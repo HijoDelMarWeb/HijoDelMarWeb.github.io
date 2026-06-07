@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hijo del Mar - Asesorías náuticas y experiencias en velero en Valdivia, Chile. Rodrigo Troncoso Peirano, Capitán con 30 años de experiencia.">
+<meta property="og:title" content="Hijo del Mar">
+<meta property="og:description" content="Asesorías náuticas y experiencias en velero en Valdivia, Chile.">
+<title>Hijo del Mar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Nunito Sans', sans-serif; background: #08131f; color: #ddd5c0; overflow-x: hidden; }
+
+  /* NAV */
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; border-bottom: 1px solid rgba(196,162,100,0.12); position: sticky; top: 0; background: rgba(8,19,31,0.95); backdrop-filter: blur(8px); z-index: 100; }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: #c4a264; letter-spacing: 1px; text-decoration: none; }
+  .nav-links { display: flex; gap: 1.5rem; }
+  .nav-link { font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #5a7090; cursor: pointer; text-decoration: none; transition: color 0.2s; }
+  .nav-link:hover { color: #c4a264; }
+
+  /* HERO */
+  .hero { min-height: 480px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem 3rem; background: #08131f; position: relative; overflow: hidden; }
+  .hero canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+  .hero-wave { position: absolute; bottom: 0; left: 0; width: 100%; pointer-events: none; }
+  .hero-content { position: relative; z-index: 2; }
+  .hero-tag { font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: #c4a264; margin-bottom: 1rem; }
+  .hero-title { font-family: 'Cormorant Garamond', serif; font-size: 64px; font-weight: 600; color: #f0e8d5; line-height: 1.05; margin-bottom: 0.3rem; }
+  .hero-title em { font-style: italic; color: #c4a264; }
+  .hero-by { font-size: 12px; font-weight: 300; letter-spacing: 3px; text-transform: uppercase; color: #7890a8; margin-bottom: 1.5rem; }
+  .hero-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: #b0a080; max-width: 520px; line-height: 1.65; margin: 0 auto 2.5rem; }
+  .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn-gold { background: #c4a264; color: #08131f; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 13px 30px; border: none; border-radius: 2px; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.1s; }
+  .btn-gold:hover { background: #d8b878; transform: translateY(-1px); }
+  .btn-ghost { background: transparent; color: #c4a264; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 13px 30px; border: 1px solid rgba(196,162,100,0.5); border-radius: 2px; cursor: pointer; text-decoration: none; display: inline-block; transition: border-color 0.2s, background 0.2s; }
+  .btn-ghost:hover { border-color: #c4a264; background: rgba(196,162,100,0.08); }
+
+  /* BAND */
+  .band { display: grid; grid-template-columns: repeat(4, 1fr); background: #0b1a2c; border-top: 1px solid rgba(196,162,100,0.12); border-bottom: 1px solid rgba(196,162,100,0.12); }
+  .band-item { text-align: center; padding: 1.5rem 0.5rem; }
+  .band-item + .band-item { border-left: 1px solid rgba(196,162,100,0.08); }
+  .band-num { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 600; color: #c4a264; line-height: 1; margin-bottom: 6px; }
+  .band-lbl { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #4a6080; }
+
+  /* SECTIONS */
+  .sec { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
+  .sec-tag { font-size: 10px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: #c4a264; margin-bottom: 0.5rem; }
+  .sec-h { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 600; color: #f0e8d5; margin: 0 0 1.5rem; line-height: 1.2; }
+  .sec-p { font-size: 15px; color: #8090a8; line-height: 1.85; margin-bottom: 1.2rem; }
+  .sep { height: 1px; background: rgba(196,162,100,0.08); }
+
+  /* SERVICIOS */
+  .srv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 1.5rem 0; }
+  .srv-card { background: #0c1e32; border: 1px solid rgba(196,162,100,0.12); border-radius: 4px; padding: 1.5rem; transition: border-color 0.2s; }
+  .srv-card:hover { border-color: rgba(196,162,100,0.4); }
+  .srv-card.full { grid-column: 1 / -1; }
+  .srv-icon { font-size: 26px; color: #c4a264; margin-bottom: 12px; display: block; }
+  .srv-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: #f0e8d5; margin-bottom: 8px; }
+  .srv-desc { font-size: 13px; color: #5a7090; line-height: 1.65; margin-bottom: 12px; }
+  .srv-items { list-style: none; padding: 0; margin: 0 0 14px; }
+  .srv-items li { font-size: 12px; color: #4a6878; padding: 4px 0 4px 16px; position: relative; border-bottom: 1px solid rgba(196,162,100,0.05); }
+  .srv-items li::before { content: '—'; position: absolute; left: 0; color: rgba(196,162,100,0.4); }
+  .srv-items.two-col { columns: 2; gap: 1rem; }
+  .srv-btn { display: inline-block; background: rgba(196,162,100,0.1); color: #c4a264; font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 8px 16px; border-radius: 2px; text-decoration: none; border: 1px solid rgba(196,162,100,0.25); transition: background 0.2s; }
+  .srv-btn:hover { background: rgba(196,162,100,0.22); }
+
+  /* EXPERIENCIAS */
+  .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 1.5rem 0; }
+  .exp-card { background: #0c1e32; border: 1px solid rgba(196,162,100,0.12); border-radius: 4px; padding: 1.5rem; transition: border-color 0.2s; }
+  .exp-card:hover { border-color: rgba(196,162,100,0.35); }
+  .exp-icon { font-size: 26px; color: #c4a264; margin-bottom: 12px; display: block; }
+  .exp-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: #f0e8d5; margin-bottom: 8px; }
+  .exp-desc { font-size: 13px; color: #5a7090; line-height: 1.6; }
+
+  /* PRECIOS */
+  .price-strip { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 1.5rem 0; }
+  .price-card { background: #0c1e32; border: 1px solid rgba(196,162,100,0.12); border-radius: 4px; padding: 1.5rem 1.25rem; text-align: center; transition: border-color 0.2s; }
+  .price-card:hover { border-color: rgba(196,162,100,0.4); }
+  .price-card.featured { border: 1px solid rgba(196,162,100,0.5); }
+  .price-badge { background: rgba(196,162,100,0.12); color: #c4a264; font-size: 9px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 2px; margin-bottom: 10px; display: inline-block; }
+  .price-label { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #c4a264; margin-bottom: 10px; }
+  .price-amount { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 600; color: #f0e8d5; margin-bottom: 4px; }
+  .price-unit { font-size: 11px; color: #4a6080; margin-bottom: 12px; }
+  .price-features { list-style: none; padding: 0; margin: 0; }
+  .price-features li { font-size: 11px; color: #6080a0; padding: 4px 0; border-bottom: 1px solid rgba(196,162,100,0.06); }
+  .price-note { font-size: 11px; color: #3a5070; text-align: center; margin-top: 0.75rem; }
+
+  /* JOURNEY */
+  .journey { display: flex; flex-direction: column; margin: 1.5rem 0; }
+  .j-step { display: flex; gap: 1.5rem; padding: 1.25rem 0; border-bottom: 1px solid rgba(196,162,100,0.07); align-items: flex-start; }
+  .j-step:last-child { border-bottom: none; }
+  .j-num { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 600; color: rgba(196,162,100,0.2); line-height: 1; min-width: 36px; margin-top: 2px; }
+  .j-year { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #c4a264; margin-bottom: 4px; }
+  .j-title { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 600; color: #f0e8d5; margin-bottom: 4px; }
+  .j-desc { font-size: 13px; color: #5a7090; line-height: 1.6; }
+
+  /* INSTAGRAM */
+  .insta-sec { background: #0b1a2c; border-top: 1px solid rgba(196,162,100,0.1); border-bottom: 1px solid rgba(196,162,100,0.1); padding: 3rem 2rem; text-align: center; }
+  .insta-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 1.5rem; }
+  .insta-btn { display: flex; align-items: center; gap: 8px; background: rgba(196,162,100,0.1); color: #c4a264; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 10px 20px; border-radius: 2px; text-decoration: none; border: 1px solid rgba(196,162,100,0.25); transition: background 0.2s; }
+  .insta-btn:hover { background: rgba(196,162,100,0.2); }
+  .insta-btn i { font-size: 18px; }
+  .insta-placeholder { margin-top: 2rem; padding: 2rem; border: 1px dashed rgba(196,162,100,0.2); border-radius: 4px; max-width: 700px; margin-left: auto; margin-right: auto; }
+  .insta-placeholder p { font-size: 13px; color: #3a5070; }
+
+  /* CONTACTO */
+  .contact-bar { background: #0b1a2c; border-top: 1px solid rgba(196,162,100,0.15); padding: 4rem 2rem; text-align: center; }
+  .contact-h { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 600; color: #f0e8d5; margin-bottom: 0.5rem; }
+  .contact-sub { font-size: 14px; color: #3a5070; max-width: 400px; margin: 0 auto 0.5rem; }
+  .contact-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 1.5rem; }
+  .c-link { display: flex; align-items: center; gap: 8px; color: #5a7090; font-size: 13px; letter-spacing: 1px; text-decoration: none; transition: color 0.2s; }
+  .c-link:hover { color: #c4a264; }
+  .c-link i { font-size: 18px; }
+
+  /* FOOTER */
+  footer { text-align: center; padding: 1.5rem; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #2a3a50; background: #08131f; }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .hero-title { font-size: 42px; }
+    .band { grid-template-columns: repeat(2, 1fr); }
+    .srv-grid, .exp-grid, .price-strip { grid-template-columns: 1fr; }
+    .srv-card.full { grid-column: 1; }
+    .srv-items.two-col { columns: 1; }
+    nav .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">Hijo del Mar</a>
+  <div class="nav-links">
+    <a href="#asesorias" class="nav-link">Asesorías</a>
+    <a href="#velero" class="nav-link">El velero</a>
+    <a href="#historia" class="nav-link">Historia</a>
+    <a href="#contacto" class="nav-link">Contacto</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <canvas id="stars"></canvas>
+  <svg class="hero-wave" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 C240,10 480,50 720,30 C960,10 1200,45 1440,25 L1440,60 L0,60 Z" fill="#0b1a2c" opacity="0.7"/>
+    <path d="M0,44 C300,28 600,55 900,40 C1140,27 1300,50 1440,40 L1440,60 L0,60 Z" fill="#08131f" opacity="0.9"/>
+  </svg>
+  <div class="hero-content">
+    <div class="hero-tag">Capitán · Marino Mercante · Valdivia · Chile</div>
+    <h1 class="hero-title"><em>Hijo del Mar</em></h1>
+    <div class="hero-by">Rodrigo Troncoso Peirano &nbsp;·&nbsp; Capitán</div>
+    <p class="hero-tagline">Asesorías náuticas con 30 años de experiencia real.<br>Y el velero que viene: turismo auténtico en el Río Valdivia.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/56923956367?text=Hola,%20quiero%20solicitar%20una%20asesoría%20con%20Hijo%20del%20Mar." class="btn-gold">Solicitar asesoría →</a>
+      <a href="#velero" class="btn-ghost">El velero que viene</a>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="band-item"><div class="band-num">30+</div><div class="band-lbl">Años en el mar</div></div>
+  <div class="band-item"><div class="band-num">15+</div><div class="band-lbl">Países operados</div></div>
+  <div class="band-item"><div class="band-num">5</div><div class="band-lbl">Asesorías disponibles</div></div>
+  <div class="band-item"><div class="band-num">749</div><div class="band-lbl">Días DP registrados</div></div>
+</div>
+
+<div class="sep"></div>
+
+<section class="sec" id="historia">
+  <div class="sec-tag">Quién soy</div>
+  <h2 class="sec-h">30 años de mar puesto a tu servicio</h2>
+  <p class="sec-p">Soy Rodrigo Troncoso Peirano, marino mercante con más de 30 años de experiencia como Capitán en wellboats, remolcadores, PSV, AHTS y embarcaciones pesqueras. He operado en los fiordos australes de Chile y en las costas de Angola, Congo, Ghana, Brasil, Trinidad y el Caribe.</p>
+  <p class="sec-p">Hoy pongo esa experiencia a disposición de quienes navegan o quieren navegar en Chile: deportistas, aventureros, compradores de embarcaciones y cualquier persona que quiera moverse por el mar con más seguridad y conocimiento.</p>
+</section>
+
+<div class="sep"></div>
+
+<section class="sec" id="asesorias">
+  <div class="sec-tag">Asesorías náuticas</div>
+  <h2 class="sec-h">Experiencia real, a tu disposición hoy</h2>
+  <p class="sec-p">Estas asesorías están disponibles ahora mismo. Se entregan por WhatsApp, videollamada o email, desde cualquier lugar de Chile.</p>
+
+  <div class="srv-grid">
+    <div class="srv-card">
+      <span class="srv-icon"><i class="ti ti-route"></i></span>
+      <div class="srv-title">Planificación de navegación</div>
+      <div class="srv-desc">Te ayudo a planificar tu ruta por los canales, ríos y zonas costeras de Chile antes de zarpar.</div>
+      <ul class="srv-items">
+        <li>Revisión de ruta y zona de navegación</li>
+        <li>Clima, viento, mareas y corrientes</li>
+        <li>Fondeos, puertos y pasos angostos</li>
+        <li>Tiempos, distancias y consumos</li>
+        <li>Seguridad y preparación de tripulación</li>
+      </ul>
+      <a class="srv-btn" href="https://wa.me/56923956367?text=Hola,%20quiero%20solicitar%20una%20asesoría%20de%20navegación%20con%20Hijo%20del%20Mar.">Solicitar por WhatsApp</a>
+    </div>
+
+    <div class="srv-card">
+      <span class="srv-icon"><i class="ti ti-shield-check"></i></span>
+      <div class="srv-title">Equipos de seguridad a bordo</div>
+      <div class="srv-desc">Reviso si tu embarcación cuenta con los equipos correctos para proteger la vida en caso de emergencia.</div>
+      <ul class="srv-items">
+        <li>Chalecos, aros, líneas y balsas</li>
+        <li>VHF, EPIRB, PLB y AIS</li>
+        <li>Ubicación y disponibilidad de equipos</li>
+        <li>Evaluación de lo que tienes y lo que falta</li>
+      </ul>
+      <a class="srv-btn" href="https://wa.me/56923956367?text=Hola,%20quiero%20solicitar%20asesoría%20de%20equipos%20de%20seguridad%20con%20Hijo%20del%20Mar.">Solicitar por WhatsApp</a>
+    </div>
+
+    <div class="srv-card">
+      <span class="srv-icon"><i class="ti ti-boat"></i></span>
+      <div class="srv-title">Compra de embarcaciones usadas</div>
+      <div class="srv-desc">Antes de comprar, revisemos juntos el aviso, las fotos y los riesgos. Evita errores caros con los ojos de un profesional.</div>
+      <ul class="srv-items">
+        <li>Revisión del aviso y características</li>
+        <li>Detección de riesgos visibles</li>
+        <li>Preguntas clave al vendedor</li>
+        <li>Orientación de uso, seguridad y costos</li>
+      </ul>
+      <a class="srv-btn" href="https://wa.me/56923956367?text=Hola,%20quiero%20asesoría%20para%20comprar%20una%20embarcación%20usada%20con%20Hijo%20del%20Mar.">Solicitar por WhatsApp</a>
+    </div>
+
+    <div class="srv-card">
+      <span class="srv-icon"><i class="ti ti-device-tablet"></i></span>
+      <div class="srv-title">Ayudas electrónicas para navegar</div>
+      <div class="srv-desc">Te oriento sobre los equipos electrónicos que realmente importan para navegar mejor preparado.</div>
+      <ul class="srv-items">
+        <li>GPS, plotter, ecosonda y radar</li>
+        <li>AIS, VHF, EPIRB y PLB</li>
+        <li>Aplicaciones náuticas y baterías de respaldo</li>
+        <li>Qué es útil y qué es accesorio</li>
+      </ul>
+      <a class="srv-btn" href="https://wa.me/56923956367?text=Hola,%20quiero%20asesoría%20sobre%20ayudas%20electrónicas%20con%20Hijo%20del%20Mar.">Solicitar por WhatsApp</a>
+    </div>
+
+    <div class="srv-card full">
+      <span class="srv-icon"><i class="ti ti-lifebuoy"></i></span>
+      <div class="srv-title">Supervivencia en el mar</div>
+      <div class="srv-desc">Te ayudo a revisar qué equipos deberías llevar a bordo para enfrentar una emergencia real en el mar, los lagos, ríos y canales del sur de Chile.</div>
+      <ul class="srv-items two-col">
+        <li>Trajes de inmersión y chalecos</li>
+        <li>Balsas y líneas de rescate</li>
+        <li>Luces, silbatos y botiquín</li>
+        <li>Comunicaciones de emergencia</li>
+        <li>Procedimientos básicos de rescate</li>
+        <li>Cómo aumentar probabilidades de sobrevivir</li>
+      </ul>
+      <a class="srv-btn" href="https://wa.me/56923956367?text=Hola,%20quiero%20asesoría%20sobre%20supervivencia%20en%20el%20mar%20con%20Hijo%20del%20Mar.">Solicitar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<section class="sec" id="velero">
+  <div class="sec-tag">El proyecto que viene</div>
+  <h2 class="sec-h">Un velero en Valdivia: el sueño en construcción</h2>
+  <p class="sec-p">Mientras las asesorías son el presente, el velero es el futuro. Un barco de 40 a 47 pies, traído desde el extranjero a Valdivia, para ofrecer experiencias únicas en el Río Valdivia y los canales del sur.</p>
+
+  <div class="exp-grid">
+    <div class="exp-card">
+      <span class="exp-icon"><i class="ti ti-sunset-2"></i></span>
+      <div class="exp-title">Atardecer con champagne</div>
+      <div class="exp-desc">Navegación tranquila por el Río Valdivia al caer el sol. Champagne a bordo. El capitán cuenta historias de sus rutas por el mundo.</div>
+    </div>
+    <div class="exp-card">
+      <span class="exp-icon"><i class="ti ti-heart"></i></span>
+      <div class="exp-title">Noche romántica a bordo</div>
+      <div class="exp-desc">El velero como suite privada para parejas. Camarote íntimo, vista al río, champagne y desayuno al amanecer.</div>
+    </div>
+    <div class="exp-card">
+      <span class="exp-icon"><i class="ti ti-sailboat"></i></span>
+      <div class="exp-title">Tour náutico por Valdivia</div>
+      <div class="exp-desc">Recorrer el río, los fuertes históricos y la fauna marina con un capitán que ha navegado el mundo entero.</div>
+    </div>
+    <div class="exp-card">
+      <span class="exp-icon"><i class="ti ti-anchor"></i></span>
+      <div class="exp-title">Arriendo privado</div>
+      <div class="exp-desc">El velero completo para ti. Cumpleaños, aniversarios, fotografías, eventos íntimos. Flexible y a medida.</div>
+    </div>
+  </div>
+
+  <div class="price-strip">
+    <div class="price-card">
+      <div class="price-label">Atardecer</div>
+      <div class="price-amount">$45.000</div>
+      <div class="price-unit">por persona · 2 hrs</div>
+      <ul class="price-features">
+        <li>Navegación al atardecer</li>
+        <li>Champagne incluido</li>
+        <li>Guía del capitán</li>
+      </ul>
+    </div>
+    <div class="price-card featured">
+      <div class="price-badge">Más especial</div>
+      <div class="price-label">Noche a bordo</div>
+      <div class="price-amount">$180.000</div>
+      <div class="price-unit">pareja · noche completa</div>
+      <ul class="price-features">
+        <li>Camarote privado</li>
+        <li>Champagne + desayuno</li>
+        <li>Vista al río toda la noche</li>
+      </ul>
+    </div>
+    <div class="price-card">
+      <div class="price-label">Arriendo privado</div>
+      <div class="price-amount">A convenir</div>
+      <div class="price-unit">según duración y grupo</div>
+      <ul class="price-features">
+        <li>Velero completo para ti</li>
+        <li>Ruta personalizada</li>
+        <li>Consultar disponibilidad</li>
+      </ul>
+    </div>
+  </div>
+  <p class="price-note">* Tarifas referenciales. El velero está en proceso de adquisición.</p>
+</section>
+
+<div class="sep"></div>
+
+<section class="sec">
+  <div class="sec-tag">La hoja de ruta</div>
+  <h2 class="sec-h">Cómo se construye este sueño</h2>
+  <div class="journey">
+    <div class="j-step">
+      <div class="j-num">1</div>
+      <div>
+        <div class="j-year">Ahora · 2025–2026</div>
+        <div class="j-title">Asesorías náuticas y construcción de marca</div>
+        <div class="j-desc">Ofrecer las cinco asesorías disponibles hoy. Crear contenido en redes. Hacerme conocido antes de que el velero llegue.</div>
+      </div>
+    </div>
+    <div class="j-step">
+      <div class="j-num">2</div>
+      <div>
+        <div class="j-year">2027–2028</div>
+        <div class="j-title">Seleccionar y comprar el velero en el extranjero</div>
+        <div class="j-desc">40 a 47 pies, con los estándares que exige un marino profesional. La búsqueda también será contenido.</div>
+      </div>
+    </div>
+    <div class="j-step">
+      <div class="j-num">3</div>
+      <div>
+        <div class="j-year">2028–2029</div>
+        <div class="j-title">La travesía de traerlo a Chile</div>
+        <div class="j-desc">Cada milla, cada puerto, cada decisión documentada en video. El viaje de traer el barco ya es el contenido más potente.</div>
+      </div>
+    </div>
+    <div class="j-step">
+      <div class="j-num">4</div>
+      <div>
+        <div class="j-year">2029–2030</div>
+        <div class="j-title">Zarpar desde Valdivia</div>
+        <div class="j-desc">El velero fondea en el Río Valdivia. Empieza el turismo. Atardeceres, noches románticas, tours náuticos. La vida que elegí.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<section class="insta-sec">
+  <div class="sec-tag" style="text-align:center;">El sur de Chile visto desde el mar</div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:#f0e8d5;margin-bottom:0.5rem;">Sígueme en Instagram</h2>
+  <p style="font-size:14px;color:#3a5070;max-width:450px;margin:0 auto;">Fotos reales de navegación, canales, fauna marina y paisajes del sur de Chile.</p>
+  <div class="insta-links">
+    <a class="insta-btn" href="https://www.instagram.com/hijodelmar.cl/" target="_blank">
+      <i class="ti ti-brand-instagram"></i> @hijodelmar.cl
+    </a>
+    <a class="insta-btn" href="https://www.instagram.com/rodrigo_del_mar/" target="_blank">
+      <i class="ti ti-brand-instagram"></i> @rodrigo_del_mar
+    </a>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<section class="contact-bar" id="contacto">
+  <div class="sec-tag" style="margin-bottom:0.5rem;">Contacto</div>
+  <div class="contact-h">¿Necesitas una asesoría? Escríbeme.</div>
+  <p class="contact-sub">Soy el capitán, el asesor y el que contesta. Sin intermediarios ni bots.</p>
+  <div class="contact-links">
+    <a class="c-link" href="https://wa.me/56923956367" target="_blank"><i class="ti ti-brand-whatsapp"></i> WhatsApp</a>
+    <a class="c-link" href="mailto:alexistroncosop@gmail.com"><i class="ti ti-mail"></i> Email</a>
+    <a class="c-link" href="https://www.instagram.com/hijodelmar.cl/" target="_blank"><i class="ti ti-brand-instagram"></i> @hijodelmar.cl</a>
+    <a class="c-link" href="https://www.instagram.com/rodrigo_del_mar/" target="_blank"><i class="ti ti-brand-instagram"></i> @rodrigo_del_mar</a>
+    <a class="c-link" href="https://linkedin.com/in/alexistroncosomaster" target="_blank"><i class="ti ti-brand-linkedin"></i> LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  Hijo del Mar · Rodrigo Troncoso Peirano · Valdivia, Chile · 2025
+</footer>
+
+<script>
+  const canvas = document.getElementById('stars');
+  const ctx = canvas.getContext('2d');
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = canvas.parentElement.offsetHeight;
+    drawStars();
+  }
+  function drawStars() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i = 0; i < 120; i++) {
+      const x = Math.random() * canvas.width;
+      const y = Math.random() * canvas.height;
+      const r = Math.random() * 1.4 + 0.3;
+      const a = Math.random() * 0.7 + 0.2;
+      ctx.beginPath();
+      ctx.arc(x, y, r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(240,232,210,${a})`;
+      ctx.fill();
+    }
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+</script>
+
+</body>
+</html>
