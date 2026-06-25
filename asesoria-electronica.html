@@ -179,7 +179,7 @@
   }
 
   /* Sailboat nav indicator */
-  .nav-boat { position: absolute; bottom: -20px; pointer-events: none; transition: left 0.16s cubic-bezier(0.25,0.46,0.45,0.94); opacity: 0; z-index: 101; transform: translateX(-50%); }
+  .nav-boat { position: absolute; bottom: -16px; pointer-events: none; transition: left 0.16s cubic-bezier(0.25,0.46,0.45,0.94); opacity: 0; z-index: 101; transform: translateX(-50%); }
   .nav-boat.visible { opacity: 1; }
 </style>
 
@@ -231,11 +231,21 @@
     <a href="index.html#contacto" class="nav-link">Contacto</a>
   </div>
   <div class="nav-boat" id="navBoat">
-    <svg width="36" height="22" viewBox="0 0 36 22" xmlns="http://www.w3.org/2000/svg">
-      <path d="M17 1 L17 15 L4 15 Z" fill="#c4a264" opacity="0.9"/>
-      <path d="M18 5 L18 15 L27 15 Z" fill="#c4a264" opacity="0.6"/>
-      <rect x="16.4" y="0" width="1.2" height="15.5" fill="#c4a264"/>
-      <path d="M3 15 Q18 20.5 33 15 L31 17 Q18 23 5 17 Z" fill="#c4a264"/>
+    <svg width="46" height="44" viewBox="0 0 60 58" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#c4a264" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Mast -->
+      <line x1="32" y1="2" x2="32" y2="37"/>
+      <!-- Mainsail (left of mast, large curved triangle) -->
+      <path d="M32 3 C20 11, 8 26, 6 37 L32 37 Z"/>
+      <!-- Headsail/jib (right of mast, smaller) -->
+      <path d="M32 11 C42 19, 50 28, 52 37 L32 37 Z"/>
+      <!-- Hull deck line (top of hull) -->
+      <path d="M4 37 Q32 33 57 37"/>
+      <!-- Hull keel (bottom curve) -->
+      <path d="M4 37 Q32 46 57 37"/>
+      <!-- Wave 1 -->
+      <path d="M2 49 Q12 45 22 49 Q32 53 38 49"/>
+      <!-- Wave 2 -->
+      <path d="M22 52 Q33 48 44 52 Q54 56 58 52"/>
     </svg>
   </div>
 </nav>
