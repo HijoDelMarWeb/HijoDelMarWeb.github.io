@@ -107,7 +107,26 @@
   .author-name { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: #f0e8d5; margin-bottom: 4px; }
   .author-bio { font-size: 13px; color: #5a7090; line-height: 1.5; }
   footer { text-align: center; padding: 1.5rem; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #2a3a50; background: #08131f; }
-  @media (max-width: 640px) { .page-title { font-size: 32px; } .related-grid { grid-template-columns: 1fr; } .author-box { flex-direction: column; text-align: center; } nav .nav-links { display: none; } }</style>
+  @media (max-width: 640px) { .page-title { font-size: 32px; } .related-grid { grid-template-columns: 1fr; } .author-box { flex-direction: column; text-align: center; } nav .nav-links { display: none; } }
+  /* ── Mobile hamburger ── */
+  .nav-burger { display: none; background: none; border: 1px solid rgba(196,162,100,0.3); border-radius: 4px; padding: 8px 10px; cursor: pointer; flex-direction: column; gap: 5px; flex-shrink: 0; }
+  .nav-burger span { display: block; width: 22px; height: 2px; background: #c4a264; border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+  .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-burger.open span:nth-child(2) { opacity: 0; }
+  .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  @media (max-width: 768px) {
+    .nav-burger { display: flex; }
+    nav { padding: 1rem 1.5rem 1.4rem; }
+    nav .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(8,19,31,0.98); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); padding: 1rem 1.5rem 1.5rem; border-bottom: 1px solid rgba(196,162,100,0.15); gap: 0.4rem; z-index: 99; }
+    nav .nav-links.open { display: flex; }
+    nav .nav-links .nav-link { padding: 12px 4px; border-bottom: 1px solid rgba(196,162,100,0.07); border-radius: 0; background: none; border-left: none; border-right: none; border-top: none; box-shadow: none; font-size: 14px; letter-spacing: 1.5px; }
+    nav .nav-links .nav-dropdown { padding-bottom: 0; margin-bottom: 0; }
+    nav .nav-links .nav-dropdown-toggle { width: 100%; justify-content: space-between; padding: 12px 4px; border-radius: 0; background: none; border-left: none; border-right: none; border-top: none; border-bottom: 1px solid rgba(196,162,100,0.07); box-shadow: none; font-size: 14px; letter-spacing: 1.5px; }
+    nav .nav-links .nav-dropdown-menu { position: static; transform: none; min-width: 100%; box-shadow: none; border: 1px solid rgba(196,162,100,0.1); background: rgba(0,0,0,0.25); border-radius: 4px; margin-top: 4px; display: none; }
+    nav .nav-links .nav-dropdown.mob-open .nav-dropdown-menu { display: block; }
+    nav .lang-picker { margin-top: 0.25rem; }
+  }
+</style>
 </head>
 <body>
 
@@ -132,6 +151,7 @@
     </div>
     <div class="lang-picker" id="langPicker"><button class="nav-lang-btn lang-en" id="langToggle"><img src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="US" style="border-radius:2px;display:block;"><span id="langText">EN</span></button><div class="lang-drop" id="langDrop"><div class="lang-opt lang-cur" id="ldEN"><img src="https://flagcdn.com/16x12/us.png" width="16" height="12" alt="US">English</div><div class="lang-opt" id="ldES"><img src="https://flagcdn.com/16x12/cl.png" width="16" height="12" alt="CL">Español</div></div></div>
   </div>
+  <button class="nav-burger" id="navBurger" aria-label="Menú"><span></span><span></span><span></span></button>
   <div class="nav-boat" id="navBoat">
     <svg width="20" height="18" viewBox="0 0 60 46" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#c4a264" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
       <line x1="32" y1="2" x2="32" y2="35"/>
@@ -334,5 +354,42 @@
   if(elEN){elEN.style.cursor='default';}
 })();
 </script>
+
+<script>
+(function(){
+  var burger=document.getElementById('navBurger');
+  var links=document.querySelector('nav .nav-links');
+  if(!burger||!links) return;
+  burger.addEventListener('click',function(e){
+    e.stopPropagation();
+    burger.classList.toggle('open');
+    links.classList.toggle('open');
+  });
+  // Close on link click
+  links.querySelectorAll('.nav-link,.nav-dropdown-item').forEach(function(el){
+    el.addEventListener('click',function(){
+      burger.classList.remove('open');
+      links.classList.remove('open');
+    });
+  });
+  // Mobile dropdown toggle
+  var dd=links.querySelector('.nav-dropdown');
+  var ddt=dd&&dd.querySelector('.nav-dropdown-toggle');
+  if(ddt){
+    ddt.addEventListener('click',function(e){
+      if(window.innerWidth<=768){
+        e.stopPropagation();
+        dd.classList.toggle('mob-open');
+      }
+    });
+  }
+  // Close on outside click
+  document.addEventListener('click',function(){
+    burger.classList.remove('open');
+    links.classList.remove('open');
+  });
+})();
+</script>
+
 </body>
 </html>
