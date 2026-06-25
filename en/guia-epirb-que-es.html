@@ -254,8 +254,7 @@
   if(boat&&nav){
     function cx(el){var nr=nav.getBoundingClientRect();var er=el.getBoundingClientRect();return er.left-nr.left+er.width/2;}
     function goHome(){var logo=document.querySelector('.nav-logo');if(logo){boat.style.left=cx(logo)+'px';}}
-    goHome();
-    boat.classList.add('visible');
+    requestAnimationFrame(function(){ goHome(); boat.classList.add('visible'); });
     nav.querySelectorAll('.nav-link,.nav-dropdown-toggle').forEach(function(el){
       el.addEventListener('mouseenter',function(){boat.style.left=cx(el)+'px';});
     });
