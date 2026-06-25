@@ -225,7 +225,8 @@
   .exp-card-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; filter: brightness(0.88) saturate(1.15); }
   .exp-card:hover .exp-card-img { transform: scale(1.07); filter: brightness(1.0) saturate(1.25); }
   .exp-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(3,10,20,0.90) 0%, rgba(3,10,20,0.38) 50%, rgba(3,10,20,0.0) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.6rem; }
-  .exp-icon { position: absolute; top: 1.1rem; right: 1.1rem; font-size: 17px; color: #c4a264; background: rgba(3,10,20,0.65); border: 1px solid rgba(196,162,100,0.38); border-radius: 50%; width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); flex-shrink: 0; margin: 0; }
+  .exp-icon { position: absolute; top: 1.1rem; right: 1.1rem; background: rgba(3,10,20,0.55); border: 1px solid rgba(196,162,100,0.35); border-radius: 50%; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); flex-shrink: 0; margin: 0; overflow: hidden; padding: 6px; }
+  .exp-icon img { width: 100%; height: 100%; object-fit: contain; }
   .exp-tag { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #c4a264; margin-bottom: 5px; }
   .exp-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: #f0e8d5; margin-bottom: 7px; line-height: 1.2; text-shadow: 0 2px 14px rgba(0,0,0,0.8); }
   .exp-desc { font-size: 13px; color: rgba(221,213,192,0.75); line-height: 1.6; text-shadow: 0 1px 6px rgba(0,0,0,0.95); }
@@ -513,7 +514,7 @@
            alt="Velero blanco navegando al atardecer — experiencia con champagne en los canales del sur de Chile"
            loading="lazy">
       <div class="exp-card-overlay">
-        <span class="exp-icon"><i class="ti ti-sunset-2"></i></span>
+        <span class="exp-icon"><img src="logo_hijodelmar.png" alt="Hijo del Mar"></span>
         <div class="exp-title">Atardecer con champagne</div>
         <div class="exp-desc">Navegación tranquila por los canales del sur al caer el sol. Champagne a bordo. El capitán cuenta historias de sus rutas por el mundo.</div>
       </div>
@@ -526,7 +527,7 @@
            alt="Pareja enamorada viendo las luces de la ciudad desde un bote de noche — noche romántica a bordo del velero en Valdivia"
            loading="lazy">
       <div class="exp-card-overlay">
-        <span class="exp-icon"><i class="ti ti-heart"></i></span>
+        <span class="exp-icon"><img src="logo_hijodelmar.png" alt="Hijo del Mar"></span>
         <div class="exp-title">Noche romántica a bordo</div>
         <div class="exp-desc">El velero como suite privada para parejas. Camarote íntimo, vista al río, champagne y desayuno al amanecer.</div>
       </div>
@@ -539,7 +540,7 @@
            alt="Tres personas navegando en velero con montañas de los Andes al fondo — tour náutico por los canales del sur de Chile"
            loading="lazy">
       <div class="exp-card-overlay">
-        <span class="exp-icon"><i class="ti ti-sailboat"></i></span>
+        <span class="exp-icon"><img src="logo_hijodelmar.png" alt="Hijo del Mar"></span>
         <div class="exp-title">Tour náutico por los canales del sur</div>
         <div class="exp-desc">Recorrer el río, los fuertes históricos y la fauna marina con un capitán que ha navegado el mundo entero.</div>
       </div>
@@ -552,7 +553,7 @@
            alt="Grupo de personas celebrando a bordo de un yate privado — arriendo privado del velero Hijo del Mar"
            loading="lazy">
       <div class="exp-card-overlay">
-        <span class="exp-icon"><i class="ti ti-anchor"></i></span>
+        <span class="exp-icon"><img src="logo_hijodelmar.png" alt="Hijo del Mar"></span>
         <div class="exp-title">Arriendo privado</div>
         <div class="exp-desc">El velero completo para ti. Cumpleaños, aniversarios, fotografías, eventos íntimos. Flexible y a medida.</div>
       </div>
@@ -687,8 +688,4 @@
   function drawStars() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for (let i = 0; i < 120; i++) {
-      const x = Math.random() * canvas.width;
-      const y = Math.random() * canvas.height;
-      const r = Math.random() * 1.4 + 0.3;
-      const a = Math.random() * 0.7 + 0.2;
-      ctx.be
+      const x = Math.random() * canvas.
