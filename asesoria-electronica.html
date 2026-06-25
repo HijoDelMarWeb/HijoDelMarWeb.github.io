@@ -213,7 +213,7 @@
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo"><img src="logo_hijodelmar.png" alt="Hijo del Mar" style="height:48px;width:48px;border-radius:50%;vertical-align:middle;margin-right:10px;">Hijo del Mar</a>
+  <a href="index.html" class="nav-logo"><img src="logo_hijodelmar.png" alt="Hijo del Mar" style="height:48px;width:48px;border-radius:50%;vertical-align:middle;margin-right:10px;">Hijo <span id="navBoatHome">del</span> Mar</a>
   <div class="nav-links">
     <div class="nav-dropdown">
       <button class="nav-dropdown-toggle">Recursos</button>
@@ -364,19 +364,31 @@
 (function(){
   var boat=document.getElementById('navBoat');
   var nav=document.querySelector('nav');
+  var homeEl=document.getElementById('navBoatHome');
   if(boat&&nav){
-    var targets=nav.querySelectorAll('.nav-link,.nav-dropdown-toggle');
-    targets.forEach(function(el){
-      el.addEventListener('mouseenter',function(){
-        var nr=nav.getBoundingClientRect();
-        var er=el.getBoundingClientRect();
-        var cx=er.left-nr.left+er.width/2;
-        boat.style.left=cx+'px';
-        boat.classList.add('visible');
-      });
+    // Get center X of an element relative to nav
+    function cx(el){
+      var nr=nav.getBoundingClientRect();
+      var er=el.getBoundingClientRect();
+      return er.left-nr.left+er.width/2;
+    }
+    // Move boat to home (under "del" in logo)
+    function goHome(){
+      if(homeEl){ boat.style.left=cx(homeEl)+'px'; }
+    }
+    // Init: position and show boat at home
+    goHome();
+    boat.classList.add('visible');
+    // On hover: sail to button
+    nav.querySelectorAll('.nav-link,.nav-dropdown-toggle').forEach(function(el){
+      el.addEventListener('mouseenter',function(){ boat.style.left=cx(el)+'px'; });
     });
-    nav.addEventListener('mouseleave',function(){boat.classList.remove('visible');});
+    // On mouse leave nav: return home
+    nav.addEventListener('mouseleave', goHome);
+    // Recalculate on resize
+    window.addEventListener('resize', goHome);
   }
+  // Dropdown hover with delay
   var dd=document.querySelector('.nav-dropdown');
   var menu=dd&&dd.querySelector('.nav-dropdown-menu');
   if(dd&&menu){
