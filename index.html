@@ -205,7 +205,8 @@
 
   /* SERVICIOS */
   .srv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 1.5rem 0; }
-  .srv-card { background: #0c1e32; border: 1px solid rgba(196,162,100,0.12); border-radius: 4px; padding: 1.5rem; transition: border-color 0.2s; }
+  .srv-card { background: #0c1e32; border: 1px solid rgba(196,162,100,0.12); border-radius: 4px; padding: 1.5rem; transition: border-color 0.2s; display: flex; flex-direction: column; }
+  .srv-card .srv-btn { margin-top: auto; align-self: flex-start; }
   .srv-card:hover { border-color: rgba(196,162,100,0.4); }
   .srv-card.full { grid-column: 1 / -1; }
   .srv-icon { font-size: 26px; color: #c4a264; margin-bottom: 12px; display: block; }
@@ -701,6 +702,4 @@
 <script>
 (function(){
   var boat=document.getElementById('navBoat');
-  var nav=document.querySelector('nav');
-  if(boat&&nav){
-    function cx(el){var nr=nav.getBoundingClientRect();var er=el.getBoundingClientRect
+  var nav=document.querySelector('nav'
