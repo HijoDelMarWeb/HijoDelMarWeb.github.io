@@ -92,7 +92,7 @@
 <nav>
   <a href="../index.html" class="nav-logo"><img src="../logo_hijodelmar.png" alt="Hijo del Mar - Nautical Advisory Chile" width="48" height="48" style="height:48px;width:48px;border-radius:50%;vertical-align:middle;margin-right:10px;">Hijo <span id="navBoatHome">del</span> Mar</a>
   <div class="nav-links">
-    <button class="nav-lang-btn lang-en" id="langToggle" onclick="hdmToggleLang()"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span id="langText">EN</span></button>
+    <div class="lang-picker" id="langPicker"><button class="nav-lang-btn lang-en" id="langToggle"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span id="langText">EN</span></button><div class="lang-drop" id="langDrop"><div class="lang-opt lang-cur" id="ldEN"><span class="lf">🇺🇸</span>English</div><div class="lang-opt" id="ldES"><span class="lf">🇨🇱</span>Español</div></div></div>
     <div class="nav-dropdown">
       <button class="nav-dropdown-toggle">Resources</button>
       <div class="nav-dropdown-menu">
@@ -247,11 +247,18 @@
 <script>
 (function(){
   var btn=document.getElementById('langToggle');
-  var lbl=document.getElementById('langText');
-  if(btn&&lbl){ lbl.textContent='EN'; btn.classList.add('lang-en'); }
-  window.hdmToggleLang=function(){
-    location.href='../asesoria-seguridad.html';
-  };
+  if(btn){btn.classList.add('lang-en');}
+  var picker=document.getElementById('langPicker');
+  var drop=document.getElementById('langDrop');
+  var t;
+  function show(){clearTimeout(t);drop.classList.add('open');}
+  function hide(){t=setTimeout(function(){drop.classList.remove('open');},160);}
+  if(picker){picker.addEventListener('mouseenter',show);picker.addEventListener('mouseleave',hide);}
+  if(drop){drop.addEventListener('mouseenter',show);drop.addEventListener('mouseleave',hide);}
+  var elES=document.getElementById('ldES');
+  var elEN=document.getElementById('ldEN');
+  if(elES){elES.onclick=function(){location.href='../asesoria-seguridad.html';}; }
+  if(elEN){elEN.style.cursor='default';}
 })();
 </script>
 </body>
