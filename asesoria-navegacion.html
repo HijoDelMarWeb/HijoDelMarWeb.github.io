@@ -375,6 +375,34 @@
 
 <script>
 (function(){
+  var boat=document.getElementById('navBoat');
+  var nav=document.querySelector('nav');
+  if(boat&&nav){
+    function cx(el){var nr=nav.getBoundingClientRect();var er=el.getBoundingClientRect();return er.left-nr.left+er.width/2;}
+    function goHome(){var logo=document.querySelector('.nav-logo');if(logo){boat.style.left=cx(logo)+'px';}}
+    goHome();
+    boat.classList.add('visible');
+    nav.querySelectorAll('.nav-link,.nav-dropdown-toggle').forEach(function(el){
+      el.addEventListener('mouseenter',function(){boat.style.left=cx(el)+'px';});
+    });
+    nav.addEventListener('mouseleave',goHome);
+    window.addEventListener('resize',goHome);
+  }
+  var dd=document.querySelector('.nav-dropdown');
+  var menu=dd&&dd.querySelector('.nav-dropdown-menu');
+  if(dd&&menu){
+    var timer;
+    var open=function(){clearTimeout(timer);menu.style.display='block';};
+    var close=function(){timer=setTimeout(function(){menu.style.display='';},220);};
+    dd.addEventListener('mouseenter',open);
+    dd.addEventListener('mouseleave',close);
+    menu.addEventListener('mouseenter',open);
+    menu.addEventListener('mouseleave',close);
+  }
+})();
+</script>
+<script>
+(function(){
   var picker=document.getElementById('langPicker');
   var drop=document.getElementById('langDrop');
   var t;
