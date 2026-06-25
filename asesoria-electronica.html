@@ -366,29 +366,22 @@
   var nav=document.querySelector('nav');
   var homeEl=document.getElementById('navBoatHome');
   if(boat&&nav){
-    // Get center X of an element relative to nav
     function cx(el){
       var nr=nav.getBoundingClientRect();
       var er=el.getBoundingClientRect();
       return er.left-nr.left+er.width/2;
     }
-    // Move boat to home (under "del" in logo)
     function goHome(){
       if(homeEl){ boat.style.left=cx(homeEl)+'px'; }
     }
-    // Init: position and show boat at home
     goHome();
     boat.classList.add('visible');
-    // On hover: sail to button
     nav.querySelectorAll('.nav-link,.nav-dropdown-toggle').forEach(function(el){
       el.addEventListener('mouseenter',function(){ boat.style.left=cx(el)+'px'; });
     });
-    // On mouse leave nav: return home
     nav.addEventListener('mouseleave', goHome);
-    // Recalculate on resize
     window.addEventListener('resize', goHome);
   }
-  // Dropdown hover with delay
   var dd=document.querySelector('.nav-dropdown');
   var menu=dd&&dd.querySelector('.nav-dropdown-menu');
   if(dd&&menu){

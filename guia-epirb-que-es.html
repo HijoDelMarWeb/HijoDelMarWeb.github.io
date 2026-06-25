@@ -357,23 +357,26 @@
 
 <script>
 (function(){
-  // Boat indicator
   var boat=document.getElementById('navBoat');
   var nav=document.querySelector('nav');
+  var homeEl=document.getElementById('navBoatHome');
   if(boat&&nav){
-    var targets=nav.querySelectorAll('.nav-link,.nav-dropdown-toggle');
-    targets.forEach(function(el){
-      el.addEventListener('mouseenter',function(){
-        var nr=nav.getBoundingClientRect();
-        var er=el.getBoundingClientRect();
-        var cx=er.left-nr.left+er.width/2;
-        boat.style.left=cx+'px';
-        boat.classList.add('visible');
-      });
+    function cx(el){
+      var nr=nav.getBoundingClientRect();
+      var er=el.getBoundingClientRect();
+      return er.left-nr.left+er.width/2;
+    }
+    function goHome(){
+      if(homeEl){ boat.style.left=cx(homeEl)+'px'; }
+    }
+    goHome();
+    boat.classList.add('visible');
+    nav.querySelectorAll('.nav-link,.nav-dropdown-toggle').forEach(function(el){
+      el.addEventListener('mouseenter',function(){ boat.style.left=cx(el)+'px'; });
     });
-    nav.addEventListener('mouseleave',function(){boat.classList.remove('visible');});
+    nav.addEventListener('mouseleave', goHome);
+    window.addEventListener('resize', goHome);
   }
-  // Dropdown hover with delay (allows diagonal mouse movement to menu)
   var dd=document.querySelector('.nav-dropdown');
   var menu=dd&&dd.querySelector('.nav-dropdown-menu');
   if(dd&&menu){
