@@ -231,7 +231,8 @@
       return er.left-nr.left+er.width/2;
     }
     function goHome(){
-      if(homeEl){ boat.style.left=cx(homeEl)+'px'; }
+      var logo=document.querySelector('.nav-logo');
+      if(logo){ boat.style.left=cx(logo)+'px'; }
     }
     goHome();
     boat.classList.add('visible');
