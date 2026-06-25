@@ -514,8 +514,7 @@
            alt="Velero blanco navegando al atardecer — experiencia con champagne en los canales del sur de Chile"
            loading="lazy">
       <div class="exp-card-overlay">
-        <span class="exp-icon"><img src="logo_hijodelmar.png" alt="Hijo del Mar"></span>
-        <div class="exp-title">Atardecer con champagne</div>
+<div class="exp-title">Atardecer con champagne</div>
         <div class="exp-desc">Navegación tranquila por los canales del sur al caer el sol. Champagne a bordo. El capitán cuenta historias de sus rutas por el mundo.</div>
       </div>
     </div>
@@ -527,8 +526,7 @@
            alt="Pareja enamorada viendo las luces de la ciudad desde un bote de noche — noche romántica a bordo del velero en Valdivia"
            loading="lazy">
       <div class="exp-card-overlay">
-        <span class="exp-icon"><img src="logo_hijodelmar.png" alt="Hijo del Mar"></span>
-        <div class="exp-title">Noche romántica a bordo</div>
+<div class="exp-title">Noche romántica a bordo</div>
         <div class="exp-desc">El velero como suite privada para parejas. Camarote íntimo, vista al río, champagne y desayuno al amanecer.</div>
       </div>
     </div>
@@ -540,8 +538,7 @@
            alt="Tres personas navegando en velero con montañas de los Andes al fondo — tour náutico por los canales del sur de Chile"
            loading="lazy">
       <div class="exp-card-overlay">
-        <span class="exp-icon"><img src="logo_hijodelmar.png" alt="Hijo del Mar"></span>
-        <div class="exp-title">Tour náutico por los canales del sur</div>
+<div class="exp-title">Tour náutico por los canales del sur</div>
         <div class="exp-desc">Recorrer el río, los fuertes históricos y la fauna marina con un capitán que ha navegado el mundo entero.</div>
       </div>
     </div>
@@ -553,8 +550,7 @@
            alt="Grupo de personas celebrando a bordo de un yate privado — arriendo privado del velero Hijo del Mar"
            loading="lazy">
       <div class="exp-card-overlay">
-        <span class="exp-icon"><img src="logo_hijodelmar.png" alt="Hijo del Mar"></span>
-        <div class="exp-title">Arriendo privado</div>
+<div class="exp-title">Arriendo privado</div>
         <div class="exp-desc">El velero completo para ti. Cumpleaños, aniversarios, fotografías, eventos íntimos. Flexible y a medida.</div>
       </div>
     </div>
@@ -693,4 +689,18 @@
       const r = Math.random() * 1.4 + 0.3;
       const a = Math.random() * 0.7 + 0.2;
       ctx.beginPath();
-      ctx.arc(x, y, r
+      ctx.arc(x, y, r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(240,232,210,${a})`;
+      ctx.fill();
+    }
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+</script>
+
+<script>
+(function(){
+  var boat=document.getElementById('navBoat');
+  var nav=document.querySelector('nav');
+  if(boat&&nav){
+    function cx(el){var nr=nav.getBoundingClientRect();var er=el.getBoundingClientRect
