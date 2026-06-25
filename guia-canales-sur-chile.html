@@ -105,11 +105,11 @@
   nav { display: flex; align-items: center; justify-content: space-between; padding: 1.4rem 3rem; border-bottom: 1px solid rgba(196,162,100,0.25); position: sticky; top: 0; background: rgba(8,19,31,0.95); backdrop-filter: blur(8px); z-index: 100; }
   .nav-logo { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 24px; color: #c4a264; letter-spacing: 1px; text-decoration: none; }
   .nav-links { display: flex; gap: 1.5rem; align-items: center; }
-  .nav-link { font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #9ab8d0; text-decoration: none; transition: color 0.2s, background 0.2s; padding: 7px 12px; border-radius: 3px; }
-  .nav-link:hover, .nav-link.active { color: #c4a264; background: rgba(196,162,100,0.08); }
+  .nav-link { font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #b8cfe0; text-decoration: none; transition: color 0.15s, background 0.15s, box-shadow 0.15s; padding: 7px 14px; border-radius: 4px; background: linear-gradient(180deg, rgba(255,255,255,0.07) 0%, rgba(0,0,0,0.14) 100%); border: 1px solid rgba(196,162,100,0.2); box-shadow: 0 2px 5px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08), inset 0 -1px 0 rgba(0,0,0,0.2); }
+  .nav-link:hover, .nav-link.active { color: #c4a264; background: linear-gradient(180deg, rgba(196,162,100,0.16) 0%, rgba(196,162,100,0.07) 100%); border-color: rgba(196,162,100,0.4); box-shadow: 0 2px 8px rgba(0,0,0,0.45), inset 0 1px 0 rgba(196,162,100,0.18), inset 0 -1px 0 rgba(0,0,0,0.2); }
   .nav-dropdown { position: relative; padding-bottom: 16px; margin-bottom: -16px; }
-  .nav-dropdown-toggle { font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #9ab8d0; cursor: pointer; text-decoration: none; transition: color 0.2s, background 0.2s; display: flex; align-items: center; gap: 5px; background: none; border: none; padding: 7px 12px; border-radius: 3px; font-family: inherit; }
-  .nav-dropdown-toggle:hover, .nav-dropdown:hover .nav-dropdown-toggle { color: #c4a264; }
+  .nav-dropdown-toggle { font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #b8cfe0; cursor: pointer; text-decoration: none; transition: color 0.15s, background 0.15s, box-shadow 0.15s; display: flex; align-items: center; gap: 5px; background: linear-gradient(180deg, rgba(255,255,255,0.07) 0%, rgba(0,0,0,0.14) 100%); border: 1px solid rgba(196,162,100,0.2); padding: 7px 14px; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08), inset 0 -1px 0 rgba(0,0,0,0.2); font-family: inherit; }
+  .nav-dropdown-toggle:hover, .nav-dropdown:hover .nav-dropdown-toggle { color: #c4a264; background: linear-gradient(180deg, rgba(196,162,100,0.16) 0%, rgba(196,162,100,0.07) 100%); border-color: rgba(196,162,100,0.4); box-shadow: 0 2px 8px rgba(0,0,0,0.45), inset 0 1px 0 rgba(196,162,100,0.18), inset 0 -1px 0 rgba(0,0,0,0.2); }
   .nav-dropdown-toggle::after { content: '▾'; font-size: 12px; transition: transform 0.2s; }
   .nav-dropdown:hover .nav-dropdown-toggle::after { transform: rotate(180deg); }
   .nav-dropdown-menu { display: none; position: absolute; top: calc(100% - 8px); left: 50%; transform: translateX(-50%); background: #0d1f33; border: 1px solid rgba(196,162,100,0.25); border-radius: 6px; min-width: 280px; z-index: 200; overflow: hidden; box-shadow: 0 24px 48px rgba(0,0,0,0.5); }
@@ -176,6 +176,10 @@
     .author-box { flex-direction: column; text-align: center; }
     nav .nav-links { display: none; }
   }
+
+  /* Sailboat nav indicator */
+  .nav-boat { position: absolute; bottom: -20px; pointer-events: none; transition: left 0.16s cubic-bezier(0.25,0.46,0.45,0.94); opacity: 0; z-index: 101; transform: translateX(-50%); }
+  .nav-boat.visible { opacity: 1; }
 </style>
 </head>
 <body>
@@ -198,6 +202,14 @@
     <a href="index.html#historia" class="nav-link">Historia</a>
     <a href="guias.html" class="nav-link">Publicaciones</a>
     <a href="index.html#contacto" class="nav-link">Contacto</a>
+  </div>
+  <div class="nav-boat" id="navBoat">
+    <svg width="36" height="22" viewBox="0 0 36 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17 1 L17 15 L4 15 Z" fill="#c4a264" opacity="0.9"/>
+      <path d="M18 5 L18 15 L27 15 Z" fill="#c4a264" opacity="0.6"/>
+      <rect x="16.4" y="0" width="1.2" height="15.5" fill="#c4a264"/>
+      <path d="M3 15 Q18 20.5 33 15 L31 17 Q18 23 5 17 Z" fill="#c4a264"/>
+    </svg>
   </div>
 </nav>
 
@@ -367,5 +379,23 @@
   &copy; 2025–2026 Hijo del Mar · Capitán Rodrigo Troncoso · <a href="index.html" style="color:#3a5070;text-decoration:none;">Inicio</a>
 </footer>
 
+<script>
+(function(){
+  var boat=document.getElementById('navBoat');
+  var nav=document.querySelector('nav');
+  if(!boat||!nav)return;
+  var targets=nav.querySelectorAll('.nav-link,.nav-dropdown-toggle');
+  targets.forEach(function(el){
+    el.addEventListener('mouseenter',function(){
+      var nr=nav.getBoundingClientRect();
+      var er=el.getBoundingClientRect();
+      var cx=er.left-nr.left+er.width/2;
+      boat.style.left=cx+'px';
+      boat.classList.add('visible');
+    });
+  });
+  nav.addEventListener('mouseleave',function(){boat.classList.remove('visible');});
+})();
+</script>
 </body>
 </html>
