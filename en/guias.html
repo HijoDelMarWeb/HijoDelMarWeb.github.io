@@ -171,6 +171,19 @@
     </div>
   </a>
 
+  <a href="guia-velero-vs-lancha.html" class="guide-card">
+    <div class="guide-icon"><i class="ti ti-sailboat"></i></div>
+    <div>
+      <div class="guide-tag">Purchase</div>
+      <div class="guide-title">Sailboat vs Motorboat: Which to Buy in Chile?</div>
+      <div class="guide-desc">The question I'm asked most often — with the honest answer no one else will give you.</div>
+    </div>
+    <div>
+      <div class="guide-meta">8 min</div>
+      <div class="guide-arrow"><i class="ti ti-arrow-right"></i></div>
+    </div>
+  </a>
+
   <div class="cta-strip">
     <h2>Have a specific question?</h2>
     <p>If there's something specific about navigation, safety or vessels you'd like to ask, contact me directly.</p>
@@ -217,15 +230,4 @@
   var picker=document.getElementById('langPicker');
   var drop=document.getElementById('langDrop');
   var t;
-  function show(){clearTimeout(t);drop.classList.add('open');}
-  function hide(){t=setTimeout(function(){drop.classList.remove('open');},160);}
-  if(picker){picker.addEventListener('mouseenter',show);picker.addEventListener('mouseleave',hide);}
-  if(drop){drop.addEventListener('mouseenter',show);drop.addEventListener('mouseleave',hide);}
-  var elES=document.getElementById('ldES');
-  var elEN=document.getElementById('ldEN');
-  if(elES){elES.onclick=function(){location.href='../guias.html';}; }
-  if(elEN){elEN.style.cursor='default';}
-})();
-</script>
-</body>
-</html>
+  function show(){clearTimeout(t
