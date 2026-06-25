@@ -351,13 +351,15 @@
 
 <script>
 (function(){
-  var btn=document.getElementById('langToggle');
-  var lbl=document.getElementById('langText');
-  if(btn&&lbl){ lbl.textContent='ES'; }
-  window.hdmToggleLang=function(){
-    var page=location.pathname.split('/').pop()||'index.html';
-    location.href='en/'+page;
-  };
+  var picker=document.getElementById('langPicker');
+  var drop=document.getElementById('langDrop');
+  var t;
+  function show(){clearTimeout(t);drop.classList.add('open');}
+  function hide(){t=setTimeout(function(){drop.classList.remove('open');},160);}
+  if(picker){picker.addEventListener('mouseenter',show);picker.addEventListener('mouseleave',hide);}
+  if(drop){drop.addEventListener('mouseenter',show);drop.addEventListener('mouseleave',hide);}
+  var elEN=document.getElementById('ldEN');
+  if(elEN){elEN.onclick=function(){location.href='en/guia-errores-comprar-velero.html';}; }
 })();
 </script>
 
