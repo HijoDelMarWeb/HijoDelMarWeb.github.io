@@ -514,7 +514,6 @@
            loading="lazy">
       <div class="exp-card-overlay">
         <span class="exp-icon"><i class="ti ti-sunset-2"></i></span>
-        <div class="exp-tag">Romance · Atardecer</div>
         <div class="exp-title">Atardecer con champagne</div>
         <div class="exp-desc">Navegación tranquila por los canales del sur al caer el sol. Champagne a bordo. El capitán cuenta historias de sus rutas por el mundo.</div>
       </div>
@@ -528,7 +527,6 @@
            loading="lazy">
       <div class="exp-card-overlay">
         <span class="exp-icon"><i class="ti ti-heart"></i></span>
-        <div class="exp-tag">Parejas · Noche</div>
         <div class="exp-title">Noche romántica a bordo</div>
         <div class="exp-desc">El velero como suite privada para parejas. Camarote íntimo, vista al río, champagne y desayuno al amanecer.</div>
       </div>
@@ -542,7 +540,6 @@
            loading="lazy">
       <div class="exp-card-overlay">
         <span class="exp-icon"><i class="ti ti-sailboat"></i></span>
-        <div class="exp-tag">Familia · Semana Valdiviana</div>
         <div class="exp-title">Tour náutico por los canales del sur</div>
         <div class="exp-desc">Recorrer el río, los fuertes históricos y la fauna marina con un capitán que ha navegado el mundo entero.</div>
       </div>
@@ -556,7 +553,6 @@
            loading="lazy">
       <div class="exp-card-overlay">
         <span class="exp-icon"><i class="ti ti-anchor"></i></span>
-        <div class="exp-tag">Privado · A medida</div>
         <div class="exp-title">Arriendo privado</div>
         <div class="exp-desc">El velero completo para ti. Cumpleaños, aniversarios, fotografías, eventos íntimos. Flexible y a medida.</div>
       </div>
@@ -690,3 +686,9 @@
   }
   function drawStars() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i = 0; i < 120; i++) {
+      const x = Math.random() * canvas.width;
+      const y = Math.random() * canvas.height;
+      const r = Math.random() * 1.4 + 0.3;
+      const a = Math.random() * 0.7 + 0.2;
+      ctx.be
