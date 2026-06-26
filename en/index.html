@@ -145,9 +145,16 @@
   /* INSTAGRAM */
   .insta-sec { background: #0b1a2c; border-top: 1px solid rgba(196,162,100,0.1); border-bottom: 1px solid rgba(196,162,100,0.1); padding: 3rem 2rem; text-align: center; }
   .insta-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 1.5rem; }
-  .insta-btn { display: flex; align-items: center; gap: 8px; background: rgba(196,162,100,0.1); color: #c4a264; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 10px 20px; border-radius: 2px; text-decoration: none; border: 1px solid rgba(196,162,100,0.25); transition: background 0.2s; }
-  .insta-btn:hover { background: rgba(196,162,100,0.2); }
-  .insta-btn i { font-size: 18px; }
+  .insta-btn { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; padding: 16px 22px; border-radius: 4px; text-decoration: none; border: 1px solid rgba(196,162,100,0.2); background: rgba(196,162,100,0.05); transition: background 0.2s, border-color 0.2s; min-width: 190px; }
+  .insta-platform { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+  .insta-platform i { font-size: 20px; }
+  .insta-handle { font-size: 11px; color: #5a7090; letter-spacing: 1px; text-transform: lowercase; padding-left: 2px; }
+  .insta-ig .insta-platform { color: #e1306c; }
+  .insta-ig { border-color: rgba(225,48,108,0.2); }
+  .insta-ig:hover { background: rgba(225,48,108,0.07); border-color: rgba(225,48,108,0.4); }
+  .insta-yt .insta-platform { color: #e63030; }
+  .insta-yt { border-color: rgba(230,48,48,0.2); }
+  .insta-yt:hover { background: rgba(230,48,48,0.07); border-color: rgba(230,48,48,0.4); }
 
   /* CONTACTO */
   .contact-bar { background: #0b1a2c; border-top: 1px solid rgba(196,162,100,0.15); padding: 4rem 2rem; text-align: center; }
@@ -572,9 +579,18 @@
   <h2 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:#f0e8d5;margin-bottom:0.5rem;">Follow me on Instagram and YouTube</h2>
   <p style="font-size:14px;color:#3a5070;max-width:450px;margin:0 auto;">Real photos of sailing, canals, marine wildlife and landscapes of southern Chile.</p>
   <div class="insta-links">
-    <a class="insta-btn" href="https://www.instagram.com/hijodelmar.cl/" target="_blank"><i class="ti ti-brand-instagram"></i> @hijodelmar.cl</a>
-    <a class="insta-btn" href="https://www.instagram.com/capitanrodrigotroncoso/" target="_blank"><i class="ti ti-brand-instagram"></i> @capitanrodrigotroncoso</a>
-    <a class="insta-btn" href="https://www.youtube.com/@HijodelMarAdventure" target="_blank"><i class="ti ti-brand-youtube"></i> Hijo del Mar</a>
+    <a class="insta-btn insta-ig" href="https://www.instagram.com/hijodelmar.cl/" target="_blank">
+      <div class="insta-platform"><i class="ti ti-brand-instagram"></i> Instagram</div>
+      <div class="insta-handle">@hijodelmar.cl</div>
+    </a>
+    <a class="insta-btn insta-ig" href="https://www.instagram.com/capitanrodrigotroncoso/" target="_blank">
+      <div class="insta-platform"><i class="ti ti-brand-instagram"></i> Instagram</div>
+      <div class="insta-handle">@capitanrodrigotroncoso</div>
+    </a>
+    <a class="insta-btn insta-yt" href="https://www.youtube.com/@HijodelMarAdventure" target="_blank">
+      <div class="insta-platform"><i class="ti ti-brand-youtube"></i> YouTube</div>
+      <div class="insta-handle">Hijo del Mar</div>
+    </a>
   </div>
 </section>
 
