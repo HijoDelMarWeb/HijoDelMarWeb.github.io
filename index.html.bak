@@ -1,23 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nautical Experience in Chile · Son of the Sea · Captain Rodrigo</title>
-<meta name="description" content="Nautical advisory services in Chile with 30 years of experience. Route planning, safety, vessel purchase. Online and in-person. Contact me.">
+
+<!-- SEO Principal -->
+<title>Experiencia Náutica · Hijo del Mar · Capitán Rodrigo</title>
+<meta name="description" content="Asesorías náuticas en Chile con 30 años de experiencia. Planificación de rutas, seguridad, compra de embarcaciones. Online y presencial. Contáctame.">
+<meta name="keywords" content="asesoría náutica Chile, capitán marino mercante, navegación canales sur Chile, seguridad náutica, compra velero Chile, turismo náutico Chile, fiordos patagonia, wellboat, offshore Chile">
+<meta name="author" content="Rodrigo Troncoso Peirano">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.hijodelmar.cl/en/index.html">
+<link rel="canonical" href="https://www.hijodelmar.cl/">
   <link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/index.html">
   <link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/index.html">
   <link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/index.html">
+
+<!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.hijodelmar.cl/en/">
-<meta property="og:title" content="Nautical Experience in Chile · Son of the Sea · Captain Rodrigo Troncoso">
-<meta property="og:description" content="Nautical advisory services online and in-person in Chile. 30 years of real experience. Route planning, safety and vessel purchase. Contact me.">
+<meta property="og:url" content="https://www.hijodelmar.cl/">
+<meta property="og:title" content="Experiencia Náutica en Chile · Hijo del Mar · Capitán Rodrigo Troncoso">
+<meta property="og:description" content="Asesorías náuticas online y presencial en Chile. 30 años de experiencia real. Planificación de rutas, seguridad y compra de embarcaciones. Contáctame.">
 <meta property="og:image" content="https://www.hijodelmar.cl/logo_hijodelmar.png">
+<meta property="og:image:width" content="500">
+<meta property="og:image:height" content="500">
 <meta property="og:site_name" content="Hijo del Mar">
-<link rel="icon" type="image/x-icon" href="../favicon.ico">
-<link rel="apple-touch-icon" href="../favicon_192.png">
+<meta property="og:locale" content="es_CL">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Asesoría Náutica Chile · Hijo del Mar">
+<meta name="twitter:description" content="30 años como Capitán en Chile y el mundo. Asesorías náuticas online y presencial: rutas, seguridad, compra de embarcaciones.">
+<meta name="twitter:image" content="https://www.hijodelmar.cl/logo_hijodelmar.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="favicon_192.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon_192.png">
+
+<!-- Schema.org: Negocio local + Persona + FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.hijodelmar.cl/#business",
+      "name": "Hijo del Mar",
+      "description": "Asesorías náuticas profesionales en todo Chile. Servicio online y presencial. Planificación de navegación, equipos de seguridad, compra de embarcaciones. Capitán con 30 años de experiencia en canales australes, fiordos y mar abierto.",
+      "url": "https://www.hijodelmar.cl",
+      "logo": "https://www.hijodelmar.cl/logo_hijodelmar.png",
+      "image": "https://www.hijodelmar.cl/logo_hijodelmar.png",
+      "telephone": "+56923956367",
+      "email": "contacto@hijodelmar.cl",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CL"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Chile"
+      },
+      "serviceType": ["Asesoría náutica", "Planificación de navegación", "Seguridad marítima", "Turismo náutico"],
+      "priceRange": "$$",
+      "sameAs": [
+        "https://www.instagram.com/hijodelmar.cl/",
+        "https://www.instagram.com/capitanrodrigotroncoso/",
+        "https://linkedin.com/in/alexistroncosomaster"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.hijodelmar.cl/#person",
+      "name": "Rodrigo Troncoso Peirano",
+      "jobTitle": "Capitán de Marina Mercante",
+      "description": "Marino mercante chileno con más de 30 años de experiencia como Capitán en wellboats, remolcadores, PSV, AHTS y buques offshore para la industria petrolera en Chile, África, Sudamérica y el Caribe.",
+      "url": "https://www.hijodelmar.cl",
+      "image": "https://www.hijodelmar.cl/logo_hijodelmar.png",
+      "worksFor": {
+        "@id": "https://www.hijodelmar.cl/#business"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.hijodelmar.cl/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué incluye la asesoría de planificación de navegación?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La asesoría de planificación de navegación incluye revisión de ruta y zona de navegación, análisis de clima, viento, mareas y corrientes, identificación de fondeos, puertos y pasos angostos, cálculo de tiempos, distancias y consumos, y orientación sobre seguridad y preparación de tripulación."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo puedo contratar una asesoría náutica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puedes contactar al Capitán Rodrigo Troncoso directamente por WhatsApp al +56 9 2395 6367 o por email a contacto@hijodelmar.cl. Las asesorías se entregan online (videollamada, WhatsApp o email) desde cualquier lugar de Chile, sin necesidad de desplazamiento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué equipos de seguridad debo llevar en mi embarcación?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La asesoría de equipos de seguridad a bordo cubre chalecos salvavidas, aros, líneas y balsas, equipos de comunicación (VHF, EPIRB, PLB y AIS), ubicación y disponibilidad de equipos, y una evaluación personalizada de lo que tienes y lo que falta para navegar seguro."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo recibir asesoría para comprar un velero o embarcación usada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. La asesoría de compra de embarcaciones usadas incluye revisión del aviso y características del barco, detección de riesgos visibles en fotos y documentación, preguntas clave para hacerle al vendedor, y orientación sobre costos, uso y seguridad. Todo online, antes de que firmes o pagues."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Las asesorías son presenciales o se pueden hacer online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Las asesorías están disponibles tanto online como presencial. El servicio online se entrega por WhatsApp, videollamada o email desde cualquier lugar de Chile. El Capitán Rodrigo Troncoso cubre todo el territorio nacional."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+
+<!-- Google Analytics -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -33,7 +147,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/tabler-icons.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.min.css">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; scroll-padding-top: 100px; }
@@ -117,6 +230,9 @@
   .exp-card-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; filter: brightness(0.88) saturate(1.15); }
   .exp-card:hover .exp-card-img { transform: scale(1.07); filter: brightness(1.0) saturate(1.25); }
   .exp-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(3,10,20,0.90) 0%, rgba(3,10,20,0.38) 50%, rgba(3,10,20,0.0) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.6rem; }
+  .exp-icon { position: absolute; top: 1.1rem; right: 1.1rem; border-radius: 50%; width: 48px; height: 48px; overflow: hidden; flex-shrink: 0; margin: 0; }
+  .exp-icon img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.72; }
+  .exp-tag { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #c4a264; margin-bottom: 5px; }
   .exp-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: #f0e8d5; margin-bottom: 7px; line-height: 1.2; text-shadow: 0 2px 14px rgba(0,0,0,0.8); }
   .exp-desc { font-size: 13px; color: rgba(221,213,192,0.75); line-height: 1.6; text-shadow: 0 1px 6px rgba(0,0,0,0.95); }
 
@@ -148,6 +264,8 @@
   .insta-btn { display: flex; align-items: center; gap: 8px; background: rgba(196,162,100,0.1); color: #c4a264; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 10px 20px; border-radius: 2px; text-decoration: none; border: 1px solid rgba(196,162,100,0.25); transition: background 0.2s; }
   .insta-btn:hover { background: rgba(196,162,100,0.2); }
   .insta-btn i { font-size: 18px; }
+  .insta-placeholder { margin-top: 2rem; padding: 2rem; border: 1px dashed rgba(196,162,100,0.2); border-radius: 4px; max-width: 700px; margin-left: auto; margin-right: auto; }
+  .insta-placeholder p { font-size: 13px; color: #3a5070; }
 
   /* CONTACTO */
   .contact-bar { background: #0b1a2c; border-top: 1px solid rgba(196,162,100,0.15); padding: 4rem 2rem; text-align: center; }
@@ -185,33 +303,9 @@
   .lang-opt:hover{background:rgba(196,162,100,0.1);color:#c4a264;}
   .lang-opt.lang-cur{color:#c4a264;}
   .lang-opt img{border-radius:2px;display:block;}
-
-  /* VIDEO HERO */
-  .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 1; filter: brightness(0.80) saturate(1.1); z-index: 0; }
-  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,19,31,0.18) 0%, rgba(8,19,31,0.0) 40%, rgba(8,19,31,0.55) 100%); z-index: 1; }
-  .hero canvas { z-index: 2; }
-  .hero-wave { z-index: 3 !important; }
-  .hero-content { z-index: 4; }
-
-  /* TESTIMONIALS */
-  .testi-sec { background: #0b1a2c; border-top: 1px solid rgba(196,162,100,0.1); border-bottom: 1px solid rgba(196,162,100,0.1); padding: 4rem 2rem; }
-  .testi-inner { max-width: 1100px; margin: 0 auto; }
-  .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 2rem; }
-  .testi-card { background: #08131f; border: 1px solid rgba(196,162,100,0.1); border-radius: 6px; padding: 1.75rem; position: relative; transition: border-color 0.25s, transform 0.25s; }
-  .testi-card:hover { border-color: rgba(196,162,100,0.38); transform: translateY(-3px); }
-  .testi-quot { font-family: 'Cormorant Garamond', serif; font-size: 56px; color: rgba(196,162,100,0.15); line-height: 1; position: absolute; top: 10px; left: 18px; }
-  .testi-stars { color: #c4a264; font-size: 13px; margin-bottom: 0.7rem; letter-spacing: 2px; }
-  .testi-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; color: #9a8868; line-height: 1.75; margin-bottom: 1.25rem; padding-top: 0.25rem; }
-  .testi-author { display: flex; align-items: center; gap: 10px; }
-  .testi-avatar { width: 38px; height: 38px; border-radius: 50%; background: rgba(196,162,100,0.12); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: #c4a264; flex-shrink: 0; border: 1px solid rgba(196,162,100,0.2); }
-  .testi-name { font-size: 12px; font-weight: 600; letter-spacing: 1px; color: #c4a264; text-transform: uppercase; }
-  .testi-role { font-size: 11px; color: #3a5070; margin-top: 1px; }
-  @media (max-width: 768px) { .testi-grid { grid-template-columns: 1fr; } }
-
-  /* WHATSAPP FLOATING BUTTON */
-  .wa-fab { position: fixed; bottom: 28px; right: 28px; z-index: 997; width: 58px; height: 58px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 6px 24px rgba(37,211,102,0.38); transition: transform 0.22s, box-shadow 0.22s; }
-  .wa-fab:hover { transform: scale(1.12); box-shadow: 0 10px 36px rgba(37,211,102,0.55); }
-  .wa-fab svg { width: 30px; height: 30px; fill: white; }
+  /* Hide Google Translate default UI */
+  .goog-te-banner-frame, iframe.skiptranslate, .goog-te-gadget-icon { display: none !important; }
+  body { top: 0 !important; }
 
   /* ── Mobile hamburger ── */
   .nav-burger { display: none; background: none; border: 1px solid rgba(196,162,100,0.3); border-radius: 4px; padding: 8px 10px; cursor: pointer; flex-direction: column; gap: 5px; flex-shrink: 0; }
@@ -236,27 +330,27 @@
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo"><img src="../logo_hijodelmar.png" alt="Hijo del Mar" width="48" height="48" style="height:48px;width:48px;border-radius:50%;vertical-align:middle;margin-right:10px;">Hijo <span id="navBoatHome">del</span> Mar</a>
+  <a href="#" class="nav-logo"><img src="logo_hijodelmar.png" alt="Hijo del Mar" width="48" height="48" style="height:48px;width:48px;border-radius:50%;vertical-align:middle;margin-right:10px;">Hijo <span id="navBoatHome">del</span> Mar</a>
   <div class="nav-links">
-    <a href="index.html" class="nav-link">HOME</a>
-    <a href="#velero" class="nav-link">The Sailboat</a>
-    <a href="#historia" class="nav-link">History</a>
-    <a href="guias.html" class="nav-link">Publications</a>
-    <a href="#contacto" class="nav-link">Contact</a>
+    <a href="index.html" class="nav-link">INICIO</a>
+    <a href="#velero" class="nav-link">El velero</a>
+    <a href="#historia" class="nav-link">Historia</a>
+    <a href="guias.html" class="nav-link">Publicaciones</a>
+    <a href="#contacto" class="nav-link">Contacto</a>
     <div class="nav-dropdown">
-      <button class="nav-dropdown-toggle">Resources</button>
+      <button class="nav-dropdown-toggle">Recursos</button>
       <div class="nav-dropdown-menu">
-        <div class="nav-dropdown-header">Nautical Services</div>
-        <a href="asesoria-navegacion.html" class="nav-dropdown-item"><i class="ti ti-route"></i>Navigation Planning</a>
-        <a href="asesoria-seguridad.html" class="nav-dropdown-item"><i class="ti ti-shield-check"></i>Safety Equipment</a>
-        <a href="asesoria-electronica.html" class="nav-dropdown-item"><i class="ti ti-device-tablet"></i>Electronic Aids</a>
-        <a href="asesoria-supervivencia.html" class="nav-dropdown-item"><i class="ti ti-lifebuoy"></i>Sea Survival</a>
-        <a href="asesoria-compra-embarcacion.html" class="nav-dropdown-item"><i class="ti ti-anchor"></i>Vessel Selection Help</a>
+        <div class="nav-dropdown-header">Asesorías náuticas</div>
+        <a href="asesoria-navegacion.html" class="nav-dropdown-item"><i class="ti ti-route"></i>Planificación de Navegación</a>
+        <a href="asesoria-seguridad.html" class="nav-dropdown-item"><i class="ti ti-shield-check"></i>Equipos de Seguridad</a>
+        <a href="asesoria-electronica.html" class="nav-dropdown-item"><i class="ti ti-device-tablet"></i>Ayudas Electrónicas</a>
+        <a href="asesoria-supervivencia.html" class="nav-dropdown-item"><i class="ti ti-lifebuoy"></i>Supervivencia en el Mar</a>
+        <a href="asesoria-compra-embarcacion.html" class="nav-dropdown-item"><i class="ti ti-anchor"></i>Ayuda en Selección de Barcos</a>
       </div>
     </div>
-    <div class="lang-picker" id="langPicker"><button class="nav-lang-btn lang-en" id="langToggle"><img src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="US" style="border-radius:2px;display:block;"><span id="langText">EN</span></button><div class="lang-drop" id="langDrop"><div class="lang-opt lang-cur" id="ldEN"><img src="https://flagcdn.com/16x12/us.png" width="16" height="12" alt="US">English</div><div class="lang-opt" id="ldES"><img src="https://flagcdn.com/16x12/cl.png" width="16" height="12" alt="CL">Español</div></div></div>
+    <div class="lang-picker" id="langPicker"><button class="nav-lang-btn" id="langToggle"><img src="https://flagcdn.com/20x15/cl.png" width="20" height="15" alt="CL" style="border-radius:2px;display:block;"><span id="langText">ES</span></button><div class="lang-drop" id="langDrop"><div class="lang-opt" id="ldEN"><img src="https://flagcdn.com/16x12/us.png" width="16" height="12" alt="US">English</div><div class="lang-opt lang-cur" id="ldES"><img src="https://flagcdn.com/16x12/cl.png" width="16" height="12" alt="CL">Español</div></div></div>
   </div>
-  <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="nav-burger" id="navBurger" aria-label="Menú"><span></span><span></span><span></span></button>
   <div class="nav-boat" id="navBoat">
     <svg width="20" height="18" viewBox="0 0 60 46" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#c4a264" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
       <line x1="32" y1="2" x2="32" y2="35"/>
@@ -269,170 +363,116 @@
 </nav>
 
 <section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline>
-    <source src="../hero.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay"></div>
   <canvas id="stars"></canvas>
   <svg class="hero-wave" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M0,30 C240,10 480,50 720,30 C960,10 1200,45 1440,25 L1440,60 L0,60 Z" fill="#0b1a2c" opacity="0.7"/>
     <path d="M0,44 C300,28 600,55 900,40 C1140,27 1300,50 1440,40 L1440,60 L0,60 Z" fill="#08131f" opacity="0.9"/>
   </svg>
   <div class="hero-content">
-    <img src="../logo_hijodelmar.png" alt="Captain Rodrigo Troncoso - Nautical Advisory Chile" width="260" height="260" loading="eager" style="width:260px;height:260px;border-radius:50%;margin-bottom:1.5rem;display:block;margin-left:auto;margin-right:auto;">
-    <div class="hero-tag">Captain &middot; Merchant Marine &middot; All Chile &middot; Online &amp; In-Person</div>
-    <h1 class="hero-title">Nautical Experience</h1>
-    <div class="hero-by">Rodrigo Troncoso Peirano &nbsp;&middot;&nbsp; Captain</div>
-    <p class="hero-tagline">Nautical advisory services with 30 years of real experience.<br>And the sailboat coming: cruising tours in the canals of southern Chile.</p>
+    <img src="logo_hijodelmar.png" alt="Capitán Rodrigo Troncoso - Asesoría Náutica Chile" width="260" height="260" loading="eager" style="width:260px;height:260px;border-radius:50%;margin-bottom:1.5rem;display:block;margin-left:auto;margin-right:auto;">
+    <div class="hero-tag">Capitán · Marino Mercante · Todo Chile · Online y Presencial</div>
+    <h1 class="hero-title">Experiencia Náutica</h1>
+    <div class="hero-by">Rodrigo Troncoso Peirano &nbsp;·&nbsp; Capitán</div>
+    <p class="hero-tagline">Asesorías náuticas con 30 años de experiencia real.<br>Y el velero que viene: turismo en los canales del sur de Chile.</p>
     <div class="hero-btns">
-      <a href="https://wa.me/56923956367?text=Hello,%20I%20would%20like%20to%20request%20a%20nautical%20advisory%20with%20Hijo%20del%20Mar." class="btn-gold">Request advisory &rarr;</a>
-      <a href="#velero" class="btn-ghost">The sailboat coming</a>
+      <a href="https://wa.me/56923956367?text=Hola,%20quiero%20solicitar%20una%20asesoría%20con%20Hijo%20del%20Mar." class="btn-gold">Solicitar asesoría →</a>
+      <a href="#velero" class="btn-ghost">El velero que viene</a>
     </div>
   </div>
 </section>
 
 <div class="band">
-  <div class="band-item" data-aos="fade-up" data-aos-delay="0"><div class="band-num" data-count="30" data-suffix="+">0</div><div class="band-lbl">Years at sea</div></div>
-  <div class="band-item" data-aos="fade-up" data-aos-delay="100"><div class="band-num" data-count="15" data-suffix="+">0</div><div class="band-lbl">Countries operated</div></div>
-  <div class="band-item" data-aos="fade-up" data-aos-delay="200"><div class="band-num" data-count="5" data-suffix="">0</div><div class="band-lbl">Advisory services</div></div>
-  <div class="band-item" data-aos="fade-up" data-aos-delay="300"><div class="band-num" data-count="749" data-suffix="">0</div><div class="band-lbl">DP days on record</div></div>
+  <div class="band-item"><div class="band-num">30+</div><div class="band-lbl">Años en el mar</div></div>
+  <div class="band-item"><div class="band-num">15+</div><div class="band-lbl">Países operados</div></div>
+  <div class="band-item"><div class="band-num">5</div><div class="band-lbl">Asesorías disponibles</div></div>
+  <div class="band-item"><div class="band-num">749</div><div class="band-lbl">Días DP registrados</div></div>
 </div>
 
 <div class="sep"></div>
 
 <section class="sec" id="historia" style="padding-left: 3rem; padding-right: 3rem; text-align: justify;">
-  <div class="sec-tag" data-aos="fade-up">About me</div>
-  <h2 class="sec-h" data-aos="fade-up" data-aos-delay="60">30 years at sea, at your service</h2>
-  <p class="sec-p">Welcome — my name is Rodrigo Troncoso, I'm a Captain. My story starts in commercial fishing, sailing Chile's open ocean and southern fjords all the way to the Antarctic Sea. The Drake Passage and Cape Horn became my home, and that experience — witnessing nature at its most powerful — prepared me for everything that followed.</p>
-  <p class="sec-p">From there I made the leap into offshore work, as Captain of highly specialized vessels: PSVs, AHTSs, dive support ships and FSIVs, operating for the oil industry off the coasts of Angola, Brazil, Congo, Ghana, Venezuela, Trinidad and Tobago, Cameroon and the Caribbean — maneuvering in open sea just meters from oil platforms in waters that forgive no mistakes.</p>
-  <p class="sec-p">I have over 15 years of DP (dynamic positioning) operations, with current international certifications, all carried out with the composure and clear head that only comes from commanding in any weather, any port, any emergency. I returned to Chile with all of that knowledge, and now I sail the Patagonian fjords again in wellboats for the salmon industry — but now, in this stage of my life, with a new purpose.</p>
-  <p class="sec-p">Today I put all of this experience at your disposal: for those who sail or want to sail, sports enthusiasts, adventurers, business people, or anyone who wants to move through the sea with me as their co-pilot. Just 30 years of experience — and I'm still evolving. Get in touch.</p>
+  <div class="sec-tag">Quién soy</div>
+  <h2 class="sec-h">30 Años de mar puesto a tu servicio</h2>
+  <p class="sec-p">Bienvenido, mi nombre es Rodrigo Troncoso, soy Capitán, un placer conocerlos. Mi historia es esta: Mis comienzos en el mar fueron en la pesca industrial, navegando el mar abierto chileno y los fiordos del sur hasta llegar incluso al Mar Antártico, haciendo de mi hogar el temido Mar de Drake y el Cabo de Hornos, tuve la bendición de ver cosas maravillosas, y además pude sentir la naturaleza en su máximo poder — esa experiencia me preparó para lo que vendría más adelante.</p>
+  <p class="sec-p">De ahí di el salto al mundo offshore, como Capitán de barcos extremadamente tecnológicos y especializados, tales como PSV, AHTS, buques de buceo y FSIV, los cuales trabajaban para la industria petrolera frente a las costas de diversos países: Angola, Brasil, Congo, Ghana, Venezuela, Trinidad y Tobago, Camerún y el Caribe, y en todos ellos maniobrando en altamar a solo unos pocos metros de plataformas petroleras, en aguas que no perdonan errores.</p>
+  <p class="sec-p">Tengo más de 15 años de experiencia operando sistemas DP (posicionamiento dinámico), con certificaciones internacionales vigentes, todo esto con el temple y la cabeza fría que solo da estar al mando en cualquier clima, cualquier puerto, cualquier emergencia. Volví a Chile con todo ese mundo metido en la mochila, y ahora navego de nuevo los fiordos de la Patagonia en barcos wellboat en la industria del salmón chileno — pero ahora, en esta etapa de mi vida, con un propósito nuevo.</p>
+  <p class="sec-p">Hoy pongo toda esta experiencia a disposición de ustedes: quienes navegan o quieren navegar, deportistas, aventureros, empresarios y/o cualquier persona que quiera moverse por el mar conmigo como su copiloto y con esta experiencia ayudándolos en todo lo que pueda. Solo son 30 años de experiencia, y aún sigo evolucionando. Anímate y contáctame.</p>
 </section>
 
 <div class="sep"></div>
 
 <section class="sec" id="asesorias">
-  <div class="sec-tag" data-aos="fade-up">Nautical advisory services</div>
-  <h2 class="sec-h" data-aos="fade-up" data-aos-delay="60">Real experience, available to you today</h2>
-  <p class="sec-p">These advisory services are available right now. Delivered by WhatsApp, video call or email, from anywhere in Chile.</p>
+  <div class="sec-tag">Asesorías náuticas</div>
+  <h2 class="sec-h">Experiencia real, a tu disposición hoy</h2>
+  <p class="sec-p">Estas asesorías están disponibles ahora mismo. Se entregan por WhatsApp, videollamada o email, desde cualquier lugar de Chile.</p>
 
   <div class="srv-grid">
-    <div class="srv-card" data-aos="fade-up" data-aos-delay="0">
+    <div class="srv-card">
       <span class="srv-icon"><i class="ti ti-route"></i></span>
-      <div class="srv-title">Navigation Planning</div>
-      <div class="srv-desc">I help you plan your route through Chile's canals, rivers and coastal zones before you set sail.</div>
+      <div class="srv-title">Planificación de navegación</div>
+      <div class="srv-desc">Te ayudo a planificar tu ruta por los canales, ríos y zonas costeras de Chile antes de zarpar.</div>
       <ul class="srv-items">
-        <li>Route and navigation zone review</li>
-        <li>Weather, wind, tides and currents</li>
-        <li>Anchorages, harbors and narrow passes</li>
-        <li>Times, distances and fuel consumption</li>
-        <li>Safety and crew preparation</li>
+        <li>Revisión de ruta y zona de navegación</li>
+        <li>Clima, viento, mareas y corrientes</li>
+        <li>Fondeos, puertos y pasos angostos</li>
+        <li>Tiempos, distancias y consumos</li>
+        <li>Seguridad y preparación de tripulación</li>
       </ul>
-      <a class="srv-btn" href="asesoria-navegacion.html">Learn more &rarr;</a>
+      <a class="srv-btn" href="asesoria-navegacion.html">Ver más →</a>
     </div>
 
-    <div class="srv-card" data-aos="fade-up" data-aos-delay="100">
+    <div class="srv-card">
       <span class="srv-icon"><i class="ti ti-shield-check"></i></span>
-      <div class="srv-title">Safety Equipment On Board</div>
-      <div class="srv-desc">I review whether your vessel has the right equipment to protect lives in an emergency.</div>
+      <div class="srv-title">Equipos de seguridad a bordo</div>
+      <div class="srv-desc">Reviso si tu embarcación cuenta con los equipos correctos para proteger la vida en caso de emergencia.</div>
       <ul class="srv-items">
-        <li>Life jackets, rings, lines and life rafts</li>
-        <li>VHF, EPIRB, PLB and AIS</li>
-        <li>Equipment location and accessibility</li>
-        <li>Assessment of what you have and what's missing</li>
+        <li>Chalecos, aros, líneas y balsas</li>
+        <li>VHF, EPIRB, PLB y AIS</li>
+        <li>Ubicación y disponibilidad de equipos</li>
+        <li>Evaluación de lo que tienes y lo que falta</li>
       </ul>
-      <a class="srv-btn" href="asesoria-seguridad.html">Learn more &rarr;</a>
+      <a class="srv-btn" href="asesoria-seguridad.html">Ver más →</a>
     </div>
 
-    <div class="srv-card" data-aos="fade-up" data-aos-delay="0">
+    <div class="srv-card">
       <span class="srv-icon"><i class="ti ti-anchor"></i></span>
-      <div class="srv-title">Used Vessel Purchase</div>
-      <div class="srv-desc">Before you buy, let's review the listing, photos and risks together. Avoid expensive mistakes with professional eyes.</div>
+      <div class="srv-title">Compra de embarcaciones usadas</div>
+      <div class="srv-desc">Antes de comprar, revisemos juntos el aviso, las fotos y los riesgos. Evita errores caros con los ojos de un profesional.</div>
       <ul class="srv-items">
-        <li>Listing and characteristics review</li>
-        <li>Detection of visible risks</li>
-        <li>Key questions to ask the seller</li>
-        <li>Guidance on use, safety and costs</li>
+        <li>Revisión del aviso y características</li>
+        <li>Detección de riesgos visibles</li>
+        <li>Preguntas clave al vendedor</li>
+        <li>Orientación de uso, seguridad y costos</li>
       </ul>
-      <a class="srv-btn" href="asesoria-compra-embarcacion.html">Learn more &rarr;</a>
+      <a class="srv-btn" href="asesoria-compra-embarcacion.html">Ver más →</a>
     </div>
 
-    <div class="srv-card" data-aos="fade-up" data-aos-delay="100">
+    <div class="srv-card">
       <span class="srv-icon"><i class="ti ti-device-tablet"></i></span>
-      <div class="srv-title">Electronic Aids for Navigation</div>
-      <div class="srv-desc">I guide you on the electronic equipment that truly matters to navigate better prepared.</div>
+      <div class="srv-title">Ayudas electrónicas para navegar</div>
+      <div class="srv-desc">Te oriento sobre los equipos electrónicos que realmente importan para navegar mejor preparado.</div>
       <ul class="srv-items">
-        <li>GPS, chartplotter, depth sounder and radar</li>
-        <li>AIS, VHF, EPIRB and PLB</li>
-        <li>Nautical apps and backup batteries</li>
-        <li>What's essential and what's optional</li>
+        <li>GPS, plotter, ecosonda y radar</li>
+        <li>AIS, VHF, EPIRB y PLB</li>
+        <li>Aplicaciones náuticas y baterías de respaldo</li>
+        <li>Qué es útil y qué es accesorio</li>
       </ul>
-      <a class="srv-btn" href="asesoria-electronica.html">Learn more &rarr;</a>
+      <a class="srv-btn" href="asesoria-electronica.html">Ver más →</a>
     </div>
 
     <div class="srv-card full">
       <span class="srv-icon"><i class="ti ti-lifebuoy"></i></span>
-      <div class="srv-title">Survival at Sea</div>
-      <div class="srv-desc">I help you review what equipment you should carry on board to face a real emergency at sea, in the lakes, rivers and canals of southern Chile.</div>
+      <div class="srv-title">Supervivencia en el mar</div>
+      <div class="srv-desc">Te ayudo a revisar qué equipos deberías llevar a bordo para enfrentar una emergencia real en el mar, los lagos, ríos y canales del sur de Chile.</div>
       <ul class="srv-items two-col">
-        <li>Immersion suits and life jackets</li>
-        <li>Life rafts and rescue lines</li>
-        <li>Lights, whistles and first aid kit</li>
-        <li>Emergency communications</li>
-        <li>Basic rescue procedures</li>
-        <li>How to increase survival chances</li>
+        <li>Trajes de inmersión y chalecos</li>
+        <li>Balsas y líneas de rescate</li>
+        <li>Luces, silbatos y botiquín</li>
+        <li>Comunicaciones de emergencia</li>
+        <li>Procedimientos básicos de rescate</li>
+        <li>Cómo aumentar probabilidades de sobrevivir</li>
       </ul>
-      <a class="srv-btn" href="asesoria-supervivencia.html">Learn more &rarr;</a>
-    </div>
-  </div>
-</section>
-
-<div class="sep"></div>
-
-<!-- TESTIMONIALS -->
-<section class="testi-sec">
-  <div class="testi-inner">
-    <div style="text-align:center;" data-aos="fade-up">
-      <div class="sec-tag">What they say</div>
-      <h2 class="sec-h">Who have trusted my experience</h2>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card" data-aos="fade-up" data-aos-delay="0">
-        <div class="testi-quot">"</div>
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">Rodrigo helped me plan my first voyage through Patagonia's canals. Thanks to his advisory we were prepared for every scenario. A true professional.</p>
-        <div class="testi-author">
-          <div class="testi-avatar">M</div>
-          <div>
-            <div class="testi-name">Mark Sullivan</div>
-            <div class="testi-role">Recreational sailor · Puerto Montt</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card" data-aos="fade-up" data-aos-delay="120">
-        <div class="testi-quot">"</div>
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">I was about to buy a vessel with serious structural issues. Rodrigo's advisory saved me a lot of money and a huge headache.</p>
-        <div class="testi-author">
-          <div class="testi-avatar">C</div>
-          <div>
-            <div class="testi-name">Claire Thomas</div>
-            <div class="testi-role">First-time boat buyer · Santiago</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card" data-aos="fade-up" data-aos-delay="240">
-        <div class="testi-quot">"</div>
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">30 years of real experience at sea can't be improvised. The safety equipment advisory was exactly what I needed before the summer sailing season.</p>
-        <div class="testi-author">
-          <div class="testi-avatar">A</div>
-          <div>
-            <div class="testi-name">Andrew Foster</div>
-            <div class="testi-role">Sports captain · Valdivia</div>
-          </div>
-        </div>
-      </div>
+      <a class="srv-btn" href="asesoria-supervivencia.html">Ver más →</a>
     </div>
   </div>
 </section>
@@ -440,126 +480,161 @@
 <div class="sep"></div>
 
 <section class="sec sec-wide">
-  <div class="sec-tag">Real-time weather</div>
-  <h2 class="sec-h">Current conditions where you are</h2>
-  <p class="sec-p">Wind, swell and weather in real time. Before you cast off, check the conditions. The map centers automatically on your location.</p>
+  <div class="sec-tag">Clima en tiempo real</div>
+  <h2 class="sec-h">Condiciones actuales donde estás</h2>
+  <p class="sec-p">Viento, oleaje y clima en tiempo real. Antes de zarpar, revisa las condiciones. El mapa se centra automáticamente en tu ubicación.</p>
   <div id="windy-container" style="width:100%; border-radius:4px; overflow:hidden; border:1px solid rgba(196,162,100,0.2); margin-top:1.5rem;">
     <iframe id="windy-frame" src="https://embed.windy.com/embed2.html?lat=-39.8&lon=-73.2&zoom=7&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" width="100%" height="450" frameborder="0" loading="lazy" style="display:block;"></iframe>
   </div>
-  <p style="font-size:11px; color:#3a5070; margin-top:0.75rem; text-align:center;">If your browser requests location permission, accept it to see weather for your exact area.</p>
+  <p style="font-size:11px; color:#3a5070; margin-top:0.75rem; text-align:center;">Si tu navegador solicita permiso de ubicación, acéptalo para ver el clima de tu zona exacta.</p>
 </section>
+
+<script>
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(pos) {
+      const lat = pos.coords.latitude.toFixed(4);
+      const lon = pos.coords.longitude.toFixed(4);
+      const frame = document.getElementById('windy-frame');
+      if (frame) {
+        frame.src = `https://embed.windy.com/embed2.html?lat=${lat}&lon=${lon}&zoom=8&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1`;
+      }
+    }, function() {
+    });
+  }
+</script>
 
 <div class="sep"></div>
 
 <section class="sec" id="velero">
-  <div class="sec-tag">The coming project</div>
-  <div class="sec-tag" style="font-size:13px; letter-spacing:3px; margin-bottom:0.4rem;">Available from 2029</div>
-  <h2 class="sec-h">A sailboat in Chile: the dream under construction</h2>
-  <p class="sec-p">While the advisory services are the present, the sailboat is the future. A 40–47 ft vessel, brought from abroad to Chile, to offer unique experiences in the canals and rivers of the south.</p>
+  <div class="sec-tag">El proyecto que viene</div>
+  <div class="sec-tag" style="font-size:13px; letter-spacing:3px; margin-bottom:0.4rem;">Disponible desde 2029</div>
+  <h2 class="sec-h">Un velero · Una meta en construcción</h2>
+  <p class="sec-p">Mientras las asesorías son el presente, el velero es el futuro. Un barco de 40 a 47 pies, traído desde el extranjero a Chile, para ofrecer experiencias únicas en los canales y ríos del sur.</p>
 
   <div class="exp-grid">
+
+    <!-- Tarjeta 1: Atardecer con champagne -->
     <div class="exp-card" style="background:linear-gradient(135deg,#1a0800 0%,#5c2000 35%,#9a5500 65%,#c47a10 100%);">
-      <img class="exp-card-img" src="https://images.unsplash.com/photo-1526761122248-c31c93f8b2b9?auto=format&fit=crop&w=800&q=82" alt="White sailboat sailing at sunset" loading="lazy">
+      <img class="exp-card-img"
+           src="https://images.unsplash.com/photo-1526761122248-c31c93f8b2b9?auto=format&fit=crop&w=800&q=82"
+           alt="Velero blanco navegando al atardecer — experiencia con champagne en los canales del sur de Chile"
+           loading="lazy">
       <div class="exp-card-overlay">
-        <div class="exp-title">Champagne Sunset Sail</div>
-        <div class="exp-desc">A tranquil cruise through the southern canals at sunset. Champagne on board. The captain shares stories from his voyages around the world.</div>
+<div class="exp-title">Atardecer con champagne</div>
+        <div class="exp-desc">Navegación tranquila por los canales del sur al caer el sol. Champagne a bordo. El capitán cuenta historias de sus rutas por el mundo.</div>
       </div>
     </div>
+
+    <!-- Tarjeta 2: Noche romántica a bordo -->
     <div class="exp-card" style="background:linear-gradient(135deg,#000814 0%,#03071e 40%,#0d1b40 75%,#0a2463 100%);">
-      <img class="exp-card-img" src="https://images.unsplash.com/photo-1759888107288-b9a8857e20e6?auto=format&fit=crop&w=800&q=82" alt="Couple enjoying a romantic evening on a boat at night" loading="lazy">
+      <img class="exp-card-img"
+           src="https://images.unsplash.com/photo-1759888107288-b9a8857e20e6?auto=format&fit=crop&w=800&q=82"
+           alt="Pareja enamorada viendo las luces de la ciudad desde un bote de noche — noche romántica a bordo del velero en Valdivia"
+           loading="lazy">
       <div class="exp-card-overlay">
-        <div class="exp-title">Romantic Night on Board</div>
-        <div class="exp-desc">The sailboat as a private suite for couples. Intimate cabin, river views, champagne and breakfast at dawn.</div>
+<div class="exp-title">Noche romántica a bordo</div>
+        <div class="exp-desc">El velero como suite privada para parejas. Camarote íntimo, vista al río, champagne y desayuno al amanecer.</div>
       </div>
     </div>
+
+    <!-- Tarjeta 3: Tour náutico -->
     <div class="exp-card" style="background:linear-gradient(135deg,#0a1628 0%,#0d2b22 35%,#0f3d2a 65%,#1B4332 100%);">
-      <img class="exp-card-img" src="https://images.unsplash.com/photo-1775649136154-f25fae163d7b?auto=format&fit=crop&w=800&q=82" alt="Three people sailing with the Andes mountains in the background" loading="lazy">
+      <img class="exp-card-img"
+           src="https://images.unsplash.com/photo-1775649136154-f25fae163d7b?auto=format&fit=crop&w=800&q=82"
+           alt="Tres personas navegando en velero con montañas de los Andes al fondo — tour náutico por los canales del sur de Chile"
+           loading="lazy">
       <div class="exp-card-overlay">
-        <div class="exp-title">Nautical Tour of the Southern Canals</div>
-        <div class="exp-desc">Explore the river, historic forts and marine wildlife with a captain who has sailed the entire world.</div>
+<div class="exp-title">Tour náutico por los canales del sur</div>
+        <div class="exp-desc">Recorrer el río, los fuertes históricos y la fauna marina con un capitán que ha navegado el mundo entero.</div>
       </div>
     </div>
+
+    <!-- Tarjeta 4: Arriendo privado -->
     <div class="exp-card" style="background:linear-gradient(135deg,#050f1c 0%,#0a1f3d 40%,#1a3560 70%,#0d2b50 100%);">
-      <img class="exp-card-img" src="https://images.unsplash.com/photo-1542405242-8217b4c9e34c?auto=format&fit=crop&w=800&q=82" alt="Group of people celebrating on a private yacht" loading="lazy">
+      <img class="exp-card-img"
+           src="https://images.unsplash.com/photo-1542405242-8217b4c9e34c?auto=format&fit=crop&w=800&q=82"
+           alt="Grupo de personas celebrando a bordo de un yate privado — arriendo privado del velero Hijo del Mar"
+           loading="lazy">
       <div class="exp-card-overlay">
-        <div class="exp-title">Private Charter</div>
-        <div class="exp-desc">The full sailboat for you. Birthdays, anniversaries, photography, intimate events. Flexible and tailored.</div>
+<div class="exp-title">Arriendo privado</div>
+        <div class="exp-desc">El velero completo para ti. Cumpleaños, aniversarios, fotografías, eventos íntimos. Flexible y a medida.</div>
       </div>
     </div>
+
   </div>
 
   <div class="price-strip">
     <div class="price-card">
-      <div class="price-label">Sunset</div>
+      <div class="price-label">Atardecer</div>
       <div class="price-amount">$45.000</div>
-      <div class="price-unit">per person &middot; 2 hrs</div>
+      <div class="price-unit">por persona · 2 hrs</div>
       <ul class="price-features">
-        <li>Sunset sailing</li>
-        <li>Champagne included</li>
-        <li>Captain's narration</li>
+        <li>Navegación al atardecer</li>
+        <li>Champagne incluido</li>
+        <li>Guía del capitán</li>
       </ul>
     </div>
     <div class="price-card featured">
-      <div class="price-badge">Most special</div>
-      <div class="price-label">Night on board</div>
+      <div class="price-badge">Más especial</div>
+      <div class="price-label">Noche a bordo</div>
       <div class="price-amount">$180.000</div>
-      <div class="price-unit">couple &middot; full night</div>
+      <div class="price-unit">pareja · noche completa</div>
       <ul class="price-features">
-        <li>Private cabin</li>
-        <li>Champagne + breakfast</li>
-        <li>River view all night</li>
+        <li>Camarote privado</li>
+        <li>Champagne + desayuno</li>
+        <li>Vista al río toda la noche</li>
       </ul>
     </div>
     <div class="price-card">
-      <div class="price-label">Private charter</div>
-      <div class="price-amount">On request</div>
-      <div class="price-unit">depending on duration &amp; group</div>
+      <div class="price-label">Arriendo privado</div>
+      <div class="price-amount">A convenir</div>
+      <div class="price-unit">según duración y grupo</div>
       <ul class="price-features">
-        <li>Full sailboat for you</li>
-        <li>Custom route</li>
-        <li>Check availability</li>
+        <li>Velero completo para ti</li>
+        <li>Ruta personalizada</li>
+        <li>Consultar disponibilidad</li>
       </ul>
     </div>
   </div>
-  <p class="price-note">* Reference prices. The sailboat is being acquired.</p>
+  <p class="price-note">* Tarifas referenciales. El velero está en proceso de adquisición.</p>
 </section>
 
 <div class="sep"></div>
 
 <section class="sec">
-  <div class="sec-tag">The roadmap</div>
-  <h2 class="sec-h">How this dream is being built</h2>
+  <div class="sec-tag">La hoja de ruta</div>
+  <h2 class="sec-h">Cómo se construye este sueño</h2>
   <div class="journey">
     <div class="j-step">
       <div class="j-num">1</div>
       <div>
-        <div class="j-year">Now &middot; 2025&ndash;2026</div>
-        <div class="j-title">Advisory services and brand building</div>
-        <div class="j-desc">Offering the five services available today. Creating content on social media. Building a reputation before the sailboat arrives.</div>
+        <div class="j-year">Ahora · 2025–2026</div>
+        <div class="j-title">Asesorías náuticas y construcción de marca</div>
+        <div class="j-desc">Ofrecer las cinco asesorías disponibles hoy. Crear contenido en redes. Hacerme conocido antes de que el velero llegue.</div>
       </div>
     </div>
     <div class="j-step">
       <div class="j-num">2</div>
       <div>
-        <div class="j-year">2027&ndash;2028</div>
-        <div class="j-title">Select and purchase the sailboat abroad</div>
-        <div class="j-desc">40 to 47 feet, meeting the standards a professional mariner demands. The search itself becomes content.</div>
+        <div class="j-year">2027–2028</div>
+        <div class="j-title">Seleccionar y comprar el velero en el extranjero</div>
+        <div class="j-desc">40 a 47 pies, con los estándares que exige un marino profesional. La búsqueda también será contenido.</div>
       </div>
     </div>
     <div class="j-step">
       <div class="j-num">3</div>
       <div>
-        <div class="j-year">2028&ndash;2029</div>
-        <div class="j-title">The voyage of bringing her to Chile</div>
-        <div class="j-desc">Every mile, every port, every decision documented on video. The passage to bring the boat is the most compelling content of all.</div>
+        <div class="j-year">2028–2029</div>
+        <div class="j-title">La travesía de traerlo a Chile</div>
+        <div class="j-desc">Cada milla, cada puerto, cada decisión documentada en video. El viaje de traer el barco ya es el contenido más potente.</div>
       </div>
     </div>
     <div class="j-step">
       <div class="j-num">4</div>
       <div>
-        <div class="j-year">2029&ndash;2030</div>
-        <div class="j-title">Set sail from southern Chile</div>
-        <div class="j-desc">The sailboat anchors in the southern canals. Tourism begins. Sunsets, romantic nights, nautical tours. The life I chose.</div>
+        <div class="j-year">2029–2030</div>
+        <div class="j-title">Zarpar desde el sur de Chile</div>
+        <div class="j-desc">El velero fondea en los canales del sur. Empieza el turismo. Atardeceres, noches románticas, tours náuticos. La vida que elegí.</div>
       </div>
     </div>
   </div>
@@ -568,22 +643,28 @@
 <div class="sep"></div>
 
 <section class="insta-sec">
-  <div class="sec-tag" style="text-align:center;">Southern Chile seen from the sea</div>
-  <h2 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:#f0e8d5;margin-bottom:0.5rem;">Follow me on Instagram and YouTube</h2>
-  <p style="font-size:14px;color:#3a5070;max-width:450px;margin:0 auto;">Real photos of sailing, canals, marine wildlife and landscapes of southern Chile.</p>
+  <div class="sec-tag" style="text-align:center;">El sur de Chile visto desde el mar</div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:#f0e8d5;margin-bottom:0.5rem;">Sígueme en Instagram y YouTube</h2>
+  <p style="font-size:14px;color:#3a5070;max-width:450px;margin:0 auto;">Fotos reales de navegación, canales, fauna marina y paisajes del sur de Chile.</p>
   <div class="insta-links">
-    <a class="insta-btn" href="https://www.instagram.com/hijodelmar.cl/" target="_blank"><i class="ti ti-brand-instagram"></i> @hijodelmar.cl</a>
-    <a class="insta-btn" href="https://www.instagram.com/capitanrodrigotroncoso/" target="_blank"><i class="ti ti-brand-instagram"></i> @capitanrodrigotroncoso</a>
-    <a class="insta-btn" href="https://www.youtube.com/@HijodelMarAdventure" target="_blank"><i class="ti ti-brand-youtube"></i> Hijo del Mar</a>
+    <a class="insta-btn" href="https://www.instagram.com/hijodelmar.cl/" target="_blank">
+      <i class="ti ti-brand-instagram"></i> @hijodelmar.cl
+    </a>
+    <a class="insta-btn" href="https://www.instagram.com/capitanrodrigotroncoso/" target="_blank">
+      <i class="ti ti-brand-instagram"></i> @capitanrodrigotroncoso
+    </a>
+    <a class="insta-btn" href="https://www.youtube.com/@HijodelMarAdventure" target="_blank">
+      <i class="ti ti-brand-youtube"></i> Hijo del Mar
+    </a>
   </div>
 </section>
 
 <div class="sep"></div>
 
 <section class="contact-bar" id="contacto">
-  <div class="sec-tag" style="margin-bottom:0.5rem;">Contact</div>
-  <div class="contact-h">Need an advisory? Write to me.</div>
-  <p class="contact-sub">I'm the captain, the advisor and the one who answers. No intermediaries or bots.</p>
+  <div class="sec-tag" style="margin-bottom:0.5rem;">Contacto</div>
+  <div class="contact-h">¿Necesitas una asesoría? Escríbeme.</div>
+  <p class="contact-sub">Soy el capitán, el asesor y el que contesta. Sin intermediarios ni bots.</p>
   <div class="contact-links">
     <a class="c-link" href="https://wa.me/56923956367" target="_blank"><i class="ti ti-brand-whatsapp"></i> WhatsApp</a>
     <a class="c-link" href="mailto:contacto@hijodelmar.cl"><i class="ti ti-mail"></i> Email</a>
@@ -595,19 +676,33 @@
 </section>
 
 <footer>
-  Hijo del Mar &nbsp;&middot;&nbsp; Rodrigo Troncoso Peirano &nbsp;&middot;&nbsp; Chile &nbsp;&middot;&nbsp; 2025&ndash;2026 &nbsp;&middot;&nbsp; <a href="cookie-policy.html" style="color:inherit;text-decoration:none;opacity:0.7;">Cookie policy</a>
+  Hijo del Mar · Rodrigo Troncoso Peirano · Chile · 2025–2026 · <a href="politica-cookies.html" style="color:inherit;text-decoration:none;opacity:0.7;">Política de cookies</a>
 </footer>
 
 <script>
   const canvas = document.getElementById('stars');
   const ctx = canvas.getContext('2d');
-  function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = canvas.parentElement.offsetHeight; drawStars(); }
-  function drawStars() { ctx.clearRect(0,0,canvas.width,canvas.height); for(let i=0;i<120;i++){ const x=Math.random()*canvas.width; const y=Math.random()*canvas.height; const r=Math.random()*1.4+0.3; const a=Math.random()*0.7+0.2; ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2); ctx.fillStyle=`rgba(240,232,210,${a})`; ctx.fill(); } }
-  resizeCanvas(); window.addEventListener('resize',resizeCanvas);
-</script>
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = canvas.parentElement.offsetHeight;
+    drawStars();
+  }
+  function drawStars() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i = 0; i < 120; i++) {
+      const x = Math.random() * canvas.width;
+      const y = Math.random() * canvas.height;
+      const r = Math.random() * 1.4 + 0.3;
+      const a = Math.random() * 0.7 + 0.2;
+      ctx.beginPath();
+      ctx.arc(x, y, r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(240,232,210,${a})`;
+      ctx.fill();
+    }
+  }
 
-<script>
-  if(navigator.geolocation){navigator.geolocation.getCurrentPosition(function(pos){const lat=pos.coords.latitude.toFixed(4);const lon=pos.coords.longitude.toFixed(4);const frame=document.getElementById('windy-frame');if(frame)frame.src=`https://embed.windy.com/embed2.html?lat=${lat}&lon=${lon}&zoom=8&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1`;},function(){});}
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
 </script>
 
 <script>
@@ -650,8 +745,8 @@
   if(drop){drop.addEventListener('mouseenter',show);drop.addEventListener('mouseleave',hide);}
   var elEN=document.getElementById('ldEN');
   var elES=document.getElementById('ldES');
-  if(elEN){elEN.style.cursor='default';}
-  if(elES){elES.addEventListener('click',function(){location.href='../index.html';});}
+  if(elEN){elEN.addEventListener('click',function(){location.href='en/index.html';});}
+  if(elES){elES.style.cursor='default';}
 })();
 </script>
 
@@ -688,54 +783,6 @@
 })();
 </script>
 
-<script src="../cookies.js"></script>
-
-<!-- WHATSAPP FLOATING BUTTON -->
-<a class="wa-fab" href="https://wa.me/56923956367?text=Hello,%20I%20would%20like%20to%20inquire%20about%20a%20nautical%20advisory." target="_blank" rel="noopener" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-</a>
-
-<!-- AOS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.min.js"></script>
-<script>
-  AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 });
-</script>
-
-<!-- ANIMATED COUNTER -->
-<script>
-(function(){
-  var counters = document.querySelectorAll('.band-num[data-count]');
-  if(!counters.length) return;
-  var ran = false;
-  function runCounters(){
-    if(ran) return;
-    ran = true;
-    counters.forEach(function(el){
-      var target = parseInt(el.getAttribute('data-count'), 10);
-      var suffix = el.getAttribute('data-suffix') !== null ? el.getAttribute('data-suffix') : '';
-      var duration = target >= 100 ? 1800 : 900;
-      var startTime = null;
-      function step(ts){
-        if(!startTime) startTime = ts;
-        var progress = Math.min((ts - startTime) / duration, 1);
-        var ease = 1 - Math.pow(1 - progress, 3);
-        el.textContent = Math.round(ease * target) + suffix;
-        if(progress < 1) requestAnimationFrame(step);
-        else el.textContent = target + suffix;
-      }
-      requestAnimationFrame(step);
-    });
-  }
-  function checkBand(){
-    var band = document.querySelector('.band');
-    if(!band) return;
-    var rect = band.getBoundingClientRect();
-    if(rect.top < window.innerHeight + 50){ runCounters(); }
-  }
-  window.addEventListener('scroll', checkBand, { passive: true });
-  window.addEventListener('load', function(){ setTimeout(checkBand, 200); });
-  setTimeout(checkBand, 800);
-})();
-</script>
+<script src="cookies.js"></script>
 </body>
 </html>
