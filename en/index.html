@@ -92,6 +92,15 @@
   .sec-tag { font-size: 10px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: #c4a264; margin-bottom: 0.5rem; }
   .sec-h { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; color: #f0e8d5; margin: 0 0 1.5rem; line-height: 1.1; text-align: center; }
   .sec-p { font-size: 15px; color: #8090a8; line-height: 1.85; margin-bottom: 1.2rem; }
+  /* Historia timeline */
+  .historia-phases { display: flex; flex-direction: column; gap: 0; margin-top: 2rem; }
+  .historia-phase { display: grid; grid-template-columns: 52px 1fr; gap: 1.5rem; padding: 1.75rem 0; border-bottom: 1px solid rgba(196,162,100,0.08); }
+  .historia-phase:last-child { border-bottom: none; }
+  .phase-icon { width: 52px; height: 52px; background: rgba(196,162,100,0.07); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid rgba(196,162,100,0.2); margin-top: 3px; }
+  .phase-icon i { font-size: 24px; color: #c4a264; }
+  .phase-label { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(196,162,100,0.55); margin-bottom: 8px; }
+  .phase-text { font-size: 14px; color: #8090a8; line-height: 1.85; margin: 0; }
+  @media (max-width: 600px) { .historia-phase { grid-template-columns: 40px 1fr; gap: 1rem; } .phase-icon { width: 40px; height: 40px; } .phase-icon i { font-size: 18px; } }
   .sep { height: 1px; background: rgba(196,162,100,0.08); }
 
   /* SERVICIOS */
@@ -307,13 +316,39 @@
 
 <div class="sep"></div>
 
-<section class="sec" id="historia" style="padding-left: 3rem; padding-right: 3rem; text-align: justify;">
+<section class="sec" id="historia" style="padding-left: 3rem; padding-right: 3rem;">
   <div class="sec-tag" data-aos="fade-up">About me</div>
   <h2 class="sec-h" data-aos="fade-up" data-aos-delay="60">30 years at sea, at your service</h2>
-  <p class="sec-p">Welcome — my name is Rodrigo Troncoso, I'm a Captain. My story starts in commercial fishing, sailing Chile's open ocean and southern fjords all the way to the Antarctic Sea. The Drake Passage and Cape Horn became my home, and that experience — witnessing nature at its most powerful — prepared me for everything that followed.</p>
-  <p class="sec-p">From there I made the leap into offshore work, as Captain of highly specialized vessels: PSVs, AHTSs, dive support ships and FSIVs, operating for the oil industry off the coasts of Angola, Brazil, Congo, Ghana, Venezuela, Trinidad and Tobago, Cameroon and the Caribbean — maneuvering in open sea just meters from oil platforms in waters that forgive no mistakes.</p>
-  <p class="sec-p">I have over 15 years of DP (dynamic positioning) operations, with current international certifications, all carried out with the composure and clear head that only comes from commanding in any weather, any port, any emergency. I returned to Chile with all of that knowledge, and now I sail the Patagonian fjords again in wellboats for the salmon industry — but now, in this stage of my life, with a new purpose.</p>
-  <p class="sec-p">Today I put all of this experience at your disposal: for those who sail or want to sail, sports enthusiasts, adventurers, business people, or anyone who wants to move through the sea with me as their co-pilot. Just 30 years of experience — and I'm still evolving. Get in touch.</p>
+  <div class="historia-phases">
+    <div class="historia-phase" data-aos="fade-up">
+      <div class="phase-icon"><i class="ti ti-wave-sine"></i></div>
+      <div>
+        <div class="phase-label">Commercial fishing · Antarctic Sea · Cape Horn</div>
+        <p class="phase-text">My story starts in commercial fishing, sailing Chile's open ocean and southern fjords all the way to the Antarctic Sea. The Drake Passage and Cape Horn became my home — witnessing nature at its most powerful, and gaining the foundation that prepared me for everything that followed.</p>
+      </div>
+    </div>
+    <div class="historia-phase" data-aos="fade-up">
+      <div class="phase-icon"><i class="ti ti-ship"></i></div>
+      <div>
+        <div class="phase-label">Offshore · Angola, Brazil, Ghana, Venezuela and more</div>
+        <p class="phase-text">From there I made the leap into offshore work, as Captain of highly specialized vessels — PSVs, AHTSs, dive support ships and FSIVs — operating for the oil industry off the coasts of Angola, Brazil, Congo, Ghana, Venezuela, Trinidad and Tobago, Cameroon and the Caribbean. Maneuvering in open sea just meters from oil platforms, in waters that forgive no mistakes.</p>
+      </div>
+    </div>
+    <div class="historia-phase" data-aos="fade-up">
+      <div class="phase-icon"><i class="ti ti-cpu"></i></div>
+      <div>
+        <div class="phase-label">Dynamic positioning · +15 years · DP certifications</div>
+        <p class="phase-text">Over 15 years of DP operations with current international certifications — all carried out with the composure that only comes from commanding in any weather, any port, any emergency. I returned to Chile with all of that knowledge, and now sail the Patagonian fjords again in wellboats, but with a new purpose.</p>
+      </div>
+    </div>
+    <div class="historia-phase" data-aos="fade-up">
+      <div class="phase-icon"><i class="ti ti-compass"></i></div>
+      <div>
+        <div class="phase-label">Today · Chile · At your disposal</div>
+        <p class="phase-text">Today I put all of this experience at your disposal: for those who sail or want to sail, sports enthusiasts, adventurers, business people — anyone who wants to move through the sea with a real professional as their co-pilot. 30 years of experience, and still evolving. Get in touch.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <div class="sep"></div>

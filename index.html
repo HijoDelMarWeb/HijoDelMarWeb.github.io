@@ -207,6 +207,15 @@
   .sec-h { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; color: #f0e8d5; margin: 0 0 1.5rem; line-height: 1.1; text-align: center; }
   .sec-p { font-size: 15px; color: #8090a8; line-height: 1.85; margin-bottom: 1.2rem; }
   .sep { height: 1px; background: rgba(196,162,100,0.08); }
+  /* Historia timeline */
+  .historia-phases { display: flex; flex-direction: column; gap: 0; margin-top: 2rem; }
+  .historia-phase { display: grid; grid-template-columns: 52px 1fr; gap: 1.5rem; padding: 1.75rem 0; border-bottom: 1px solid rgba(196,162,100,0.08); }
+  .historia-phase:last-child { border-bottom: none; }
+  .phase-icon { width: 52px; height: 52px; background: rgba(196,162,100,0.07); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid rgba(196,162,100,0.2); margin-top: 3px; }
+  .phase-icon i { font-size: 24px; color: #c4a264; }
+  .phase-label { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(196,162,100,0.55); margin-bottom: 8px; }
+  .phase-text { font-size: 14px; color: #8090a8; line-height: 1.85; margin: 0; }
+  @media (max-width: 600px) { .historia-phase { grid-template-columns: 40px 1fr; gap: 1rem; } .phase-icon { width: 40px; height: 40px; } .phase-icon i { font-size: 18px; } }
 
   /* SERVICIOS */
   .srv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 1.5rem 0; }
@@ -429,13 +438,39 @@
 
 <div class="sep"></div>
 
-<section class="sec" id="historia" style="padding-left: 3rem; padding-right: 3rem; text-align: justify;">
+<section class="sec" id="historia" style="padding-left: 3rem; padding-right: 3rem;">
   <div class="sec-tag" data-aos="fade-up">Quién soy</div>
   <h2 class="sec-h" data-aos="fade-up" data-aos-delay="60">30 Años de mar puesto a tu servicio</h2>
-  <p class="sec-p">Bienvenido, mi nombre es Rodrigo Troncoso, soy Capitán, un placer conocerlos. Mi historia es esta: Mis comienzos en el mar fueron en la pesca industrial, navegando el mar abierto chileno y los fiordos del sur hasta llegar incluso al Mar Antártico, haciendo de mi hogar el temido Mar de Drake y el Cabo de Hornos, tuve la bendición de ver cosas maravillosas, y además pude sentir la naturaleza en su máximo poder — esa experiencia me preparó para lo que vendría más adelante.</p>
-  <p class="sec-p">De ahí di el salto al mundo offshore, como Capitán de barcos extremadamente tecnológicos y especializados, tales como PSV, AHTS, buques de buceo y FSIV, los cuales trabajaban para la industria petrolera frente a las costas de diversos países: Angola, Brasil, Congo, Ghana, Venezuela, Trinidad y Tobago, Camerún y el Caribe, y en todos ellos maniobrando en altamar a solo unos pocos metros de plataformas petroleras, en aguas que no perdonan errores.</p>
-  <p class="sec-p">Tengo más de 15 años de experiencia operando sistemas DP (posicionamiento dinámico), con certificaciones internacionales vigentes, todo esto con el temple y la cabeza fría que solo da estar al mando en cualquier clima, cualquier puerto, cualquier emergencia. Volví a Chile con todo ese mundo metido en la mochila, y ahora navego de nuevo los fiordos de la Patagonia en barcos wellboat en la industria del salmón chileno — pero ahora, en esta etapa de mi vida, con un propósito nuevo.</p>
-  <p class="sec-p">Hoy pongo toda esta experiencia a disposición de ustedes: quienes navegan o quieren navegar, deportistas, aventureros, empresarios y/o cualquier persona que quiera moverse por el mar conmigo como su copiloto y con esta experiencia ayudándolos en todo lo que pueda. Solo son 30 años de experiencia, y aún sigo evolucionando. Anímate y contáctame.</p>
+  <div class="historia-phases">
+    <div class="historia-phase" data-aos="fade-up">
+      <div class="phase-icon"><i class="ti ti-wave-sine"></i></div>
+      <div>
+        <div class="phase-label">Pesca industrial · Mar Antártico · Cabo de Hornos</div>
+        <p class="phase-text">Bienvenido, mi nombre es Rodrigo Troncoso, soy Capitán. Mis comienzos en el mar fueron en la pesca industrial, navegando el mar abierto chileno y los fiordos del sur hasta llegar incluso al Mar Antártico, haciendo de mi hogar el temido Mar de Drake y el Cabo de Hornos. Tuve la bendición de ver cosas maravillosas, y además pude sentir la naturaleza en su máximo poder — esa experiencia me preparó para lo que vendría más adelante.</p>
+      </div>
+    </div>
+    <div class="historia-phase" data-aos="fade-up">
+      <div class="phase-icon"><i class="ti ti-ship"></i></div>
+      <div>
+        <div class="phase-label">Offshore · Angola, Brasil, Ghana, Venezuela y más</div>
+        <p class="phase-text">De ahí di el salto al mundo offshore, como Capitán de barcos extremadamente tecnológicos y especializados — PSV, AHTS, buques de buceo y FSIV — trabajando para la industria petrolera frente a las costas de Angola, Brasil, Congo, Ghana, Venezuela, Trinidad y Tobago, Camerún y el Caribe. Maniobrando en altamar a solo unos pocos metros de plataformas petroleras, en aguas que no perdonan errores.</p>
+      </div>
+    </div>
+    <div class="historia-phase" data-aos="fade-up">
+      <div class="phase-icon"><i class="ti ti-cpu"></i></div>
+      <div>
+        <div class="phase-label">Posicionamiento dinámico · +15 años · Certificaciones DP</div>
+        <p class="phase-text">Más de 15 años de experiencia operando sistemas DP, con certificaciones internacionales vigentes. El temple y la cabeza fría que solo da estar al mando en cualquier clima, cualquier puerto, cualquier emergencia. Volví a Chile con todo ese mundo en la mochila, y hoy navego de nuevo los fiordos de la Patagonia en barcos wellboat — pero con un propósito nuevo.</p>
+      </div>
+    </div>
+    <div class="historia-phase" data-aos="fade-up">
+      <div class="phase-icon"><i class="ti ti-compass"></i></div>
+      <div>
+        <div class="phase-label">Hoy · Chile · A tu disposición</div>
+        <p class="phase-text">Hoy pongo toda esta experiencia a disposición de ustedes: quienes navegan o quieren navegar, deportistas, aventureros, empresarios — cualquier persona que quiera moverse por el mar con un profesional real como copiloto. Son 30 años de experiencia, y aún sigo evolucionando. Anímate y contáctame.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <div class="sep"></div>
