@@ -18,10 +18,14 @@
 <meta property="og:site_name" content="Hijo del Mar">
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
 <link rel="apple-touch-icon" href="../favicon_192.png">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KRJ42YBH5N"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  var _hdmC = localStorage.getItem('hdm_cookie_consent');
+  gtag('consent', 'default', {'analytics_storage': _hdmC === 'granted' ? 'granted' : 'denied'});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KRJ42YBH5N"></script>
+<script>
   gtag('js', new Date());
   gtag('config', 'G-KRJ42YBH5N');
 </script>
@@ -88,7 +92,7 @@
   .sec-p { font-size: 15px; color: #8090a8; line-height: 1.85; margin-bottom: 1.2rem; }
   .sep { height: 1px; background: rgba(196,162,100,0.08); }
   .srv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 1.5rem 0; }
-  .srv-card { background: #0c1e32; border: 1px solid rgba(196,162,100,0.12); border-radius: 4px; padding: 1.5rem; transition: border-color 0.2s; }
+  .srv-card { background: #0c1e32; border: 1px solid rgba(196,162,100,0.12); border-radius: 4px; padding: 1.5rem; transition: border-color 0.2s; display: flex; flex-direction: column; }
   .srv-card:hover { border-color: rgba(196,162,100,0.4); }
   .srv-card.full { grid-column: 1 / -1; }
   .srv-icon { font-size: 26px; color: #c4a264; margin-bottom: 12px; display: block; }
@@ -98,14 +102,18 @@
   .srv-items li { font-size: 12px; color: #4a6878; padding: 4px 0 4px 16px; position: relative; border-bottom: 1px solid rgba(196,162,100,0.05); }
   .srv-items li::before { content: '—'; position: absolute; left: 0; color: rgba(196,162,100,0.4); }
   .srv-items.two-col { columns: 2; gap: 1rem; }
-  .srv-btn { display: inline-block; background: rgba(196,162,100,0.1); color: #c4a264; font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 8px 16px; border-radius: 2px; text-decoration: none; border: 1px solid rgba(196,162,100,0.25); transition: background 0.2s; }
+  .srv-btn { display: inline-block; background: rgba(196,162,100,0.1); color: #c4a264; font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 8px 16px; border-radius: 2px; text-decoration: none; border: 1px solid rgba(196,162,100,0.25); transition: background 0.2s; margin-top: auto; align-self: flex-start; }
   .srv-btn:hover { background: rgba(196,162,100,0.22); }
-  .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 1.5rem 0; }
-  .exp-card { background: #0c1e32; border: 1px solid rgba(196,162,100,0.12); border-radius: 4px; padding: 1.5rem; transition: border-color 0.2s; }
-  .exp-card:hover { border-color: rgba(196,162,100,0.35); }
-  .exp-icon { font-size: 26px; color: #c4a264; margin-bottom: 12px; display: block; }
-  .exp-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: #f0e8d5; margin-bottom: 8px; }
-  .exp-desc { font-size: 13px; color: #5a7090; line-height: 1.6; }
+  .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 2rem 0; }
+  .exp-card { position: relative; border-radius: 10px; overflow: hidden; aspect-ratio: 4/3; border: 1px solid rgba(196,162,100,0.18); transition: border-color 0.35s, box-shadow 0.35s, transform 0.35s; }
+  .exp-card:hover { border-color: rgba(196,162,100,0.6); box-shadow: 0 16px 50px rgba(0,0,0,0.7); transform: translateY(-3px); }
+  .exp-card-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; filter: brightness(0.88) saturate(1.15); }
+  .exp-card:hover .exp-card-img { transform: scale(1.07); filter: brightness(1.0) saturate(1.25); }
+  .exp-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(3,10,20,0.90) 0%, rgba(3,10,20,0.38) 50%, rgba(3,10,20,0.0) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.6rem; }
+  .exp-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: #f0e8d5; margin-bottom: 7px; line-height: 1.2; text-shadow: 0 2px 14px rgba(0,0,0,0.8); }
+  .exp-desc { font-size: 13px; color: rgba(221,213,192,0.75); line-height: 1.6; text-shadow: 0 1px 6px rgba(0,0,0,0.95); }
+  .sec-wide { max-width: 1180px; }
+  #velero { max-width: 1180px; }
   .price-strip { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 1.5rem 0; }
   .price-card { background: #0c1e32; border: 1px solid rgba(196,162,100,0.12); border-radius: 4px; padding: 1.5rem 1.25rem; text-align: center; transition: border-color 0.2s; }
   .price-card:hover { border-color: rgba(196,162,100,0.4); }
@@ -229,7 +237,7 @@
 
 <div class="sep"></div>
 
-<section class="sec" id="historia">
+<section class="sec" id="historia" style="padding-left: 3rem; padding-right: 3rem; text-align: justify;">
   <div class="sec-tag">About me</div>
   <h2 class="sec-h">30 years at sea, at your service</h2>
   <p class="sec-p">Welcome — my name is Rodrigo Troncoso, I'm a Captain. My story starts in commercial fishing, sailing Chile's open ocean and southern fjords all the way to the Antarctic Sea. The Drake Passage and Cape Horn became my home, and that experience — witnessing nature at its most powerful — prepared me for everything that followed.</p>
@@ -318,7 +326,7 @@
 
 <div class="sep"></div>
 
-<section style="padding: 4rem 2rem; max-width: 900px; margin: 0 auto;">
+<section class="sec sec-wide">
   <div class="sec-tag">Real-time weather</div>
   <h2 class="sec-h">Current conditions where you are</h2>
   <p class="sec-p">Wind, swell and weather in real time. Before you cast off, check the conditions. The map centers automatically on your location.</p>
@@ -332,29 +340,38 @@
 
 <section class="sec" id="velero">
   <div class="sec-tag">The coming project</div>
+  <div class="sec-tag" style="font-size:13px; letter-spacing:3px; margin-bottom:0.4rem;">Available from 2029</div>
   <h2 class="sec-h">A sailboat in Chile: the dream under construction</h2>
   <p class="sec-p">While the advisory services are the present, the sailboat is the future. A 40–47 ft vessel, brought from abroad to Chile, to offer unique experiences in the canals and rivers of the south.</p>
 
   <div class="exp-grid">
-    <div class="exp-card">
-      <span class="exp-icon"><i class="ti ti-sunset-2"></i></span>
-      <div class="exp-title">Champagne Sunset Sail</div>
-      <div class="exp-desc">A tranquil cruise through the southern canals at sunset. Champagne on board. The captain shares stories from his voyages around the world.</div>
+    <div class="exp-card" style="background:linear-gradient(135deg,#1a0800 0%,#5c2000 35%,#9a5500 65%,#c47a10 100%);">
+      <img class="exp-card-img" src="https://images.unsplash.com/photo-1526761122248-c31c93f8b2b9?auto=format&fit=crop&w=800&q=82" alt="White sailboat sailing at sunset" loading="lazy">
+      <div class="exp-card-overlay">
+        <div class="exp-title">Champagne Sunset Sail</div>
+        <div class="exp-desc">A tranquil cruise through the southern canals at sunset. Champagne on board. The captain shares stories from his voyages around the world.</div>
+      </div>
     </div>
-    <div class="exp-card">
-      <span class="exp-icon"><i class="ti ti-heart"></i></span>
-      <div class="exp-title">Romantic Night on Board</div>
-      <div class="exp-desc">The sailboat as a private suite for couples. Intimate cabin, river views, champagne and breakfast at dawn.</div>
+    <div class="exp-card" style="background:linear-gradient(135deg,#000814 0%,#03071e 40%,#0d1b40 75%,#0a2463 100%);">
+      <img class="exp-card-img" src="https://images.unsplash.com/photo-1759888107288-b9a8857e20e6?auto=format&fit=crop&w=800&q=82" alt="Couple enjoying a romantic evening on a boat at night" loading="lazy">
+      <div class="exp-card-overlay">
+        <div class="exp-title">Romantic Night on Board</div>
+        <div class="exp-desc">The sailboat as a private suite for couples. Intimate cabin, river views, champagne and breakfast at dawn.</div>
+      </div>
     </div>
-    <div class="exp-card">
-      <span class="exp-icon"><i class="ti ti-sailboat"></i></span>
-      <div class="exp-title">Nautical Tour of the Southern Canals</div>
-      <div class="exp-desc">Explore the river, historic forts and marine wildlife with a captain who has sailed the entire world.</div>
+    <div class="exp-card" style="background:linear-gradient(135deg,#0a1628 0%,#0d2b22 35%,#0f3d2a 65%,#1B4332 100%);">
+      <img class="exp-card-img" src="https://images.unsplash.com/photo-1775649136154-f25fae163d7b?auto=format&fit=crop&w=800&q=82" alt="Three people sailing with the Andes mountains in the background" loading="lazy">
+      <div class="exp-card-overlay">
+        <div class="exp-title">Nautical Tour of the Southern Canals</div>
+        <div class="exp-desc">Explore the river, historic forts and marine wildlife with a captain who has sailed the entire world.</div>
+      </div>
     </div>
-    <div class="exp-card">
-      <span class="exp-icon"><i class="ti ti-anchor"></i></span>
-      <div class="exp-title">Private Charter</div>
-      <div class="exp-desc">The full sailboat for you. Birthdays, anniversaries, photography, intimate events. Flexible and tailored.</div>
+    <div class="exp-card" style="background:linear-gradient(135deg,#050f1c 0%,#0a1f3d 40%,#1a3560 70%,#0d2b50 100%);">
+      <img class="exp-card-img" src="https://images.unsplash.com/photo-1542405242-8217b4c9e34c?auto=format&fit=crop&w=800&q=82" alt="Group of people celebrating on a private yacht" loading="lazy">
+      <div class="exp-card-overlay">
+        <div class="exp-title">Private Charter</div>
+        <div class="exp-desc">The full sailboat for you. Birthdays, anniversaries, photography, intimate events. Flexible and tailored.</div>
+      </div>
     </div>
   </div>
 
@@ -465,7 +482,7 @@
 </section>
 
 <footer>
-  Hijo del Mar &nbsp;&middot;&nbsp; Rodrigo Troncoso Peirano &nbsp;&middot;&nbsp; Chile &nbsp;&middot;&nbsp; 2025&ndash;2026
+  Hijo del Mar &nbsp;&middot;&nbsp; Rodrigo Troncoso Peirano &nbsp;&middot;&nbsp; Chile &nbsp;&middot;&nbsp; 2025&ndash;2026 &nbsp;&middot;&nbsp; <a href="cookie-policy.html" style="color:inherit;text-decoration:none;opacity:0.7;">Cookie policy</a>
 </footer>
 
 <script>
@@ -496,67 +513,4 @@
   if(dd&&menu){
     var timer;
     var open=function(){clearTimeout(timer);menu.style.display='block';};
-    var close=function(){timer=setTimeout(function(){menu.style.display='';},220);};
-    dd.addEventListener('mouseenter',open);
-    dd.addEventListener('mouseleave',close);
-    menu.addEventListener('mouseenter',open);
-    menu.addEventListener('mouseleave',close);
-  }
-})();
-</script>
-<script>
-(function(){
-  var btn=document.getElementById('langToggle');
-  if(btn){btn.classList.add('lang-en');}
-  var picker=document.getElementById('langPicker');
-  var drop=document.getElementById('langDrop');
-  var t;
-  function show(){clearTimeout(t);drop.classList.add('open');}
-  function hide(){t=setTimeout(function(){drop.classList.remove('open');},160);}
-  if(picker){picker.addEventListener('mouseenter',show);picker.addEventListener('mouseleave',hide);}
-  if(drop){drop.addEventListener('mouseenter',show);drop.addEventListener('mouseleave',hide);}
-  var elES=document.getElementById('ldES');
-  var elEN=document.getElementById('ldEN');
-  if(elES){elES.onclick=function(){location.href='../index.html';}; }
-  if(elEN){elEN.style.cursor='default';}
-})();
-</script>
-
-<script>
-(function(){
-  var burger=document.getElementById('navBurger');
-  var links=document.querySelector('nav .nav-links');
-  if(!burger||!links) return;
-  burger.addEventListener('click',function(e){
-    e.stopPropagation();
-    burger.classList.toggle('open');
-    links.classList.toggle('open');
-  });
-  // Close on link click
-  links.querySelectorAll('.nav-link,.nav-dropdown-item').forEach(function(el){
-    el.addEventListener('click',function(){
-      burger.classList.remove('open');
-      links.classList.remove('open');
-    });
-  });
-  // Mobile dropdown toggle
-  var dd=links.querySelector('.nav-dropdown');
-  var ddt=dd&&dd.querySelector('.nav-dropdown-toggle');
-  if(ddt){
-    ddt.addEventListener('click',function(e){
-      if(window.innerWidth<=768){
-        e.stopPropagation();
-        dd.classList.toggle('mob-open');
-      }
-    });
-  }
-  // Close on outside click
-  document.addEventListener('click',function(){
-    burger.classList.remove('open');
-    links.classList.remove('open');
-  });
-})();
-</script>
-
-</body>
-</html>
+    var close=function

@@ -132,10 +132,14 @@
 
 
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KRJ42YBH5N"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  var _hdmC = localStorage.getItem('hdm_cookie_consent');
+  gtag('consent', 'default', {'analytics_storage': _hdmC === 'granted' ? 'granted' : 'denied'});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KRJ42YBH5N"></script>
+<script>
   gtag('js', new Date());
   gtag('config', 'G-KRJ42YBH5N');
 </script>
@@ -386,7 +390,7 @@
 
 <div class="sep"></div>
 
-<section class="sec" id="historia">
+<section class="sec" id="historia" style="padding-left: 3rem; padding-right: 3rem; text-align: justify;">
   <div class="sec-tag">Quién soy</div>
   <h2 class="sec-h">30 Años de mar puesto a tu servicio</h2>
   <p class="sec-p">Bienvenido, mi nombre es Rodrigo Troncoso, soy Capitán, un placer conocerlos. Mi historia es esta: Mis comienzos en el mar fueron en la pesca industrial, navegando el mar abierto chileno y los fiordos del sur hasta llegar incluso al Mar Antártico, haciendo de mi hogar el temido Mar de Drake y el Cabo de Hornos, tuve la bendición de ver cosas maravillosas, y además pude sentir la naturaleza en su máximo poder — esa experiencia me preparó para lo que vendría más adelante.</p>
@@ -696,6 +700,3 @@
       ctx.fill();
     }
   }
-  resizeCanvas();
-  window.addEventListener('resize', resizeCanvas);
-<
