@@ -239,7 +239,7 @@
   </a>
 
   <a href="guia-errores-comprar-velero.html" class="guide-card">
-    <div class="guide-icon"><img src="https://images.unsplash.com/photo-1542986015-8eaec77dc02d?auto=format&fit=crop&w=160&q=80" alt="Compra de velero usado"></div>
+    <div class="guide-icon"><img src="https://images.unsplash.com/photo-1595147389795-37094173bfd8?auto=format&fit=crop&w=160&q=80" alt="Compra de velero usado"></div>
     <div>
       <div class="guide-tag">Compra</div>
       <div class="guide-title">7 Errores al Comprar un Velero Usado en Chile</div>
@@ -252,7 +252,7 @@
   </a>
 
   <a href="guia-velero-vs-lancha.html" class="guide-card">
-    <div class="guide-icon"><img src="https://images.unsplash.com/photo-1600101144218-b949cfc02e34?auto=format&fit=crop&w=160&q=80" alt="Velero vs lancha"></div>
+    <div class="guide-icon"><img src="https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=160&q=80" alt="Velero vs lancha"></div>
     <div>
       <div class="guide-tag">Compra</div>
       <div class="guide-title">Velero vs Lancha: ¿Cuál Comprar en Chile?</div>
@@ -290,20 +290,53 @@
     nav.addEventListener('mouseleave',goHome);
     window.addEventListener('resize',goHome);
   }
-  var dd=document.querySelector('.nav-dropdown');
-  var menu=dd&&dd.querySelector('.nav-dropdown-menu');
-  if(dd&&menu){
-    var timer;
-    var open=function(){clearTimeout(timer);menu.style.display='block';};
-    var close=function(){timer=setTimeout(function(){menu.style.display='';},220);};
-    dd.addEventListener('mouseenter',open);
-    dd.addEventListener('mouseleave',close);
-    menu.addEventListener('mouseenter',open);
-    menu.addEventListener('mouseleave',close);
-  }
+  var dd=document.queryS  var drop=document.getElementById('langDrop');
+  var toggle=document.getElementById('langToggle');
+  var t;
+  function show(){clearTimeout(t);drop.classList.add('open');}
+  function hide(){t=setTimeout(function(){drop.classList.remove('open');},160);}
+  if(picker){picker.addEventListener('mouseenter',show);picker.addEventListener('mouseleave',hide);}
+  if(drop){drop.addEventListener('mouseenter',show);drop.addEventListener('mouseleave',hide);}
+  if(toggle){toggle.addEventListener('click',function(e){e.stopPropagation();drop.classList.toggle('open');});}
+  document.addEventListener('click',function(){if(drop)drop.classList.remove('open');});
+  var elEN=document.getElementById('ldEN');
+  var elES=document.getElementById('ldES');
+  if(elEN){elEN.addEventListener('click',function(){location.href='en/guias.html';});}
+  if(elES){elES.style.cursor='default';}
 })();
 </script>
 <script>
 (function(){
-  var picker=document.getElementById('langPicker');
-  v
+  var burger=document.getElementById('navBurger');
+  var links=document.querySelector('nav .nav-links');
+  if(!burger||!links) return;
+  burger.addEventListener('click',function(e){
+    e.stopPropagation();
+    burger.classList.toggle('open');
+    links.classList.toggle('open');
+  });
+  links.querySelectorAll('.nav-link,.nav-dropdown-item').forEach(function(el){
+    el.addEventListener('click',function(){
+      burger.classList.remove('open');
+      links.classList.remove('open');
+    });
+  });
+  var dd=links.querySelector('.nav-dropdown');
+  var ddt=dd&&dd.querySelector('.nav-dropdown-toggle');
+  if(ddt){
+    ddt.addEventListener('click',function(e){
+      if(window.innerWidth<=768){
+        e.stopPropagation();
+        dd.classList.toggle('mob-open');
+      }
+    });
+  }
+  document.addEventListener('click',function(){
+    burger.classList.remove('open');
+    links.classList.remove('open');
+  });
+})();
+</script>
+<script src="cookies.js"></script>
+</body>
+</html>
