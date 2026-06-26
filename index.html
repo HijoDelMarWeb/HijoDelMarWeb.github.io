@@ -820,11 +820,14 @@
 (function(){
   var picker=document.getElementById('langPicker');
   var drop=document.getElementById('langDrop');
+  var toggle=document.getElementById('langToggle');
   var t;
   function show(){clearTimeout(t);drop.classList.add('open');}
   function hide(){t=setTimeout(function(){drop.classList.remove('open');},160);}
   if(picker){picker.addEventListener('mouseenter',show);picker.addEventListener('mouseleave',hide);}
   if(drop){drop.addEventListener('mouseenter',show);drop.addEventListener('mouseleave',hide);}
+  if(toggle){toggle.addEventListener('click',function(e){e.stopPropagation();drop.classList.toggle('open');});}
+  document.addEventListener('click',function(){if(drop)drop.classList.remove('open');});
   var elEN=document.getElementById('ldEN');
   var elES=document.getElementById('ldES');
   if(elEN){elEN.addEventListener('click',function(){location.href='en/index.html';});}
