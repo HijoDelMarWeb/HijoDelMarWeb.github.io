@@ -79,6 +79,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.hijodelmar.cl/guia-como-planificar-travesia-velero.html</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.hijodelmar.cl/guia-velero-vs-lancha.html</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -159,6 +165,12 @@
   <url>
     <loc>https://www.hijodelmar.cl/en/guia-errores-comprar-velero.html</loc>
     <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/en/guia-como-planificar-travesia-velero.html</loc>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
