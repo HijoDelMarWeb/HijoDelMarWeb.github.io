@@ -849,7 +849,7 @@
 <!-- AOS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.min.js"></script>
 <script>
-  AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 });
+  if (typeof AOS !== 'undefined') { AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 }); }
 </script>
 
 <!-- ANIMATED COUNTER -->
