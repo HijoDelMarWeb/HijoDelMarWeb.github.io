@@ -103,9 +103,10 @@
 
   .guide-card { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1.5rem; padding: 1.75rem; background: #0b1a2c; border: 1px solid rgba(196,162,100,0.1); border-radius: 4px; text-decoration: none; transition: border-color 0.2s, background 0.2s; margin-bottom: 12px; }
   .guide-card:hover { border-color: rgba(196,162,100,0.35); background: #0d1f35; }
-  .guide-icon { width: 80px; height: 80px; border-radius: 4px; overflow: hidden; flex-shrink: 0; border: 1px solid rgba(196,162,100,0.15); }
-  .guide-icon img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.85) saturate(1.1); transition: filter 0.3s; }
-  .guide-card:hover .guide-icon img { filter: brightness(1.0) saturate(1.2); }
+  .guide-icon { width: 80px; height: 80px; border-radius: 4px; overflow: hidden; flex-shrink: 0; border: 1px solid rgba(196,162,100,0.15); background: rgba(196,162,100,0.05); display: flex; align-items: center; justify-content: center; transition: background 0.2s, border-color 0.2s; }
+  .guide-icon i { font-size: 36px; color: rgba(196,162,100,0.35); transition: color 0.2s; }
+  .guide-card:hover .guide-icon { background: rgba(196,162,100,0.09); border-color: rgba(196,162,100,0.3); }
+  .guide-card:hover .guide-icon i { color: rgba(196,162,100,0.65); }
   .guide-tag { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(196,162,100,0.5); margin-bottom: 4px; }
   .guide-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: #f0e8d5; margin-bottom: 4px; line-height: 1.2; }
   .guide-desc { font-size: 13px; color: #5a7090; line-height: 1.5; }
@@ -214,7 +215,7 @@
   <div class="section-label">Artículos publicados · 6</div>
 
   <a href="guia-canales-sur-chile.html" class="guide-card">
-    <div class="guide-icon"><img src="https://images.unsplash.com/photo-1526761122248-c31c93f8b2b9?auto=format&fit=crop&w=160&q=80" alt="Canales del sur de Chile"></div>
+    <div class="guide-icon"><i class="ti ti-map-2"></i></div>
     <div>
       <div class="guide-tag">Navegación</div>
       <div class="guide-title">Cómo Navegar los Canales del Sur de Chile</div>
@@ -227,7 +228,7 @@
   </a>
 
   <a href="guia-epirb-que-es.html" class="guide-card">
-    <div class="guide-icon"><img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=160&q=80" alt="Equipo de seguridad EPIRB"></div>
+    <div class="guide-icon"><i class="ti ti-radar"></i></div>
     <div>
       <div class="guide-tag">Seguridad</div>
       <div class="guide-title">¿Qué es un EPIRB y Por Qué tu Embarcación lo Necesita?</div>
@@ -240,7 +241,7 @@
   </a>
 
   <a href="guia-errores-comprar-velero.html" class="guide-card">
-    <div class="guide-icon"><img src="https://images.unsplash.com/photo-1595147389795-37094173bfd8?auto=format&fit=crop&w=160&q=80" alt="Compra de velero usado"></div>
+    <div class="guide-icon"><i class="ti ti-ship"></i></div>
     <div>
       <div class="guide-tag">Compra</div>
       <div class="guide-title">7 Errores al Comprar un Velero Usado en Chile</div>
@@ -253,7 +254,7 @@
   </a>
 
   <a href="guia-como-planificar-travesia-velero.html" class="guide-card">
-    <div class="guide-icon"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=160&q=80" alt="Planificar travesía en velero"></div>
+    <div class="guide-icon"><i class="ti ti-route"></i></div>
     <div>
       <div class="guide-tag">Navegación</div>
       <div class="guide-title">Cómo Planificar una Travesía en Velero</div>
@@ -266,7 +267,7 @@
   </a>
 
   <a href="guia-secado-casco-vacio-osmosis.html" class="guide-card">
-    <div class="guide-icon"><img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=160&q=80" alt="Casco de velero en varadero"></div>
+    <div class="guide-icon"><i class="ti ti-droplet-off"></i></div>
     <div>
       <div class="guide-tag">Compra · Técnico</div>
       <div class="guide-title">Secado de Casco por Vacío: Osmosis y lo que el Survey No Siempre Te Dice</div>
@@ -279,7 +280,7 @@
   </a>
 
   <a href="guia-velero-vs-lancha.html" class="guide-card">
-    <div class="guide-icon"><img src="https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=160&q=80" alt="Velero vs lancha"></div>
+    <div class="guide-icon"><i class="ti ti-sailboat"></i></div>
     <div>
       <div class="guide-tag">Compra</div>
       <div class="guide-title">Velero vs Lancha: ¿Cuál Comprar en Chile?</div>
