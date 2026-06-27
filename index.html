@@ -621,23 +621,34 @@
   <h2 class="sec-h">Condiciones actuales donde estás</h2>
   <p class="sec-p">Viento, oleaje y clima en tiempo real. Antes de zarpar, revisa las condiciones. El mapa se centra automáticamente en tu ubicación.</p>
   <div id="windy-container" style="width:100%; border-radius:4px; overflow:hidden; border:1px solid rgba(196,162,100,0.2); margin-top:1.5rem;">
-    <iframe id="windy-frame" src="https://embed.windy.com/embed2.html?lat=-39.8&lon=-73.2&zoom=7&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" width="100%" height="450" frameborder="0" loading="lazy" style="display:block;"></iframe>
+    <iframe id="windy-frame" title="Mapa meteorológico Windy en tiempo real" src="https://embed.windy.com/embed2.html?lat=-39.8&lon=-73.2&zoom=7&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" width="100%" height="450" frameborder="0" loading="lazy" style="display:block;"></iframe>
   </div>
   <p style="font-size:11px; color:#3a5070; margin-top:0.75rem; text-align:center;">Si tu navegador solicita permiso de ubicación, acéptalo para ver el clima de tu zona exacta.</p>
 </section>
 
 <script>
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(pos) {
-      const lat = pos.coords.latitude.toFixed(4);
-      const lon = pos.coords.longitude.toFixed(4);
-      const frame = document.getElementById('windy-frame');
-      if (frame) {
-        frame.src = `https://embed.windy.com/embed2.html?lat=${lat}&lon=${lon}&zoom=8&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1`;
+  (function() {
+    var windyRequested = false;
+    var container = document.getElementById('windy-container');
+    if (!container) return;
+    var observer = new IntersectionObserver(function(entries) {
+      if (entries[0].isIntersecting && !windyRequested) {
+        windyRequested = true;
+        observer.disconnect();
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(pos) {
+            var lat = pos.coords.latitude.toFixed(4);
+            var lon = pos.coords.longitude.toFixed(4);
+            var frame = document.getElementById('windy-frame');
+            if (frame) {
+              frame.src = 'https://embed.windy.com/embed2.html?lat=' + lat + '&lon=' + lon + '&zoom=8&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1';
+            }
+          }, function() {});
+        }
       }
-    }, function() {
-    });
-  }
+    }, { threshold: 0.1 });
+    observer.observe(container);
+  })();
 </script>
 
 <div class="sep"></div>
