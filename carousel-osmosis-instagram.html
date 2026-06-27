@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrusel Instagram · Osmosis · Hijo del Mar</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #04080f; font-family: 'Nunito Sans', sans-serif; padding: 2rem; display: flex; flex-direction: column; align-items: center; gap: 2rem; }
+
+/* Each slide is 1080×1080 but displayed at 540×540 for preview */
+.slide {
+  width: 540px;
+  height: 540px;
+  position: relative;
+  overflow: hidden;
+  background: #08131f;
+  flex-shrink: 0;
+  border: 1px solid rgba(196,162,100,0.2);
+}
+.slide-label {
+  color: rgba(196,162,100,0.4);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Print/screenshot: show at full 1080px */
+@media print {
+  body { padding: 0; gap: 0; background: #04080f; }
+  .slide { width: 1080px; height: 1080px; page-break-after: always; border: none; }
+  .slide-label { display: none; }
+}
+
+/* ─── SHARED ELEMENTS ─── */
+.brand-tag {
+  position: absolute;
+  bottom: 24px; right: 24px;
+  font-size: 11px; font-weight: 700; letter-spacing: 2px;
+  color: rgba(196,162,100,0.45);
+  text-transform: uppercase;
+}
+.slide-num {
+  position: absolute;
+  bottom: 24px; left: 24px;
+  font-size: 11px; letter-spacing: 2px;
+  color: rgba(120,144,168,0.4);
+  text-transform: uppercase;
+}
+.wave-top {
+  position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, transparent, #c4a264, transparent);
+  opacity: 0.5;
+}
+.wave-bottom {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, transparent, #c4a264, transparent);
+  opacity: 0.3;
+}
+
+/* ─── SLIDE 1: GANCHO ─── */
+#s1 { background: #06101a; }
+#s1 .bg-lines {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(196,162,100,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(196,162,100,0.04) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+#s1 .content { position: relative; z-index: 2; padding: 52px 48px; display: flex; flex-direction: column; height: 100%; justify-content: center; }
+#s1 .eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: rgba(196,162,100,0.6); margin-bottom: 28px; }
+#s1 .headline { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 600; color: #f0e8d5; line-height: 1.15; margin-bottom: 28px; }
+#s1 .subline { font-size: 14px; color: #6a8aaa; line-height: 1.7; margin-bottom: 36px; max-width: 380px; }
+#s1 .swipe { display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #c4a264; }
+#s1 .swipe-arrow { font-size: 18px; }
+#s1 .accent-line { position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 3px; height: 120px; background: linear-gradient(180deg, transparent, #c4a264, transparent); }
+
+/* ─── SLIDE 2 ─── */
+#s2 .content { padding: 48px; display: flex; flex-direction: column; height: 100%; }
+#s2 .section-tag { font-size: 9px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: rgba(196,162,100,0.5); margin-bottom: 20px; }
+#s2 .title { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 600; color: #f0e8d5; line-height: 1.1; margin-bottom: 24px; }
+#s2 .body { font-size: 14px; color: #9aacbc; line-height: 1.75; margin-bottom: 20px; }
+#s2 .highlight { background: rgba(196,162,100,0.06); border-left: 3px solid rgba(196,162,100,0.4); padding: 14px 18px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 17px; color: #c4a264; line-height: 1.5; border-radius: 0 4px 4px 0; }
+
+/* ─── SLIDE 3 ─── */
+#s3 .content { padding: 48px; display: flex; flex-direction: column; height: 100%; }
+#s3 .title { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 600; color: #f0e8d5; line-height: 1.1; margin-bottom: 8px; }
+#s3 .subtitle { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(196,162,100,0.5); margin-bottom: 24px; }
+#s3 .blisters { display: flex; flex-direction: column; gap: 12px; flex: 1; }
+#s3 .blister-row { display: flex; align-items: flex-start; gap: 14px; padding: 14px; border-radius: 6px; }
+#s3 .blister-row.b1 { background: rgba(80,180,80,0.06); border: 1px solid rgba(80,180,80,0.15); }
+#s3 .blister-row.b2 { background: rgba(196,162,100,0.06); border: 1px solid rgba(196,162,100,0.15); }
+#s3 .blister-row.b3 { background: rgba(200,60,60,0.06); border: 1px solid rgba(200,60,60,0.15); }
+#s3 .dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; margin-top: 2px; }
+#s3 .b1 .dot { background: #6dc87a; }
+#s3 .b2 .dot { background: #c4a264; }
+#s3 .b3 .dot { background: #d07070; }
+#s3 .blister-text h4 { font-size: 13px; font-weight: 700; margin-bottom: 3px; }
+#s3 .b1 .blister-text h4 { color: #6dc87a; }
+#s3 .b2 .blister-text h4 { color: #c4a264; }
+#s3 .b3 .blister-text h4 { color: #d07070; }
+#s3 .blister-text p { font-size: 13px; color: #7090a8; line-height: 1.5; }
+
+/* ─── SLIDE 4: TABLA HUMEDAD ─── */
+#s4 .content { padding: 44px 48px; display: flex; flex-direction: column; height: 100%; }
+#s4 .title { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 600; color: #f0e8d5; margin-bottom: 6px; }
+#s4 .subtitle { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(196,162,100,0.5); margin-bottom: 22px; }
+#s4 .table { display: flex; flex-direction: column; gap: 8px; flex: 1; }
+#s4 .row { display: grid; grid-template-columns: 80px 1fr auto; gap: 12px; align-items: center; padding: 12px 14px; border-radius: 4px; }
+#s4 .row.ok { background: rgba(80,180,80,0.06); }
+#s4 .row.warn { background: rgba(196,162,100,0.06); }
+#s4 .row.bad { background: rgba(200,60,60,0.06); }
+#s4 .pct { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; }
+#s4 .row.ok .pct { color: #6dc87a; }
+#s4 .row.warn .pct { color: #c4a264; }
+#s4 .row.bad .pct { color: #d07070; }
+#s4 .desc { font-size: 12px; color: #7090a8; line-height: 1.4; }
+#s4 .badge { font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 3px 8px; border-radius: 10px; white-space: nowrap; }
+#s4 .row.ok .badge { background: rgba(80,180,80,0.12); color: #6dc87a; }
+#s4 .row.warn .badge { background: rgba(196,162,100,0.12); color: #c4a264; }
+#s4 .row.bad .badge { background: rgba(200,60,60,0.12); color: #d07070; }
+#s4 .note { font-size: 11px; color: rgba(120,144,168,0.5); margin-top: 10px; font-style: italic; }
+
+/* ─── SLIDE 5: SISTEMA VACÍO ─── */
+#s5 .content { padding: 44px 48px; display: flex; flex-direction: column; height: 100%; }
+#s5 .title { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 600; color: #f0e8d5; line-height: 1.1; margin-bottom: 8px; }
+#s5 .subtitle { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(196,162,100,0.5); margin-bottom: 22px; }
+#s5 .steps { display: flex; flex-direction: column; gap: 10px; flex: 1; }
+#s5 .step { display: flex; align-items: flex-start; gap: 14px; }
+#s5 .step-n { width: 28px; height: 28px; border-radius: 50%; background: rgba(196,162,100,0.1); border: 1px solid rgba(196,162,100,0.25); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #c4a264; flex-shrink: 0; }
+#s5 .step-text h4 { font-size: 13px; font-weight: 700; color: #ddd5c0; margin-bottom: 2px; }
+#s5 .step-text p { font-size: 12px; color: #6a8090; line-height: 1.5; }
+
+/* ─── SLIDE 6: HERRAMIENTAS SURVEY ─── */
+#s6 .content { padding: 44px 48px; display: flex; flex-direction: column; height: 100%; }
+#s6 .title { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 600; color: #f0e8d5; line-height: 1.1; margin-bottom: 6px; }
+#s6 .subtitle { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(196,162,100,0.5); margin-bottom: 22px; }
+#s6 .tools { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; flex: 1; }
+#s6 .tool { padding: 14px; background: rgba(196,162,100,0.03); border: 1px solid rgba(196,162,100,0.1); border-radius: 6px; }
+#s6 .tool-name { font-size: 12px; font-weight: 700; color: #c4a264; margin-bottom: 4px; }
+#s6 .tool-model { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: rgba(196,162,100,0.4); margin-bottom: 6px; }
+#s6 .tool-desc { font-size: 11px; color: #6a8090; line-height: 1.5; }
+
+/* ─── SLIDE 7: CUÁNDO FUNCIONA ─── */
+#s7 .content { padding: 44px 48px; display: flex; flex-direction: column; height: 100%; }
+#s7 .title { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 600; color: #f0e8d5; line-height: 1.1; margin-bottom: 8px; }
+#s7 .subtitle { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(196,162,100,0.5); margin-bottom: 22px; }
+#s7 .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; flex: 1; }
+#s7 .col { padding: 16px; border-radius: 6px; }
+#s7 .col.go { background: rgba(80,180,80,0.05); border: 1px solid rgba(80,180,80,0.18); }
+#s7 .col.stop { background: rgba(200,60,60,0.05); border: 1px solid rgba(200,60,60,0.18); }
+#s7 .col-head { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+#s7 .col.go .col-head { color: #6dc87a; }
+#s7 .col.stop .col-head { color: #d07070; }
+#s7 .col ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+#s7 .col ul li { font-size: 12px; color: #7090a8; line-height: 1.4; display: flex; gap: 6px; }
+#s7 .col.go ul li::before { content: '✓'; color: #6dc87a; flex-shrink: 0; }
+#s7 .col.stop ul li::before { content: '✗'; color: #d07070; flex-shrink: 0; }
+
+/* ─── SLIDE 8: ZONAS CRÍTICAS ─── */
+#s8 .content { padding: 44px 48px; display: flex; flex-direction: column; height: 100%; }
+#s8 .title { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 600; color: #f0e8d5; line-height: 1.1; margin-bottom: 8px; }
+#s8 .subtitle { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(196,162,100,0.5); margin-bottom: 22px; }
+#s8 .zones { display: flex; flex-direction: column; gap: 10px; flex: 1; }
+#s8 .zone { display: flex; align-items: flex-start; gap: 14px; padding: 12px 14px; border-radius: 4px; border-left: 3px solid; }
+#s8 .zone.low { border-color: #6dc87a; background: rgba(80,180,80,0.04); }
+#s8 .zone.med { border-color: #c4a264; background: rgba(196,162,100,0.04); }
+#s8 .zone.high { border-color: #d07070; background: rgba(200,60,60,0.04); }
+#s8 .zone-icon { font-size: 22px; flex-shrink: 0; }
+#s8 .zone-text h4 { font-size: 13px; font-weight: 700; margin-bottom: 3px; color: #ddd5c0; }
+#s8 .zone-text p { font-size: 12px; color: #6a8090; line-height: 1.4; }
+#s8 .zone.low .zone-text h4 { color: #6dc87a; }
+#s8 .zone.med .zone-text h4 { color: #c4a264; }
+#s8 .zone.high .zone-text h4 { color: #d07070; }
+
+/* ─── SLIDE 9: COSTOS ─── */
+#s9 .content { padding: 44px 48px; display: flex; flex-direction: column; height: 100%; }
+#s9 .title { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 600; color: #f0e8d5; line-height: 1.1; margin-bottom: 8px; }
+#s9 .subtitle { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(196,162,100,0.5); margin-bottom: 22px; }
+#s9 .costs { display: flex; flex-direction: column; gap: 12px; flex: 1; }
+#s9 .cost-item { padding: 16px 18px; border-radius: 6px; background: rgba(196,162,100,0.04); border: 1px solid rgba(196,162,100,0.1); }
+#s9 .cost-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(196,162,100,0.5); margin-bottom: 6px; }
+#s9 .cost-name { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #f0e8d5; margin-bottom: 4px; }
+#s9 .cost-range { font-size: 22px; font-weight: 700; color: #c4a264; margin-bottom: 4px; }
+#s9 .cost-note { font-size: 12px; color: #6a8090; }
+#s9 .warning { margin-top: 10px; padding: 12px 14px; border-radius: 4px; background: rgba(200,60,60,0.05); border: 1px solid rgba(200,60,60,0.15); font-size: 12px; color: #d07070; line-height: 1.5; }
+
+/* ─── SLIDE 10: CTA ─── */
+#s10 { background: #06101a; }
+#s10 .bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 100%, rgba(196,162,100,0.08) 0%, transparent 65%); }
+#s10 .content { position: relative; z-index: 2; padding: 52px 48px; display: flex; flex-direction: column; height: 100%; align-items: center; justify-content: center; text-align: center; }
+#s10 .eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: rgba(196,162,100,0.5); margin-bottom: 24px; }
+#s10 .title { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 600; color: #f0e8d5; line-height: 1.15; margin-bottom: 20px; max-width: 380px; }
+#s10 .body { font-size: 14px; color: #6a8aaa; line-height: 1.7; margin-bottom: 32px; max-width: 360px; }
+#s10 .cta-box { background: rgba(196,162,100,0.1); border: 1px solid rgba(196,162,100,0.3); border-radius: 6px; padding: 16px 28px; margin-bottom: 24px; }
+#s10 .cta-text { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #c4a264; margin-bottom: 4px; }
+#s10 .cta-url { font-size: 13px; color: #8090a8; }
+#s10 .handle { font-size: 18px; font-weight: 700; color: rgba(196,162,100,0.6); letter-spacing: 1px; }
+#s10 .accent-circle { position: absolute; bottom: -80px; right: -80px; width: 200px; height: 200px; border-radius: 50%; border: 1px solid rgba(196,162,100,0.08); }
+#s10 .accent-circle2 { position: absolute; bottom: -50px; right: -50px; width: 140px; height: 140px; border-radius: 50%; border: 1px solid rgba(196,162,100,0.05); }
+
+/* ─── CAPTION BOX ─── */
+.caption-box {
+  width: 540px;
+  background: #0b1a2c;
+  border: 1px solid rgba(196,162,100,0.15);
+  border-radius: 6px;
+  padding: 28px 32px;
+}
+.caption-box h2 { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #c4a264; margin-bottom: 16px; }
+.caption-box pre { font-family: 'Nunito Sans', sans-serif; font-size: 13px; color: #9aacbc; line-height: 1.8; white-space: pre-wrap; }
+</style>
+</head>
+<body>
+
+<!-- INSTRUCCIONES -->
+<div style="width:540px;background:#0b1a2c;border:1px solid rgba(196,162,100,0.2);border-radius:6px;padding:24px 28px;margin-bottom:1rem;">
+  <p style="font-size:13px;font-weight:700;color:#c4a264;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Instrucciones de uso</p>
+  <p style="font-size:13px;color:#7090a8;line-height:1.7;">Haz pantalla completa (F11) · Captura cada slide (Win+Shift+S o Screenshot) · Guarda los 10 · Sube en orden al carrusel de Instagram · Copia el caption del final.</p>
+</div>
+
+<!-- SLIDE 1 -->
+<div class="slide-label">Slide 1 / 10 — GANCHO</div>
+<div class="slide" id="s1">
+  <div class="bg-lines"></div>
+  <div class="accent-line"></div>
+  <div class="wave-top"></div>
+  <div class="content">
+    <div class="eyebrow">Capitán Rodrigo Troncoso · Hijo del Mar</div>
+    <div class="headline">El barco tenía buen precio. El surveyor sacó el medidor. Y apareció ese número.</div>
+    <div class="subline">Lo que nadie te explica sobre la ósmosis antes de firmar la compra.</div>
+    <div class="swipe">Desliza para saber qué significa <span class="swipe-arrow">→</span></div>
+  </div>
+  <div class="brand-tag">@hijodelmar.cl</div>
+  <div class="wave-bottom"></div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide-label">Slide 2 / 10 — ¿QUÉ ES LA ÓSMOSIS?</div>
+<div class="slide" id="s2">
+  <div class="wave-top"></div>
+  <div class="content">
+    <div class="section-tag">Concepto base</div>
+    <div class="title">¿Qué es la ósmosis en un casco de fibra?</div>
+    <div class="body">La fibra de vidrio no es 100% impermeable. Con los años, el agua penetra a nivel molecular a través del gelcoat y disuelve los compuestos atrapados en el laminado durante la fabricación.</div>
+    <div class="body">Eso crea una solución más concentrada adentro que afuera. El agua sigue entrando para equilibrar — y así se forman las ampollas.</div>
+    <div class="highlight">"No es un defecto de fabricación. Es un proceso químico que ocurre en casi todos los cascos de poliéster con el tiempo."</div>
+  </div>
+  <div class="brand-tag">@hijodelmar.cl</div>
+  <div class="slide-num">2 / 10</div>
+  <div class="wave-bottom"></div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide-label">Slide 3 / 10 — LOS BLÍSTERES</div>
+<div class="slide" id="s3">
+  <div class="wave-top"></div>
+  <div class="content">
+    <div class="title">Tres tipos de blíster. Tres diagnósticos distintos.</div>
+    <div class="subtitle">Lo que ves vs lo que hay debajo</div>
+    <div class="blisters">
+      <div class="blister-row b1">
+        <div class="dot"></div>
+        <div class="blister-text">
+          <h4>Blíster superficial en gelcoat</h4>
+          <p>Pequeño, líquido claro. Solo compromete el exterior. Se trata con secado + barrera epóxica.</p>
+        </div>
+      </div>
+      <div class="blister-row b2">
+        <div class="dot"></div>
+        <div class="blister-text">
+          <h4>Blíster profundo en laminado</h4>
+          <p>Mayor tamaño, líquido amarillento con olor ácido. Laminado afectado. Requiere tratamiento completo.</p>
+        </div>
+      </div>
+      <div class="blister-row b3">
+        <div class="dot"></div>
+        <div class="blister-text">
+          <h4>Ósmosis avanzada — bandera roja</h4>
+          <p>Ampollas grandes, líquido marrón/verdoso, olor fuerte. Posible delaminación. Evaluar antes de comprar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="brand-tag">@hijodelmar.cl</div>
+  <div class="slide-num">3 / 10</div>
+  <div class="wave-bottom"></div>
+</div>
+
+<!-- SLIDE 4 -->
+<div class="slide-label">Slide 4 / 10 — EL MEDIDOR DE HUMEDAD</div>
+<div class="slide" id="s4">
+  <div class="wave-top"></div>
+  <div class="content">
+    <div class="title">Cómo leer el medidor de humedad</div>
+    <div class="subtitle">Los números que importan en el survey</div>
+    <div class="table">
+      <div class="row ok">
+        <div class="pct">1–3%</div>
+        <div class="desc">Laminado seco. Sin penetración significativa de agua.</div>
+        <div class="badge">Normal</div>
+      </div>
+      <div class="row warn">
+        <div class="pct">4–10%</div>
+        <div class="desc">Humedad moderada. Revisar y monitorear.</div>
+        <div class="badge">Atención</div>
+      </div>
+      <div class="row warn">
+        <div class="pct">10–20%</div>
+        <div class="desc">Penetración significativa. Negociar precio y tratar.</div>
+        <div class="badge">Negociar</div>
+      </div>
+      <div class="row bad">
+        <div class="pct">+20%</div>
+        <div class="desc">Ósmosis severa o núcleo comprometido.</div>
+        <div class="badge">Riesgo</div>
+      </div>
+    </div>
+    <div class="note">* El medidor mide conductividad, no ósmosis directamente. Siempre complementar con inspección visual.</div>
+  </div>
+  <div class="brand-tag">@hijodelmar.cl</div>
+  <div class="slide-num">4 / 10</div>
+  <div class="wave-bottom"></div>
+</div>
+
+<!-- SLIDE 5 -->
+<div class="slide-label">Slide 5 / 10 — EL SISTEMA DE VACÍO</div>
+<div class="slide" id="s5">
+  <div class="wave-top"></div>
+  <div class="content">
+    <div class="title">¿Cómo funciona el secado por vacío?</div>
+    <div class="subtitle">El proceso en 6 pasos</div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <div class="step-text"><h4>Mapeado del casco</h4><p>El técnico registra la humedad en cada zona con el medidor.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <div class="step-text"><h4>Perforación de acceso</h4><p>Orificios de 4–8mm en las zonas húmedas. Mínimo y calculado.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <div class="step-text"><h4>Instalación de tubos</h4><p>Tubos transparentes sellados conectados a un colector central.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-n">4</div>
+        <div class="step-text"><h4>Aplicación de vacío</h4><p>Bomba a 0.6–0.9 bar fuerza la humedad a salir del laminado.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-n">5</div>
+        <div class="step-text"><h4>Monitoreo (semanas)</h4><p>Lecturas periódicas hasta bajar de 5%. Puede tomar 4–16 semanas.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-n">6</div>
+        <div class="step-text"><h4>Sellado + barrera epóxica</h4><p>Mínimo 5 capas de epóxico. Sin esto, la humedad vuelve.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="brand-tag">@hijodelmar.cl</div>
+  <div class="slide-num">5 / 10</div>
+  <div class="wave-bottom"></div>
+</div>
+
+<!-- SLIDE 6 -->
+<div class="slide-label">Slide 6 / 10 — HERRAMIENTAS DEL SURVEY</div>
+<div class="slide" id="s6">
+  <div class="wave-top"></div>
+  <div class="content">
+    <div class="title">Las herramientas del surveyor</div>
+    <div class="subtitle">Cómo se detecta el problema — lo que deberías ver en el survey</div>
+    <div class="tools">
+      <div class="tool">
+        <div class="tool-name">Medidor de conductividad</div>
+        <div class="tool-model">Tramex Skipper 5</div>
+        <div class="tool-desc">Mide humedad sin perforar. Doble profundidad: 10mm y 30mm.</div>
+      </div>
+      <div class="tool">
+        <div class="tool-name">Test de percusión</div>
+        <div class="tool-model">Martillo / Nudillo</div>
+        <div class="tool-desc">Sonido hueco = zona delaminada. No reemplazable por ningún aparato.</div>
+      </div>
+      <div class="tool">
+        <div class="tool-name">Cámara termográfica</div>
+        <div class="tool-model">FLIR / HIKMICRO</div>
+        <div class="tool-desc">Mapea temperatura diferencial. Revela zonas húmedas invisibles al ojo.</div>
+      </div>
+      <div class="tool">
+        <div class="tool-name">Inspección visual</div>
+        <div class="tool-model">Lupa + espátula</div>
+        <div class="tool-desc">Abrir una ampolla y oler el líquido. El olor a vinagre no miente.</div>
+      </div>
+    </div>
+  </div>
+  <div class="brand-tag">@hijodelmar.cl</div>
+  <div class="slide-num">6 / 10</div>
+  <div class="wave-bottom"></div>
+</div>
+
+<!-- SLIDE 7 -->
+<div class="slide-label">Slide 7 / 10 — ¿CUÁNDO FUNCIONA?</div>
+<div class="slide" id="s7">
+  <div class="wave-top"></div>
+  <div class="content">
+    <div class="title">¿Cuándo sirve el secado por vacío y cuándo no basta?</div>
+    <div class="subtitle">La pregunta que define si el barco vale la pena</div>
+    <div class="cols">
+      <div class="col go">
+        <div class="col-head">Funciona bien</div>
+        <ul>
+          <li>Laminado húmedo pero íntegro</li>
+          <li>Sin zonas blandas al tacto</li>
+          <li>Núcleo firme, sin pudrir</li>
+          <li>Humedad moderada (+4% a 20%)</li>
+          <li>Documentación del taller disponible</li>
+        </ul>
+      </div>
+      <div class="col stop">
+        <div class="col-head">No es suficiente</div>
+        <ul>
+          <li>Cubierta blanda al caminar</li>
+          <li>Golpe hueco en espejo o costados</li>
+          <li>Núcleo de balsa podrido</li>
+          <li>Humedad sobre 20% extendida</li>
+          <li>Sin historial del tratamiento</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="brand-tag">@hijodelmar.cl</div>
+  <div class="slide-num">7 / 10</div>
+  <div class="wave-bottom"></div>
+</div>
+
+<!-- SLIDE 8 -->
+<div class="slide-label">Slide 8 / 10 — ZONAS CRÍTICAS</div>
+<div class="slide" id="s8">
+  <div class="wave-top"></div>
+  <div class="content">
+    <div class="title">Las zonas del barco que más importan revisar</div>
+    <div class="subtitle">No todas tienen el mismo riesgo</div>
+    <div class="zones">
+      <div class="zone low">
+        <div class="zone-icon">⚓</div>
+        <div class="zone-text">
+          <h4>Casco bajo flotación — manejable</h4>
+          <p>La zona más común de ósmosis. Si el laminado suena sólido, el tratamiento funciona bien.</p>
+        </div>
+      </div>
+      <div class="zone med">
+        <div class="zone-icon">🚢</div>
+        <div class="zone-text">
+          <h4>Espejo de popa — atención</h4>
+          <p>Múltiples puntos de entrada de agua (motor, prensaestopas). Núcleo frecuentemente comprometido.</p>
+        </div>
+      </div>
+      <div class="zone high">
+        <div class="zone-icon">⚠️</div>
+        <div class="zone-text">
+          <h4>Cubierta — la más preocupante</h4>
+          <p>Núcleo de balsa o madera que se pudre en silencio. Una cubierta blanda es la reparación más cara.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="brand-tag">@hijodelmar.cl</div>
+  <div class="slide-num">8 / 10</div>
+  <div class="wave-bottom"></div>
+</div>
+
+<!-- SLIDE 9 -->
+<div class="slide-label">Slide 9 / 10 — COSTOS REALES</div>
+<div class="slide" id="s9">
+  <div class="wave-top"></div>
+  <div class="content">
+    <div class="title">¿Cuánto cuesta realmente tratar la ósmosis?</div>
+    <div class="subtitle">Rangos reales para veleros de 35–40 pies</div>
+    <div class="costs">
+      <div class="cost-item">
+        <div class="cost-label">Ósmosis leve a moderada</div>
+        <div class="cost-name">Secado + barrera epóxica + antifouling</div>
+        <div class="cost-range">USD 3.000 – 8.000</div>
+        <div class="cost-note">6 a 16 semanas fuera del agua</div>
+      </div>
+      <div class="cost-item">
+        <div class="cost-label">Ósmosis severa con corte de núcleo</div>
+        <div class="cost-name">Apertura + reemplazo de laminado comprometido</div>
+        <div class="cost-range">USD 15.000 – 25.000+</div>
+        <div class="cost-note">Puede superar el valor de compra del barco</div>
+      </div>
+    </div>
+    <div class="warning">La reparación puede costar más que lo que pagaste por el barco. Saberlo antes de firmar es la diferencia entre un buen negocio y uno malo.</div>
+  </div>
+  <div class="brand-tag">@hijodelmar.cl</div>
+  <div class="slide-num">9 / 10</div>
+  <div class="wave-bottom"></div>
+</div>
+
+<!-- SLIDE 10 -->
+<div class="slide-label">Slide 10 / 10 — LLAMADO A LA ACCIÓN</div>
+<div class="slide" id="s10">
+  <div class="bg"></div>
+  <div class="accent-circle"></div>
+  <div class="accent-circle2"></div>
+  <div class="wave-top"></div>
+  <div class="content">
+    <div class="eyebrow">Asesoría náutica · Chile</div>
+    <div class="title">¿Vas a comprar un velero y el survey tiene humedad?</div>
+    <div class="body">Te ayudo a leer el informe y decidir si vale la pena — antes de que firmes cualquier cosa.</div>
+    <div class="cta-box">
+      <div class="cta-text">Guía completa en</div>
+      <div class="cta-url">hijodelmar.cl → Publicaciones</div>
+    </div>
+    <div class="handle">@hijodelmar.cl</div>
+  </div>
+  <div class="wave-bottom"></div>
+</div>
+
+<!-- CAPTION -->
+<div class="caption-box">
+  <h2>Caption para copiar y pegar</h2>
+  <pre>
+El barco tenía buen precio. El surveyor sacó el medidor de humedad. Y apareció ese número. 🚢
+
+La ósmosis asusta a mucha gente — y hace que otros ignoren el problema. Ninguna de las dos cosas es lo correcto.
+
+En este carrusel te explico:
+→ Qué es realmente la ósmosis
+→ Cómo leer el medidor de humedad
+→ Cómo funciona el sistema de secado por vacío
+→ Cuándo sirve y cuándo no basta
+→ Cuánto cuesta realmente
+
+La guía completa está en el link de mi bio 👇
+hijodelmar.cl
+
+——
+
+¿Estás evaluando un velero con humedad en el survey? Escríbeme por WhatsApp y te ayudo a interpretar el informe antes de que firmes.
+
+#velero #navegacion #comprarvelero #surveynamarino #osmosis #fibra #casco #veleroschile #nautica #capitanrodrigotroncoso #hijodelmar #Chile #navegacionchile #barco #yate #velerousado #inspeccionnaval #marinavelera</pre>
+</div>
+
+</body>
+</html>
