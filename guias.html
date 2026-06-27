@@ -103,8 +103,10 @@
   .guide-card:hover { border-color: rgba(196,162,100,0.35); background: #0d1f35; }
   .guide-icon { width: 80px; height: 80px; border-radius: 4px; overflow: hidden; flex-shrink: 0; border: 1px solid rgba(196,162,100,0.15); background: rgba(196,162,100,0.05); display: flex; align-items: center; justify-content: center; transition: background 0.2s, border-color 0.2s; }
   .guide-icon i { font-size: 38px; color: rgba(196,162,100,0.55); transition: color 0.2s; }
+  .guide-icon svg { width: 38px; height: 38px; stroke: rgba(196,162,100,0.55); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.2s; }
   .guide-card:hover .guide-icon { background: rgba(196,162,100,0.09); border-color: rgba(196,162,100,0.3); }
   .guide-card:hover .guide-icon i { color: #c4a264; }
+  .guide-card:hover .guide-icon svg { stroke: #c4a264; }
   .guide-tag { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(196,162,100,0.5); margin-bottom: 4px; }
   .guide-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: #f0e8d5; margin-bottom: 4px; line-height: 1.2; }
   .guide-desc { font-size: 13px; color: #5a7090; line-height: 1.5; }
@@ -218,7 +220,7 @@
   <div class="section-label">Artículos publicados · 6</div>
 
   <a href="guia-canales-sur-chile.html" class="guide-card">
-    <div class="guide-icon"><i class="ti ti-map"></i></div>
+    <div class="guide-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 7l6 -3l6 3l6 -3v13l-6 3l-6 -3l-6 3v-13"/><path d="M9 4v13"/><path d="M15 7v13"/></svg></div>
     <div>
       <div class="guide-tag">Navegación</div>
       <div class="guide-title">Cómo Navegar los Canales del Sur de Chile</div>
@@ -231,7 +233,7 @@
   </a>
 
   <a href="guia-epirb-que-es.html" class="guide-card">
-    <div class="guide-icon"><i class="ti ti-radar"></i></div>
+    <div class="guide-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="3"/><path d="M6.1 6.1l3.9 3.9"/></svg></div>
     <div>
       <div class="guide-tag">Seguridad</div>
       <div class="guide-title">¿Qué es un EPIRB y Por Qué tu Embarcación lo Necesita?</div>
@@ -244,7 +246,7 @@
   </a>
 
   <a href="guia-errores-comprar-velero.html" class="guide-card">
-    <div class="guide-icon"><i class="ti ti-ship"></i></div>
+    <div class="guide-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 20a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1"/><path d="M4 18v-5l8 -4l8 4v5"/><path d="M8 18v-4l4 -2l4 2v4"/></svg></div>
     <div>
       <div class="guide-tag">Compra</div>
       <div class="guide-title">7 Errores al Comprar un Velero Usado en Chile</div>
@@ -257,7 +259,7 @@
   </a>
 
   <a href="guia-como-planificar-travesia-velero.html" class="guide-card">
-    <div class="guide-icon"><i class="ti ti-route"></i></div>
+    <div class="guide-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M12 19h4.5a3.5 3.5 0 0 0 0 -7h-8a3.5 3.5 0 0 1 0 -7h3.5"/></svg></div>
     <div>
       <div class="guide-tag">Navegación</div>
       <div class="guide-title">Cómo Planificar una Travesía en Velero</div>
@@ -270,7 +272,7 @@
   </a>
 
   <a href="guia-secado-casco-vacio-osmosis.html" class="guide-card">
-    <div class="guide-icon"><i class="ti ti-droplet"></i></div>
+    <div class="guide-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3l4.9 8.5a7 7 0 1 1 -9.8 0z"/></svg></div>
     <div>
       <div class="guide-tag">Compra · Técnico</div>
       <div class="guide-title">Secado de Casco por Vacío: Osmosis y lo que el Survey No Siempre Te Dice</div>
@@ -283,7 +285,7 @@
   </a>
 
   <a href="guia-velero-vs-lancha.html" class="guide-card">
-    <div class="guide-icon"><i class="ti ti-sailboat"></i></div>
+    <div class="guide-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 20a25 25 0 0 0 20 0"/><path d="M7 20l5 -15l5 15"/><path d="M7 20l5 -6l5 6"/><path d="M7 14l5 -3"/></svg></div>
     <div>
       <div class="guide-tag">Compra</div>
       <div class="guide-title">Velero vs Lancha: ¿Cuál Comprar en Chile?</div>
