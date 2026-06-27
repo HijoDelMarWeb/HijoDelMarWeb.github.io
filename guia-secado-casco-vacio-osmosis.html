@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Secado de Casco por Vacío en Veleros: Osmosis y Humedad · Hijo del Mar</title>
+<meta name="description" content="Guía técnica completa sobre el secado de casco por vacío en veleros de fibra. Cómo detectar osmosis, qué significa humedad alta en el survey, cuándo reparar y cuándo rechazar un barco.">
+<meta name="author" content="Rodrigo Troncoso Peirano">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.hijodelmar.cl/guia-secado-casco-vacio-osmosis.html">
+<link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-secado-casco-vacio-osmosis.html">
+<link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-secado-casco-vacio-osmosis.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.hijodelmar.cl/guia-secado-casco-vacio-osmosis.html">
+<meta property="og:title" content="Secado de Casco por Vacío en Veleros: Osmosis y Humedad · Hijo del Mar">
+<meta property="og:description" content="Guía técnica sobre osmosis, humedad en el casco y el sistema de secado por vacío. Lo que debes saber antes de comprar un velero usado.">
+<meta property="og:image" content="https://www.hijodelmar.cl/logo_hijodelmar.png">
+<meta property="og:site_name" content="Hijo del Mar">
+<meta property="og:locale" content="es_CL">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="favicon_192.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://www.hijodelmar.cl/guia-secado-casco-vacio-osmosis.html#article",
+      "headline": "Secado de Casco por Vacío en Veleros: Osmosis, Humedad y lo que Debes Saber Antes de Comprar",
+      "description": "Guía técnica completa sobre el secado de casco por vacío. Cómo funciona, cuándo sirve y cuándo no basta. Incluye tabla de valores de humedad y criterios de decisión para compra de veleros usados.",
+      "author": { "@id": "https://www.hijodelmar.cl/#rodrigo" },
+      "publisher": { "@id": "https://www.hijodelmar.cl/#business" },
+      "datePublished": "2026-06-27",
+      "dateModified": "2026-06-27",
+      "url": "https://www.hijodelmar.cl/guia-secado-casco-vacio-osmosis.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.hijodelmar.cl/" },
+        { "@type": "ListItem", "position": 2, "name": "Publicaciones", "item": "https://www.hijodelmar.cl/guias.html" },
+        { "@type": "ListItem", "position": 3, "name": "Secado de Casco por Vacío", "item": "https://www.hijodelmar.cl/guia-secado-casco-vacio-osmosis.html" }
+      ]
+    }
+  ]
+}
+</script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  var _hdmC = localStorage.getItem('hdm_cookie_consent');
+  gtag('consent', 'default', {'analytics_storage': _hdmC === 'granted' ? 'granted' : 'denied'});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KRJ42YBH5N"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-KRJ42YBH5N');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/tabler-icons.min.css">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+  body { font-family: 'Nunito Sans', sans-serif; background: #08131f; color: #ddd5c0; overflow-x: hidden; }
+
+  /* NAV */
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 2rem 3rem 2.4rem; position: sticky; top: 0; background: rgba(8,19,31,0.95); backdrop-filter: blur(8px); z-index: 100; }
+  nav::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 14px; background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='14'><path d='M0 14 Q10 10 20 14 Q30 10 40 14 Q50 10 60 14 Q70 10 80 14 Q90 10 100 14 Q110 10 120 14' fill='none' stroke='%23c4a264' stroke-width='1' opacity='0.35'/><path d='M0 14 Q20 7 40 14 Q60 7 80 14 Q100 7 120 14' fill='none' stroke='%23c4a264' stroke-width='1.3' opacity='0.42'/><path d='M0 14 Q30 1 60 14 Q90 1 120 14' fill='none' stroke='%23c4a264' stroke-width='1.7' opacity='0.48'/></svg>"); background-repeat: repeat-x; background-size: 120px 14px; pointer-events: none; }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 24px; color: #c4a264; letter-spacing: 1px; text-decoration: none; }
+  .nav-links { display: flex; align-items: center; gap: 2rem; }
+  .nav-link { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #8090a8; text-decoration: none; transition: color 0.2s; }
+  .nav-link:hover, .nav-link.active { color: #c4a264; }
+  .nav-dropdown { position: relative; }
+  .nav-dropdown-toggle { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #8090a8; background: none; border: none; cursor: pointer; padding: 0; transition: color 0.2s; font-family: inherit; }
+  .nav-dropdown-toggle:hover { color: #c4a264; }
+  .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 1rem); right: 0; background: rgba(8,19,31,0.98); border: 1px solid rgba(196,162,100,0.18); border-radius: 6px; min-width: 220px; padding: 0.5rem 0; z-index: 200; box-shadow: 0 8px 32px rgba(0,0,0,0.5); }
+  .nav-dropdown::after { content: ''; position: absolute; top: 100%; left: -10px; right: -10px; height: 1rem; }
+  .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown.mob-open .nav-dropdown-menu { display: block; }
+  .nav-dropdown-header { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(196,162,100,0.5); padding: 0.6rem 1rem 0.3rem; }
+  .nav-dropdown-item { display: flex; align-items: center; gap: 0.6rem; padding: 0.55rem 1rem; font-size: 12px; color: #8090a8; text-decoration: none; transition: color 0.15s, background 0.15s; }
+  .nav-dropdown-item:hover { color: #c4a264; background: rgba(196,162,100,0.06); }
+  .nav-dropdown-item i { font-size: 15px; }
+  .lang-picker { position: relative; }
+  .nav-lang-btn { display: flex; align-items: center; gap: 6px; background: none; border: 1px solid rgba(196,162,100,0.25); border-radius: 4px; padding: 4px 8px; cursor: pointer; color: #8090a8; font-size: 11px; font-weight: 600; letter-spacing: 1px; }
+  .lang-drop { display: none; position: absolute; right: 0; top: calc(100% + 6px); background: rgba(8,19,31,0.98); border: 1px solid rgba(196,162,100,0.18); border-radius: 6px; min-width: 130px; z-index: 200; padding: 0.3rem 0; }
+  .lang-drop.open { display: block; }
+  .lang-opt { display: flex; align-items: center; gap: 8px; padding: 0.5rem 0.9rem; font-size: 12px; color: #8090a8; cursor: pointer; transition: color 0.15s; }
+  .lang-opt:hover { color: #c4a264; }
+  .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+  .nav-burger span { display: block; width: 22px; height: 2px; background: #c4a264; border-radius: 2px; }
+
+  /* HERO */
+  .hero { padding: 5rem 2rem 3.5rem; text-align: center; border-bottom: 1px solid rgba(196,162,100,0.1); position: relative; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(196,162,100,0.05) 0%, transparent 65%); pointer-events: none; }
+  .breadcrumb { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(196,162,100,0.4); margin-bottom: 1.5rem; }
+  .breadcrumb a { color: rgba(196,162,100,0.4); text-decoration: none; }
+  .breadcrumb a:hover { color: #c4a264; }
+  .hero-tag { font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: rgba(196,162,100,0.6); margin-bottom: 1rem; }
+  .hero-title { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; color: #f0e8d5; line-height: 1.1; margin-bottom: 1.5rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+  .hero-meta { display: flex; align-items: center; justify-content: center; gap: 1.5rem; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #5a7090; margin-bottom: 2rem; flex-wrap: wrap; }
+  .hero-meta span { display: flex; align-items: center; gap: 6px; }
+  .hero-intro { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: #b0a080; max-width: 680px; margin: 0 auto; line-height: 1.6; }
+
+  /* CONTENT */
+  .content-wrap { max-width: 780px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+  .prose { font-size: 16px; line-height: 1.85; color: #c8bfa8; margin-bottom: 1.5rem; }
+  .prose strong { color: #f0e8d5; font-weight: 600; }
+  h2.section-title { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 600; color: #f0e8d5; margin: 3.5rem 0 1.25rem; line-height: 1.2; }
+  h3.sub-title { font-family: 'Nunito Sans', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #c4a264; margin: 2.5rem 0 1rem; }
+  .pull-quote { border-left: 3px solid rgba(196,162,100,0.35); padding: 1.25rem 1.5rem; margin: 2.5rem 0; background: rgba(196,162,100,0.03); border-radius: 0 4px 4px 0; }
+  .pull-quote p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: #c4a264; line-height: 1.5; margin: 0; }
+
+  /* STEP CARDS */
+  .steps { display: flex; flex-direction: column; gap: 0; margin: 2rem 0; }
+  .step { display: grid; grid-template-columns: 48px 1fr; gap: 1.25rem; padding: 1.5rem 0; border-bottom: 1px solid rgba(196,162,100,0.07); align-items: flex-start; }
+  .step:last-child { border-bottom: none; }
+  .step-num { width: 48px; height: 48px; border-radius: 50%; background: rgba(196,162,100,0.08); border: 1px solid rgba(196,162,100,0.2); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #c4a264; font-weight: 600; flex-shrink: 0; }
+  .step-content h4 { font-size: 14px; font-weight: 700; color: #f0e8d5; margin-bottom: 0.4rem; letter-spacing: 0.5px; }
+  .step-content p { font-size: 14px; line-height: 1.7; color: #9090a8; margin: 0; }
+
+  /* HUMIDITY TABLE */
+  .humidity-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 14px; }
+  .humidity-table th { background: rgba(196,162,100,0.08); color: #c4a264; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid rgba(196,162,100,0.2); }
+  .humidity-table td { padding: 0.75rem 1rem; border-bottom: 1px solid rgba(196,162,100,0.06); color: #c8bfa8; vertical-align: top; }
+  .humidity-table tr:last-child td { border-bottom: none; }
+  .badge { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+  .badge-ok { background: rgba(80,180,80,0.12); color: #6dc87a; border: 1px solid rgba(80,180,80,0.2); }
+  .badge-warn { background: rgba(196,162,100,0.12); color: #c4a264; border: 1px solid rgba(196,162,100,0.25); }
+  .badge-red { background: rgba(200,60,60,0.12); color: #d07070; border: 1px solid rgba(200,60,60,0.2); }
+
+  /* WARNING / INFO BOXES */
+  .info-box { background: rgba(196,162,100,0.04); border: 1px solid rgba(196,162,100,0.15); border-radius: 6px; padding: 1.5rem 1.75rem; margin: 2rem 0; }
+  .info-box .box-label { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #c4a264; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 8px; }
+  .info-box p { font-size: 14px; line-height: 1.75; color: #a0a8b8; margin: 0; }
+  .info-box p + p { margin-top: 0.75rem; }
+  .warn-box { background: rgba(200,60,60,0.04); border: 1px solid rgba(200,60,60,0.2); border-radius: 6px; padding: 1.5rem 1.75rem; margin: 2rem 0; }
+  .warn-box .box-label { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #d07070; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 8px; }
+  .warn-box p { font-size: 14px; line-height: 1.75; color: #a0a8b8; margin: 0; }
+
+  /* DECISION GRID */
+  .decision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+  .decision-card { padding: 1.5rem; border-radius: 6px; }
+  .decision-card.go { background: rgba(80,180,80,0.05); border: 1px solid rgba(80,180,80,0.18); }
+  .decision-card.stop { background: rgba(200,60,60,0.05); border: 1px solid rgba(200,60,60,0.18); }
+  .decision-card h4 { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.75rem; }
+  .decision-card.go h4 { color: #6dc87a; }
+  .decision-card.stop h4 { color: #d07070; }
+  .decision-card ul { list-style: none; padding: 0; }
+  .decision-card ul li { font-size: 13px; color: #9090a8; line-height: 1.7; padding: 0.2rem 0; display: flex; align-items: flex-start; gap: 8px; }
+  .decision-card ul li::before { content: '→'; flex-shrink: 0; margin-top: 2px; }
+  .decision-card.go ul li::before { color: #6dc87a; }
+  .decision-card.stop ul li::before { color: #d07070; }
+
+  /* AUTHOR */
+  .author-box { display: flex; gap: 1.25rem; align-items: flex-start; background: rgba(196,162,100,0.04); border: 1px solid rgba(196,162,100,0.12); border-radius: 6px; padding: 1.5rem; margin: 3rem 0 0; }
+  .author-avatar { width: 56px; height: 56px; border-radius: 50%; border: 2px solid rgba(196,162,100,0.3); flex-shrink: 0; object-fit: cover; }
+  .author-info h4 { font-size: 14px; font-weight: 700; color: #f0e8d5; margin-bottom: 0.25rem; }
+  .author-info p { font-size: 13px; color: #8090a8; line-height: 1.6; margin: 0; }
+
+  /* CTA */
+  .cta-section { text-align: center; background: rgba(196,162,100,0.04); border: 1px solid rgba(196,162,100,0.12); border-radius: 8px; padding: 3rem 2rem; margin: 3rem 0; }
+  .cta-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #f0e8d5; margin-bottom: 0.75rem; }
+  .cta-sub { font-size: 14px; color: #8090a8; margin-bottom: 2rem; }
+  .btn-gold { display: inline-flex; align-items: center; gap: 8px; background: #c4a264; color: #08131f; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; border-radius: 3px; text-decoration: none; transition: background 0.2s; }
+  .btn-gold:hover { background: #d8b878; }
+
+  /* FOOTER */
+  footer { text-align: center; padding: 3rem 2rem; border-top: 1px solid rgba(196,162,100,0.08); font-size: 11px; color: #3a4a5a; letter-spacing: 1px; }
+  footer a { color: #4a6a8a; text-decoration: none; }
+
+  /* TOOL CARDS */
+  .tool-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 2rem 0; }
+  .tool-card { background: rgba(196,162,100,0.03); border: 1px solid rgba(196,162,100,0.1); border-radius: 6px; padding: 1.25rem 1.5rem; }
+  .tool-card-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.6rem; }
+  .tool-card-icon { width: 36px; height: 36px; background: rgba(196,162,100,0.08); border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .tool-card-icon i { font-size: 18px; color: #c4a264; }
+  .tool-card h4 { font-size: 13px; font-weight: 700; color: #f0e8d5; margin: 0; }
+  .tool-card .tool-model { font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(196,162,100,0.5); margin-top: 1px; }
+  .tool-card p { font-size: 13px; line-height: 1.65; color: #8090a8; margin: 0; }
+
+  /* SVG DIAGRAMS */
+  .diagram-wrap { margin: 2.5rem 0; border: 1px solid rgba(196,162,100,0.1); border-radius: 8px; overflow: hidden; background: rgba(196,162,100,0.02); }
+  .diagram-caption { font-size: 12px; color: #5a6a7a; letter-spacing: 1px; text-align: center; padding: 0.6rem 1rem; border-top: 1px solid rgba(196,162,100,0.08); }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.25rem 1.8rem; }
+    .nav-links { display: none; }
+    .nav-burger { display: flex; }
+    .hero-title { font-size: 32px; }
+    .decision-grid { grid-template-columns: 1fr; }
+    .step { grid-template-columns: 40px 1fr; gap: 1rem; }
+    .tool-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Hijo del Mar</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Inicio</a>
+    <a href="sobre-mi.html" class="nav-link">Sobre mí</a>
+    <a href="guias.html" class="nav-link active">Publicaciones</a>
+    <a href="contacto.html" class="nav-link">Contacto</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-toggle">Asesorías</button>
+      <div class="nav-dropdown-menu">
+        <div class="nav-dropdown-header">Servicios náuticos</div>
+        <a href="asesoria-navegacion.html" class="nav-dropdown-item"><i class="ti ti-route"></i>Planificación de Navegación</a>
+        <a href="asesoria-seguridad.html" class="nav-dropdown-item"><i class="ti ti-shield-check"></i>Equipos de Seguridad</a>
+        <a href="asesoria-electronica.html" class="nav-dropdown-item"><i class="ti ti-device-tablet"></i>Ayudas Electrónicas</a>
+        <a href="asesoria-supervivencia.html" class="nav-dropdown-item"><i class="ti ti-lifebuoy"></i>Supervivencia en el Mar</a>
+        <a href="asesoria-compra-embarcacion.html" class="nav-dropdown-item"><i class="ti ti-anchor"></i>Compra de Embarcación</a>
+      </div>
+    </div>
+    <div class="lang-picker">
+      <button class="nav-lang-btn">🇨🇱 ES</button>
+    </div>
+  </div>
+  <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
+</nav>
+
+<section class="hero">
+  <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="guias.html">Publicaciones</a> · Secado de Casco por Vacío</div>
+  <div class="hero-tag">Guía Técnica · Compra de Veleros</div>
+  <h1 class="hero-title">Secado de Casco por Vacío: Lo que el Survey No Siempre Te Dice</h1>
+  <div class="hero-meta">
+    <span><i class="ti ti-user"></i> Capitán Rodrigo Troncoso</span>
+    <span><i class="ti ti-calendar"></i> Junio 2026</span>
+    <span><i class="ti ti-clock"></i> 12 min de lectura</span>
+  </div>
+  <p class="hero-intro">Cuando el medidor de humedad da rojo en el survey de un velero usado, empieza una conversación que pocos compradores están preparados para tener. Esta guía te da las herramientas para entenderla.</p>
+</section>
+
+<main class="content-wrap">
+
+  <p class="prose">Llevas meses buscando. Encontraste el velero. El precio es bueno, el diseño te convence, el vendedor parece honesto. Pero el surveyor saca su medidor de humedad, lo pasa por el casco, y aparece un número que no te gusta. O aparece una palabra: <strong>ósmosis</strong>.</p>
+
+  <p class="prose">En ese momento, la mayoría de los compradores reacciona de una de dos maneras: entra en pánico y abandona el barco, o ignora el tema porque el vendedor dice que "ya está tratado". Ninguna de las dos es la respuesta correcta.</p>
+
+  <div class="pull-quote">
+    <p>"La humedad en un casco de fibra no es una sentencia de muerte para el barco. Pero sí es información que tienes que saber leer."</p>
+  </div>
+
+  <h2 class="section-title">¿Qué es la Ósmosis y Por Qué Aparece?</h2>
+
+  <p class="prose">La fibra de vidrio —el material con el que están construidos la mayoría de los veleros modernos— no es impermeable al 100%. A nivel molecular, el laminado de fibra y resina poliéster tiene microporos que permiten el paso lento de agua. Con los años, el agua penetra desde el exterior hacia adentro del laminado.</p>
+
+  <p class="prose">Una vez dentro, el agua disuelve las trazas de componentes hidrosolubles que quedan atrapados en el laminado durante la fabricación (sales, glicoles, ácidos). Eso crea una solución de mayor concentración que el agua exterior. Por osmosis —el mismo proceso que explica cómo las células regulan su contenido— el agua sigue siendo atraída hacia adentro para equilibrar las concentraciones.</p>
+
+  <p class="prose">El resultado son <strong>ampollas o burbujas bajo el gelcoat</strong>, algunas pequeñas como cabezas de alfiler, otras grandes como monedas, que contienen un líquido ácido con olor característico. Eso es ósmosis.</p>
+
+  <h3 class="sub-title">¿Cuánto tarda en aparecer?</h3>
+  <p class="prose">Depende de la calidad del laminado original, de si tiene barrera epóxica, de la temperatura del agua y de cuánto tiempo ha estado en el mar. Veleros de los años 70 y 80 fabricados con resina poliéster sin barrera son los más propensos. Algunos muestran ósmosis en 5 años. Otros llevan 40 años sin una sola ampolla. La calidad del trabajo original es determinante.</p>
+
+  <div class="diagram-wrap">
+    <svg viewBox="0 0 780 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+      <defs>
+        <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#0a2a4a" stop-opacity="0.9"/>
+          <stop offset="100%" stop-color="#061520" stop-opacity="1"/>
+        </linearGradient>
+        <linearGradient id="hullGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2a3a28"/>
+          <stop offset="100%" stop-color="#1a2818"/>
+        </linearGradient>
+      </defs>
+      <!-- background -->
+      <rect width="780" height="260" fill="#08131f"/>
+      <!-- SEA zone label -->
+      <text x="20" y="22" fill="rgba(120,144,168,0.6)" font-family="'Nunito Sans',sans-serif" font-size="10" letter-spacing="2" text-transform="uppercase">EXTERIOR · AGUA DE MAR</text>
+      <!-- sea water -->
+      <rect x="0" y="28" width="780" height="72" fill="url(#seaGrad)" opacity="0.7"/>
+      <!-- gelcoat layer -->
+      <rect x="0" y="100" width="780" height="14" fill="#2d4a2a"/>
+      <text x="20" y="111" fill="rgba(196,162,100,0.5)" font-family="'Nunito Sans',sans-serif" font-size="9" letter-spacing="1">GELCOAT</text>
+      <!-- laminado layer -->
+      <rect x="0" y="114" width="780" height="46" fill="#1a2818"/>
+      <text x="20" y="142" fill="rgba(196,162,100,0.5)" font-family="'Nunito Sans',sans-serif" font-size="9" letter-spacing="1">LAMINADO · FIBRA + RESINA POLIÉSTER</text>
+      <!-- interior label -->
+      <rect x="0" y="160" width="780" height="100" fill="#0c1a0a" opacity="0.5"/>
+      <text x="20" y="200" fill="rgba(120,144,168,0.4)" font-family="'Nunito Sans',sans-serif" font-size="10" letter-spacing="2">INTERIOR DEL CASCO</text>
+
+      <!-- water molecules penetrating - arrows -->
+      <g opacity="0.6">
+        <line x1="160" y1="40" x2="160" y2="98" stroke="#7890a8" stroke-width="1" stroke-dasharray="3,3"/>
+        <polygon points="160,100 156,90 164,90" fill="#7890a8"/>
+        <line x1="300" y1="40" x2="300" y2="98" stroke="#7890a8" stroke-width="1" stroke-dasharray="3,3"/>
+        <polygon points="300,100 296,90 304,90" fill="#7890a8"/>
+        <line x1="480" y1="40" x2="480" y2="98" stroke="#7890a8" stroke-width="1" stroke-dasharray="3,3"/>
+        <polygon points="480,100 476,90 484,90" fill="#7890a8"/>
+        <line x1="620" y1="40" x2="620" y2="98" stroke="#7890a8" stroke-width="1" stroke-dasharray="3,3"/>
+        <polygon points="620,100 616,90 624,90" fill="#7890a8"/>
+      </g>
+      <text x="390" y="70" fill="rgba(120,144,168,0.7)" font-family="'Nunito Sans',sans-serif" font-size="11" text-anchor="middle">H₂O penetra por los microporos del gelcoat</text>
+
+      <!-- BLISTERS -->
+      <!-- Blister 1: pequeña (superficial) -->
+      <ellipse cx="200" cy="105" rx="18" ry="7" fill="rgba(196,162,100,0.15)" stroke="rgba(196,162,100,0.5)" stroke-width="1.5"/>
+      <text x="200" y="88" fill="rgba(196,162,100,0.7)" font-family="'Nunito Sans',sans-serif" font-size="9" text-anchor="middle">Blíster</text>
+      <text x="200" y="78" fill="rgba(196,162,100,0.7)" font-family="'Nunito Sans',sans-serif" font-size="9" text-anchor="middle">superficial</text>
+
+      <!-- Blister 2: mediana (en gelcoat/laminado) -->
+      <ellipse cx="400" cy="112" rx="28" ry="9" fill="rgba(196,162,100,0.1)" stroke="rgba(196,162,100,0.4)" stroke-width="1.5"/>
+      <text x="400" y="88" fill="rgba(196,162,100,0.7)" font-family="'Nunito Sans',sans-serif" font-size="9" text-anchor="middle">Blíster</text>
+      <text x="400" y="78" fill="rgba(196,162,100,0.7)" font-family="'Nunito Sans',sans-serif" font-size="9" text-anchor="middle">profundo</text>
+      <!-- liquid inside -->
+      <ellipse cx="400" cy="114" rx="18" ry="5" fill="rgba(180,140,60,0.2)"/>
+
+      <!-- Blister 3: grande con líquido ácido (osmosis avanzada) -->
+      <ellipse cx="600" cy="115" rx="40" ry="11" fill="rgba(200,60,60,0.08)" stroke="rgba(200,60,60,0.35)" stroke-width="1.5"/>
+      <ellipse cx="600" cy="117" rx="28" ry="6" fill="rgba(200,60,60,0.15)"/>
+      <text x="600" y="88" fill="rgba(200,80,80,0.8)" font-family="'Nunito Sans',sans-serif" font-size="9" text-anchor="middle">Blíster grande</text>
+      <text x="600" y="78" fill="rgba(200,80,80,0.8)" font-family="'Nunito Sans',sans-serif" font-size="9" text-anchor="middle">· líquido ácido</text>
+
+      <!-- legend icons at bottom -->
+      <circle cx="160" cy="230" r="6" fill="rgba(196,162,100,0.15)" stroke="rgba(196,162,100,0.5)" stroke-width="1.5"/>
+      <text x="172" y="234" fill="#7890a8" font-family="'Nunito Sans',sans-serif" font-size="11">Blíster leve — gelcoat comprometido</text>
+      <circle cx="400" cy="230" r="6" fill="rgba(196,162,100,0.1)" stroke="rgba(196,162,100,0.4)" stroke-width="1.5"/>
+      <text x="412" y="234" fill="#7890a8" font-family="'Nunito Sans',sans-serif" font-size="11">Blíster profundo — laminado afectado</text>
+      <circle cx="600" cy="230" r="6" fill="rgba(200,60,60,0.08)" stroke="rgba(200,60,60,0.35)" stroke-width="1.5"/>
+      <text x="612" y="234" fill="#d07070" font-family="'Nunito Sans',sans-serif" font-size="11">Ósmosis avanzada · bandera roja</text>
+    </svg>
+    <div class="diagram-caption">Corte transversal del casco: progresión de los blísteres osmóticos desde el gelcoat hacia el laminado · Diagrama original Hijo del Mar</div>
+  </div>
+
+  <h2 class="section-title">Las Herramientas del Survey: Cómo se Detecta la Humedad</h2>
+
+  <p class="prose">El surveyor profesional no llega con un solo instrumento. El diagnóstico correcto requiere combinar al menos tres métodos. Cada uno revela algo diferente:</p>
+
+  <div class="tool-grid">
+    <div class="tool-card">
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-device-analytics"></i></div>
+        <div>
+          <h4>Medidor de Humedad por Conductividad</h4>
+          <div class="tool-model">Tramex Skipper 5 · Protimeter Aquant · Sovereign</div>
+        </div>
+      </div>
+      <p>El instrumento central. Mide la resistencia eléctrica del laminado: más agua = mayor conductividad = valor más alto. El Tramex Skipper 5 tiene doble profundidad de lectura (10 mm superficial y 30 mm profundo), lo que permite distinguir si la humedad está en el gelcoat o en el núcleo. No es invasivo — no requiere perforar. Su limitación: no diferencia entre agua libre, agua ligada a resina, y condensación interna. Siempre se usa como punto de partida, no como diagnóstico definitivo.</p>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-hammer"></i></div>
+        <div>
+          <h4>Test de Percusión (Hammer Test)</h4>
+          <div class="tool-model">Martillo de survey · Nudillo · Maza de plástico</div>
+        </div>
+      </div>
+      <p>El método más antiguo y todavía indispensable. Se golpea suavemente la superficie con un martillo de madera o plástico (o simplemente con el nudillo) y se escucha. Un sonido sólido y seco indica laminado íntegro. Un sonido hueco, apagado o de "caja vacía" revela delaminación o núcleo comprometido. Especialmente útil en cubierta y superestructura donde el núcleo de balsa se pudre antes de que el exterior muestre señales. No cuesta nada y da información que ningún aparato puede reemplazar.</p>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-temperature"></i></div>
+        <div>
+          <h4>Cámara Termográfica Infrarroja</h4>
+          <div class="tool-model">FLIR E8 · Fluke TiX580 · HIKMICRO</div>
+        </div>
+      </div>
+      <p>Herramienta avanzada, no siempre disponible pero muy poderosa. Las zonas húmedas del laminado retienen calor de manera distinta a las zonas secas. Fotografiando el casco con cámara infrarroja al amanecer —cuando la temperatura exterior acaba de cambiar— se revelan manchas de temperatura diferente que mapean exactamente dónde está concentrada la humedad. Ideal para confirmar hallazgos del medidor de conductividad y para documentar el estado antes de un tratamiento.</p>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-eyeglass"></i></div>
+        <div>
+          <h4>Inspección Visual Directa</h4>
+          <div class="tool-model">Lupa · Linterna de inspección · Espátula</div>
+        </div>
+      </div>
+      <p>Fundamental y no reemplazable por ningún instrumento. El surveyor revisa el casco completo bajo buena luz buscando ampollas, burbujas o elevaciones en el gelcoat. Con una espátula o bisturí se abre cuidadosamente una ampolla sospechosa: si el líquido interior es claro e inodoro, puede ser agua de lluvia atrapada. Si es amarillento, verdoso o marrón con olor ácido o a vinagre, es diagnóstico de ósmosis activa. El olor es un signo clínico que no miente.</p>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-microscope"></i></div>
+        <div>
+          <h4>Análisis de Laminado (Core Sample)</h4>
+          <div class="tool-model">Taladro · Sierra Copa · Laboratorio</div>
+        </div>
+      </div>
+      <p>Usado solo cuando hay dudas sobre la integridad estructural. Se extrae un pequeño testigo del laminado (o del núcleo en zonas sospechosas) con una broca hueca y se inspecciona o se envía a laboratorio. Permite ver el estado real de las capas internas: si el balsa está ennegrecido y blando, si las fibras están delaminadas, si hay fisuras internas. Es invasivo y requiere reparar después, por eso se reserva para casos donde el resto del diagnóstico no es concluyente.</p>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-ruler-measure"></i></div>
+        <div>
+          <h4>Medidor de Espesor Ultrasónico</h4>
+          <div class="tool-model">Elcometer 500 · Cygnus Instruments</div>
+        </div>
+      </div>
+      <p>Mide el espesor del laminado desde el exterior sin perforar. Especialmente útil en cascos donde no es posible acceder al interior para medir directamente. Al comparar el espesor actual con las especificaciones originales del astillero, se detectan zonas donde el laminado se ha adelgazado por corrosión galvánica, abrasión o reparaciones mal ejecutadas. También confirma si el espesor es uniforme o si hay variaciones que sugieren reparaciones previas no declaradas.</p>
+    </div>
+  </div>
+
+  <h2 class="section-title">El Medidor de Humedad: Cómo Interpretar los Números</h2>
+
+  <p class="prose">El instrumento que usa el surveyor se llama <strong>medidor de humedad por conductividad</strong> (moisture meter). Mide la resistencia eléctrica del laminado: cuando hay más agua, la conductividad aumenta y el valor sube. Los valores se expresan en porcentaje o en una escala relativa según la marca del equipo.</p>
+
+  <p class="prose">Lo que importa saber: <strong>el barco debe estar fuera del agua al menos 48 horas antes de medir</strong>. Un casco recién sacado siempre va a dar valores altos aunque no tenga ósmosis. Los profesionales esperan más tiempo —idealmente una semana o más— para lecturas confiables.</p>
+
+  <table class="humidity-table">
+    <thead>
+      <tr>
+        <th>Nivel de Humedad</th>
+        <th>Valor Aprox.</th>
+        <th>Significado</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Seco / Normal</td>
+        <td>1% – 3%</td>
+        <td>Laminado en buen estado, sin penetración de agua significativa</td>
+        <td><span class="badge badge-ok">OK</span></td>
+      </tr>
+      <tr>
+        <td>Húmedo moderado</td>
+        <td>4% – 10%</td>
+        <td>Hay agua en el laminado. Puede requerir secado y revisión</td>
+        <td><span class="badge badge-warn">Atención</span></td>
+      </tr>
+      <tr>
+        <td>Húmedo alto</td>
+        <td>10% – 20%</td>
+        <td>Penetración significativa. Tratamiento necesario. Negociar precio</td>
+        <td><span class="badge badge-warn">Negociar</span></td>
+      </tr>
+      <tr>
+        <td>Crítico</td>
+        <td>+ 20%</td>
+        <td>Ósmosis severa o núcleo comprometido. Bandera roja</td>
+        <td><span class="badge badge-red">Bandera Roja</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="info-box">
+    <div class="box-label"><i class="ti ti-info-circle"></i> Importante</div>
+    <p>Los medidores de humedad no miden directamente ósmosis — miden conductividad. Un valor alto puede deberse a ósmosis, pero también a agua en un núcleo de balsa o espuma, a condensación interna, o a reparaciones mal hechas que atraparon humedad. El medidor es el primer paso, no el diagnóstico completo.</p>
+  </div>
+
+  <h2 class="section-title">El Sistema de Secado por Vacío: Cómo Funciona Exactamente</h2>
+
+  <p class="prose">Cuando la humedad está alta pero el laminado todavía está estructuralmente firme —sin delaminación, sin zonas blandas, sin núcleo podrido— existe una alternativa a cortar y rehacer el casco: el <strong>secado por vacío</strong>, también llamado drying system o vacuum hull drying.</p>
+
+  <p class="prose">La idea es extraer la humedad que quedó atrapada dentro del laminado o el núcleo, forzando su salida sin necesidad de quitar paños enteros de fibra. El proceso, cuando está bien ejecutado, es efectivo. Pero hay que entender exactamente qué hace y qué no hace.</p>
+
+  <h3 class="sub-title">El Proceso Paso a Paso</h3>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Mapeado y diagnóstico de zonas húmedas</h4>
+        <p>Antes de perforar nada, el técnico mapea el casco completo con el medidor de humedad, registrando los valores en cada zona. Esto permite identificar dónde está concentrada la humedad y qué partes del laminado o núcleo están comprometidas. También se hace golpeando con el nudillo para detectar zonas huecas que indican delaminación.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Perforación de los orificios de acceso</h4>
+        <p>Se perforan pequeños orificios estratégicos en las zonas húmedas, normalmente en un patrón calculado según el espesor del laminado y la distribución de la humedad. El diámetro es mínimo —generalmente 4 a 8 mm— y se ubican para crear una red de canales de extracción a través del material.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Inserción de tubos y conexión al manifold</h4>
+        <p>En cada orificio se instala un tubo transparente sellado. Estos tubos se conectan a un colector central —el manifold— que puede verse como un tubo blanco horizontal al que confluyen todos los tubos individuales. El sellado entre el tubo y el orificio es crítico para que el sistema funcione correctamente.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Aplicación de vacío y/o calor</h4>
+        <p>Una bomba de vacío se conecta al manifold y extrae el aire del sistema. Esto crea una presión diferencial que fuerza la humedad atrapada a migrar hacia los tubos. Los sistemas más avanzados combinan vacío con calor seco (aire caliente a temperatura controlada) o aplican calor directamente sobre la superficie del casco, lo que acelera la evaporación.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <h4>Monitoreo y medición periódica</h4>
+        <p>Las lecturas del medidor de humedad se repiten regularmente —cada días o semanas— en los puntos registrados inicialmente. El objetivo es bajar desde valores de 10–30% hasta menos del 5%, idealmente entre 1% y 3%. Este proceso puede tomar desde 4 semanas hasta 6 meses dependiendo del grosor del laminado, la temperatura ambiente y la gravedad de la humedad.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">6</div>
+      <div class="step-content">
+        <h4>Sellado, reparación y barrera epóxica</h4>
+        <p>Una vez alcanzados los valores objetivo, los orificios se sellan con resina epóxica. Se repara la superficie, se aplican mínimo 5 capas de barrera epóxica (que es impermeable al agua, a diferencia del gelcoat original) y finalmente se aplica antifouling si el barco va al agua. Sin esta barrera, la humedad vuelve.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="diagram-wrap">
+    <svg viewBox="0 0 780 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+      <!-- background -->
+      <rect width="780" height="320" fill="#08131f"/>
+
+      <!-- CASCO (sección) -->
+      <text x="30" y="22" fill="rgba(120,144,168,0.5)" font-family="'Nunito Sans',sans-serif" font-size="10" letter-spacing="2">CORTE DEL CASCO · SISTEMA DE VACÍO INSTALADO</text>
+
+      <!-- laminado exterior -->
+      <rect x="0" y="38" width="780" height="28" fill="#1a2818" rx="0"/>
+      <rect x="0" y="38" width="780" height="6" fill="#2d4a2a"/>
+      <text x="20" y="50" fill="rgba(196,162,100,0.5)" font-family="'Nunito Sans',sans-serif" font-size="9" letter-spacing="1">GELCOAT + LAMINADO EXTERIOR</text>
+
+      <!-- núcleo (sandwich) -->
+      <rect x="0" y="66" width="780" height="36" fill="#0e1a0c"/>
+      <text x="20" y="89" fill="rgba(120,144,168,0.4)" font-family="'Nunito Sans',sans-serif" font-size="9" letter-spacing="1">NÚCLEO (BALSA / ESPUMA) · ZONA DE HUMEDAD</text>
+      <!-- moisture dots in core -->
+      <g fill="rgba(120,144,200,0.4)">
+        <circle cx="80" cy="84" r="3"/><circle cx="120" cy="78" r="2"/><circle cx="160" cy="86" r="3"/>
+        <circle cx="220" cy="80" r="2"/><circle cx="280" cy="85" r="3"/><circle cx="340" cy="79" r="2"/>
+        <circle cx="400" cy="83" r="3"/><circle cx="460" cy="78" r="2"/><circle cx="520" cy="85" r="3"/>
+        <circle cx="580" cy="80" r="2"/><circle cx="640" cy="84" r="3"/><circle cx="700" cy="79" r="2"/>
+      </g>
+
+      <!-- laminado interior -->
+      <rect x="0" y="102" width="780" height="20" fill="#1a2818"/>
+      <text x="20" y="116" fill="rgba(196,162,100,0.5)" font-family="'Nunito Sans',sans-serif" font-size="9" letter-spacing="1">LAMINADO INTERIOR</text>
+
+      <!-- ORIFICIOS con tubos -->
+      <!-- Tube 1 -->
+      <rect x="146" y="122" width="8" height="90" rx="3" fill="rgba(120,180,255,0.15)" stroke="rgba(120,180,255,0.4)" stroke-width="1"/>
+      <rect x="146" y="38" width="8" height="86" rx="0" fill="rgba(196,162,100,0.1)" stroke="rgba(196,162,100,0.3)" stroke-width="1"/>
+      <circle cx="150" cy="38" r="5" fill="#08131f" stroke="rgba(196,162,100,0.5)" stroke-width="1.5"/>
+      <!-- Tube 2 -->
+      <rect x="296" y="122" width="8" height="90" rx="3" fill="rgba(120,180,255,0.15)" stroke="rgba(120,180,255,0.4)" stroke-width="1"/>
+      <rect x="296" y="38" width="8" height="86" rx="0" fill="rgba(196,162,100,0.1)" stroke="rgba(196,162,100,0.3)" stroke-width="1"/>
+      <circle cx="300" cy="38" r="5" fill="#08131f" stroke="rgba(196,162,100,0.5)" stroke-width="1.5"/>
+      <!-- Tube 3 -->
+      <rect x="446" y="122" width="8" height="90" rx="3" fill="rgba(120,180,255,0.15)" stroke="rgba(120,180,255,0.4)" stroke-width="1"/>
+      <rect x="446" y="38" width="8" height="86" rx="0" fill="rgba(196,162,100,0.1)" stroke="rgba(196,162,100,0.3)" stroke-width="1"/>
+      <circle cx="450" cy="38" r="5" fill="#08131f" stroke="rgba(196,162,100,0.5)" stroke-width="1.5"/>
+      <!-- Tube 4 -->
+      <rect x="596" y="122" width="8" height="90" rx="3" fill="rgba(120,180,255,0.15)" stroke="rgba(120,180,255,0.4)" stroke-width="1"/>
+      <rect x="596" y="38" width="8" height="86" rx="0" fill="rgba(196,162,100,0.1)" stroke="rgba(196,162,100,0.3)" stroke-width="1"/>
+      <circle cx="600" cy="38" r="5" fill="#08131f" stroke="rgba(196,162,100,0.5)" stroke-width="1.5"/>
+
+      <!-- MANIFOLD (horizontal pipe) -->
+      <rect x="50" y="205" width="680" height="18" rx="9" fill="rgba(196,162,100,0.08)" stroke="rgba(196,162,100,0.35)" stroke-width="1.5"/>
+      <text x="390" y="219" fill="rgba(196,162,100,0.7)" font-family="'Nunito Sans',sans-serif" font-size="10" letter-spacing="2" text-anchor="middle">MANIFOLD · COLECTOR CENTRAL</text>
+
+      <!-- Tubes connecting to manifold -->
+      <line x1="150" y1="212" x2="150" y2="212" stroke="rgba(120,180,255,0.4)" stroke-width="2"/>
+      <line x1="300" y1="212" x2="300" y2="212" stroke="rgba(120,180,255,0.4)" stroke-width="2"/>
+      <line x1="450" y1="212" x2="450" y2="212" stroke="rgba(120,180,255,0.4)" stroke-width="2"/>
+      <line x1="600" y1="212" x2="600" y2="212" stroke="rgba(120,180,255,0.4)" stroke-width="2"/>
+
+      <!-- Arrows from core to tube (moisture extraction) -->
+      <g fill="rgba(120,180,255,0.5)" stroke="none">
+        <polygon points="150,90 146,98 154,98"/>
+        <polygon points="300,90 296,98 304,98"/>
+        <polygon points="450,90 446,98 454,98"/>
+        <polygon points="600,90 596,98 604,98"/>
+      </g>
+
+      <!-- Main line to pump -->
+      <line x1="390" y1="223" x2="390" y2="260" stroke="rgba(196,162,100,0.4)" stroke-width="2" stroke-dasharray="4,3"/>
+
+      <!-- VACUUM PUMP box -->
+      <rect x="310" y="260" width="160" height="50" rx="6" fill="rgba(196,162,100,0.05)" stroke="rgba(196,162,100,0.3)" stroke-width="1.5"/>
+      <text x="390" y="280" fill="#c4a264" font-family="'Nunito Sans',sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1">BOMBA DE VACÍO</text>
+      <text x="390" y="298" fill="rgba(120,144,168,0.7)" font-family="'Nunito Sans',sans-serif" font-size="10" text-anchor="middle">— 0.6 a 0.9 bar —</text>
+
+      <!-- Labels -->
+      <text x="55" y="153" fill="rgba(120,180,255,0.7)" font-family="'Nunito Sans',sans-serif" font-size="10" letter-spacing="1">Tubos transparentes sellados</text>
+      <line x1="140" y1="148" x2="140" y2="158" stroke="rgba(120,180,255,0.3)" stroke-width="1"/>
+
+      <!-- moisture out arrows -->
+      <text x="680" y="145" fill="rgba(120,180,255,0.6)" font-family="'Nunito Sans',sans-serif" font-size="10" text-anchor="middle">Humedad</text>
+      <text x="680" y="157" fill="rgba(120,180,255,0.6)" font-family="'Nunito Sans',sans-serif" font-size="10" text-anchor="middle">extraída →</text>
+    </svg>
+    <div class="diagram-caption">Sistema de extracción de humedad por vacío: orificios → tubos transparentes → manifold → bomba · Diagrama original Hijo del Mar</div>
+  </div>
+
+  <h3 class="sub-title">Herramientas y Equipos del Proceso de Vacío</h3>
+
+  <div class="tool-grid">
+    <div class="tool-card">
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-wind"></i></div>
+        <div>
+          <h4>Bomba de Vacío</h4>
+          <div class="tool-model">Vacío de 0.6 – 0.9 bar</div>
+        </div>
+      </div>
+      <p>El corazón del sistema. Genera la presión negativa que fuerza la humedad a migrar desde el laminado hacia los tubos. Las bombas de vacío para este uso trabajan entre 0.6 y 0.9 bar de vacío. Deben funcionar de manera continua y estable durante semanas, por lo que la calidad y el caudal de la bomba determinan en gran medida la efectividad del tratamiento.</p>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-git-branch"></i></div>
+        <div>
+          <h4>Manifold (Colector Central)</h4>
+          <div class="tool-model">PVC · Acero inoxidable</div>
+        </div>
+      </div>
+      <p>El tubo horizontal al que confluyen todos los tubos individuales del casco. Generalmente de PVC blanco con conexiones tipo Y o T. Centraliza el flujo de aire/vapor extraído de múltiples puntos hacia una única salida conectada a la bomba. Un buen manifold es hermético — cualquier fuga en las uniones reduce drásticamente la eficiencia del vacío.</p>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-tool"></i></div>
+        <div>
+          <h4>Taladro + Brocas de Punta Fina</h4>
+          <div class="tool-model">4 a 8 mm de diámetro</div>
+        </div>
+      </div>
+      <p>Se usan para perforar los orificios de acceso al laminado o núcleo. El diámetro es mínimo para minimizar el daño. El ángulo y la profundidad de cada perforación son calculados por el técnico según el espesor del laminado. Un error en la perforación (demasiado profundo, en ángulo incorrecto) puede comprometer la integridad estructural del casco.</p>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-gauge"></i></div>
+        <div>
+          <h4>Manómetro de Vacío</h4>
+          <div class="tool-model">Analógico o digital</div>
+        </div>
+      </div>
+      <p>Mide en tiempo real el nivel de vacío que está logrando el sistema. Permite al técnico detectar fugas (el vacío cae si hay una fuga), verificar que la bomba está trabajando correctamente, y ajustar la presión si es necesario. Un sistema bien sellado debería mantener el vacío objetivo de manera estable durante horas sin variación significativa.</p>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-flame"></i></div>
+        <div>
+          <h4>Sistemas de Calor Controlado</h4>
+          <div class="tool-model">Estufa dieléctrica · Calentador de aire · Hot-vac</div>
+        </div>
+      </div>
+      <p>El calor acelera la evaporación de la humedad dentro del laminado. Los sistemas más avanzados (hot-vac) combinan vacío con calor aplicado directamente sobre la superficie del casco, elevando la temperatura del laminado a 40–60°C. Los sistemas más modernos usan inducción dieléctrica o lámparas de infrarrojos lejanos para calentar sin dañar la superficie. El calor por sí solo sin vacío también se usa en algunos tratamientos.</p>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-droplet-off"></i></div>
+        <div>
+          <h4>Barrera Epóxica (Post-tratamiento)</h4>
+          <div class="tool-model">West System 105/207 · Hempel · International</div>
+        </div>
+      </div>
+      <p>No es parte del proceso de secado, sino la etapa final indispensable. Una vez que el laminado alcanza los valores objetivo de humedad, se aplican mínimo 5 capas de resina epóxica, que es verdaderamente impermeable al agua (a diferencia del gelcoat original de poliéster). Sin barrera epóxica, la humedad vuelve en 1–3 temporadas. Con barrera bien aplicada, la protección dura décadas.</p>
+    </div>
+  </div>
+
+  <div class="pull-quote">
+    <p>"El sistema de vacío extrae la humedad. La barrera epóxica evita que vuelva. Sin las dos cosas juntas, el tratamiento no sirve."</p>
+  </div>
+
+  <h2 class="section-title">¿Cuándo Funciona y Cuándo No Basta?</h2>
+
+  <p class="prose">Aquí está la parte que más importa para alguien que está comprando un velero: el secado por vacío es una herramienta poderosa, pero no hace milagros. Su efectividad depende completamente del estado del material que está debajo.</p>
+
+  <h3 class="sub-title">El Sistema Funciona Bien Cuando:</h3>
+  <p class="prose">El laminado está húmedo pero estructuralmente <strong>íntegro</strong> — las capas de fibra siguen adheridas entre sí, no hay zonas blandas al tacto ni huecas al golpe. El núcleo (si lo hay) está saturado de agua pero todavía firme — el balsa, la espuma o la madera no se han descompuesto. La humedad es uniforme y no hay concentraciones extremas en puntos específicos que sugieran fractura del laminado.</p>
+
+  <h3 class="sub-title">El Sistema No Basta Cuando:</h3>
+  <p class="prose">El núcleo está <strong>podrido, pulverizado o deslaminado</strong> — el vacío puede extraer humedad, pero no reconstruye la estructura del material. El balsa húmedo durante años se convierte en una masa oscura y sin rigidez que hay que cortar y reemplazar. Si hay zonas blandas en la cubierta o el casco al caminar o presionar, el vacío no es suficiente: hay que abrir.</p>
+
+  <div class="warn-box">
+    <div class="box-label"><i class="ti ti-alert-triangle"></i> Señal de alerta</div>
+    <p>Un casco que "suena hueco" al golpear con el nudillo, que cede ligeramente al presionar con el pulgar, o que tiene ampollas grandes con líquido oscuro y ácido en la zona del fondo, necesita más que secado. Necesita evaluación estructural antes de decidir cualquier cosa.</p>
+  </div>
+
+  <h2 class="section-title">Dónde Aparece la Humedad: Las Zonas Críticas</h2>
+
+  <p class="prose">No todas las zonas del barco responden igual al secado por vacío. Estas son las áreas que hay que revisar con más cuidado:</p>
+
+  <h3 class="sub-title">Casco bajo la línea de flotación</h3>
+  <p class="prose">La zona más común de ósmosis clásica. Siempre ha estado en contacto con el agua. Si el gelcoat tiene ampollas pero el laminado suena sólido, el tratamiento por vacío + barrera epóxica tiene buen pronóstico.</p>
+
+  <h3 class="sub-title">Cubierta y superestructura (espejo, tecas, pasillos)</h3>
+  <p class="prose">Mucho más preocupante que el casco. La cubierta suele tener núcleo de balsa o contrachapado para dar rigidez. Cuando el agua entra —por tornillos sin sellar, tapes de antena, herrajes mal montados— satura el núcleo y lo pudre. Una cubierta blanda es una reparación costosa y compleja que implica levantar todo el piso.</p>
+
+  <h3 class="sub-title">Stringers y refuerzos internos</h3>
+  <p class="prose">Los stringers son los refuerzos longitudinales del casco. En muchos veleros son de madera o balsa cubierta con fibra. Si el agua llegó adentro —por una fisura en el casco, por una quilla mal sellada, por una manga de achique— los stringers pueden estar podridos mientras el exterior parece perfecto. Esto solo se ve al abrir.</p>
+
+  <h3 class="sub-title">Espejo de popa</h3>
+  <p class="prose">El espejo concentra muchos puntos de entrada de agua: soportes del motor fuera de borda, escotillas, prensaestopas, herrajes. La humedad en el espejo a menudo indica núcleo comprometido y es difícil de tratar sin abrir.</p>
+
+  <h2 class="section-title">Si el Survey Detecta Humedad: Mi Protocolo para la Decisión</h2>
+
+  <div class="decision-grid">
+    <div class="decision-card go">
+      <h4>✓ Se puede negociar y reparar</h4>
+      <ul>
+        <li>Humedad moderada (4–15%) con laminado firme</li>
+        <li>Ampollas pequeñas superficiales en gelcoat</li>
+        <li>Casco sin zonas blandas ni huecos</li>
+        <li>Cubierta sólida al caminar</li>
+        <li>Vendedor presenta informe de tratamiento con mediciones antes/después</li>
+        <li>El precio refleja el estado real del barco</li>
+      </ul>
+    </div>
+    <div class="decision-card stop">
+      <h4>✗ Bandera Roja: reconsiderar</h4>
+      <ul>
+        <li>Humedad sobre 20% en múltiples zonas</li>
+        <li>Zonas blandas en cubierta o casco</li>
+        <li>Ampollas grandes con líquido oscuro y ácido</li>
+        <li>Golpe hueco en cubierta o espejo</li>
+        <li>Stringers blandos o con evidencia de agua interna</li>
+        <li>Vendedor no tiene documentación del tratamiento</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <div class="box-label"><i class="ti ti-file-text"></i> Lo que siempre pido antes de cerrar una compra</div>
+    <p>Si el barco fue tratado con vacío, exijo: mediciones de humedad antes del tratamiento (fechadas y firmadas por el técnico), mediciones después del tratamiento, fotos del proceso, nombre y referencia del taller que lo hizo, e inspección propia o de un surveyor de mi confianza después del tratamiento.</p>
+    <p>Un vendedor que hizo el trabajo bien no tiene problema en mostrar todo eso. Uno que no puede mostrarlo, o que dice "confíe en mí que quedó bien", es razón suficiente para seguir buscando.</p>
+  </div>
+
+  <h2 class="section-title">Cuánto Cuesta y Cuánto Tarda</h2>
+
+  <p class="prose">Los rangos varían mucho según el tamaño del barco, la gravedad de la humedad y si incluye solo el secado o también la barrera epóxica completa:</p>
+
+  <h3 class="sub-title">Sólo secado y barrera epóxica (ósmosis superficial)</h3>
+  <p class="prose">En un velero de 35–40 pies con ósmosis leve a moderada, el tratamiento completo —lijado del gelcoat, secado, barrera epóxica, antifouling— puede costar entre 3.000 y 8.000 USD dependiendo del país y el taller. El tiempo en tierra: entre 6 y 16 semanas.</p>
+
+  <h3 class="sub-title">Con corte y reemplazo de núcleo</h3>
+  <p class="prose">Si hay zonas de cubierta o casco con núcleo podrido que hay que abrir, cortar y relamininar, el costo puede superar los 15.000–25.000 USD en casos serios. Este tipo de trabajo requiere un astillero con experiencia en laminado y materiales compuestos.</p>
+
+  <div class="pull-quote">
+    <p>"La reparación de un velero con problemas serios de humedad puede costar más que lo que pagaste por el barco. Eso no siempre es un mal negocio, pero hay que saberlo antes de firmar."</p>
+  </div>
+
+  <h2 class="section-title">Conclusión: La Humedad es Información, No Veredicto</h2>
+
+  <p class="prose">Un velero con el medidor de humedad en rojo no es necesariamente un barco que debes descartar. Pero tampoco es un barco que debes comprar sin entender exactamente qué significa ese número, dónde está la humedad, qué hay debajo, y cuánto va a costar ponerlo en condiciones.</p>
+
+  <p class="prose">El sistema de secado por vacío existe, funciona, y en manos de profesionales puede recuperar un barco que de otro modo requeriría cirugía mayor. Pero es una herramienta, no magia. El diagnóstico correcto —hecho por alguien que sabe lo que está mirando— sigue siendo lo más importante.</p>
+
+  <p class="prose">Si estás en proceso de comprar un velero y el survey arroja humedad, antes de decidir cualquier cosa, conversa con alguien que haya visto muchos cascos. Ese es exactamente el tipo de asesoría que puedo darte.</p>
+
+  <div class="cta-section">
+    <div class="cta-title">¿Estás evaluando un velero con humedad en el survey?</div>
+    <p class="cta-sub">Te puedo ayudar a interpretar el informe y decidir si vale la pena —o cuánto negociar.</p>
+    <a href="asesoria-compra-embarcacion.html" class="btn-gold">Ver asesoría de compra →</a>
+  </div>
+
+  <div class="author-box">
+    <img src="logo_hijodelmar.png" alt="Capitán Rodrigo Troncoso" class="author-avatar">
+    <div class="author-info">
+      <h4>Rodrigo Troncoso Peirano · Capitán de Marina</h4>
+      <p>30 años navegando en pesca industrial, offshore en África y fiordos de la Patagonia. Hoy asesoro a quienes quieren entrar al mar con información real, no con folletos.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 Hijo del Mar · Capitán Rodrigo Troncoso · <a href="politica-cookies.html">Política de Cookies</a></p>
+</footer>
+
+<script src="cookies.js"></script>
+
+<script>
+(function(){
+  var burger=document.getElementById('navBurger');
+  var links=document.querySelector('nav .nav-links');
+  if(!burger||!links) return;
+  burger.addEventListener('click',function(){
+    burger.classList.toggle('open');
+    links.classList.toggle('open');
+  });
+  var dd=links.querySelector('.nav-dropdown');
+  var ddt=dd&&dd.querySelector('.nav-dropdown-toggle');
+  if(ddt){
+    ddt.addEventListener('click',function(e){
+      if(window.innerWidth<=768){
+        e.preventDefault();
+        dd.classList.toggle('mob-open');
+      }
+    });
+  }
+  document.addEventListener('click',function(e){
+    if(!e.target.closest('nav')){
+      burger.classList.remove('open');
+      links.classList.remove('open');
+      dd&&dd.classList.remove('mob-open');
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
