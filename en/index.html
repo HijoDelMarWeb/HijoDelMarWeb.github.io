@@ -101,8 +101,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/tabler-icons.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/tabler-icons.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/tabler-icons.min.css"></noscript>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.min.css"></noscript>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; scroll-padding-top: 100px; }
@@ -273,6 +275,8 @@
 
   /* VIDEO HERO */
   .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; opacity: 1; filter: brightness(0.80) saturate(1.1); z-index: 0; }
+  .hero-poster-mobile { display: none; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; filter: brightness(0.80) saturate(1.1); z-index: 0; }
+  @media (max-width: 768px) { .hero-video { display: none; } .hero-poster-mobile { display: block; } }
   .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,19,31,0.18) 0%, rgba(8,19,31,0.0) 40%, rgba(8,19,31,0.55) 100%); z-index: 1; }
   .hero canvas { z-index: 2; }
   .hero-wave { z-index: 3 !important; }
@@ -353,11 +357,13 @@
   </div>
 </nav>
 
+<main>
 <section class="hero">
   <video class="hero-video" autoplay muted loop playsinline preload="none" poster="../hero-poster.jpg">
     <source src="../hero.webm" type="video/webm">
     <source src="../hero.mp4" type="video/mp4">
   </video>
+  <img class="hero-poster-mobile" src="../hero-poster.jpg" alt="" aria-hidden="true" fetchpriority="high">
   <div class="hero-overlay"></div>
   <canvas id="stars"></canvas>
   <svg class="hero-wave" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -365,7 +371,7 @@
     <path d="M0,44 C300,28 600,55 900,40 C1140,27 1300,50 1440,40 L1440,60 L0,60 Z" fill="#08131f" opacity="0.9"/>
   </svg>
   <div class="hero-content">
-    <img src="../logo_hijodelmar.png" alt="Captain Rodrigo Troncoso - Nautical Advisory Chile" width="260" height="260" loading="eager" style="width:260px;height:260px;border-radius:50%;margin-bottom:1.5rem;display:block;margin-left:auto;margin-right:auto;">
+    <img src="../logo_hijodelmar.png" alt="Captain Rodrigo Troncoso - Nautical Advisory Chile" width="260" height="260" loading="eager" fetchpriority="high" style="width:260px;height:260px;border-radius:50%;margin-bottom:1.5rem;display:block;margin-left:auto;margin-right:auto;">
     <div class="hero-tag">Captain &middot; Merchant Marine &middot; All Chile &middot; Online &amp; In-Person</div>
     <h1 class="hero-title">Nautical Advisory in Chile</h1>
     <div class="hero-by">Rodrigo Troncoso Peirano &nbsp;&middot;&nbsp; Captain</div>
@@ -714,6 +720,8 @@
     <a class="c-link" href="https://linkedin.com/in/alexistroncosomaster" target="_blank"><i class="ti ti-brand-linkedin"></i> LinkedIn</a>
   </div>
 </section>
+
+</main>
 
 <footer>
   Hijo del Mar &nbsp;&middot;&nbsp; Rodrigo Troncoso Peirano &nbsp;&middot;&nbsp; Chile &nbsp;&middot;&nbsp; 2025&ndash;2026 &nbsp;&middot;&nbsp; <a href="cookie-policy.html" style="color:inherit;text-decoration:none;opacity:0.7;">Cookie policy</a>
