@@ -155,6 +155,7 @@
   }
 }
 </script>
+<script src="/lang-detect.js"></script>
 </head>
 <body>
 
@@ -376,7 +377,7 @@
   if(toggle){toggle.addEventListener('click',function(e){e.stopPropagation();drop.classList.toggle('open');});}
   document.addEventListener('click',function(){if(drop)drop.classList.remove('open');});
   var elES=document.getElementById('ldES');
-  if(elES){elES.addEventListener('click',function(){location.href='../como-funciona.html';});}
+  if(elES){elES.addEventListener('click',function(){localStorage.setItem('langOverride','es');location.href='../como-funciona.html';});}
 })();
 
 (function(){

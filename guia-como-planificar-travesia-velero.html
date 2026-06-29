@@ -207,6 +207,7 @@
   ]
 }
 </script>
+<script src="/lang-detect.js"></script>
 </head>
 <body>
 
@@ -469,7 +470,7 @@
   if(toggle){toggle.addEventListener('click',function(e){e.stopPropagation();drop.classList.toggle('open');});}
   document.addEventListener('click',function(){if(drop)drop.classList.remove('open');});
   var elEN=document.getElementById('ldEN');
-  if(elEN){elEN.addEventListener('click',function(){location.href='en/guia-como-planificar-travesia-velero.html';});}
+  if(elEN){elEN.addEventListener('click',function(){localStorage.setItem('langOverride','en');location.href='en/guia-como-planificar-travesia-velero.html';});}
 })();
 (function(){
   var burger=document.getElementById('navBurger'),links=document.querySelector('nav .nav-links');

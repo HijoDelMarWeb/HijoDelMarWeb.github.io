@@ -229,6 +229,7 @@
   ]
 }
 </script>
+<script src="/lang-detect.js"></script>
 </head>
 <body>
 
@@ -416,7 +417,7 @@ document.querySelectorAll('.faq-question').forEach(function(btn){
   document.addEventListener('click',function(){if(drop)drop.classList.remove('open');});
   var elES=document.getElementById('ldES');
   var elEN=document.getElementById('ldEN');
-  if(elES){elES.addEventListener('click',function(){location.href='../faq.html';});}
+  if(elES){elES.addEventListener('click',function(){localStorage.setItem('langOverride','es');location.href='../faq.html';});}
   if(elEN){elEN.style.cursor='default';}
 })();
 

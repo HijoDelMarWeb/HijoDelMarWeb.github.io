@@ -161,6 +161,7 @@
   }
 }
 </script>
+<script src="/lang-detect.js"></script>
 </head>
 <body>
 
@@ -341,7 +342,7 @@
   document.addEventListener('click',function(){if(drop)drop.classList.remove('open');});
   var elEN=document.getElementById('ldEN');
   var elES=document.getElementById('ldES');
-  if(elEN){elEN.addEventListener('click',function(){location.href='en/guias.html';});}
+  if(elEN){elEN.addEventListener('click',function(){localStorage.setItem('langOverride','en');location.href='en/guias.html';});}
   if(elES){elES.style.cursor='default';}
 })();
 </script>
