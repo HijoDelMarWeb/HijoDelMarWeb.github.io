@@ -38,105 +38,6 @@
 <link rel="icon" type="image/png" sizes="192x192" href="favicon_192.png">
 
 <!-- Schema.org: Negocio local + Persona + FAQ -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://www.hijodelmar.cl/#business",
-      "name": "Hijo del Mar",
-      "description": "Asesorías náuticas profesionales en todo Chile. Servicio online y presencial. Planificación de navegación, equipos de seguridad, compra de embarcaciones. Capitán con 30 años de experiencia en canales australes, fiordos y mar abierto.",
-      "url": "https://www.hijodelmar.cl",
-      "logo": "https://www.hijodelmar.cl/logo_hijodelmar.png",
-      "image": "https://www.hijodelmar.cl/logo_hijodelmar.png",
-      "telephone": "+56923956367",
-      "email": "contacto@hijodelmar.cl",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "CL"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Chile"
-      },
-      "serviceType": ["Asesoría náutica", "Planificación de navegación", "Seguridad marítima", "Turismo náutico"],
-      "priceRange": "$$",
-      "sameAs": [
-        "https://www.instagram.com/hijodelmar.cl/",
-        "https://www.instagram.com/capitanrodrigotroncoso/",
-        "https://linkedin.com/in/alexistroncosomaster"
-      ]
-    },
-    {
-      "@type": "Person",
-      "@id": "https://www.hijodelmar.cl/#person",
-      "name": "Rodrigo Troncoso Peirano",
-      "jobTitle": "Capitán de Marina Mercante",
-      "description": "Marino mercante chileno con más de 30 años de experiencia como Capitán en wellboats, remolcadores, PSV, AHTS y buques offshore para la industria petrolera en Chile, África, Sudamérica y el Caribe.",
-      "url": "https://www.hijodelmar.cl",
-      "image": "https://www.hijodelmar.cl/logo_hijodelmar.png",
-      "nationality": { "@type": "Country", "name": "Chile" },
-      "knowsAbout": ["Navegación náutica", "Seguridad marítima", "Posicionamiento dinámico", "Canales australes", "Offshore petrolero", "Planificación de rutas", "Equipos de supervivencia"],
-      "worksFor": {
-        "@id": "https://www.hijodelmar.cl/#business"
-      },
-      "sameAs": [
-        "https://www.instagram.com/hijodelmar.cl/",
-        "https://www.instagram.com/capitanrodrigotroncoso/",
-        "https://www.youtube.com/@HijodelMarAdventure",
-        "https://linkedin.com/in/alexistroncosomaster"
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://www.hijodelmar.cl/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Qué incluye la asesoría de planificación de navegación?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "La asesoría de planificación de navegación incluye revisión de ruta y zona de navegación, análisis de clima, viento, mareas y corrientes, identificación de fondeos, puertos y pasos angostos, cálculo de tiempos, distancias y consumos, y orientación sobre seguridad y preparación de tripulación."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cómo puedo contratar una asesoría náutica?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Puedes contactar al Capitán Rodrigo Troncoso directamente por WhatsApp al +56 9 2395 6367 o por email a contacto@hijodelmar.cl. Las asesorías se entregan online (videollamada, WhatsApp o email) desde cualquier lugar de Chile, sin necesidad de desplazamiento."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Qué equipos de seguridad debo llevar en mi embarcación?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "La asesoría de equipos de seguridad a bordo cubre chalecos salvavidas, aros, líneas y balsas, equipos de comunicación (VHF, EPIRB, PLB y AIS), ubicación y disponibilidad de equipos, y una evaluación personalizada de lo que tienes y lo que falta para navegar seguro."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Puedo recibir asesoría para comprar un velero o embarcación usada?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sí. La asesoría de compra de embarcaciones usadas incluye revisión del aviso y características del barco, detección de riesgos visibles en fotos y documentación, preguntas clave para hacerle al vendedor, y orientación sobre costos, uso y seguridad. Todo online, antes de que firmes o pagues."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Las asesorías son presenciales o se pueden hacer online?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Las asesorías están disponibles tanto online como presencial. El servicio online se entrega por WhatsApp, videollamada o email desde cualquier lugar de Chile. El Capitán Rodrigo Troncoso cubre todo el territorio nacional."
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
 
 
 <!-- Google Analytics -->
@@ -380,6 +281,85 @@
     nav .lang-picker { margin-top: 0.25rem; }
   }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "LocalBusiness",
+        "ProfessionalService"
+      ],
+      "@id": "https://www.hijodelmar.cl/#business",
+      "name": "Hijo del Mar",
+      "description": "Asesorías náuticas en Chile con 30 años de experiencia real. Planificación de rutas, seguridad, compra de embarcaciones. Online y presencial.",
+      "url": "https://www.hijodelmar.cl/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.hijodelmar.cl/logo_hijodelmar.png"
+      },
+      "image": "https://www.hijodelmar.cl/logo_hijodelmar.png",
+      "telephone": "+56923956367",
+      "email": "contacto@hijodelmar.cl",
+      "inLanguage": "es-CL",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Chile"
+      },
+      "serviceType": [
+        "Asesoría náutica",
+        "Planificación de navegación",
+        "Seguridad náutica"
+      ],
+      "priceRange": "$$",
+      "founder": {
+        "@type": "Person",
+        "name": "Rodrigo Troncoso Peirano",
+        "jobTitle": "Capitán de Marina Mercante",
+        "description": "Capitán con más de 30 años de experiencia en pesca industrial, offshore y canales australes de Chile.",
+        "url": "https://www.hijodelmar.cl/sobre-mi.html",
+        "sameAs": [
+          "https://www.instagram.com/capitanrodrigotroncoso/",
+          "https://www.instagram.com/hijodelmar.cl/",
+          "https://www.youtube.com/@HijodelMarAdventure"
+        ]
+      },
+      "sameAs": [
+        "https://www.instagram.com/hijodelmar.cl/",
+        "https://www.instagram.com/capitanrodrigotroncoso/",
+        "https://www.youtube.com/@HijodelMarAdventure"
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Rodrigo Troncoso Peirano",
+      "jobTitle": "Capitán de Marina Mercante",
+      "description": "Capitán con más de 30 años de experiencia en pesca industrial, offshore y canales australes de Chile.",
+      "url": "https://www.hijodelmar.cl/sobre-mi.html",
+      "sameAs": [
+        "https://www.instagram.com/capitanrodrigotroncoso/",
+        "https://www.instagram.com/hijodelmar.cl/",
+        "https://www.youtube.com/@HijodelMarAdventure"
+      ],
+      "@id": "https://www.hijodelmar.cl/#founder",
+      "worksFor": {
+        "@id": "https://www.hijodelmar.cl/#business"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.hijodelmar.cl/#website",
+      "name": "Hijo del Mar",
+      "url": "https://www.hijodelmar.cl/",
+      "inLanguage": "es-CL",
+      "publisher": {
+        "@id": "https://www.hijodelmar.cl/#business"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

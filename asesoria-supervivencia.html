@@ -31,66 +31,6 @@
 <link rel="apple-touch-icon" href="favicon_192.png">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon_192.png">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Service",
-      "@id": "https://www.hijodelmar.cl/asesoria-supervivencia.html#service",
-      "name": "Asesoría de Supervivencia en el Mar",
-      "description": "Preparación para emergencias reales en el mar: equipos de supervivencia, procedimientos de rescate, trajes de inmersión, balsas y comunicaciones de emergencia. Para navegar en los canales, lagos, ríos y costas de Chile.",
-      "provider": {
-        "@type": "LocalBusiness",
-        "@id": "https://www.hijodelmar.cl/#business",
-        "name": "Hijo del Mar"
-      },
-      "areaServed": { "@type": "Country", "name": "Chile" },
-      "url": "https://www.hijodelmar.cl/asesoria-supervivencia.html",
-      "serviceType": "Asesoría náutica - Supervivencia marítima"
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://www.hijodelmar.cl/asesoria-supervivencia.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Qué hago si alguien cae al agua en los canales del sur de Chile?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "En los canales del sur, la temperatura del agua puede causar hipotermia en minutos. Lo primero: gritar 'hombre al agua', lanzar aro salvavidas inmediatamente, marcar la posición GPS, dar un Mayday por VHF canal 16, y maniobrar para recuperar a la persona lo más rápido posible. Un traje de inmersión aumenta dramáticamente el tiempo de supervivencia en esas aguas."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Necesito traje de inmersión para navegar en el sur de Chile?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Para los canales australes y la Patagonia, sí. Las temperaturas del agua en esas zonas oscilan entre 4°C y 12°C según la época del año. Sin traje de inmersión, el tiempo de supervivencia en el agua es de minutos. Con traje de inmersión, puedes sobrevivir horas mientras llega el rescate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cuándo debo activar una baliza EPIRB?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "La EPIRB se activa cuando hay peligro inminente para la vida de la tripulación y no puedes resolver la situación por tus propios medios. No es para pedir remolque ni reportar averías menores. Se activa cuando la embarcación se está hundiendo, cuando hay heridos graves sin posibilidad de auxilio cercano, o cuando hay fuego no controlable a bordo."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Qué procedimientos básicos de emergencia debo conocer antes de navegar?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Los más críticos: procedimiento de hombre al agua (MOB), uso del VHF en emergencias (Mayday y Pan-Pan), activación de EPIRB y PLB, uso de señales pirotécnicas, uso de la balsa salvavidas, y procedimiento de abandono de barco. Toda la tripulación debe conocerlos antes de zarpar, no solo el capitán."
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
-
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -211,27 +151,35 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@type": "Service",
+  "name": "Asesoría de Supervivencia en el Mar",
+  "description": "Revisión de equipos para emergencias marítimas: trajes, balsas, comunicaciones, procedimientos de rescate.",
+  "url": "https://www.hijodelmar.cl/asesoria-supervivencia.html",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Hijo del Mar",
+    "url": "https://www.hijodelmar.cl/",
+    "telephone": "+56923956367"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Chile"
+  },
+  "availableChannel": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Inicio",
-      "item": "https://www.hijodelmar.cl/"
+      "@type": "ServiceChannel",
+      "serviceType": "WhatsApp"
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Asesorías",
-      "item": "https://www.hijodelmar.cl/#asesorias"
+      "@type": "ServiceChannel",
+      "serviceType": "Videollamada"
     },
     {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Supervivencia en el Mar",
-      "item": "https://www.hijodelmar.cl/asesoria-supervivencia.html"
+      "@type": "ServiceChannel",
+      "serviceType": "Email"
     }
-  ]
+  ],
+  "inLanguage": "es-CL"
 }
 </script>
 </head>
