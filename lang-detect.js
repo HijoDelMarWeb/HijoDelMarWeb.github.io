@@ -15,7 +15,6 @@
     'guia-como-planificar-travesia-velero.html': 'en/guia-como-planificar-travesia-velero.html',
     'guia-epirb-que-es.html': 'en/guia-epirb-que-es.html',
     'guia-errores-comprar-velero.html': 'en/guia-errores-comprar-velero.html',
-    'guia-secado-casco-vacio-osmosis.html': 'en/guia-secado-casco-vacio-osmosis.html',
     'guia-velero-vs-lancha.html': 'en/guia-velero-vs-lancha.html',
     'guias.html': 'en/guias.html',
     'precios.html': 'en/pricing.html',

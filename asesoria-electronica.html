@@ -377,7 +377,7 @@
   if(picker){picker.addEventListener('mouseenter',show);picker.addEventListener('mouseleave',hide);}
   if(drop){drop.addEventListener('mouseenter',show);drop.addEventListener('mouseleave',hide);}
   var elEN=document.getElementById('ldEN');
-  if(elEN){elEN.onclick=function(){location.href='en/asesoria-electronica.html';}; }
+  if(elEN){elEN.onclick=function(){localStorage.setItem('langOverride','en');location.href='en/asesoria-electronica.html';}; }
 })();
 </script>
 

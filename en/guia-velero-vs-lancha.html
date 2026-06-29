@@ -512,7 +512,7 @@
   if(picker){picker.addEventListener('mouseenter',show);picker.addEventListener('mouseleave',hide);}
   if(drop){drop.addEventListener('mouseenter',show);drop.addEventListener('mouseleave',hide);}
   var elES=document.getElementById('ldES');
-  if(elES){elES.onclick=function(){location.href='../guia-velero-vs-lancha.html';}; }
+  if(elES){elES.onclick=function(){localStorage.setItem('langOverride','es');location.href='../guia-velero-vs-lancha.html';}; }
 })();
 </script>
 

@@ -462,7 +462,7 @@
   if(picker){picker.addEventListener('mouseenter',show);picker.addEventListener('mouseleave',hide);}
   if(drop){drop.addEventListener('mouseenter',show);drop.addEventListener('mouseleave',hide);}
   var elEN=document.getElementById('ldEN');
-  if(elEN){elEN.onclick=function(){location.href='en/guia-canales-sur-chile.html';}; }
+  if(elEN){elEN.onclick=function(){localStorage.setItem('langOverride','en');location.href='en/guia-canales-sur-chile.html';}; }
 })();
 </script>
 

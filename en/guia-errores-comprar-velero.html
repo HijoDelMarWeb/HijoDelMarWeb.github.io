@@ -395,7 +395,7 @@
   if(drop){drop.addEventListener('mouseenter',show);drop.addEventListener('mouseleave',hide);}
   var elES=document.getElementById('ldES');
   var elEN=document.getElementById('ldEN');
-  if(elES){elES.onclick=function(){location.href='../guia-errores-comprar-velero.html';}; }
+  if(elES){elES.onclick=function(){localStorage.setItem('langOverride','es');location.href='../guia-errores-comprar-velero.html';}; }
   if(elEN){elEN.style.cursor='default';}
 })();
 </script>
