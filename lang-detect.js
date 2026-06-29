@@ -20,7 +20,8 @@
     'precios.html': 'en/pricing.html',
     'sobre-mi.html': 'en/about.html',
     'contacto.html': 'en/contact.html',
-    'politica-cookies.html': 'en/cookie-policy.html'
+    'politica-cookies.html': 'en/cookie-policy.html',
+    'survey-embarcacion.html': 'en/survey-embarcacion.html'
   };
 
   /* Build reverse map EN → ES */

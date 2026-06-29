@@ -250,6 +250,7 @@
         <a href="asesoria-electronica.html" class="nav-dropdown-item"><i class="ti ti-device-tablet"></i>Electronic Aids</a>
         <a href="asesoria-supervivencia.html" class="nav-dropdown-item"><i class="ti ti-lifebuoy"></i>Survival at Sea</a>
         <a href="asesoria-compra-embarcacion.html" class="nav-dropdown-item"><i class="ti ti-anchor"></i>Boat Selection Help</a>
+        <a href="survey-embarcacion.html" class="nav-dropdown-item"><i class="ti ti-clipboard-check"></i>Vessel Survey</a>
       </div>
     </div>
     <a href="guias.html" class="nav-link">Guides</a>
@@ -331,6 +332,14 @@
       <span class="faq-icon">+</span>
     </button>
     <div class="faq-answer"><p>Yes. Before you sign or pay anything, we review the listing, photos and available documentation together. I help you spot risks that are not always obvious, tell you what questions to ask the seller, and give you a realistic picture of running and maintenance costs to get the boat properly seaworthy. It is the best investment you can make before buying.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">
+      <span class="faq-q-text">How is this different from hiring a broker or dealer?</span>
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer"><p>A broker earns a commission when you close a purchase — their incentive is to get you to buy something, not necessarily the best thing for you. A dealer wants to sell you the boat they represent. I have no boat to sell you and no commission to collect from the sale: my only job is to give you the most honest professional assessment I can of the vessel or situation you're evaluating. I'm not a marine insurance surveyor or an official appraiser — I'm a Captain with 30 years at sea telling you what he sees with eyes that have actually been on the water.</p></div>
   </div>
 
   <div class="faq-item">
@@ -417,32 +426,4 @@ document.querySelectorAll('.faq-question').forEach(function(btn){
   document.addEventListener('click',function(){if(drop)drop.classList.remove('open');});
   var elES=document.getElementById('ldES');
   var elEN=document.getElementById('ldEN');
-  if(elES){elES.addEventListener('click',function(){localStorage.setItem('langOverride','es');location.href='../faq.html';});}
-  if(elEN){elEN.style.cursor='default';}
-})();
-
-// Burger
-(function(){
-  var burger=document.getElementById('navBurger');
-  var links=document.querySelector('nav .nav-links');
-  if(!burger||!links) return;
-  burger.addEventListener('click',function(e){
-    e.stopPropagation();
-    burger.classList.toggle('open');
-    links.classList.toggle('open');
-  });
-  document.addEventListener('click',function(){
-    burger.classList.remove('open');
-    links.classList.remove('open');
-  });
-  var dd=links.querySelector('.nav-dropdown');
-  var ddt=dd&&dd.querySelector('.nav-dropdown-toggle');
-  if(ddt){
-    ddt.addEventListener('click',function(e){
-      if(window.innerWidth<=768){e.stopPropagation();dd.classList.toggle('mob-open');}
-    });
-  }
-})();
-</script>
-</body>
-</html>
+  if(elES){elES.addEventListener('click',function(){localStorage.
