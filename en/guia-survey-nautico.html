@@ -149,6 +149,13 @@
   .wa-fab { position: fixed; bottom: 1.5rem; right: 1.5rem; width: 52px; height: 52px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(37,211,102,0.35); z-index: 300; transition: transform 0.2s; }
   .wa-fab:hover { transform: scale(1.08); }
   .wa-fab svg { width: 26px; height: 26px; fill: #fff; }
+
+  /* Downloads dropdown: click-only, not hover */
+  .nav-dropdown.nav-downloads:hover .nav-dropdown-menu { display: none; }
+  .nav-dropdown.nav-downloads.open .nav-dropdown-menu,
+  nav .nav-links .nav-dropdown.nav-downloads.open .nav-dropdown-menu { display: block; }
+  .nav-downloads .nav-dropdown-toggle { color: #c4a264; }
+  .nav-downloads .nav-dropdown-toggle:hover { color: #e8c87a; }
 </style>
 
 <script type="application/ld+json">
@@ -218,7 +225,13 @@
     </div>
     <a href="guias.html" class="nav-link active">Guides</a>
     <a href="contact.html" class="nav-link">Contact</a>
-        <a href="/checklist-compra-velero.pdf" class="nav-link" style="color:#c4a264;border-color:rgba(196,162,100,0.5);" download>&#8595; Free Downloads</a>
+        <div class="nav-dropdown nav-downloads">
+      <button class="nav-dropdown-toggle nav-downloads-btn" onclick="event.stopPropagation();this.closest('.nav-downloads').classList.toggle('open')">&#8595; Free Downloads</button>
+      <div class="nav-dropdown-menu">
+        <div class="nav-dropdown-header">Free Documents</div>
+        <a href="/checklist-compra-velero.pdf" class="nav-dropdown-item" download><i class="ti ti-file-download"></i>Checklist: 50-point vessel inspection</a>
+      </div>
+    </div>
     <div class="lang-picker" id="langPicker">
       <button class="nav-lang-btn" id="langToggle"><img loading="eager" src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="US" style="border-radius:2px;display:block;"><span>EN</span></button>
       <div class="lang-drop" id="langDrop">
@@ -436,6 +449,7 @@
 </a>
 
 <script src="../cookies.js"></script>
+<script>document.addEventListener('click',function(){document.querySelectorAll('.nav-downloads.open').forEach(function(el){el.classList.remove('open');});});</script>
 </body>
 </html>
      
