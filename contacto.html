@@ -372,7 +372,7 @@
   });
   links.querySelectorAll('.nav-link,.nav-dropdown-item').forEach(function(el){
     el.addEventListener('click',function(){
-      burger.classList.remove('open');
+      btn.classList.remove('open');
       links.classList.remove('open');
     });
   });
@@ -389,7 +389,7 @@
   }
   // Close on outside click
   document.addEventListener('click',function(){
-    burger.classList.remove('open');
+    btn.classList.remove('open');
     links.classList.remove('open');
   });
 })();

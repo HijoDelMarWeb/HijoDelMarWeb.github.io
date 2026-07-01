@@ -140,7 +140,13 @@
     .checklist { grid-template-columns: 1fr; }
     .compare-grid { grid-template-columns: 1fr; }
     .other-services { grid-template-columns: 1fr; }
-    nav .nav-links { display: none; }
+    nav .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(8,19,31,0.98); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); padding: 1rem 1.5rem 1.5rem; border-bottom: 1px solid rgba(196,162,100,0.15); gap: 0.4rem; z-index: 99; }
+    nav .nav-links.open { display: flex; }
+    nav .nav-links .nav-link { padding: 12px 4px; border-bottom: 1px solid rgba(196,162,100,0.07); border-radius: 0; background: none; border-left: none; border-right: none; border-top: none; box-shadow: none; font-size: 14px; letter-spacing: 1.5px; }
+    nav .nav-links .nav-dropdown { padding-bottom: 0; margin-bottom: 0; }
+    nav .nav-links .nav-dropdown-toggle { width: 100%; justify-content: space-between; padding: 12px 4px; border-radius: 0; background: none; border-left: none; border-right: none; border-top: none; border-bottom: 1px solid rgba(196,162,100,0.07); box-shadow: none; font-size: 14px; letter-spacing: 1.5px; }
+    nav .nav-links .nav-dropdown-menu { position: static; transform: none; min-width: 100%; box-shadow: none; border: 1px solid rgba(196,162,100,0.1); background: rgba(0,0,0,0.25); border-radius: 4px; margin-top: 4px; display: none; }
+    nav .nav-links .nav-dropdown.mob-open .nav-dropdown-menu { display: block; }
   }
 
   .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
