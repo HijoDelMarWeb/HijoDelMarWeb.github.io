@@ -23,7 +23,11 @@
     'politica-cookies.html': 'en/cookie-policy.html',
     'survey-embarcacion.html': 'en/survey-embarcacion.html',
     'guia-survey-nautico.html': 'en/guia-survey-nautico.html',
-    'guia-sart-respondedor-radar.html': 'en/guia-sart-respondedor-radar.html'
+    'guia-sart-respondedor-radar.html': 'en/guia-sart-respondedor-radar.html',
+    'guia-secado-casco-vacio-osmosis.html': 'en/guia-secado-casco-vacio-osmosis.html',
+    'guia-como-comprar-velero-chile.html': 'en/guia-how-to-buy-sailboat-chile.html',
+    'guia-navegar-en-chile.html': 'en/guia-sailing-chile.html',
+    'guia-navegar-patagonia-chile.html': 'en/guia-sailing-patagonia.html'
   };
 
   /* Build reverse map EN → ES */

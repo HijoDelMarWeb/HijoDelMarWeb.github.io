@@ -10,6 +10,7 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.hijodelmar.cl/guia-secado-casco-vacio-osmosis.html">
 <link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-secado-casco-vacio-osmosis.html">
+<link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-secado-casco-vacio-osmosis.html">
 <link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-secado-casco-vacio-osmosis.html">
 
 <meta property="og:type" content="article">
@@ -241,8 +242,15 @@
 <script src="/lang-detect.js"></script>
 <script>
 (function(){
+  var picker=document.getElementById('langPicker');
+  var drop=document.getElementById('langDrop');
+  var t;
+  function show(){clearTimeout(t);drop.classList.add('open');}
+  function hide(){t=setTimeout(function(){drop.classList.remove('open');},160);}
+  if(picker){picker.addEventListener('mouseenter',show);picker.addEventListener('mouseleave',hide);}
+  if(drop){drop.addEventListener('mouseenter',show);drop.addEventListener('mouseleave',hide);}
   var elEN=document.getElementById('ldEN');
-  if(elEN){elEN.style.opacity='0.4';elEN.style.cursor='default';elEN.title='Próximamente en inglés';}
+  if(elEN){elEN.addEventListener('click',function(){localStorage.setItem('langOverride','en');location.href='en/guia-secado-casco-vacio-osmosis.html';});}
 })();
 </script>
 
