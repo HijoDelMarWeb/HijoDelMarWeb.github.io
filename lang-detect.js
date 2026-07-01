@@ -22,7 +22,8 @@
     'contacto.html': 'en/contact.html',
     'politica-cookies.html': 'en/cookie-policy.html',
     'survey-embarcacion.html': 'en/survey-embarcacion.html',
-    'guia-survey-nautico.html': 'en/guia-survey-nautico.html'
+    'guia-survey-nautico.html': 'en/guia-survey-nautico.html',
+    'guia-sart-respondedor-radar.html': 'en/guia-sart-respondedor-radar.html'
   };
 
   /* Build reverse map EN → ES */
