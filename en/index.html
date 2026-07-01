@@ -31,6 +31,7 @@
   gtag('js', new Date());
   gtag('config', 'G-KRJ42YBH5N');
 </script>
+<link rel="preload" as="image" href="../hero-poster.webp" type="image/webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
@@ -415,7 +416,10 @@
     <source src="../hero.webm" type="video/webm">
     <source src="../hero.mp4" type="video/mp4">
   </video>
-  <img class="hero-poster-mobile" src="../hero-poster.jpg" alt="" aria-hidden="true" fetchpriority="high" loading="eager">
+  <picture>
+    <source srcset="../hero-poster.webp" type="image/webp">
+    <img class="hero-poster-mobile" src="../hero-poster.jpg" alt="" aria-hidden="true" fetchpriority="high" loading="eager">
+  </picture>
   <div class="hero-overlay"></div>
   <canvas id="stars"></canvas>
   <svg class="hero-wave" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
