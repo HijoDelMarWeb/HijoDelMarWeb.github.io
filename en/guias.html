@@ -139,6 +139,8 @@
 </script>
 <script src="/lang-detect.js"></script>
 <script src="../cookies.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2472289282343962"
+         crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -386,29 +388,4 @@
   document.addEventListener('click',function(){if(drop)drop.classList.remove('open');});
   var elEN=document.getElementById('ldEN');
   var elES=document.getElementById('ldES');
-  if(elES){elES.addEventListener('click',function(){localStorage.setItem('langOverride','es');location.href='../guias.html';});}
-  if(elEN){elEN.style.cursor='default';}
-})();
-</script>
-<script>
-(function(){
-  var burger=document.getElementById('navBurger');
-  var links=document.querySelector('nav .nav-links');
-  if(!burger||!links) return;
-  burger.addEventListener('click',function(e){
-    e.stopPropagation();
-    burger.classList.toggle('open');
-    links.classList.toggle('open');
-  });
-  links.querySelectorAll('.nav-link,.nav-dropdown-item').forEach(function(el){
-    el.addEventListener('click',function(){
-      burger.classList.remove('open');
-      links.classList.remove('open');
-    });
-  });
-  var dd=links.querySelector('.nav-dropdown');
-  var ddt=dd&&dd.querySelector('.nav-dropdown-toggle');
-  if(ddt){
-    ddt.addEventListener('click',function(e){
-      if(window.innerWidth<=768){
-        e.stopPropag
+  if(elES){elES.addEventListener('click',function(){localStorage.setItem('langOverride','es');location
