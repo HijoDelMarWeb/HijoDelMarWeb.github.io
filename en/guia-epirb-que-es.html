@@ -173,6 +173,55 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an EPIRB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An EPIRB (Emergency Position-Indicating Radio Beacon) is a maritime emergency beacon that transmits a distress signal on 406 MHz to the COSPAS-SARSAT satellite system. It automatically alerts rescue centres with the vessel's exact position."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does an EPIRB work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When activated, it transmits a digital signal on 406 MHz with a unique identification code and GPS coordinates. COSPAS-SARSAT satellites detect the signal and relay it to ground stations, which alert the relevant rescue coordination centre. The process takes between a few minutes and 90 minutes depending on satellite type."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is an EPIRB required in Chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, for oceanic navigation, major coastal routes and the southern canals it is mandatory under the Chilean Maritime Authority (Directemar). For recreational vessels in coastal zones it depends on the authorised navigation area."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does an EPIRB battery last?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The battery has a 5-year standby life and must guarantee at least 48 hours of continuous active transmission. It must be replaced even if the device has never been used."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between an EPIRB and a PLB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The EPIRB is for the vessel — it identifies and locates the boat. A PLB (Personal Locator Beacon) is a personal device carried by each crew member. They are complementary: if someone falls overboard and drifts away, only the PLB can locate that individual."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {
@@ -275,11 +324,27 @@
     <p>"The EPIRB doesn't prevent accidents. But it can be the reason rescue arrives in time."</p>
   </div>
 
-  <h2>How does it work in practice?</h2>
+  <h2>How Does an EPIRB Work?</h2>
+
+  <p>An EPIRB works by transmitting a digital distress signal on the internationally reserved <strong>406 MHz</strong> frequency — monitored continuously by the <strong>COSPAS-SARSAT</strong> satellite network. The signal contains a unique 15-digit hexadecimal identification code that tells rescuers exactly which vessel it's coming from.</p>
+
+  <p>Modern EPIRBs include an internal GPS receiver. This means the signal they transmit includes exact position coordinates with approximately <strong>100-metre accuracy</strong>. Older models without GPS rely on the satellite calculating position via the Doppler effect, which takes longer and is less precise.</p>
+
+  <div class="info-box">
+    <div class="info-box-title">How an EPIRB works — step by step</div>
+    <ul>
+      <li><strong>Activation:</strong> the EPIRB activates — manually or automatically on water contact</li>
+      <li><strong>Transmission:</strong> emits a digital signal on 406 MHz with identification code and GPS coordinates</li>
+      <li><strong>Satellite detection:</strong> COSPAS-SARSAT satellites (LEO and GEO) capture the signal — detection time: ~90 min with LEO, near-instant with MEOSAR satellites</li>
+      <li><strong>Ground station (LUT):</strong> the signal reaches a Local User Terminal that processes the position data</li>
+      <li><strong>Coordination centre:</strong> the Mission Control Center alerts the SAR centre of the relevant country</li>
+      <li><strong>Chilean Navy:</strong> receives the alert with position, vessel data and registered contacts — and mobilises rescue</li>
+    </ul>
+  </div>
 
   <p>There are two ways to activate an EPIRB: <strong>manually</strong>, when you press the activation button yourself, and <strong>automatically</strong>, when the device comes into contact with water. This second mode has saved the most lives — because in many maritime emergencies the crew has no time to activate anything.</p>
 
-  <p>Modern Category 1 EPIRBs have a hydrostatic release mechanism: if the vessel sinks, the device releases itself, floats, and activates automatically on contact with water. This works even if no one on board is conscious.</p>
+  <p>Modern Category 1 EPIRBs have a hydrostatic release mechanism: if the vessel sinks, the device releases itself, floats, and activates automatically on contact with water. This works even if no one on board is conscious. The battery must sustain active transmission for at least <strong>48 continuous hours</strong>.</p>
 
   <div class="info-box">
     <div class="info-box-title">Types of EPIRB</div>
@@ -331,6 +396,43 @@
   <p>The vessel EPIRB is designed to identify and locate the vessel in distress. The PLB is a personal device that each crew member can carry on them — especially useful if someone falls overboard and drifts away from the vessel. In that case, the vessel's EPIRB is useless for that person.</p>
 
   <p>For navigation in the southern canals or high-exposure areas, I recommend both: Category 1 EPIRB on the vessel, and one PLB per crew member.</p>
+
+  <h2>Frequently Asked Questions about EPIRB</h2>
+
+  <div class="info-box" style="margin-bottom:1rem;">
+    <div class="info-box-title">What is an EPIRB?</div>
+    <ul>
+      <li>An EPIRB (Emergency Position-Indicating Radio Beacon) is a maritime emergency beacon that transmits a distress signal on 406 MHz to the COSPAS-SARSAT satellite system. It automatically alerts rescue centres with the vessel's exact position</li>
+    </ul>
+  </div>
+
+  <div class="info-box" style="margin-bottom:1rem;">
+    <div class="info-box-title">How does an EPIRB work?</div>
+    <ul>
+      <li>When activated, it transmits a digital signal on 406 MHz with a unique identification code and GPS coordinates. COSPAS-SARSAT satellites detect the signal and relay it to ground stations, which alert the Chilean Navy. The process takes between a few minutes and 90 minutes depending on satellite type</li>
+    </ul>
+  </div>
+
+  <div class="info-box" style="margin-bottom:1rem;">
+    <div class="info-box-title">Is an EPIRB required in Chile?</div>
+    <ul>
+      <li>Yes, for oceanic navigation, major coastal routes and the southern canals it is mandatory under the Maritime Authority (Directemar). For recreational vessels in coastal zones it depends on the authorised navigation area. Check with your local Harbour Master for your specific route</li>
+    </ul>
+  </div>
+
+  <div class="info-box" style="margin-bottom:1rem;">
+    <div class="info-box-title">How long does an EPIRB battery last?</div>
+    <ul>
+      <li>The battery has a 5-year standby life and must guarantee at least 48 hours of continuous active transmission. It must be replaced even if the device has never been used. The expiry date is printed on the device</li>
+    </ul>
+  </div>
+
+  <div class="info-box" style="margin-bottom:2rem;">
+    <div class="info-box-title">What is the difference between an EPIRB and a PLB?</div>
+    <ul>
+      <li>The EPIRB is for the vessel — it identifies and locates the boat. A PLB (Personal Locator Beacon) is a personal device carried by each crew member. They are complementary: if someone falls overboard and drifts away, only the PLB can locate that individual</li>
+    </ul>
+  </div>
 
   <div class="cta-box">
     <h2>Questions about your vessel's safety equipment?</h2>

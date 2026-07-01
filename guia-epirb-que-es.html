@@ -202,6 +202,55 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es un EPIRB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un EPIRB (Emergency Position-Indicating Radio Beacon) es una baliza de emergencia marítima que transmite una señal de socorro en 406 MHz al sistema satelital COSPAS-SARSAT. Alerta automáticamente a los centros de rescate con la posición exacta de la embarcación."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo funciona un EPIRB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Al activarse, transmite una señal digital en 406 MHz con un código único de identificación y coordenadas GPS. Los satélites COSPAS-SARSAT detectan la señal y la retransmiten a estaciones terrestres, que alertan a la Armada de Chile. El proceso toma entre minutos y 90 minutos según el tipo de satélite."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es obligatorio el EPIRB en Chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, para navegación oceánica, cabotaje mayor y canales australes es obligatorio por la Autoridad Marítima (Directemar). Para embarcaciones deportivas en zonas costeras depende del área de navegación autorizada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto dura la batería de un EPIRB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La batería tiene una vida útil de 5 años en standby y debe garantizar al menos 48 horas de transmisión activa continua. Debe reemplazarse aunque el equipo nunca se haya usado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué diferencia hay entre EPIRB y PLB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El EPIRB es para la embarcación — identifica y localiza el barco. El PLB (Personal Locator Beacon) es un dispositivo personal que lleva cada tripulante. Son complementarios: si alguien cae al agua y se aleja del barco, solo el PLB lo puede localizar a él."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {
@@ -298,11 +347,27 @@
     <p>"El EPIRB no previene accidentes. Pero puede ser la razón por la que el rescate llega a tiempo."</p>
   </div>
 
-  <h2>¿Cómo funciona en la práctica?</h2>
+  <h2>¿Cómo Funciona un EPIRB?</h2>
+
+  <p>Un EPIRB funciona transmitiendo una señal de socorro digital en la frecuencia internacional de <strong>406 MHz</strong>. Esa frecuencia está reservada exclusivamente para emergencias y es monitoreada permanentemente por la red de satélites <strong>COSPAS-SARSAT</strong>. La señal incluye un código de identificación único de 15 dígitos hexadecimales — es lo que permite saber exactamente de qué embarcación proviene.</p>
+
+  <p>Los EPIRB modernos incorporan además un receptor GPS interno. Esto significa que la señal que transmiten incluye las coordenadas exactas de posición, con una precisión de aproximadamente <strong>100 metros</strong>. Los modelos más antiguos sin GPS dependen de que el satélite calcule la posición por efecto Doppler, lo que puede tomar más tiempo y tiene menor precisión.</p>
+
+  <div class="info-box">
+    <div class="info-box-title">Cómo funciona un EPIRB paso a paso</div>
+    <ul>
+      <li><strong>Activación:</strong> el EPIRB se activa — manual o automáticamente al contacto con el agua</li>
+      <li><strong>Transmisión:</strong> emite señal digital en 406 MHz con código de identificación y coordenadas GPS</li>
+      <li><strong>Detección satelital:</strong> los satélites COSPAS-SARSAT (LEO y GEO) captan la señal — tiempo de detección: 90 minutos con LEO, casi inmediato con satélites MEOSAR</li>
+      <li><strong>Estación terrestre (LUT):</strong> la señal llega a una Local User Terminal que procesa los datos de posición</li>
+      <li><strong>Centro de coordinación:</strong> el Mission Control Center alerta al centro SAR del país correspondiente</li>
+      <li><strong>Armada de Chile:</strong> recibe la alerta con posición, datos de embarcación y contactos registrados — y moviliza el rescate</li>
+    </ul>
+  </div>
 
   <p>Hay dos formas de activar un EPIRB: <strong>manualmente</strong>, cuando tú mismo presionas el botón de activación, y <strong>automáticamente</strong>, cuando el dispositivo entra en contacto con el agua. Esta segunda modalidad es la que más vidas ha salvado — porque en muchas emergencias marítimas la tripulación no tiene tiempo de activar nada.</p>
 
-  <p>Los EPIRB modernos de categoría 1 tienen un mecanismo de liberación hidrostática: si la embarcación se hunde, el dispositivo se libera solo, flota, y se activa automáticamente al contacto con el agua. Esto funciona aunque nadie esté consciente a bordo.</p>
+  <p>Los EPIRB modernos de categoría 1 tienen un mecanismo de liberación hidrostática: si la embarcación se hunde, el dispositivo se libera solo, flota, y se activa automáticamente al contacto con el agua. Esto funciona aunque nadie esté consciente a bordo. La batería debe mantener transmisión activa durante al menos <strong>48 horas continuas</strong>.</p>
 
   <div class="info-box">
     <div class="info-box-title">Tipos de EPIRB</div>
@@ -356,6 +421,43 @@
   <p>El EPIRB de embarcación está pensado para identificar y localizar la embarcación en peligro. El PLB es un dispositivo personal que cada tripulante puede llevar encima — es especialmente útil si alguien cae al agua y se aleja de la embarcación. En ese caso, el EPIRB de la embarcación no sirve de nada para esa persona.</p>
 
   <p>Para navegación en los canales australes o en zonas de alta exposición, yo recomiendo tener ambos: EPIRB de categoría 1 en la embarcación, y un PLB por tripulante.</p>
+
+  <h2>Preguntas frecuentes sobre el EPIRB</h2>
+
+  <div class="info-box" style="margin-bottom:1rem;">
+    <div class="info-box-title">¿Qué es un EPIRB?</div>
+    <ul>
+      <li>Un EPIRB (Emergency Position-Indicating Radio Beacon) es una baliza de emergencia marítima que transmite una señal de socorro en 406 MHz al sistema satelital COSPAS-SARSAT. Alerta automáticamente a los centros de rescate con la posición exacta de la embarcación</li>
+    </ul>
+  </div>
+
+  <div class="info-box" style="margin-bottom:1rem;">
+    <div class="info-box-title">¿Cómo funciona un EPIRB?</div>
+    <ul>
+      <li>Al activarse, transmite una señal digital en 406 MHz con un código único de identificación y coordenadas GPS. Los satélites COSPAS-SARSAT detectan la señal y la retransmiten a estaciones terrestres, que alertan a la Armada de Chile. El proceso toma entre minutos y 90 minutos según el tipo de satélite</li>
+    </ul>
+  </div>
+
+  <div class="info-box" style="margin-bottom:1rem;">
+    <div class="info-box-title">¿Es obligatorio el EPIRB en Chile?</div>
+    <ul>
+      <li>Sí, para navegación oceánica, cabotaje mayor y canales australes es obligatorio por la Autoridad Marítima (Directemar). Para embarcaciones deportivas en zonas costeras depende del área de navegación autorizada. Consulta en tu Capitanía de Puerto según tu ruta</li>
+    </ul>
+  </div>
+
+  <div class="info-box" style="margin-bottom:1rem;">
+    <div class="info-box-title">¿Cuánto dura la batería de un EPIRB?</div>
+    <ul>
+      <li>La batería tiene una vida útil de 5 años en standby y debe garantizar al menos 48 horas de transmisión activa continua. Debe reemplazarse aunque el equipo nunca se haya usado. El vencimiento de batería figura impreso en el equipo</li>
+    </ul>
+  </div>
+
+  <div class="info-box" style="margin-bottom:2rem;">
+    <div class="info-box-title">¿Qué diferencia hay entre EPIRB y PLB?</div>
+    <ul>
+      <li>El EPIRB es para la embarcación — identifica y localiza el barco. El PLB (Personal Locator Beacon) es un dispositivo personal que lleva cada tripulante. Son complementarios: si alguien cae al agua y se aleja del barco, solo el PLB lo puede localizar a él</li>
+    </ul>
+  </div>
 
   <div class="cta-box">
     <h2>¿Tienes dudas sobre el equipamiento de tu embarcación?</h2>
