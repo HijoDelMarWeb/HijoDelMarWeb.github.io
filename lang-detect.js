@@ -21,7 +21,8 @@
     'sobre-mi.html': 'en/about.html',
     'contacto.html': 'en/contact.html',
     'politica-cookies.html': 'en/cookie-policy.html',
-    'survey-embarcacion.html': 'en/survey-embarcacion.html'
+    'survey-embarcacion.html': 'en/survey-embarcacion.html',
+    'guia-survey-nautico.html': 'en/guia-survey-nautico.html'
   };
 
   /* Build reverse map EN → ES */
