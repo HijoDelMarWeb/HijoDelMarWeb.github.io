@@ -276,4 +276,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/en/guia-how-to-buy-sailboat-chile.html</loc>
+    <lastmod>2026-07-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-how-to-buy-sailboat-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/en/guia-how-to-buy-sailboat-chile.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
