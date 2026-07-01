@@ -252,10 +252,7 @@
     nav .lang-picker { margin-top: 0.25rem; }
   }
 
-  /* Downloads dropdown: click-only, not hover */
-  .nav-dropdown.nav-downloads:hover .nav-dropdown-menu { display: none; }
-  .nav-dropdown.nav-downloads.open .nav-dropdown-menu,
-  nav .nav-links .nav-dropdown.nav-downloads.open .nav-dropdown-menu { display: block; }
+  /* Downloads dropdown */
   .nav-downloads .nav-dropdown-toggle { color: #c4a264; }
   .nav-downloads .nav-dropdown-toggle:hover { color: #e8c87a; }
 </style>
@@ -346,7 +343,7 @@
     <a href="guias.html" class="nav-link">Guides</a>
     <a href="contact.html" class="nav-link">Contact</a>
         <div class="nav-dropdown nav-downloads">
-      <button class="nav-dropdown-toggle nav-downloads-btn" onclick="event.stopPropagation();this.closest('.nav-downloads').classList.toggle('open')">&#8595; Free Downloads</button>
+      <button class="nav-dropdown-toggle nav-downloads-btn" >&#8595; Free Downloads</button>
       <div class="nav-dropdown-menu">
         <div class="nav-dropdown-header">Free Documents</div>
         <a href="/checklist-compra-velero.pdf" class="nav-dropdown-item" download><i class="ti ti-file-download"></i>Checklist for vessel survey</a>
@@ -874,6 +871,5 @@
   setTimeout(checkBand, 800);
 })();
 </script>
-<script>document.addEventListener('click',function(){document.querySelectorAll('.nav-downloads.open').forEach(function(el){el.classList.remove('open');});});</script>
 </body>
 </html>
