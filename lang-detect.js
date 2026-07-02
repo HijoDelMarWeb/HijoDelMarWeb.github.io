@@ -29,7 +29,10 @@
     'guia-navegar-en-chile.html': 'en/guia-sailing-chile.html',
     'guia-navegar-patagonia-chile.html': 'en/guia-sailing-patagonia.html',
     'guia-licencia-nautica-chile.html': 'en/guia-nautical-license-chile.html',
-    'guia-seguro-embarcacion-chile.html': 'en/guia-boat-insurance-chile.html'
+    'guia-seguro-embarcacion-chile.html': 'en/guia-boat-insurance-chile.html',
+    'guia-equipamiento-seguridad-chile.html': 'en/guia-safety-equipment-chile.html',
+    'guia-electronica-nautica-principiantes.html': 'en/guia-marine-electronics-beginners.html',
+    'guia-inscripcion-directemar-chile.html': 'en/guia-directemar-registration-chile.html'
   };
 
   /* Build reverse map EN → ES */
