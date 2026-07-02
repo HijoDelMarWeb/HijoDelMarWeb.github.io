@@ -27,7 +27,9 @@
     'guia-secado-casco-vacio-osmosis.html': 'en/guia-secado-casco-vacio-osmosis.html',
     'guia-como-comprar-velero-chile.html': 'en/guia-how-to-buy-sailboat-chile.html',
     'guia-navegar-en-chile.html': 'en/guia-sailing-chile.html',
-    'guia-navegar-patagonia-chile.html': 'en/guia-sailing-patagonia.html'
+    'guia-navegar-patagonia-chile.html': 'en/guia-sailing-patagonia.html',
+    'guia-licencia-nautica-chile.html': 'en/guia-nautical-license-chile.html',
+    'guia-seguro-embarcacion-chile.html': 'en/guia-boat-insurance-chile.html'
   };
 
   /* Build reverse map EN → ES */
