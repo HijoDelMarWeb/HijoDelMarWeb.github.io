@@ -39,6 +39,48 @@
 <link rel="icon" type="image/png" sizes="192x192" href="favicon_192.png">
 
 <!-- Schema.org: Negocio local + Persona + FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.hijodelmar.cl/#negocio",
+      "name": "Hijo del Mar",
+      "url": "https://www.hijodelmar.cl",
+      "description": "Asesorías náuticas en Chile con 30 años de experiencia real. Planificación de rutas, seguridad, compra de embarcaciones y survey náutico.",
+      "telephone": "+56923956367",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Chile"
+      },
+      "serviceType": ["Asesoría náutica", "Survey de embarcación", "Planificación de navegación"],
+      "priceRange": "$$",
+      "sameAs": [
+        "https://www.instagram.com/hijodelmar.cl/",
+        "https://www.instagram.com/capitanrodrigotroncoso/",
+        "https://www.youtube.com/@HijodelMarAdventure"
+      ],
+      "founder": {
+        "@type": "Person",
+        "@id": "https://www.hijodelmar.cl/#capitan",
+        "name": "Rodrigo Troncoso Peirano",
+        "jobTitle": "Capitán de Marina Mercante",
+        "url": "https://www.hijodelmar.cl/sobre-mi.html"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.hijodelmar.cl/#capitan",
+      "name": "Rodrigo Troncoso Peirano",
+      "jobTitle": "Capitán de Marina Mercante",
+      "description": "Capitán de Marina Mercante con 30 años de experiencia en pesca industrial, offshore y navegación en canales del sur de Chile.",
+      "url": "https://www.hijodelmar.cl/sobre-mi.html",
+      "worksFor": { "@id": "https://www.hijodelmar.cl/#negocio" }
+    }
+  ]
+}
+</script>
 
 
 <!-- Google Analytics -->
@@ -1001,3 +1043,4 @@
 </script>
 </body>
 </html>
+                                                                                                                         
