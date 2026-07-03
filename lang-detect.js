@@ -35,7 +35,8 @@
     'guia-seguro-embarcacion-chile.html': 'en/guia-boat-insurance-chile.html',
     'guia-equipamiento-seguridad-chile.html': 'en/guia-safety-equipment-chile.html',
     'guia-electronica-nautica-principiantes.html': 'en/guia-marine-electronics-beginners.html',
-    'guia-inscripcion-directemar-chile.html': 'en/guia-directemar-registration-chile.html'
+    'guia-inscripcion-directemar-chile.html': 'en/guia-directemar-registration-chile.html',
+    'tarjeta.html': 'en/card.html'
   };
 
   /* Build reverse map EN → ES */
