@@ -33,6 +33,7 @@
 <meta name="twitter:image" content="https://www.hijodelmar.cl/logo_hijodelmar.png">
 
 <!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="isotipo.svg">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="favicon_192.png">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon_192.png">
@@ -52,7 +53,7 @@
   gtag('js', new Date());
   gtag('config', 'G-KRJ42YBH5N');
 </script>
-<link rel="preload" as="image" href="hero-poster.webp" type="image/webp" fetchpriority="high">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
@@ -90,7 +91,7 @@
   .hero-wave { position: absolute; bottom: 0; left: 0; width: 100%; pointer-events: none; }
   .hero-content { position: relative; z-index: 2; }
   .hero-tag { font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: #e8d5a8; margin-bottom: 1rem; text-shadow: 0 1px 6px rgba(0,0,0,0.75); }
-  .hero-title { font-family: 'Cormorant Garamond', serif; font-size: 64px; font-weight: 600; color: #f0e8d5; line-height: 1.05; margin-bottom: 0.3rem; margin-top: 2.5rem; }
+  .hero-title { font-family: 'Cormorant Garamond', serif; font-size: 64px; font-weight: 600; color: #f0e8d5; line-height: 1.05; margin-bottom: 0.3rem; margin-top: 1rem; }
   .hero-title em { font-style: italic; color: #c4a264; }
   .hero-by { font-size: 12px; font-weight: 300; letter-spacing: 3px; text-transform: uppercase; color: #7890a8; margin-bottom: 1.5rem; }
   .hero-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: #b0a080; max-width: 520px; line-height: 1.65; margin: 0 auto 0rem; }
@@ -234,12 +235,23 @@
   .goog-te-banner-frame, iframe.skiptranslate, .goog-te-gadget-icon { display: none !important; }
   body { top: 0 !important; }
 
-  /* HERO IMAGE */
-  .hero-poster-mobile { display: block; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; filter: brightness(0.80) saturate(1.1); z-index: 0; }
-  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,19,31,0.18) 0%, rgba(8,19,31,0.0) 40%, rgba(8,19,31,0.55) 100%); z-index: 1; }
-  .hero canvas { display: none; }
+  /* HERO — OPCIÓN B (isotipo centrado) */
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(196,162,100,0.06) 0%, transparent 70%); pointer-events: none; z-index: 1; }
+  .hero-isotipo { display: block; margin: 0 auto 1.5rem; filter: drop-shadow(0 4px 24px rgba(196,162,100,0.18)); }
   .hero-wave { z-index: 3 !important; }
   .hero-content { z-index: 4; }
+  /* SECCIÓN EL CAPITÁN */
+  .capitan-sec { border-top: 1px solid rgba(196,162,100,0.1); border-bottom: 1px solid rgba(196,162,100,0.1); padding: 5rem 2rem; }
+  .capitan-inner { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: 300px 1fr; gap: 4rem; align-items: center; }
+  .capitan-photo-wrap { position: relative; }
+  .capitan-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; border-radius: 4px; filter: brightness(0.92) saturate(1.05); }
+  .capitan-photo-frame { position: absolute; inset: -8px; border: 1px solid rgba(196,162,100,0.25); border-radius: 6px; pointer-events: none; }
+  .capitan-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: rgba(196,162,100,0.6); margin-bottom: 1rem; }
+  .capitan-name { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 600; color: #f0e8d5; line-height: 1.1; margin-bottom: 0.5rem; }
+  .capitan-sub { font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: #5a7090; margin-bottom: 2rem; }
+  .capitan-bio { font-size: 15px; color: #8090a8; line-height: 1.85; margin-bottom: 1rem; }
+  .capitan-line { width: 40px; height: 1px; background: rgba(196,162,100,0.5); margin: 0 0 2rem; }
+  @media (max-width: 768px) { .capitan-inner { grid-template-columns: 1fr; gap: 2rem; } .capitan-photo { aspect-ratio: 4/3; } }
 
   /* TESTIMONIOS */
   .testi-sec { background: #0b1a2c; border-top: 1px solid rgba(196,162,100,0.1); border-bottom: 1px solid rgba(196,162,100,0.1); padding: 4rem 2rem; }
@@ -408,7 +420,7 @@
 <body>
 
 <nav>
-  <a href="#" class="nav-logo"><picture><source srcset="logo_hijodelmar.webp" type="image/webp"><img src="logo_hijodelmar.png" alt="Hijo del Mar" width="48" height="48" style="height:48px;width:48px;border-radius:50%;vertical-align:middle;margin-right:10px;"></picture>Hijo <span id="navBoatHome">del</span> Mar</a>
+  <a href="#" class="nav-logo" style="display:flex;align-items:center;gap:10px;"><svg width="30" height="26" viewBox="0 0 120 100" aria-hidden="true"><path d="M6,78 C16,66 26,66 34,73 C40,78 46,77 50,70 L64,16 Q66,12 67,18 L72,72 C78,79 88,78 98,68 L98,76 C88,86 76,87 68,79 L64,40 L56,74 C50,84 38,86 30,79 C22,72 14,74 6,84 Z" fill="#c4a264"/></svg>Hijo <span id="navBoatHome">del</span> Mar</a>
   <div class="nav-links">
     <a href="index.html" class="nav-link active">Inicio</a>
     <a href="index.html#historia" class="nav-link">Historia</a>
@@ -452,18 +464,13 @@
 
 <main>
 <section class="hero">
-  <picture>
-    <source srcset="hero-poster.webp" type="image/webp">
-    <img class="hero-poster-mobile" src="hero-poster.jpg" alt="" aria-hidden="true" fetchpriority="high" loading="eager">
-  </picture>
-  <div class="hero-overlay"></div>
   <canvas id="stars"></canvas>
   <svg class="hero-wave" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M0,30 C240,10 480,50 720,30 C960,10 1200,45 1440,25 L1440,60 L0,60 Z" fill="#0b1a2c" opacity="0.7"/>
     <path d="M0,44 C300,28 600,55 900,40 C1140,27 1300,50 1440,40 L1440,60 L0,60 Z" fill="#08131f" opacity="0.9"/>
   </svg>
   <div class="hero-content">
-    <picture><source srcset="logo_hijodelmar.webp" type="image/webp"><img src="logo_hijodelmar.png" alt="Capitán Rodrigo Troncoso - Asesoría Náutica Chile" width="260" height="260" loading="eager" fetchpriority="high" style="width:260px;height:260px;border-radius:50%;margin-bottom:1.5rem;display:block;margin-left:auto;margin-right:auto;"></picture>
+    <svg class="hero-isotipo" width="150" height="128" viewBox="0 0 120 100" role="img" aria-label="Hijo del Mar — La Vela que Nace de la Ola"><path d="M6,78 C16,66 26,66 34,73 C40,78 46,77 50,70 L64,16 Q66,12 67,18 L72,72 C78,79 88,78 98,68 L98,76 C88,86 76,87 68,79 L64,40 L56,74 C50,84 38,86 30,79 C22,72 14,74 6,84 Z" fill="#c4a264"/></svg>
     <div class="hero-tag">Capitán · Marino Mercante · Todo Chile · Online y Presencial</div>
     <h1 class="hero-title">Asesoría Náutica en Chile</h1>
     <div class="hero-by">Rodrigo Troncoso Peirano &nbsp;·&nbsp; Capitán</div>
@@ -481,6 +488,27 @@
   <div class="band-item" data-aos="fade-up" data-aos-delay="200"><div class="band-num" data-count="5" data-suffix="">5</div><div class="band-lbl">Asesorías disponibles</div></div>
   <div class="band-item" data-aos="fade-up" data-aos-delay="300"><div class="band-num" data-count="15" data-suffix="+">15+</div><div class="band-lbl">Años DP</div></div>
 </div>
+
+<section class="capitan-sec" data-aos="fade-up">
+  <div class="capitan-inner">
+    <div class="capitan-photo-wrap">
+      <picture>
+        <source srcset="hero-poster.webp" type="image/webp">
+        <img class="capitan-photo" src="hero-poster.jpg" alt="Capitán Rodrigo Troncoso Peirano — Asesoría Náutica Chile" loading="lazy">
+      </picture>
+      <div class="capitan-photo-frame"></div>
+    </div>
+    <div>
+      <div class="capitan-eyebrow">El Capitán</div>
+      <h2 class="capitan-name">Rodrigo<br>Troncoso Peirano</h2>
+      <div class="capitan-sub">Capitán de Marina Mercante &nbsp;·&nbsp; 30 años en el mar</div>
+      <div class="capitan-line"></div>
+      <p class="capitan-bio">Comencé en la pesca industrial navegando el Mar Antártico y el Cabo de Hornos. Di el salto al offshore como capitán de buques PSV y AHTS frente a Angola, Brasil, Ghana y Venezuela — con más de 15 años operando sistemas de posicionamiento dinámico.</p>
+      <p class="capitan-bio">Volví a Chile con todo ese mundo en la mochila. Hoy navego los fiordos de la Patagonia en barcos wellboat y pongo 30 años de mar a tu disposición.</p>
+      <a href="sobre-mi.html" class="srv-btn" style="margin-top:0.75rem;display:inline-block;">Historia completa →</a>
+    </div>
+  </div>
+</section>
 
 <div class="sep"></div>
 

@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Hull Osmosis &amp; Vacuum Drying: What the Survey Doesn't Always Tell You · Hijo del Mar</title>
-<meta name="description" content="How to detect osmosis in a fiberglass hull, what the moisture readings actually mean, how vacuum drying works, and whether a boat with osmosis is worth buying. By a local Chilean captain.">
-<meta name="keywords" content="hull osmosis sailboat, osmosis fiberglass hull, vacuum drying hull, moisture meter boat, Tramex Skipper, buying boat with osmosis, blistered hull repair, osmosis Chile sailboat">
+<title>Hull Osmosis & Vacuum Drying: What the Survey Doesn't Always Tell You · Hijo del Mar</title>
+<meta name="description" content="Complete technical guide on hull osmosis in fibreglass sailboats. How to detect it, what high moisture readings mean, when to treat vs. walk away. By Captain Rodrigo Troncoso.">
 <meta name="author" content="Rodrigo Troncoso Peirano">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.hijodelmar.cl/en/guia-secado-casco-vacio-osmosis.html">
@@ -16,8 +15,8 @@
 
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://www.hijodelmar.cl/en/guia-secado-casco-vacio-osmosis.html">
-<meta property="og:title" content="Hull Osmosis &amp; Vacuum Drying: What the Survey Doesn't Always Tell You · Hijo del Mar">
-<meta property="og:description" content="How to detect hull osmosis, what moisture readings mean, how vacuum drying works, and whether a boat with osmosis is worth buying.">
+<meta property="og:title" content="Hull Osmosis & Vacuum Drying: What the Survey Doesn't Always Tell You · Hijo del Mar">
+<meta property="og:description" content="What osmosis blistering is, how to detect it, what moisture readings mean, and when to negotiate vs. walk away from a used sailboat.">
 <meta property="og:image" content="https://www.hijodelmar.cl/logo_hijodelmar.png">
 <meta property="og:site_name" content="Hijo del Mar">
 <meta property="og:locale" content="en_US">
@@ -47,6 +46,7 @@
   html { scroll-behavior: smooth; scroll-padding-top: 100px; }
   body { font-family: 'Nunito Sans', sans-serif; background: #08131f; color: #ddd5c0; overflow-x: hidden; }
 
+  /* NAV */
   nav { display: flex; align-items: center; justify-content: space-between; padding: 2rem 3rem 2.4rem; position: sticky; top: 0; background: rgba(8,19,31,0.95); backdrop-filter: blur(8px); z-index: 100; }
   nav::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 14px; background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='14'><path d='M0 14 Q10 10 20 14 Q30 10 40 14 Q50 10 60 14 Q70 10 80 14 Q90 10 100 14 Q110 10 120 14' fill='none' stroke='%23c4a264' stroke-width='1' opacity='0.35'/><path d='M0 14 Q20 7 40 14 Q60 7 80 14 Q100 7 120 14' fill='none' stroke='%23c4a264' stroke-width='1.3' opacity='0.42'/><path d='M0 14 Q30 1 60 14 Q90 1 120 14' fill='none' stroke='%23c4a264' stroke-width='1.7' opacity='0.48'/></svg>"); background-repeat: repeat-x; background-size: 120px 14px; pointer-events: none; }
   .nav-logo { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 24px; color: #c4a264; letter-spacing: 1px; text-decoration: none; }
@@ -73,115 +73,150 @@
   .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
   .nav-burger span { display: block; width: 22px; height: 2px; background: #c4a264; border-radius: 2px; }
 
-  .page-hero { padding: 4rem 2rem 3rem; text-align: center; background: #08131f; border-bottom: 1px solid rgba(196,162,100,0.08); }
-  .breadcrumb { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #7890a8; margin-bottom: 1.5rem; }
-  .breadcrumb a { color: #5a7090; text-decoration: none; }
+  /* HERO */
+  .hero { padding: 5rem 2rem 3.5rem; text-align: center; border-bottom: 1px solid rgba(196,162,100,0.1); position: relative; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(196,162,100,0.05) 0%, transparent 65%); pointer-events: none; }
+  .breadcrumb { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(196,162,100,0.4); margin-bottom: 1.5rem; }
+  .breadcrumb a { color: rgba(196,162,100,0.4); text-decoration: none; }
   .breadcrumb a:hover { color: #c4a264; }
-  .page-tag { font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: #c4a264; margin-bottom: 1rem; }
-  .page-title { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; color: #f0e8d5; line-height: 1.1; margin-bottom: 1rem; max-width: 760px; margin-left: auto; margin-right: auto; }
-  .page-sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; color: #b0a080; max-width: 560px; margin: 0 auto 1.5rem; line-height: 1.6; }
-  .article-meta { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #7890a8; margin-bottom: 2rem; }
-  .article-meta span { color: #5a7090; }
+  .hero-tag { font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: rgba(196,162,100,0.6); margin-bottom: 1rem; }
+  .hero-title { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; color: #f0e8d5; line-height: 1.1; margin-bottom: 1.5rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+  .hero-meta { display: flex; align-items: center; justify-content: center; gap: 1.5rem; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #5a7090; margin-bottom: 2rem; flex-wrap: wrap; }
+  .hero-meta span { display: flex; align-items: center; gap: 6px; }
+  .hero-intro { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: #b0a080; max-width: 680px; margin: 0 auto; line-height: 1.6; }
 
-  .article-body { max-width: 760px; margin: 0 auto; padding: 3rem 2rem; }
-  .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 600; color: #f0e8d5; margin: 2.5rem 0 1rem; line-height: 1.2; }
-  .article-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: #d0c8a8; margin: 1.75rem 0 0.75rem; }
-  .article-body p { font-size: 15px; color: #8090a8; line-height: 1.9; margin-bottom: 1.2rem; }
-  .article-body strong { color: #c4a264; font-weight: 600; }
-  .article-body a { color: #c4a264; text-decoration: underline; text-underline-offset: 3px; }
+  /* CONTENT */
+  .content-wrap { max-width: 780px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+  .prose { font-size: 16px; line-height: 1.85; color: #c8bfa8; margin-bottom: 1.5rem; }
+  .prose strong { color: #f0e8d5; font-weight: 600; }
+  h2.section-title { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 600; color: #f0e8d5; margin: 3.5rem 0 1.25rem; line-height: 1.2; }
+  h3.sub-title { font-family: 'Nunito Sans', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #c4a264; margin: 2.5rem 0 1rem; }
+  .pull-quote { border-left: 3px solid rgba(196,162,100,0.35); padding: 1.25rem 1.5rem; margin: 2.5rem 0; background: rgba(196,162,100,0.03); border-radius: 0 4px 4px 0; }
+  .pull-quote p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: #c4a264; line-height: 1.5; margin: 0; }
 
-  .info-box { background: #0c1e32; border: 1px solid rgba(196,162,100,0.2); border-left: 3px solid #c4a264; border-radius: 4px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
-  .info-box p { font-size: 14px; color: #6080a0; line-height: 1.7; margin: 0; }
-  .info-box strong { color: #c4a264; }
-  .warning-box { background: rgba(180,80,60,0.08); border: 1px solid rgba(180,80,60,0.25); border-left: 3px solid rgba(200,100,80,0.7); border-radius: 4px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
-  .warning-box p { font-size: 14px; color: #a08888; line-height: 1.7; margin: 0; }
+  /* STEP CARDS */
+  .steps { display: flex; flex-direction: column; gap: 0; margin: 2rem 0; }
+  .step { display: grid; grid-template-columns: 48px 1fr; gap: 1.25rem; padding: 1.5rem 0; border-bottom: 1px solid rgba(196,162,100,0.07); align-items: flex-start; }
+  .step:last-child { border-bottom: none; }
+  .step-num { width: 48px; height: 48px; border-radius: 50%; background: rgba(196,162,100,0.08); border: 1px solid rgba(196,162,100,0.2); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #c4a264; font-weight: 600; flex-shrink: 0; }
+  .step-content h4 { font-size: 14px; font-weight: 700; color: #f0e8d5; margin-bottom: 0.4rem; letter-spacing: 0.5px; }
+  .step-content p { font-size: 14px; line-height: 1.7; color: #9090a8; margin: 0; }
 
-  .tool-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 1.5rem 0; }
-  .tool-card { background: #0c1e32; border: 1px solid rgba(196,162,100,0.12); border-radius: 4px; padding: 1.1rem; }
-  .tool-icon { font-size: 22px; color: #c4a264; margin-bottom: 8px; }
-  .tool-name { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; color: #f0e8d5; margin-bottom: 6px; }
-  .tool-desc { font-size: 11px; color: #5a7090; line-height: 1.6; }
-  .tool-card.tool-primary { border-color: rgba(196,162,100,0.35); background: #0e2338; }
-
-  .humidity-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 13px; }
-  .humidity-table th { text-align: left; padding: 10px 14px; background: #0c1e32; color: #c4a264; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid rgba(196,162,100,0.2); }
-  .humidity-table td { padding: 10px 14px; color: #5a7090; border-bottom: 1px solid rgba(196,162,100,0.05); }
+  /* HUMIDITY TABLE */
+  .humidity-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 14px; }
+  .humidity-table th { background: rgba(196,162,100,0.08); color: #c4a264; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid rgba(196,162,100,0.2); }
+  .humidity-table td { padding: 0.75rem 1rem; border-bottom: 1px solid rgba(196,162,100,0.06); color: #c8bfa8; vertical-align: top; }
   .humidity-table tr:last-child td { border-bottom: none; }
-  .humidity-table td:first-child { color: #8090a8; font-weight: 600; font-family: 'Cormorant Garamond', serif; font-size: 15px; }
-  .h-ok { color: #5a9070 !important; }
-  .h-warn { color: #a09030 !important; }
-  .h-bad { color: #a05030 !important; }
-  .h-crit { color: #c04030 !important; }
+  .badge { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+  .badge-ok { background: rgba(80,180,80,0.12); color: #6dc87a; border: 1px solid rgba(80,180,80,0.2); }
+  .badge-warn { background: rgba(196,162,100,0.12); color: #c4a264; border: 1px solid rgba(196,162,100,0.25); }
+  .badge-red { background: rgba(200,60,60,0.12); color: #d07070; border: 1px solid rgba(200,60,60,0.2); }
 
-  .steps-list { counter-reset: step; list-style: none; padding: 0; margin: 1.5rem 0; }
-  .step-item { counter-increment: step; display: flex; gap: 1.25rem; padding: 1.25rem; background: #0c1e32; border: 1px solid rgba(196,162,100,0.1); border-radius: 4px; margin-bottom: 10px; }
-  .step-num { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 600; color: rgba(196,162,100,0.25); line-height: 1; min-width: 36px; }
-  .step-content { flex: 1; }
-  .step-title { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: #f0e8d5; margin-bottom: 6px; }
-  .step-desc { font-size: 13px; color: #5a7090; line-height: 1.7; }
+  /* WARNING / INFO BOXES */
+  .info-box { background: rgba(196,162,100,0.04); border: 1px solid rgba(196,162,100,0.15); border-radius: 6px; padding: 1.5rem 1.75rem; margin: 2rem 0; }
+  .info-box .box-label { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #c4a264; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 8px; }
+  .info-box p { font-size: 14px; line-height: 1.75; color: #a0a8b8; margin: 0; }
+  .info-box p + p { margin-top: 0.75rem; }
+  .warn-box { background: rgba(200,60,60,0.04); border: 1px solid rgba(200,60,60,0.2); border-radius: 6px; padding: 1.5rem 1.75rem; margin: 2rem 0; }
+  .warn-box .box-label { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #d07070; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 8px; }
+  .warn-box p { font-size: 14px; line-height: 1.75; color: #a0a8b8; margin: 0; }
 
-  .decision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(196,162,100,0.12); border: 1px solid rgba(196,162,100,0.12); border-radius: 4px; overflow: hidden; margin: 1.5rem 0; }
-  .dg-header { background: #0c1e32; padding: 10px 14px; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #c4a264; }
-  .dg-cell { background: #08131f; padding: 12px 14px; font-size: 13px; color: #5a7090; line-height: 1.5; }
-  .dg-cell.go { color: #5a9060; }
-  .dg-cell.no-go { color: #c04030; }
-  .dg-cell.negotiate { color: #9a8030; }
+  /* DECISION GRID */
+  .decision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+  .decision-card { padding: 1.5rem; border-radius: 6px; }
+  .decision-card.go { background: rgba(80,180,80,0.05); border: 1px solid rgba(80,180,80,0.18); }
+  .decision-card.stop { background: rgba(200,60,60,0.05); border: 1px solid rgba(200,60,60,0.18); }
+  .decision-card h4 { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.75rem; }
+  .decision-card.go h4 { color: #6dc87a; }
+  .decision-card.stop h4 { color: #d07070; }
+  .decision-card ul { list-style: none; padding: 0; }
+  .decision-card ul li { font-size: 13px; color: #9090a8; line-height: 1.7; padding: 0.2rem 0; display: flex; align-items: flex-start; gap: 8px; }
+  .decision-card ul li::before { content: '→'; flex-shrink: 0; margin-top: 2px; }
+  .decision-card.go ul li::before { color: #6dc87a; }
+  .decision-card.stop ul li::before { color: #d07070; }
 
-  .cost-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 13px; }
-  .cost-table th { text-align: left; padding: 10px 14px; background: #0c1e32; color: #c4a264; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid rgba(196,162,100,0.2); }
-  .cost-table td { padding: 10px 14px; color: #5a7090; border-bottom: 1px solid rgba(196,162,100,0.05); }
-  .cost-table tr:last-child td { border-bottom: none; }
-  .cost-table td:first-child { color: #8090a8; font-weight: 600; }
+  /* AUTHOR */
+  .author-box { display: flex; gap: 1.25rem; align-items: flex-start; background: rgba(196,162,100,0.04); border: 1px solid rgba(196,162,100,0.12); border-radius: 6px; padding: 1.5rem; margin: 3rem 0 0; }
+  .author-avatar { width: 56px; height: 56px; border-radius: 50%; border: 2px solid rgba(196,162,100,0.3); flex-shrink: 0; object-fit: cover; }
+  .author-info h4 { font-size: 14px; font-weight: 700; color: #f0e8d5; margin-bottom: 0.25rem; }
+  .author-info p { font-size: 13px; color: #8090a8; line-height: 1.6; margin: 0; }
 
-  .cta-inline { background: #0b1a2c; border: 1px solid rgba(196,162,100,0.2); border-radius: 4px; padding: 2rem; text-align: center; margin: 3rem 0; }
-  .cta-inline h3 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: #f0e8d5; margin-bottom: 0.5rem; }
-  .cta-inline p { font-size: 14px; color: #5a7090; margin-bottom: 1.25rem; }
-  .btn-gold { background: #c4a264; color: #08131f; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 13px 30px; border-radius: 2px; text-decoration: none; display: inline-block; transition: background 0.2s; }
+  /* CTA */
+  .cta-section { text-align: center; background: rgba(196,162,100,0.04); border: 1px solid rgba(196,162,100,0.12); border-radius: 8px; padding: 3rem 2rem; margin: 3rem 0; }
+  .cta-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #f0e8d5; margin-bottom: 0.75rem; }
+  .cta-sub { font-size: 14px; color: #8090a8; margin-bottom: 2rem; }
+  .btn-gold { display: inline-flex; align-items: center; gap: 8px; background: #c4a264; color: #08131f; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 14px 32px; border-radius: 3px; text-decoration: none; transition: background 0.2s; }
   .btn-gold:hover { background: #d8b878; }
-  .btn-ghost { background: transparent; color: #c4a264; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 12px 28px; border-radius: 2px; text-decoration: none; display: inline-block; border: 1px solid rgba(196,162,100,0.4); transition: border-color 0.2s, color 0.2s; margin-left: 12px; }
-  .btn-ghost:hover { border-color: #c4a264; color: #d8b878; }
 
-  .related-guides { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 2rem 0; max-width: 760px; margin-left: auto; margin-right: auto; padding: 0 2rem 3rem; }
-  .guide-card { background: #0c1e32; border: 1px solid rgba(196,162,100,0.1); border-radius: 4px; padding: 1.25rem; text-decoration: none; transition: border-color 0.2s; display: block; }
-  .guide-card:hover { border-color: rgba(196,162,100,0.4); }
-  .guide-tag { font-size: 9px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #c4a264; margin-bottom: 0.5rem; }
-  .guide-title { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: #f0e8d5; line-height: 1.3; }
-
-  footer { text-align: center; padding: 1.5rem; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #2a3a50; background: #08131f; }
+  /* FOOTER */
+  footer { text-align: center; padding: 3rem 2rem; border-top: 1px solid rgba(196,162,100,0.08); font-size: 11px; color: #3a4a5a; letter-spacing: 1px; }
   footer a { color: #4a6a8a; text-decoration: none; }
 
-  .wa-fab { position: fixed; bottom: 1.5rem; right: 1.5rem; width: 52px; height: 52px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(37,211,102,0.35); z-index: 300; transition: transform 0.2s; }
-  .wa-fab:hover { transform: scale(1.08); }
-  .wa-fab svg { width: 26px; height: 26px; fill: #fff; }
+  /* TOOL CARDS */
+  .tool-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 2rem 0; }
+  .tool-card { background: rgba(196,162,100,0.03); border: 1px solid rgba(196,162,100,0.1); border-radius: 6px; padding: 1.25rem 1.5rem; }
+  .tool-card-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.6rem; }
+  .tool-card-icon { width: 36px; height: 36px; background: rgba(196,162,100,0.08); border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .tool-card-icon i { font-size: 18px; color: #c4a264; }
+  .tool-card h4 { font-size: 13px; font-weight: 700; color: #f0e8d5; margin: 0; }
+  .tool-card .tool-model { font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(196,162,100,0.5); margin-top: 1px; }
+  .tool-card p { font-size: 13px; line-height: 1.65; color: #8090a8; margin: 0; }
 
-  .nav-downloads .nav-dropdown-toggle { color: #c4a264; }
-  .nav-downloads .nav-dropdown-toggle:hover { color: #e8c87a; }
+  /* SVG DIAGRAMS */
+  .diagram-wrap { margin: 2.5rem 0; border: 1px solid rgba(196,162,100,0.1); border-radius: 8px; overflow: hidden; background: rgba(196,162,100,0.02); }
+  .diagram-caption { font-size: 12px; color: #5a6a7a; letter-spacing: 1px; text-align: center; padding: 0.6rem 1rem; border-top: 1px solid rgba(196,162,100,0.08); }
 
+  /* MOBILE */
   @media (max-width: 768px) {
     nav { padding: 1rem 1.25rem 1.8rem; }
     .nav-links { display: none; }
     .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(8,19,31,0.98); padding: 1rem 1.5rem 1.5rem; border-bottom: 1px solid rgba(196,162,100,0.15); gap: 0.75rem; z-index: 99; }
     .nav-burger { display: flex; }
-    .page-title { font-size: 34px; }
-    .tool-grid { grid-template-columns: 1fr 1fr; }
+    .hero-title { font-size: 32px; }
     .decision-grid { grid-template-columns: 1fr; }
-    .related-guides { grid-template-columns: 1fr; }
-    .btn-ghost { margin-left: 0; margin-top: 10px; display: block; }
+    .step { grid-template-columns: 40px 1fr; gap: 1rem; }
+    .tool-grid { grid-template-columns: 1fr; }
   }
+  .wa-fab { position: fixed; bottom: 1.5rem; right: 1.5rem; width: 52px; height: 52px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(37,211,102,0.35); z-index: 300; transition: transform 0.2s; }
+  .wa-fab:hover { transform: scale(1.08); }
+  .wa-fab svg { width: 26px; height: 26px; fill: #fff; }
+  .nav-downloads .nav-dropdown-toggle { color: #c4a264; }
+  .nav-downloads .nav-dropdown-toggle:hover { color: #e8c87a; }
 </style>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.hijodelmar.cl/en/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Publications", "item": "https://www.hijodelmar.cl/en/guias.html" },
+    { "@type": "ListItem", "position": 3, "name": "Hull Osmosis & Vacuum Drying" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Hull Osmosis and Vacuum Drying: What the Survey Doesn't Always Tell You",
-  "description": "How to detect osmosis in a fiberglass hull, what the moisture readings actually mean, how vacuum drying works, and whether a boat with osmosis is worth buying.",
-  "author": {"@type": "Person", "name": "Rodrigo Troncoso Peirano", "url": "https://www.hijodelmar.cl/en/about.html"},
-  "publisher": {"@type": "Organization", "name": "Hijo del Mar", "url": "https://www.hijodelmar.cl/", "logo": {"@type": "ImageObject", "url": "https://www.hijodelmar.cl/logo_hijodelmar.png"}},
+  "headline": "Hull Osmosis & Vacuum Drying: What the Survey Doesn't Always Tell You",
+  "description": "What osmosis blistering is, how to detect it, what moisture readings mean, and when to negotiate vs. walk away from a used sailboat.",
   "url": "https://www.hijodelmar.cl/en/guia-secado-casco-vacio-osmosis.html",
-  "inLanguage": "en",
   "datePublished": "2026-06-01",
-  "dateModified": "2026-07-01",
+  "dateModified": "2026-06-27",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Person",
+    "name": "Rodrigo Troncoso Peirano",
+    "url": "https://www.hijodelmar.cl/en/sobre-mi.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hijo del Mar",
+    "url": "https://www.hijodelmar.cl/",
+    "logo": { "@type": "ImageObject", "url": "https://www.hijodelmar.cl/logo_hijodelmar.png" }
+  },
   "image": "https://www.hijodelmar.cl/logo_hijodelmar.png"
 }
 </script>
@@ -193,87 +228,82 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is osmosis in a fiberglass hull?",
+      "name": "What is osmosis in a sailboat hull?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Osmosis in a fiberglass hull is the process by which water molecules penetrate the gelcoat and laminate through microscopic pathways. Water reacts with hydrophilic compounds in the laminate — primarily residual styrene, unreacted resins and glass fiber sizing — creating a dilute acidic solution inside the laminate. This solution exerts osmotic pressure, drawing in more water and eventually forming blisters visible below the waterline. Osmosis is not a structural failure in its early stages — it is a moisture accumulation process that becomes structural only when it reaches advanced stages with widespread delamination."
+        "text": "Osmosis is a chemical process that occurs in fibreglass (GRP) hulls when water penetrates through the gelcoat and reacts with the resins in the laminate, forming blisters under the surface. It is one of the most common problems in fibreglass sailboats and can seriously deteriorate the structural integrity of the hull if left untreated."
       }
     },
     {
       "@type": "Question",
-      "name": "How do you detect osmosis before buying a sailboat?",
+      "name": "How is osmosis detected in a sailboat hull?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The most reliable detection method is a combination of a calibrated moisture meter (such as the Tramex Skipper 5) on a dry hull, a hammer tap test to detect hollow areas, and a direct visual inspection below the waterline after haul-out. Moisture meter readings above 10% on a dry hull should prompt further investigation. Blisters can range from pinhead size to the diameter of a coin — some are visible to the naked eye, others only show under scraped gelcoat. An infrared camera can help identify moisture concentration zones not visible externally. For a definitive assessment, a core sample or ultrasonic thickness gauge reading provides the deepest structural insight."
+        "text": "Osmosis is detected visually by blisters or surface irregularities in the gelcoat below the waterline, and technically using a moisture meter. In a nautical survey, moisture readings above 20% are a red flag. A completely healthy hull typically reads below 10%. The surveyor also taps the hull with a hammer or knuckle to listen for hollow sounds indicating delamination."
       }
     },
     {
       "@type": "Question",
-      "name": "What is hull vacuum drying and how does it work?",
+      "name": "What is vacuum hull drying?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Vacuum drying is the professional treatment for osmosis. The process involves: complete stripping of antifouling, gelcoat, and affected laminate layers; initial moisture measurement across the hull; installation of a sealed tent over the hull that creates a controlled low-humidity environment; and a monitored drying period — typically 3 to 12 months depending on initial moisture levels. Once the laminate reaches target dryness (typically under 3% on a calibrated meter), the hull is re-laminated with epoxy and sealed with a multi-coat epoxy barrier system before new antifouling is applied. Done correctly, vacuum drying resolves osmosis and prevents recurrence for decades."
+        "text": "Vacuum hull drying is a technical treatment that involves hauling the vessel out of the water, peeling back the gelcoat and antifouling paint, and applying a controlled heating and vacuum system to extract moisture from the fibreglass laminate. The process can take weeks or months depending on the moisture level. It is the most effective treatment for severe osmosis."
       }
     },
     {
       "@type": "Question",
-      "name": "How much does osmosis treatment cost in Chile?",
+      "name": "How much does osmosis treatment cost on a sailboat?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In Chile, a complete vacuum drying and hull restoration treatment for a 35–45 foot fiberglass sailboat typically costs between USD 3,000 and USD 12,000 depending on the severity of the osmosis, the size of the hull, the cost of haul-out and storage at the boatyard, and whether structural laminate replacement is required. Mild osmosis (moisture under 15%, no structural delamination) sits at the lower end. Severe osmosis with widespread blister fields and affected structural laminate sits at the upper end. Always get written quotes from the boatyard that will carry out the work before agreeing a price reduction with the seller."
+        "text": "Costs vary significantly by hull size and severity. A full osmosis treatment on a 35-45 ft sailboat (vacuum drying, peeling, epoxy barrier and new antifouling) typically runs USD 3,000-8,000. If sections of decking or hull core need to be cut out and re-laminated, costs can exceed USD 15,000-25,000. Always commission a professional nautical survey before purchasing any fibreglass vessel."
       }
     },
     {
       "@type": "Question",
-      "name": "Is it worth buying a sailboat with osmosis?",
+      "name": "Can you buy a sailboat with osmosis?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It depends entirely on the stage and extent of the osmosis. Mild osmosis — blisters limited to the gelcoat layer, moisture readings between 4–10%, no structural delamination — is a negotiating point, not a deal-breaker. A well-priced boat with mild osmosis that the buyer plans to treat is often a better purchase than an 'osmosis-free' boat with inflated price. Severe osmosis — deep structural delamination, moisture above 20%, keel joint compromise — is a different matter and can exceed the value of the boat to repair. A professional survey with moisture readings below the waterline is the only way to know which category you're dealing with."
+        "text": "Yes, but only if the price reflects the cost of treatment and you understand the severity. Mild or surface osmosis is not necessarily a dealbreaker, but severe osmosis with compromised laminate can mean a very expensive repair - sometimes more than the boat is worth. Always have a professional survey done before closing the deal so you know exactly what you're buying."
       }
     }
   ]
 }
 </script>
 <script src="/lang-detect.js"></script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2472289282343962"
-     crossorigin="anonymous"></script>
 </head>
 <body>
 
 <nav>
   <a href="../index.html" class="nav-logo">Hijo del Mar</a>
-  <div class="nav-links">
+  <div class="nav-links" id="navLinks">
     <a href="../index.html" class="nav-link">Home</a>
     <a href="../index.html#historia" class="nav-link">Story</a>
     <a href="../index.html#windy-container" class="nav-link">Weather</a>
-    <a href="../index.html#velero" class="nav-link">The Boat</a>
-    <a href="about.html" class="nav-link">About</a>
+    <a href="../index.html#velero" class="nav-link">The boat</a>
+    <a href="sobre-mi.html" class="nav-link">About</a>
     <div class="nav-dropdown">
       <button class="nav-dropdown-toggle">Advisory</button>
       <div class="nav-dropdown-menu">
-        <div class="nav-dropdown-header">Nautical advisory</div>
+        <div class="nav-dropdown-header">Nautical Advisory Services</div>
         <a href="asesoria-navegacion.html" class="nav-dropdown-item"><i class="ti ti-route"></i>Navigation Planning</a>
         <a href="asesoria-seguridad.html" class="nav-dropdown-item"><i class="ti ti-shield-check"></i>Safety Equipment</a>
-        <a href="asesoria-electronica.html" class="nav-dropdown-item"><i class="ti ti-device-tablet"></i>Electronics</a>
-        <a href="asesoria-supervivencia.html" class="nav-dropdown-item"><i class="ti ti-lifebuoy"></i>Survival at Sea</a>
-        <a href="asesoria-compra-embarcacion.html" class="nav-dropdown-item"><i class="ti ti-anchor"></i>Boat Selection Advisory</a>
-        <a href="survey-embarcacion.html" class="nav-dropdown-item"><i class="ti ti-clipboard-check"></i>Vessel Survey</a>
+        <a href="asesoria-electronica.html" class="nav-dropdown-item"><i class="ti ti-device-tablet"></i>Electronic Aids</a>
+        <a href="asesoria-supervivencia.html" class="nav-dropdown-item"><i class="ti ti-lifebuoy"></i>Sea Survival</a>
+        <a href="asesoria-compra-embarcacion.html" class="nav-dropdown-item"><i class="ti ti-anchor"></i>Boat Selection Help</a>
+        <a href="survey-embarcacion.html" class="nav-dropdown-item"><i class="ti ti-clipboard-check"></i>Boat Survey</a>
       </div>
     </div>
-    <a href="guias.html" class="nav-link active">Guides</a>
+    <a href="guias.html" class="nav-link active">Publications</a>
     <a href="contacto.html" class="nav-link">Contact</a>
     <div class="nav-dropdown nav-downloads">
-      <button class="nav-dropdown-toggle nav-downloads-btn">&#8595; Free Downloads</button>
+      <button class="nav-dropdown-toggle">&#8595; Free Downloads</button>
       <div class="nav-dropdown-menu">
-        <div class="nav-dropdown-header">Free documents</div>
-        <a href="../checklist-compra-velero.pdf" class="nav-dropdown-item" download><i class="ti ti-file-download"></i>50-Point Sailboat Inspection Checklist</a>
+        <div class="nav-dropdown-header">Free Documents</div>
+        <a href="../checklist-compra-velero.pdf" class="nav-dropdown-item" download><i class="ti ti-file-download"></i>Sailboat Survey Checklist</a>
       </div>
     </div>
     <div class="lang-picker" id="langPicker">
-      <button class="nav-lang-btn" id="langToggle">
-        <img loading="eager" src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="US" style="border-radius:2px;display:block;">
-        <span id="langText">EN</span>
-      </button>
+      <button class="nav-lang-btn"><img loading="eager" src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="US" style="border-radius:2px;display:block;"><span>EN</span></button>
       <div class="lang-drop" id="langDrop">
         <div class="lang-opt lang-cur" id="ldEN"><img loading="eager" src="https://flagcdn.com/16x12/us.png" width="16" height="12" alt="US">English</div>
         <div class="lang-opt" id="ldES"><img loading="eager" src="https://flagcdn.com/16x12/cl.png" width="16" height="12" alt="CL">Español</div>
@@ -283,292 +313,478 @@
   <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
 </nav>
 
-<div class="page-hero">
-  <div class="breadcrumb"><a href="../index.html">Home</a> &nbsp;/&nbsp; <a href="guias.html">Guides</a> &nbsp;/&nbsp; Hull Osmosis &amp; Vacuum Drying</div>
-  <div class="page-tag">Boat Inspection · Pre-Purchase · Hull Condition</div>
-  <h1 class="page-title">Hull Osmosis &amp; Vacuum Drying</h1>
-  <p class="page-sub">What the survey doesn't always tell you — and how to decide what to do with it.</p>
-  <div class="article-meta">By <span>Captain Rodrigo Troncoso</span> &nbsp;·&nbsp; <span>June 2026</span> &nbsp;·&nbsp; <span>12 min read</span></div>
-</div>
+<section class="hero">
+  <div class="breadcrumb"><a href="../index.html">Home</a> · <a href="guias.html">Publications</a> · Hull Osmosis &amp; Vacuum Drying</div>
+  <div class="hero-tag">Technical Guide · Boat Purchase</div>
+  <h1 class="hero-title">Hull Osmosis &amp; Vacuum Drying: What the Survey Doesn't Always Tell You</h1>
+  <div class="hero-meta">
+    <span><i class="ti ti-user"></i> Captain Rodrigo Troncoso</span>
+    <span><i class="ti ti-calendar"></i> June 2026</span>
+    <span><i class="ti ti-clock"></i> 12 min read</span>
+  </div>
+  <p class="hero-intro">When the moisture meter turns red on a used sailboat survey, a conversation starts that few buyers are prepared to have. This guide gives you the tools to understand it.</p>
+</section>
 
-<article class="article-body">
+<main class="content-wrap">
 
-  <p>Osmosis is the word that makes buyers go quiet during a survey. The surveyor taps the hull below the waterline, you hear a hollow ring instead of a solid thud, and suddenly the deal you were excited about is under a cloud. What happens next — whether you walk away, renegotiate, or proceed — depends almost entirely on understanding what osmosis actually is, how far it has progressed, and what it costs to fix.</p>
+  <p class="prose">You've been searching for months. You found the boat. The price is right, the design appeals to you, the seller seems honest. Then the surveyor takes out the moisture meter, runs it along the hull, and a number appears that you don't like. Or a word: <strong>osmosis</strong>.</p>
 
-  <p>I've inspected dozens of fiberglass hulls in Chilean marinas and boatyards over the years. Osmosis is present to some degree in the majority of fiberglass boats that have spent years in the water without barrier coat maintenance. That doesn't make it irrelevant — but it also doesn't make every osmosis diagnosis a catastrophe. The key is knowing the difference.</p>
+  <p class="prose">At that moment, most buyers react in one of two ways: they panic and walk away, or they dismiss it because the seller says "it's already been treated." Neither is the right answer.</p>
 
-  <h2>What osmosis is (and what it isn't)</h2>
-
-  <p>Osmosis in a fiberglass hull is a process, not an event. Water molecules penetrate the gelcoat through microscopic pathways in the laminate and react with hydrophilic compounds inside the structure — unreacted resins, residual styrene, glass fiber sizing. This reaction creates a dilute acidic solution inside the laminate layers, which exerts osmotic pressure drawing in more water and gradually forming blisters visible below the waterline.</p>
-
-  <p>In its early stages, osmosis is a cosmetic-to-mild structural condition. In advanced stages — when widespread delamination has compromised the structural laminate or when the keel joint area is affected — it becomes a serious problem that can exceed the cost of the boat to repair.</p>
-
-  <div class="info-box">
-    <p><strong>The key distinction:</strong> osmosis confined to the gelcoat layer and the outer layers of laminate is a maintenance issue. Osmosis that has penetrated deep into the structural laminate — particularly in high-stress areas like the keel joint, chainplates and rudder — is a structural issue. The moisture meter reading tells you the first part of the story; only a professional inspection of the laminate cross-section tells you the second.</p>
+  <div class="pull-quote">
+    <p>"Moisture in a fibreglass hull is not a death sentence for the boat. But it is information you need to know how to read."</p>
   </div>
 
-  <h2>The inspection tools: what each one actually tells you</h2>
+  <h2 class="section-title">What is Osmosis and Why Does It Happen?</h2>
+
+  <p class="prose">Fibreglass — the material most modern sailboats are built from — is not 100% waterproof. At a molecular level, the fibreglass and polyester resin laminate has micropores that allow the slow passage of water. Over the years, water penetrates from the outside into the laminate.</p>
+
+  <p class="prose">Once inside, the water dissolves traces of water-soluble compounds trapped in the laminate during manufacture (salts, glycols, acids). This creates a solution with higher concentration than the surrounding seawater. By osmosis — the same process that explains how cells regulate their contents — water continues to be drawn inward to equalise the concentrations.</p>
+
+  <p class="prose">The result is <strong>blisters or bubbles below the gelcoat</strong> — some small as pinheads, others as large as coins — containing an acidic liquid with a distinctive smell. That is osmosis.</p>
+
+  <h3 class="sub-title">How Long Does It Take to Appear?</h3>
+  <p class="prose">It depends on the quality of the original laminate, whether an epoxy barrier was applied, the water temperature, and how long the boat has been afloat. Sailboats from the 1970s and 80s made with polyester resin and no barrier coat are the most susceptible. Some show osmosis within 5 years. Others go 40 years without a single blister. The quality of the original build is the deciding factor.</p>
+
+  <div class="diagram-wrap">
+    <svg viewBox="0 0 780 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+      <defs>
+        <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#0a2a4a" stop-opacity="0.9"/>
+          <stop offset="100%" stop-color="#061520" stop-opacity="1"/>
+        </linearGradient>
+      </defs>
+      <rect width="780" height="260" fill="#08131f"/>
+      <text x="20" y="22" fill="rgba(120,144,168,0.6)" font-family="'Nunito Sans',sans-serif" font-size="10" letter-spacing="2">EXTERIOR · SEAWATER</text>
+      <rect x="0" y="28" width="780" height="72" fill="url(#seaGrad)" opacity="0.7"/>
+      <rect x="0" y="100" width="780" height="14" fill="#2d4a2a"/>
+      <text x="20" y="111" fill="rgba(196,162,100,0.5)" font-family="'Nunito Sans',sans-serif" font-size="9" letter-spacing="1">GELCOAT</text>
+      <rect x="0" y="114" width="780" height="46" fill="#1a2818"/>
+      <text x="20" y="142" fill="rgba(196,162,100,0.5)" font-family="'Nunito Sans',sans-serif" font-size="9" letter-spacing="1">LAMINATE · FIBREGLASS + POLYESTER RESIN</text>
+      <rect x="0" y="160" width="780" height="100" fill="#0c1a0a" opacity="0.5"/>
+      <text x="20" y="200" fill="rgba(120,144,168,0.4)" font-family="'Nunito Sans',sans-serif" font-size="10" letter-spacing="2">HULL INTERIOR</text>
+      <g opacity="0.6">
+        <line x1="160" y1="40" x2="160" y2="98" stroke="#7890a8" stroke-width="1" stroke-dasharray="3,3"/>
+        <polygon points="160,100 156,90 164,90" fill="#7890a8"/>
+        <line x1="300" y1="40" x2="300" y2="98" stroke="#7890a8" stroke-width="1" stroke-dasharray="3,3"/>
+        <polygon points="300,100 296,90 304,90" fill="#7890a8"/>
+        <line x1="480" y1="40" x2="480" y2="98" stroke="#7890a8" stroke-width="1" stroke-dasharray="3,3"/>
+        <polygon points="480,100 476,90 484,90" fill="#7890a8"/>
+        <line x1="620" y1="40" x2="620" y2="98" stroke="#7890a8" stroke-width="1" stroke-dasharray="3,3"/>
+        <polygon points="620,100 616,90 624,90" fill="#7890a8"/>
+      </g>
+      <text x="390" y="70" fill="rgba(120,144,168,0.7)" font-family="'Nunito Sans',sans-serif" font-size="11" text-anchor="middle">H2O penetrates through gelcoat micropores</text>
+      <ellipse cx="200" cy="105" rx="18" ry="7" fill="rgba(196,162,100,0.15)" stroke="rgba(196,162,100,0.5)" stroke-width="1.5"/>
+      <text x="200" y="88" fill="rgba(196,162,100,0.7)" font-family="'Nunito Sans',sans-serif" font-size="9" text-anchor="middle">Surface</text>
+      <text x="200" y="78" fill="rgba(196,162,100,0.7)" font-family="'Nunito Sans',sans-serif" font-size="9" text-anchor="middle">blister</text>
+      <ellipse cx="400" cy="112" rx="28" ry="9" fill="rgba(196,162,100,0.1)" stroke="rgba(196,162,100,0.4)" stroke-width="1.5"/>
+      <text x="400" y="88" fill="rgba(196,162,100,0.7)" font-family="'Nunito Sans',sans-serif" font-size="9" text-anchor="middle">Deep</text>
+      <text x="400" y="78" fill="rgba(196,162,100,0.7)" font-family="'Nunito Sans',sans-serif" font-size="9" text-anchor="middle">blister</text>
+      <ellipse cx="400" cy="114" rx="18" ry="5" fill="rgba(180,140,60,0.2)"/>
+      <ellipse cx="600" cy="115" rx="40" ry="11" fill="rgba(200,60,60,0.08)" stroke="rgba(200,60,60,0.35)" stroke-width="1.5"/>
+      <ellipse cx="600" cy="117" rx="28" ry="6" fill="rgba(200,60,60,0.15)"/>
+      <text x="600" y="88" fill="rgba(200,80,80,0.8)" font-family="'Nunito Sans',sans-serif" font-size="9" text-anchor="middle">Large blister</text>
+      <text x="600" y="78" fill="rgba(200,80,80,0.8)" font-family="'Nunito Sans',sans-serif" font-size="9" text-anchor="middle">· acid fluid</text>
+      <circle cx="160" cy="230" r="6" fill="rgba(196,162,100,0.15)" stroke="rgba(196,162,100,0.5)" stroke-width="1.5"/>
+      <text x="172" y="234" fill="#7890a8" font-family="'Nunito Sans',sans-serif" font-size="11">Mild blister — gelcoat compromised</text>
+      <circle cx="400" cy="230" r="6" fill="rgba(196,162,100,0.1)" stroke="rgba(196,162,100,0.4)" stroke-width="1.5"/>
+      <text x="412" y="234" fill="#7890a8" font-family="'Nunito Sans',sans-serif" font-size="11">Deep blister — laminate affected</text>
+      <circle cx="600" cy="230" r="6" fill="rgba(200,60,60,0.08)" stroke="rgba(200,60,60,0.35)" stroke-width="1.5"/>
+      <text x="612" y="234" fill="#d07070" font-family="'Nunito Sans',sans-serif" font-size="11">Advanced osmosis · red flag</text>
+    </svg>
+    <div class="diagram-caption">Cross-section of hull: progression of osmotic blisters from gelcoat into the laminate · Original diagram Hijo del Mar</div>
+  </div>
+
+  <h2 class="section-title">Survey Tools: How Moisture is Detected</h2>
+
+  <p class="prose">A professional surveyor doesn't arrive with a single instrument. A correct diagnosis requires combining at least three methods. Each reveals something different:</p>
 
   <div class="tool-grid">
-    <div class="tool-card tool-primary">
-      <div class="tool-icon"><i class="ti ti-device-analytics"></i></div>
-      <div class="tool-name">Tramex Skipper 5</div>
-      <div class="tool-desc">The gold standard for moisture measurement in fiberglass. Non-destructive, calibrated for GRP (fiberglass). Gives readings across the hull surface in minutes. Reads in % moisture content. The most important instrument in any pre-purchase hull assessment.</div>
+    <div class="tool-card">
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-device-analytics"></i></div>
+        <div>
+          <h4>Conductivity Moisture Meter</h4>
+          <div class="tool-model">Tramex Skipper 5 · Protimeter Aquant · Sovereign</div>
+        </div>
+      </div>
+      <p>The central instrument. It measures the electrical resistance of the laminate: more water equals higher conductivity equals a higher reading. The Tramex Skipper 5 has dual reading depth (10 mm shallow and 30 mm deep), which distinguishes whether moisture is in the gelcoat or the core. Non-invasive — no drilling required. Limitation: it can't differentiate between free water, water bound to resin, and internal condensation. Always a starting point, never a standalone diagnosis.</p>
     </div>
     <div class="tool-card">
-      <div class="tool-icon"><i class="ti ti-tool"></i></div>
-      <div class="tool-name">Hammer Tap Test</div>
-      <div class="tool-desc">Low-tech but revealing. Tap the hull systematically below the waterline and listen. A solid composite sounds crisp. A delaminated area sounds hollow. Identifies areas of delamination the moisture meter may not flag in its surface reading.</div>
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-hammer"></i></div>
+        <div>
+          <h4>Percussion Test (Hammer Test)</h4>
+          <div class="tool-model">Survey hammer · Knuckle · Plastic mallet</div>
+        </div>
+      </div>
+      <p>The oldest method and still indispensable. The hull surface is tapped lightly with a wooden or plastic hammer (or simply a knuckle) and you listen. A solid, dry sound indicates intact laminate. A hollow, dull or "empty box" sound reveals delamination or compromised core. Especially useful on deck and superstructure where balsa core rots before the exterior shows any signs. Costs nothing and yields information no instrument can replace.</p>
     </div>
     <div class="tool-card">
-      <div class="tool-icon"><i class="ti ti-temperature"></i></div>
-      <div class="tool-name">Infrared Camera</div>
-      <div class="tool-desc">Detects temperature differential between wet and dry laminate. Useful for identifying moisture concentration zones that are not yet visible as blisters. Best used in controlled conditions — direct sun on the hull skews the reading.</div>
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-temperature"></i></div>
+        <div>
+          <h4>Infrared Thermal Camera</h4>
+          <div class="tool-model">FLIR E8 · Fluke TiX580 · HIKMICRO</div>
+        </div>
+      </div>
+      <p>An advanced tool, not always available but very powerful. Wet areas of the laminate retain heat differently from dry areas. Photographing the hull with an infrared camera at dawn — when the outside temperature has just changed — reveals patches of differing temperature that map exactly where moisture is concentrated. Ideal for confirming moisture meter findings and for documenting the condition before a treatment programme.</p>
     </div>
     <div class="tool-card">
-      <div class="tool-icon"><i class="ti ti-eye"></i></div>
-      <div class="tool-name">Visual Inspection</div>
-      <div class="tool-desc">The first step and never optional. Look for blister fields below the waterline — from pinhead size to coin-diameter. Count and map them. A boat with 20 small blisters is a different situation from one with 200 large blisters covering 60% of the wetted surface.</div>
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-eyeglass"></i></div>
+        <div>
+          <h4>Direct Visual Inspection</h4>
+          <div class="tool-model">Magnifier · Inspection torch · Scraper</div>
+        </div>
+      </div>
+      <p>Fundamental and irreplaceable by any instrument. The surveyor checks the entire hull under good light, looking for blisters, bubbles or raised areas in the gelcoat. With a scraper or scalpel a suspect blister is carefully opened: if the liquid inside is clear and odourless, it may be trapped rainwater. If it is yellowish, greenish or brown with an acidic or vinegary smell, it is diagnostic of active osmosis. The smell is a clinical sign that doesn't lie.</p>
     </div>
     <div class="tool-card">
-      <div class="tool-icon"><i class="ti ti-cut"></i></div>
-      <div class="tool-name">Core Sample</div>
-      <div class="tool-desc">Destructive but definitive. A small plug removed from the hull cross-section shows exactly which layers are affected — gelcoat only, outer laminate, core material, or deep structural laminate. Requested in specialist surveys when the moisture reading and visual inspection are inconclusive.</div>
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-microscope"></i></div>
+        <div>
+          <h4>Core Sample Analysis</h4>
+          <div class="tool-model">Drill · Hole saw · Laboratory</div>
+        </div>
+      </div>
+      <p>Used only when there is doubt about structural integrity. A small plug of laminate (or core in suspect areas) is removed with a hole saw and inspected or sent to a laboratory. It reveals the true state of the inner layers: whether the balsa is blackened and soft, whether fibres are delaminated, whether there are internal cracks. Invasive and requires repair afterwards, so reserved for cases where the rest of the diagnosis is inconclusive.</p>
     </div>
     <div class="tool-card">
-      <div class="tool-icon"><i class="ti ti-wave-sine"></i></div>
-      <div class="tool-name">Ultrasonic Gauge</div>
-      <div class="tool-desc">Measures laminate thickness from one side of the hull only. Identifies areas where the laminate has thinned due to delamination or damage without requiring access from inside. Used to verify structural integrity in key areas.</div>
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-ruler-measure"></i></div>
+        <div>
+          <h4>Ultrasonic Thickness Gauge</h4>
+          <div class="tool-model">Elcometer 500 · Cygnus Instruments</div>
+        </div>
+      </div>
+      <p>Measures laminate thickness from the outside without drilling. Particularly useful on hulls where interior access is not possible for direct measurement. Comparing the current thickness against the original builder's specifications reveals areas where the laminate has thinned through galvanic corrosion, abrasion or poorly executed repairs. It also confirms whether thickness is uniform or whether variations suggest undeclared prior repairs.</p>
     </div>
   </div>
 
-  <h2>Reading the moisture meter: what the numbers mean</h2>
+  <h2 class="section-title">The Moisture Meter: How to Read the Numbers</h2>
 
-  <p>Moisture meter readings alone don't tell you whether to buy or walk away — they tell you what questions to ask next. Here is a practical interpretation guide based on Tramex Skipper 5 readings on a dry fiberglass hull (not fresh out of the water — the hull should have been out for at least 48 hours):</p>
+  <p class="prose">The instrument the surveyor uses is called a <strong>conductivity moisture meter</strong>. It measures the electrical resistance of the laminate: when there is more water, conductivity increases and the reading rises. Values are expressed as a percentage or on a relative scale depending on the instrument brand.</p>
+
+  <p class="prose">What matters most: <strong>the boat must have been out of the water for at least 48 hours before measuring</strong>. A hull just hauled out will always give high readings even without osmosis. Professionals wait longer — ideally a week or more — for reliable readings.</p>
 
   <table class="humidity-table">
     <thead>
       <tr>
-        <th>Reading</th>
-        <th>Interpretation</th>
-        <th>Recommended Action</th>
+        <th>Moisture Level</th>
+        <th>Approx. Reading</th>
+        <th>Meaning</th>
+        <th>Status</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="h-ok">1 – 3%</td>
-        <td>Dry laminate. Normal for a well-maintained hull with good barrier coat.</td>
-        <td>Proceed. Inspect visually for surface blisters and request survey confirmation.</td>
+        <td>Dry / Normal</td>
+        <td>1% – 3%</td>
+        <td>Laminate in good condition, no significant water penetration</td>
+        <td><span class="badge badge-ok">OK</span></td>
       </tr>
       <tr>
-        <td class="h-warn">4 – 10%</td>
-        <td>Elevated moisture. Early osmosis likely. May not be visible as blisters yet.</td>
-        <td>Investigate further. Map the wet zones. Get a professional survey and cost estimate for barrier treatment. Use this as leverage in price negotiation.</td>
+        <td>Moderately wet</td>
+        <td>4% – 10%</td>
+        <td>Water present in the laminate. May require drying and review</td>
+        <td><span class="badge badge-warn">Caution</span></td>
       </tr>
       <tr>
-        <td class="h-bad">10 – 20%</td>
-        <td>Significant osmosis. Blister fields likely present. Some laminate delamination possible.</td>
-        <td>Negotiate a meaningful price reduction that covers the full treatment cost plus haul-out. Request a core sample or specialist survey before committing. Don't proceed without professional assessment.</td>
+        <td>High moisture</td>
+        <td>10% – 20%</td>
+        <td>Significant penetration. Treatment needed. Negotiate price</td>
+        <td><span class="badge badge-warn">Negotiate</span></td>
       </tr>
       <tr>
-        <td class="h-crit">20%+</td>
-        <td>Severe osmosis. Structural delamination likely. Keel joint may be compromised.</td>
-        <td>Red flag. Walk away unless the price is dramatically reduced and a specialist confirms the structural laminate is recoverable. This is repair territory that can easily exceed boat value.</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="warning-box">
-    <p><strong>The hull must be dry.</strong> Moisture meter readings taken immediately after haul-out are unreliable — the outer laminate is temporarily saturated. Wait at least 48 hours after lifting for a meaningful reading. Sellers who push for an immediate inspection right after haul-out and then argue the reading is "just surface water" should be viewed with appropriate suspicion.</p>
-  </div>
-
-  <h2>The vacuum drying process: what actually happens</h2>
-
-  <p>Vacuum drying is the professional standard for osmosis treatment. It is more thorough than simply letting a hull air-dry in the open, because it creates a controlled low-humidity environment that actively draws moisture from the laminate rather than waiting for passive evaporation. Here is what the process involves:</p>
-
-  <ol class="steps-list">
-    <li class="step-item">
-      <div class="step-num">01</div>
-      <div class="step-content">
-        <div class="step-title">Full Hull Stripping</div>
-        <div class="step-desc">All antifouling paint is removed. Then the gelcoat is removed — typically by mechanical stripping or controlled grinding. In moderate to severe cases, the outer layers of contaminated laminate are also removed. The goal is to expose the affected material to the drying environment.</div>
-      </div>
-    </li>
-    <li class="step-item">
-      <div class="step-num">02</div>
-      <div class="step-content">
-        <div class="step-title">Initial Moisture Mapping</div>
-        <div class="step-desc">With the hull stripped, a systematic moisture map is created across the entire wetted surface. This establishes the baseline and identifies the areas of greatest concentration — usually the bow sections and areas around keel attachment points.</div>
-      </div>
-    </li>
-    <li class="step-item">
-      <div class="step-num">03</div>
-      <div class="step-content">
-        <div class="step-title">Vacuum Tent Installation</div>
-        <div class="step-desc">A sealed enclosure is built around the hull (or the hull is moved into a controlled environment). Dehumidifiers run continuously to maintain low relative humidity inside the enclosure. Some systems apply mild heat to accelerate moisture migration from the laminate.</div>
-      </div>
-    </li>
-    <li class="step-item">
-      <div class="step-num">04</div>
-      <div class="step-content">
-        <div class="step-title">Monitored Drying Period</div>
-        <div class="step-desc">This is the longest phase. Depending on initial moisture levels and laminate construction, drying takes 3 to 12 months. The laminate is checked periodically with the moisture meter. The process cannot be rushed without compromising the result.</div>
-      </div>
-    </li>
-    <li class="step-item">
-      <div class="step-num">05</div>
-      <div class="step-content">
-        <div class="step-title">Final Moisture Verification</div>
-        <div class="step-desc">Once readings consistently reach target levels (under 3%), a final comprehensive moisture map is conducted and documented. This is the technical baseline the hull will be held to going forward — and it should be included in any warranty offered by the yard.</div>
-      </div>
-    </li>
-    <li class="step-item">
-      <div class="step-num">06</div>
-      <div class="step-content">
-        <div class="step-title">Re-Lamination and Barrier Coat</div>
-        <div class="step-desc">Any removed laminate is replaced with epoxy laminate (not polyester — the epoxy system is what provides the osmosis resistance). A multi-coat epoxy barrier system (typically 5–7 coats) is applied over the entire wetted surface before new antifouling. Done correctly, this should last decades without osmosis recurrence.</div>
-      </div>
-    </li>
-  </ol>
-
-  <h2>Go / No-Go: a practical decision framework</h2>
-
-  <div class="decision-grid">
-    <div class="dg-header">Condition</div>
-    <div class="dg-header">Recommended Decision</div>
-    <div class="dg-cell">Moisture 1–3%, no blisters, no hollow areas on tap test</div>
-    <div class="dg-cell go">✓ Go — proceed with full survey</div>
-    <div class="dg-cell">Moisture 4–10%, some blistering, no structural delamination</div>
-    <div class="dg-cell negotiate">⬦ Negotiate — price reduction to cover barrier treatment</div>
-    <div class="dg-cell">Moisture 10–20%, blister fields, isolated hollow areas on tap test</div>
-    <div class="dg-cell negotiate">⬦ Conditional — specialist survey + written quote for full treatment required before committing</div>
-    <div class="dg-cell">Moisture 20%+, widespread delamination, keel area compromised</div>
-    <div class="dg-cell no-go">✗ Walk away unless price reflects full structural repair cost</div>
-    <div class="dg-cell">Any level, but hull hasn't been out of water for 48+ hours at time of inspection</div>
-    <div class="dg-cell no-go">✗ Reschedule — reading is unreliable. Don't negotiate or commit based on it.</div>
-  </div>
-
-  <h2>What osmosis treatment costs in Chile</h2>
-
-  <table class="cost-table">
-    <thead>
-      <tr>
-        <th>Item</th>
-        <th>Typical Range (USD)</th>
-        <th>Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Haul-out &amp; blocking (35–45 ft)</td>
-        <td>200 – 600</td>
-        <td>Varies significantly by boatyard</td>
-      </tr>
-      <tr>
-        <td>Antifouling &amp; gelcoat stripping</td>
-        <td>400 – 1.200</td>
-        <td>Mechanical stripping of the full wetted surface</td>
-      </tr>
-      <tr>
-        <td>Vacuum drying (3–12 months)</td>
-        <td>800 – 3.000</td>
-        <td>Storage + dehumidifier operation during drying period</td>
-      </tr>
-      <tr>
-        <td>Laminate repair (if structural)</td>
-        <td>600 – 4.000</td>
-        <td>Epoxy laminate replacement of removed layers</td>
-      </tr>
-      <tr>
-        <td>Epoxy barrier coat (5–7 coats)</td>
-        <td>600 – 1.500</td>
-        <td>Materials + application</td>
-      </tr>
-      <tr>
-        <td>New antifouling + launch</td>
-        <td>400 – 800</td>
-        <td>Two coats antifouling + haul-back</td>
-      </tr>
-      <tr>
-        <td><strong>Total (mild osmosis)</strong></td>
-        <td><strong>~3.000</strong></td>
-        <td>Early-stage treatment, minimal structural work</td>
-      </tr>
-      <tr>
-        <td><strong>Total (severe osmosis)</strong></td>
-        <td><strong>~10.000 – 12.000</strong></td>
-        <td>Extensive laminate work, long drying period</td>
+        <td>Critical</td>
+        <td>20%+</td>
+        <td>Severe osmosis or compromised core. Red flag</td>
+        <td><span class="badge badge-red">Red Flag</span></td>
       </tr>
     </tbody>
   </table>
 
   <div class="info-box">
-    <p><strong>Use these figures before you make an offer.</strong> If you're considering a boat with moderate osmosis, get a written quote from a Chilean boatyard before you negotiate the purchase price — not after. The quote gives you hard numbers to anchor the negotiation, and protects you from discovering the treatment costs twice what you estimated once the boat is already yours.</p>
+    <div class="box-label"><i class="ti ti-info-circle"></i> Important</div>
+    <p>Moisture meters do not directly measure osmosis — they measure conductivity. A high reading can be caused by osmosis, but also by water in a balsa or foam core, internal condensation, or poorly made repairs that trapped moisture. The meter is the first step, not the complete diagnosis.</p>
   </div>
 
-  <div class="cta-inline">
-    <h3>Buying a boat in Chile?</h3>
-    <p>I accompany pre-purchase inspections for fiberglass and steel sailboats in Chile — on-the-ground hull assessment, rigging inspection, mechanical evaluation and an honest opinion of what the boat is actually worth and what it will cost to get ready. Available in Valparaíso, Puerto Montt and by arrangement at other ports.</p>
-    <a href="asesoria-compra-embarcacion.html" class="btn-gold">Boat selection advisory →</a>
-    <a href="survey-embarcacion.html" class="btn-ghost">Vessel survey →</a>
+  <h2 class="section-title">The Vacuum Drying System: How It Works</h2>
+
+  <p class="prose">When moisture is high but the laminate is still structurally sound — no delamination, no soft spots, no rotten core — there is an alternative to cutting and rebuilding the hull: <strong>vacuum drying</strong>, also known as vacuum hull drying or the drying system.</p>
+
+  <p class="prose">The idea is to extract the moisture trapped inside the laminate or core, forcing it out without needing to remove entire panels of fibreglass. The process, when properly executed, is effective. But you need to understand exactly what it does and what it doesn't do.</p>
+
+  <h3 class="sub-title">The Process Step by Step</h3>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Mapping and diagnosis of wet zones</h4>
+        <p>Before drilling anything, the technician maps the entire hull with the moisture meter, recording readings at each zone. This identifies where moisture is concentrated and which parts of the laminate or core are compromised. The hull is also tapped with a knuckle to detect hollow sounds indicating delamination.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Drilling the access holes</h4>
+        <p>Small, strategic holes are drilled in the wet zones, normally in a calculated pattern based on laminate thickness and moisture distribution. The diameter is minimal — generally 4 to 8 mm — positioned to create a network of extraction channels through the material.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Inserting tubes and connecting to the manifold</h4>
+        <p>A sealed transparent tube is installed in each hole. These tubes connect to a central collector — the manifold — which can be seen as a horizontal white pipe where all individual tubes converge. The seal between tube and hole is critical for the system to work correctly.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Applying vacuum and/or heat</h4>
+        <p>A vacuum pump connects to the manifold and evacuates the system. This creates a pressure differential that forces trapped moisture to migrate towards the tubes. More advanced systems combine vacuum with dry heat (controlled temperature warm air) or apply heat directly to the hull surface, accelerating evaporation.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <h4>Monitoring and periodic measurement</h4>
+        <p>Moisture meter readings are repeated regularly — every few days or weeks — at the points recorded initially. The goal is to bring readings down from 10–30% to below 5%, ideally between 1% and 3%. This process can take anywhere from 4 weeks to 6 months depending on laminate thickness, ambient temperature, and severity of the moisture.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">6</div>
+      <div class="step-content">
+        <h4>Sealing, repair and epoxy barrier coat</h4>
+        <p>Once target readings are reached, the holes are sealed with epoxy resin. The surface is made good, at least 5 coats of epoxy barrier coat are applied (which is truly waterproof, unlike the original polyester gelcoat), and finally antifouling is applied if the boat is going back in the water. Without the barrier coat, moisture returns.</p>
+      </div>
+    </div>
   </div>
 
-</article>
+  <div class="diagram-wrap">
+    <svg viewBox="0 0 780 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+      <rect width="780" height="320" fill="#08131f"/>
+      <text x="30" y="22" fill="rgba(120,144,168,0.5)" font-family="'Nunito Sans',sans-serif" font-size="10" letter-spacing="2">HULL CROSS-SECTION · VACUUM SYSTEM INSTALLED</text>
+      <rect x="0" y="38" width="780" height="28" fill="#1a2818"/>
+      <rect x="0" y="38" width="780" height="6" fill="#2d4a2a"/>
+      <text x="20" y="50" fill="rgba(196,162,100,0.5)" font-family="'Nunito Sans',sans-serif" font-size="9" letter-spacing="1">GELCOAT + OUTER LAMINATE</text>
+      <rect x="0" y="66" width="780" height="36" fill="#0e1a0c"/>
+      <text x="20" y="89" fill="rgba(120,144,168,0.4)" font-family="'Nunito Sans',sans-serif" font-size="9" letter-spacing="1">CORE (BALSA / FOAM) · WET ZONE</text>
+      <g fill="rgba(120,144,200,0.4)">
+        <circle cx="80" cy="84" r="3"/><circle cx="120" cy="78" r="2"/><circle cx="160" cy="86" r="3"/>
+        <circle cx="220" cy="80" r="2"/><circle cx="280" cy="85" r="3"/><circle cx="340" cy="79" r="2"/>
+        <circle cx="400" cy="83" r="3"/><circle cx="460" cy="78" r="2"/><circle cx="520" cy="85" r="3"/>
+        <circle cx="580" cy="80" r="2"/><circle cx="640" cy="84" r="3"/><circle cx="700" cy="79" r="2"/>
+      </g>
+      <rect x="0" y="102" width="780" height="20" fill="#1a2818"/>
+      <text x="20" y="116" fill="rgba(196,162,100,0.5)" font-family="'Nunito Sans',sans-serif" font-size="9" letter-spacing="1">INNER LAMINATE</text>
+      <rect x="146" y="122" width="8" height="90" rx="3" fill="rgba(120,180,255,0.15)" stroke="rgba(120,180,255,0.4)" stroke-width="1"/>
+      <rect x="146" y="38" width="8" height="86" fill="rgba(196,162,100,0.1)" stroke="rgba(196,162,100,0.3)" stroke-width="1"/>
+      <circle cx="150" cy="38" r="5" fill="#08131f" stroke="rgba(196,162,100,0.5)" stroke-width="1.5"/>
+      <rect x="296" y="122" width="8" height="90" rx="3" fill="rgba(120,180,255,0.15)" stroke="rgba(120,180,255,0.4)" stroke-width="1"/>
+      <rect x="296" y="38" width="8" height="86" fill="rgba(196,162,100,0.1)" stroke="rgba(196,162,100,0.3)" stroke-width="1"/>
+      <circle cx="300" cy="38" r="5" fill="#08131f" stroke="rgba(196,162,100,0.5)" stroke-width="1.5"/>
+      <rect x="446" y="122" width="8" height="90" rx="3" fill="rgba(120,180,255,0.15)" stroke="rgba(120,180,255,0.4)" stroke-width="1"/>
+      <rect x="446" y="38" width="8" height="86" fill="rgba(196,162,100,0.1)" stroke="rgba(196,162,100,0.3)" stroke-width="1"/>
+      <circle cx="450" cy="38" r="5" fill="#08131f" stroke="rgba(196,162,100,0.5)" stroke-width="1.5"/>
+      <rect x="596" y="122" width="8" height="90" rx="3" fill="rgba(120,180,255,0.15)" stroke="rgba(120,180,255,0.4)" stroke-width="1"/>
+      <rect x="596" y="38" width="8" height="86" fill="rgba(196,162,100,0.1)" stroke="rgba(196,162,100,0.3)" stroke-width="1"/>
+      <circle cx="600" cy="38" r="5" fill="#08131f" stroke="rgba(196,162,100,0.5)" stroke-width="1.5"/>
+      <rect x="50" y="205" width="680" height="18" rx="9" fill="rgba(196,162,100,0.08)" stroke="rgba(196,162,100,0.35)" stroke-width="1.5"/>
+      <text x="390" y="219" fill="rgba(196,162,100,0.7)" font-family="'Nunito Sans',sans-serif" font-size="10" letter-spacing="2" text-anchor="middle">MANIFOLD · CENTRAL COLLECTOR</text>
+      <g fill="rgba(120,180,255,0.5)">
+        <polygon points="150,90 146,98 154,98"/>
+        <polygon points="300,90 296,98 304,98"/>
+        <polygon points="450,90 446,98 454,98"/>
+        <polygon points="600,90 596,98 604,98"/>
+      </g>
+      <line x1="390" y1="223" x2="390" y2="260" stroke="rgba(196,162,100,0.4)" stroke-width="2" stroke-dasharray="4,3"/>
+      <rect x="310" y="260" width="160" height="50" rx="6" fill="rgba(196,162,100,0.05)" stroke="rgba(196,162,100,0.3)" stroke-width="1.5"/>
+      <text x="390" y="280" fill="#c4a264" font-family="'Nunito Sans',sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1">VACUUM PUMP</text>
+      <text x="390" y="298" fill="rgba(120,144,168,0.7)" font-family="'Nunito Sans',sans-serif" font-size="10" text-anchor="middle">— 0.6 to 0.9 bar —</text>
+      <text x="55" y="153" fill="rgba(120,180,255,0.7)" font-family="'Nunito Sans',sans-serif" font-size="10" letter-spacing="1">Sealed transparent tubes</text>
+      <text x="680" y="145" fill="rgba(120,180,255,0.6)" font-family="'Nunito Sans',sans-serif" font-size="10" text-anchor="middle">Moisture</text>
+      <text x="680" y="157" fill="rgba(120,180,255,0.6)" font-family="'Nunito Sans',sans-serif" font-size="10" text-anchor="middle">extracted</text>
+    </svg>
+    <div class="diagram-caption">Vacuum moisture extraction system: holes → transparent tubes → manifold → pump · Original diagram Hijo del Mar</div>
+  </div>
 
-<div style="max-width:760px;margin:0 auto;padding:0 2rem 1.5rem;">
-  <div style="height:1px;background:rgba(196,162,100,0.08);margin-bottom:2rem;"></div>
-  <div style="font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#c4a264;margin-bottom:1.25rem;">Related guides</div>
-</div>
-<div class="related-guides">
-  <a href="guia-errores-comprar-velero.html" class="guide-card">
-    <div class="guide-tag">Purchase · Mistakes</div>
-    <div class="guide-title">10 Mistakes When Buying a Used Sailboat</div>
-  </a>
-  <a href="guia-survey-nautico.html" class="guide-card">
-    <div class="guide-tag">Purchase · Survey</div>
-    <div class="guide-title">Nautical Survey: What It Is and When You Need One</div>
-  </a>
-  <a href="guia-how-to-buy-sailboat-chile.html" class="guide-card">
-    <div class="guide-tag">Buying Guide · Chile</div>
-    <div class="guide-title">How to Buy a Sailboat in Chile: A Local Guide</div>
-  </a>
-  <a href="asesoria-compra-embarcacion.html" class="guide-card">
-    <div class="guide-tag">Service</div>
-    <div class="guide-title">Boat Selection Advisory</div>
-  </a>
-</div>
+  <h3 class="sub-title">Tools and Equipment for the Vacuum Process</h3>
+
+  <div class="tool-grid">
+    <div class="tool-card">
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-wind"></i></div>
+        <div>
+          <h4>Vacuum Pump</h4>
+          <div class="tool-model">0.6 – 0.9 bar vacuum</div>
+        </div>
+      </div>
+      <p>The heart of the system. Generates the negative pressure that forces moisture to migrate from the laminate into the tubes. Vacuum pumps for this application work between 0.6 and 0.9 bar. They must run continuously and stably for weeks, so the quality and output of the pump largely determines the effectiveness of the treatment.</p>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-git-branch"></i></div>
+        <div>
+          <h4>Manifold (Central Collector)</h4>
+          <div class="tool-model">PVC · Stainless steel</div>
+        </div>
+      </div>
+      <p>The horizontal pipe where all the individual hull tubes converge. Usually white PVC with Y or T connectors. Centralises the flow of extracted air/vapour from multiple points to a single outlet connected to the pump. A good manifold is airtight — any leak in the joints dramatically reduces the vacuum efficiency.</p>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-tool"></i></div>
+        <div>
+          <h4>Drill + Fine Bits</h4>
+          <div class="tool-model">4 to 8 mm diameter</div>
+        </div>
+      </div>
+      <p>Used to drill the access holes into the laminate or core. The diameter is minimal to minimise damage. The angle and depth of each hole are calculated by the technician based on laminate thickness. A drilling error (too deep, wrong angle) can compromise the structural integrity of the hull.</p>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-gauge"></i></div>
+        <div>
+          <h4>Vacuum Gauge</h4>
+          <div class="tool-model">Analogue or digital</div>
+        </div>
+      </div>
+      <p>Measures the vacuum level the system is achieving in real time. Allows the technician to detect leaks (vacuum drops if there is a leak), verify that the pump is working correctly, and adjust pressure if needed. A well-sealed system should maintain the target vacuum stably for hours with no significant variation.</p>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-flame"></i></div>
+        <div>
+          <h4>Controlled Heat Systems</h4>
+          <div class="tool-model">Dielectric heater · Air heater · Hot-vac</div>
+        </div>
+      </div>
+      <p>Heat accelerates evaporation of moisture within the laminate. The most advanced systems (hot-vac) combine vacuum with heat applied directly to the hull surface, raising laminate temperature to 40–60°C. More modern systems use dielectric induction or far-infrared lamps to heat without damaging the surface. Heat alone without vacuum is also used in some treatments.</p>
+    </div>
+    <div class="tool-card">
+      <div class="tool-card-header">
+        <div class="tool-card-icon"><i class="ti ti-droplet-off"></i></div>
+        <div>
+          <h4>Epoxy Barrier Coat (Post-treatment)</h4>
+          <div class="tool-model">West System 105/207 · Hempel · International</div>
+        </div>
+      </div>
+      <p>Not part of the drying process, but the indispensable final stage. Once the laminate reaches target moisture readings, a minimum of 5 coats of epoxy resin are applied — truly waterproof (unlike the original polyester gelcoat). Without epoxy barrier coat, moisture returns within 1–3 seasons. With a properly applied barrier, protection lasts decades.</p>
+    </div>
+  </div>
+
+  <div class="pull-quote">
+    <p>"The vacuum system extracts the moisture. The epoxy barrier keeps it from coming back. Without both, the treatment doesn't work."</p>
+  </div>
+
+  <h2 class="section-title">When Does It Work — and When Is It Not Enough?</h2>
+
+  <p class="prose">This is the part that matters most for anyone buying a sailboat: vacuum drying is a powerful tool, but it doesn't perform miracles. Its effectiveness depends entirely on the condition of the material underneath.</p>
+
+  <h3 class="sub-title">The System Works Well When:</h3>
+  <p class="prose">The laminate is wet but structurally <strong>intact</strong> — the fibreglass layers are still bonded to each other, no soft spots to the touch, no hollow sounds when tapped. The core (if present) is water-saturated but still firm — the balsa, foam or timber has not decomposed. Moisture is relatively uniform with no extreme concentrations at specific points suggesting laminate fracture.</p>
+
+  <h3 class="sub-title">The System Is Not Enough When:</h3>
+  <p class="prose">The core is <strong>rotten, crumbled or delaminated</strong> — vacuum can extract moisture, but it cannot rebuild the material's structure. Balsa that has been wet for years turns into a dark, structureless mass that must be cut out and replaced. If there are soft areas on deck or hull when walking or pressing, vacuum is not the answer: the hull must be opened.</p>
+
+  <div class="warn-box">
+    <div class="box-label"><i class="ti ti-alert-triangle"></i> Warning sign</div>
+    <p>A hull that "sounds hollow" when tapped with a knuckle, that yields slightly when pressed with a thumb, or that has large blisters with dark, acidic liquid in the bottom area needs more than drying. It needs a structural assessment before any decision is made.</p>
+  </div>
+
+  <h2 class="section-title">Where Moisture Appears: The Critical Zones</h2>
+
+  <p class="prose">Not all areas of the boat respond equally to vacuum drying. These are the areas to check most carefully:</p>
+
+  <h3 class="sub-title">Hull below the waterline</h3>
+  <p class="prose">The most common area for classic osmosis blistering. Always in contact with water. If the gelcoat has blisters but the laminate sounds solid, vacuum drying plus epoxy barrier coat has a good prognosis.</p>
+
+  <h3 class="sub-title">Deck and superstructure</h3>
+  <p class="prose">Much more concerning than the hull. The deck usually has a balsa or plywood core for stiffness. When water gets in — through unsealed screws, antenna deck fittings, poorly bedded hardware — it saturates the core and rots it. A soft deck is an expensive and complex repair involving lifting the entire deck surface.</p>
+
+  <h3 class="sub-title">Stringers and internal reinforcements</h3>
+  <p class="prose">Stringers are the longitudinal reinforcements of the hull. In many sailboats they are wood or balsa covered with fibreglass. If water has got in — through a hull crack, a poorly sealed keel joint, a bilge hose — the stringers can be rotten while the exterior looks perfect. This is only visible once opened.</p>
+
+  <h3 class="sub-title">Transom</h3>
+  <p class="prose">The transom concentrates many water entry points: outboard engine brackets, hatches, stern glands, hardware. Moisture in the transom often indicates compromised core and is difficult to treat without opening it up.</p>
+
+  <h2 class="section-title">If the Survey Finds Moisture: My Decision Protocol</h2>
+
+  <div class="decision-grid">
+    <div class="decision-card go">
+      <h4>✓ Negotiate and repair</h4>
+      <ul>
+        <li>Moderate moisture (4–15%) with firm laminate</li>
+        <li>Small surface blisters in gelcoat</li>
+        <li>Hull with no soft spots or hollow sounds</li>
+        <li>Deck solid underfoot</li>
+        <li>Seller provides treatment report with before/after readings</li>
+        <li>Price reflects the actual condition of the boat</li>
+      </ul>
+    </div>
+    <div class="decision-card stop">
+      <h4>✗ Red Flag: reconsider</h4>
+      <ul>
+        <li>Moisture above 20% in multiple zones</li>
+        <li>Soft spots on deck or hull</li>
+        <li>Large blisters with dark, acidic liquid</li>
+        <li>Hollow sound on deck or transom</li>
+        <li>Soft stringers or evidence of internal water</li>
+        <li>Seller has no documentation of any treatment</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <div class="box-label"><i class="ti ti-file-text"></i> What I always ask for before closing a purchase</div>
+    <p>If the boat was vacuum treated, I ask for: moisture readings before the treatment (dated and signed by the technician), readings after, photos of the process, the name and reference of the yard that did it, and my own inspection or that of a trusted surveyor after the treatment.</p>
+    <p>A seller who did the job properly has no problem producing all of that. One who can't, or who says "trust me, it turned out fine," is reason enough to keep looking.</p>
+  </div>
+
+  <h2 class="section-title">Cost and Timeframe</h2>
+
+  <h3 class="sub-title">Drying and epoxy barrier coat only (surface osmosis)</h3>
+  <p class="prose">On a 35–40 ft sailboat with mild to moderate osmosis, the complete treatment — gelcoat peeling, drying, epoxy barrier, antifouling — can cost USD 3,000–8,000 depending on the country and yard. Time on the hard: 6 to 16 weeks.</p>
+
+  <h3 class="sub-title">With core cutting and replacement</h3>
+  <p class="prose">If there are areas of deck or hull with rotten core that need to be opened, cut out and re-laminated, costs can exceed USD 15,000–25,000 in serious cases. This type of work requires a yard with experience in composite materials and laminate repair.</p>
+
+  <div class="pull-quote">
+    <p>"Repairing a sailboat with serious moisture problems can cost more than you paid for the boat. That's not always a bad deal — but you need to know it before you sign."</p>
+  </div>
+
+  <h2 class="section-title">Conclusion: Moisture is Information, Not a Verdict</h2>
+
+  <p class="prose">A sailboat with the moisture meter in the red is not necessarily a boat you should reject. But it's also not a boat you should buy without understanding exactly what that number means, where the moisture is, what's underneath, and what it's going to cost to put it right.</p>
+
+  <p class="prose">Vacuum drying exists, it works, and in the hands of professionals it can save a boat that would otherwise require major surgery. But it is a tool, not magic. The right diagnosis — done by someone who knows what they're looking at — remains the most important thing.</p>
+
+  <p class="prose">If you're in the process of buying a sailboat and the survey flags moisture, before making any decision, talk to someone who has seen many hulls. That is exactly the kind of advisory I can give you.</p>
+
+  <div class="cta-section">
+    <div class="cta-title">Evaluating a sailboat with moisture in the survey?</div>
+    <p class="cta-sub">I can help you interpret the report and decide whether it's worth pursuing — and how much to negotiate.</p>
+    <a href="asesoria-compra-embarcacion.html" class="btn-gold">Boat Purchase Advisory →</a>
+  </div>
+
+  <div class="author-box">
+    <img src="../logo_hijodelmar.png" alt="Captain Rodrigo Troncoso" class="author-avatar">
+    <div class="author-info">
+      <h4>Rodrigo Troncoso Peirano · Master Mariner</h4>
+      <p>30 years at sea — industrial fishing, offshore work in Africa and Patagonian fjords. Today I advise people who want to enter the sea with real information, not brochures.</p>
+    </div>
+  </div>
+
+</main>
 
 <footer>
-  <p>&copy; 2025–2026 Hijo del Mar · Captain Rodrigo Troncoso · <a href="cookie-policy.html">Cookie Policy</a></p>
+  <p>&copy; 2026 Hijo del Mar · Captain Rodrigo Troncoso · <a href="../politica-cookies.html">Cookie Policy</a></p>
 </footer>
 
 <script src="../cookies.js"></script>
-
-<script>
-(function(){
-  var burger=document.getElementById('navBurger');
-  var links=document.querySelector('nav .nav-links');
-  if(!burger||!links) return;
-  burger.addEventListener('click',function(){
-    burger.classList.toggle('open');
-    links.classList.toggle('open');
-  });
-  var dd=links.querySelector('.nav-dropdown');
-  var ddt=dd&&dd.querySelector('.nav-dropdown-toggle');
-  if(ddt){
-    ddt.addEventListener('click',function(e){
-      if(window.innerWidth<=768){e.preventDefault();dd.classList.toggle('mob-open');}
-    });
-  }
-  document.addEventListener('click',function(e){
-    if(!e.target.closest('nav')){
-      burger.classList.remove('open');
-      links.classList.remove('open');
-      dd&&dd.classList.remove('mob-open');
-    }
-  });
-})();
-</script>
 
 <script>
 (function(){
@@ -582,7 +798,35 @@
   var elES=document.getElementById('ldES');
   if(elES){elES.addEventListener('click',function(){localStorage.setItem('langOverride','es');location.href='../guia-secado-casco-vacio-osmosis.html';});}
 })();
+(function(){
+  var burger=document.getElementById('navBurger');
+  var links=document.getElementById('navLinks');
+  if(!burger||!links) return;
+  burger.addEventListener('click',function(){
+    burger.classList.toggle('open');
+    links.classList.toggle('open');
+  });
+  var dd=links.querySelector('.nav-dropdown');
+  var ddt=dd&&dd.querySelector('.nav-dropdown-toggle');
+  if(ddt){
+    ddt.addEventListener('click',function(e){
+      if(window.innerWidth<=768){
+        e.preventDefault();
+        dd.classList.toggle('mob-open');
+      }
+    });
+  }
+  document.addEventListener('click',function(e){
+    if(!e.target.closest('nav')){
+      burger.classList.remove('open');
+      links.classList.remove('open');
+      dd&&dd.classList.remove('mob-open');
+    }
+  });
+})();
 </script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2472289282343962" crossorigin="anonymous"></script>
 
 <a class="wa-fab" href="https://wa.me/56923956367?text=Hello,%20I'd%20like%20to%20inquire%20about%20a%20nautical%20advisory." target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
