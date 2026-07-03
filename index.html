@@ -87,7 +87,7 @@
 
   /* HERO */
   .hero { min-height: 480px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem 3rem; background: #08131f; position: relative; overflow: hidden; }
-  .hero canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+
   .hero-wave { position: absolute; bottom: 0; left: 0; width: 100%; pointer-events: none; }
   .hero-content { position: relative; z-index: 2; }
   .hero-tag { font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: #e8d5a8; margin-bottom: 1rem; text-shadow: 0 1px 6px rgba(0,0,0,0.75); }
@@ -464,7 +464,6 @@
 
 <main>
 <section class="hero">
-  <canvas id="stars"></canvas>
   <svg class="hero-wave" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M0,30 C240,10 480,50 720,30 C960,10 1200,45 1440,25 L1440,60 L0,60 Z" fill="#0b1a2c" opacity="0.7"/>
     <path d="M0,44 C300,28 600,55 900,40 C1140,27 1300,50 1440,40 L1440,60 L0,60 Z" fill="#08131f" opacity="0.9"/>
@@ -858,31 +857,6 @@
   Hijo del Mar · Rodrigo Troncoso Peirano · Chile · 2025–2026 · <a href="politica-cookies.html" style="color:inherit;text-decoration:none;opacity:0.7;">Política de cookies</a>
 </footer>
 
-<script>
-  const canvas = document.getElementById('stars');
-  const ctx = canvas.getContext('2d');
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = canvas.parentElement.offsetHeight;
-    drawStars();
-  }
-  function drawStars() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (let i = 0; i < 120; i++) {
-      const x = Math.random() * canvas.width;
-      const y = Math.random() * canvas.height;
-      const r = Math.random() * 1.4 + 0.3;
-      const a = Math.random() * 0.7 + 0.2;
-      ctx.beginPath();
-      ctx.arc(x, y, r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(240,232,210,${a})`;
-      ctx.fill();
-    }
-  }
-
-  resizeCanvas();
-  window.addEventListener('resize', resizeCanvas);
-</script>
 
 <script>
 (function(){
