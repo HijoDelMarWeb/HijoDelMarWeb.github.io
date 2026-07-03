@@ -125,6 +125,17 @@ body {
 .card-footer { text-align: center; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #2a3a50; padding: 0 1.4rem 0.5rem; }
 .card-footer a { color: inherit; text-decoration: none; }
 .card-footer a:hover { color: #c4a264; }
+.card-avatar {
+  display: block;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
+  border: 2.5px solid #c4a264;
+  margin: 0 auto 1.4rem;
+  box-shadow: 0 0 0 5px rgba(196,162,100,0.12);
+}
 </style>
 <script src="/lang-detect.js"></script>
 </head>
@@ -134,6 +145,10 @@ body {
   <svg class="card-isotipo" width="70" height="59" viewBox="0 0 120 100" aria-label="Hijo del Mar" role="img">
     <path d="M6,78 C16,66 26,66 34,73 C40,78 46,77 50,70 L64,16 Q66,12 67,18 L72,72 C78,79 88,78 98,68 L98,76 C88,86 76,87 68,79 L64,40 L56,74 C50,84 38,86 30,79 C22,72 14,74 6,84 Z" fill="#c4a264"/>
   </svg>
+  <picture>
+    <source srcset="/rodrigo-foto.webp" type="image/webp">
+    <img src="/rodrigo-foto.jpg" alt="Rodrigo Troncoso Peirano" class="card-avatar" width="110" height="110">
+  </picture>
   <div class="card-brand">Hijo del Mar</div>
   <h1 class="card-name">Rodrigo<br>Troncoso Peirano</h1>
   <div class="card-rule"></div>
