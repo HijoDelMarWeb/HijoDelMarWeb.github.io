@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Electrónica Náutica Básica para Principiantes: Qué Necesitas y Por Qué · Hijo del Mar</title>
+<meta name="description" content="Guía de electrónica náutica para principiantes: chartplotter, VHF marino, AIS, piloto automático, radar, EPIRB y PLB. Qué instalar primero según tu presupuesto. Por el Capitán Rodrigo Troncoso.">
+<meta name="keywords" content="electrónica náutica principiantes, chartplotter velero, VHF marino, AIS velero, piloto automático velero, radar marino, EPIRB velero, PLB marino, electrónica barco Chile">
+<meta name="author" content="Rodrigo Troncoso Peirano">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.hijodelmar.cl/guia-electronica-nautica-principiantes.html">
+<link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-electronica-nautica-principiantes.html">
+<link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-marine-electronics-beginners.html">
+<link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-electronica-nautica-principiantes.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.hijodelmar.cl/guia-electronica-nautica-principiantes.html">
+<meta property="og:title" content="Electrónica Náutica para Principiantes: Qué Necesitas y Por Qué · Hijo del Mar">
+<meta property="og:description" content="Chartplotter, VHF, AIS, piloto automático y radar: qué instalar primero, qué puede esperar y cuánto cuesta realmente.">
+<meta property="og:image" content="https://www.hijodelmar.cl/logo_hijodelmar.png">
+<meta property="og:site_name" content="Hijo del Mar">
+<meta property="og:locale" content="es_CL">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="favicon_192.png">
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  var _hdmC = localStorage.getItem('hdm_cookie_consent');
+  gtag('consent', 'default', {'analytics_storage': _hdmC === 'granted' ? 'granted' : 'denied'});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KRJ42YBH5N"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-KRJ42YBH5N');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/tabler-icons.min.css">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+  body { font-family: 'Nunito Sans', sans-serif; background: #08131f; color: #ddd5c0; overflow-x: hidden; }
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 2rem 3rem 2.4rem; position: sticky; top: 0; background: rgba(8,19,31,0.95); backdrop-filter: blur(8px); z-index: 100; }
+  nav::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 14px; background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='14'><path d='M0 14 Q10 10 20 14 Q30 10 40 14 Q50 10 60 14 Q70 10 80 14 Q90 10 100 14 Q110 10 120 14' fill='none' stroke='%23c4a264' stroke-width='1' opacity='0.35'/><path d='M0 14 Q20 7 40 14 Q60 7 80 14 Q100 7 120 14' fill='none' stroke='%23c4a264' stroke-width='1.3' opacity='0.42'/><path d='M0 14 Q30 1 60 14 Q90 1 120 14' fill='none' stroke='%23c4a264' stroke-width='1.7' opacity='0.48'/></svg>"); background-repeat: repeat-x; background-size: 120px 14px; pointer-events: none; }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 24px; color: #c4a264; letter-spacing: 1px; text-decoration: none; }
+  .nav-links { display: flex; align-items: center; gap: 2rem; }
+  .nav-link { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #8090a8; text-decoration: none; transition: color 0.2s; }
+  .nav-link:hover, .nav-link.active { color: #c4a264; }
+  .nav-dropdown { position: relative; display: inline-flex; align-items: center; }
+  .nav-dropdown-toggle { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #8090a8; background: none; border: none; cursor: pointer; padding: 0; transition: color 0.2s; font-family: inherit; }
+  .nav-dropdown-toggle:hover { color: #c4a264; }
+  .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 1rem); right: 0; background: rgba(8,19,31,0.98); border: 1px solid rgba(196,162,100,0.18); border-radius: 6px; min-width: 220px; padding: 0.5rem 0; z-index: 200; box-shadow: 0 8px 32px rgba(0,0,0,0.5); }
+  .nav-dropdown::after { content: ''; position: absolute; top: 100%; left: -10px; right: -10px; height: 1rem; }
+  .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown.mob-open .nav-dropdown-menu { display: block; }
+  .nav-dropdown-header { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(196,162,100,0.5); padding: 0.6rem 1rem 0.3rem; }
+  .nav-dropdown-item { display: flex; align-items: center; gap: 0.6rem; padding: 0.55rem 1rem; font-size: 12px; color: #8090a8; text-decoration: none; transition: color 0.15s, background 0.15s; }
+  .nav-dropdown-item:hover { color: #c4a264; background: rgba(196,162,100,0.06); }
+  .nav-dropdown-item i { font-size: 15px; }
+  .lang-picker { position: relative; }
+  .nav-lang-btn { display: flex; align-items: center; gap: 6px; background: none; border: 1px solid rgba(196,162,100,0.25); border-radius: 4px; padding: 4px 8px; cursor: pointer; color: #8090a8; font-size: 11px; font-weight: 600; letter-spacing: 1px; }
+  .lang-drop { display: none; position: absolute; right: 0; top: calc(100% + 6px); background: rgba(8,19,31,0.98); border: 1px solid rgba(196,162,100,0.18); border-radius: 6px; min-width: 130px; z-index: 200; padding: 0.3rem 0; }
+  .lang-drop.open { display: block; }
+  .lang-opt { display: flex; align-items: center; gap: 8px; padding: 0.5rem 0.9rem; font-size: 12px; color: #8090a8; cursor: pointer; transition: color 0.15s; }
+  .lang-opt:hover { color: #c4a264; }
+  .lang-opt.lang-cur { color: #c4a264; }
+  .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+  .nav-burger span { display: block; width: 22px; height: 2px; background: #c4a264; border-radius: 2px; }
+
+  .page-hero { padding: 4rem 2rem 3rem; text-align: center; background: #08131f; border-bottom: 1px solid rgba(196,162,100,0.08); }
+  .breadcrumb { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #7890a8; margin-bottom: 1.5rem; }
+  .breadcrumb a { color: #5a7090; text-decoration: none; }
+  .breadcrumb a:hover { color: #c4a264; }
+  .page-tag { font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: #c4a264; margin-bottom: 1rem; }
+  .page-title { font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 600; color: #f0e8d5; line-height: 1.1; margin-bottom: 1rem; max-width: 800px; margin-left: auto; margin-right: auto; }
+  .page-sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; color: #b0a080; max-width: 560px; margin: 0 auto 1.5rem; line-height: 1.6; }
+  .article-meta { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #7890a8; margin-bottom: 2rem; }
+  .article-meta span { color: #5a7090; }
+
+  .article-body { max-width: 760px; margin: 0 auto; padding: 3rem 2rem; }
+  .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 600; color: #f0e8d5; margin: 2.5rem 0 1rem; line-height: 1.2; }
+  .article-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: #d0c8a8; margin: 1.75rem 0 0.75rem; }
+  .article-body p { font-size: 15px; color: #8090a8; line-height: 1.9; margin-bottom: 1.2rem; }
+  .article-body strong { color: #c4a264; font-weight: 600; }
+  .article-body a { color: #c4a264; text-decoration: underline; text-underline-offset: 3px; }
+
+  .info-box { background: #0c1e32; border: 1px solid rgba(196,162,100,0.2); border-left: 3px solid #c4a264; border-radius: 4px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+  .info-box p { font-size: 14px; color: #6080a0; line-height: 1.7; margin: 0; }
+  .info-box p + p { margin-top: 0.75rem; }
+  .info-box strong { color: #c4a264; }
+
+  /* Priority tiers */
+  .tier { margin: 1.5rem 0; }
+  .tier-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .tier-badge { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; }
+  .tier-1 .tier-badge { background: rgba(196,162,100,0.15); border: 1px solid rgba(196,162,100,0.4); color: #c4a264; }
+  .tier-2 .tier-badge { background: rgba(60,120,180,0.1); border: 1px solid rgba(60,120,180,0.3); color: #6090c8; }
+  .tier-3 .tier-badge { background: rgba(80,80,80,0.15); border: 1px solid rgba(80,80,80,0.3); color: #6080a0; }
+  .tier-label { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: #d0c8a8; }
+
+  .device-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 1rem; }
+  .device-card { background: #0c1e32; border: 1px solid rgba(196,162,100,0.1); border-radius: 4px; padding: 1.25rem; }
+  .device-card.d-primary { border-color: rgba(196,162,100,0.35); background: #0e2338; }
+  .d-icon { font-size: 20px; color: #c4a264; margin-bottom: 8px; }
+  .d-name { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: #f0e8d5; margin-bottom: 4px; }
+  .d-price { font-size: 11px; color: #c4a264; font-weight: 600; margin-bottom: 6px; }
+  .d-desc { font-size: 12px; color: #5a7090; line-height: 1.6; }
+
+  .req-list { list-style: none; padding: 0; margin: 1.25rem 0; }
+  .req-list li { font-size: 14px; color: #5a7090; padding: 9px 14px 9px 34px; position: relative; border-bottom: 1px solid rgba(196,162,100,0.05); line-height: 1.5; }
+  .req-list li:last-child { border-bottom: none; }
+  .req-list li::before { content: '→'; position: absolute; left: 10px; color: #c4a264; font-weight: 700; }
+
+  .budget-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 13px; }
+  .budget-table th { text-align: left; padding: 10px 14px; background: #0c1e32; color: #c4a264; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid rgba(196,162,100,0.2); }
+  .budget-table td { padding: 10px 14px; color: #5a7090; border-bottom: 1px solid rgba(196,162,100,0.05); }
+  .budget-table tr:last-child td { border-bottom: none; }
+  .budget-table td:first-child { color: #8090a8; font-weight: 600; }
+
+  .cta-inline { background: #0b1a2c; border: 1px solid rgba(196,162,100,0.2); border-radius: 4px; padding: 2rem; text-align: center; margin: 3rem 0; }
+  .cta-inline h3 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: #f0e8d5; margin-bottom: 0.5rem; }
+  .cta-inline p { font-size: 14px; color: #5a7090; margin-bottom: 1.25rem; }
+  .btn-gold { background: #c4a264; color: #08131f; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 13px 30px; border-radius: 2px; text-decoration: none; display: inline-block; transition: background 0.2s; }
+  .btn-gold:hover { background: #d8b878; }
+
+  .related-guides { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 2rem 0; max-width: 760px; margin-left: auto; margin-right: auto; padding: 0 2rem 3rem; }
+  .guide-card { background: #0c1e32; border: 1px solid rgba(196,162,100,0.1); border-radius: 4px; padding: 1.25rem; text-decoration: none; transition: border-color 0.2s; display: block; }
+  .guide-card:hover { border-color: rgba(196,162,100,0.4); }
+  .guide-tag { font-size: 9px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #c4a264; margin-bottom: 0.5rem; }
+  .guide-title { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: #f0e8d5; line-height: 1.3; }
+
+  footer { text-align: center; padding: 1.5rem; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #2a3a50; background: #08131f; }
+  footer a { color: #4a6a8a; text-decoration: none; }
+  .wa-fab { position: fixed; bottom: 1.5rem; right: 1.5rem; width: 52px; height: 52px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(37,211,102,0.35); z-index: 300; transition: transform 0.2s; }
+  .wa-fab:hover { transform: scale(1.08); }
+  .wa-fab svg { width: 26px; height: 26px; fill: #fff; }
+  .nav-downloads .nav-dropdown-toggle { color: #c4a264; }
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.25rem 1.8rem; }
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(8,19,31,0.98); padding: 1rem 1.5rem 1.5rem; border-bottom: 1px solid rgba(196,162,100,0.15); gap: 0.75rem; z-index: 99; }
+    .nav-burger { display: flex; }
+    .page-title { font-size: 30px; }
+    .device-grid { grid-template-columns: 1fr; }
+    .related-guides { grid-template-columns: 1fr; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Electrónica Náutica Básica para Principiantes: Qué Necesitas y Por Qué",
+  "description": "Chartplotter, VHF, AIS, piloto automático y radar: qué instalar primero, qué puede esperar y cuánto cuesta realmente para un velero de crucero.",
+  "author": {"@type": "Person", "name": "Rodrigo Troncoso Peirano", "url": "https://www.hijodelmar.cl/sobre-mi.html"},
+  "publisher": {"@type": "Organization", "name": "Hijo del Mar", "url": "https://www.hijodelmar.cl/"},
+  "url": "https://www.hijodelmar.cl/guia-electronica-nautica-principiantes.html",
+  "inLanguage": "es-CL",
+  "datePublished": "2026-07-02",
+  "dateModified": "2026-07-02"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué electrónica es imprescindible en un velero para navegar en Chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Para navegación costera en Chile, el mínimo funcional es: radio VHF fija con DSC y MMSI registrado (obligatoria para zonas costeras según Directemar), chartplotter con cartas de la zona (puede ser un tablet con aplicación tipo navionics en un principio) y EPIRB 406 MHz registrado para navegación oceánica. El AIS receptor es altamente recomendado para la seguridad en zonas con tráfico comercial. Para navegación en canales australes, añade un piloto automático — pasar días en el timón en esas zonas es agotador."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es mejor el chartplotter de cabina o una tablet con navionics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de tu uso. Un chartplotter de cabina fijo (Garmin, Raymarine, Furuno) tiene ventajas claras: resistente al agua por diseño, integrado con transductores de profundidad y velocidad, red NMEA con otros instrumentos del barco, y no depende de que recuerdes cargar la batería del tablet. Sin embargo, para quienes están empezando, una tablet marinizada con Navionics o iNavX es una excelente forma de aprender a manejar cartas electrónicas sin la inversión inicial de un chartplotter fijo. Lo ideal a largo plazo es tener el chartplotter fijo como sistema principal y el tablet como respaldo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué hace el AIS y por qué es importante?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El AIS (Automatic Identification System) es el sistema de identificación de embarcaciones por radio VHF. Los barcos equipados con AIS transmiten su posición, rumbo, velocidad, nombre y tipo de embarcación en tiempo real. Con un receptor AIS (que puede ser el mismo VHF o un receptor independiente), puedes ver en tu chartplotter todos los barcos con AIS en tu zona. En Chile, el tráfico comercial en el Estrecho de Magallanes y algunos sectores costeros puede ser intenso, y el AIS te permite anticipar encuentros con ferrys, cargueros o transbordadores que no siempre son visibles de noche o con visibilidad reducida. El AIS receptor (solo recibe, no transmite) cuesta desde USD 150 y es quizás el mejor retorno en seguridad por el dinero."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta equipar un velero de crucero con electrónica básica en Chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Para un equipamiento básico funcional (VHF con DSC + chartplotter de cabina + AIS receptor + instrumentos de profundidad y viento), el presupuesto mínimo está entre USD 1.500 y USD 3.000 en equipos, más instalación. Si agregas piloto automático (imprescindible para travesías largas), el costo sube a USD 3.000–6.000 dependiendo del tipo de barco. Un equipamiento completo de crucero (añadiendo radar + EPIRB + SSB o satélite) supera los USD 8.000–15.000. Lo razonable para empezar es ir por niveles: primero lo obligatorio (VHF + EPIRB para offshore), luego lo que mejora la seguridad (AIS + chartplotter fijo), y finalmente lo que mejora el confort (piloto automático + radar)."
+      }
+    }
+  ]
+}
+</script>
+<script src="/lang-detect.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2472289282343962" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Hijo del Mar</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Inicio</a>
+    <a href="index.html#historia" class="nav-link">Historia</a>
+    <a href="index.html#windy-container" class="nav-link">Clima</a>
+    <a href="index.html#velero" class="nav-link">El velero</a>
+    <a href="sobre-mi.html" class="nav-link">Sobre mí</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-toggle">Asesorías</button>
+      <div class="nav-dropdown-menu">
+        <div class="nav-dropdown-header">Asesorías náuticas</div>
+        <a href="asesoria-navegacion.html" class="nav-dropdown-item"><i class="ti ti-route"></i>Planificación de Navegación</a>
+        <a href="asesoria-seguridad.html" class="nav-dropdown-item"><i class="ti ti-shield-check"></i>Equipos de Seguridad</a>
+        <a href="asesoria-electronica.html" class="nav-dropdown-item"><i class="ti ti-device-tablet"></i>Ayudas Electrónicas</a>
+        <a href="asesoria-supervivencia.html" class="nav-dropdown-item"><i class="ti ti-lifebuoy"></i>Supervivencia en el Mar</a>
+        <a href="asesoria-compra-embarcacion.html" class="nav-dropdown-item"><i class="ti ti-anchor"></i>Ayuda en Selección de Barcos</a>
+        <a href="survey-embarcacion.html" class="nav-dropdown-item"><i class="ti ti-clipboard-check"></i>Survey de Embarcación</a>
+      </div>
+    </div>
+    <a href="guias.html" class="nav-link active">Publicaciones</a>
+    <a href="contacto.html" class="nav-link">Contacto</a>
+    <div class="nav-dropdown nav-downloads">
+      <button class="nav-dropdown-toggle">&#8595; Descargas Gratis</button>
+      <div class="nav-dropdown-menu">
+        <div class="nav-dropdown-header">Documentos Gratuitos</div>
+        <a href="/checklist-compra-velero.pdf" class="nav-dropdown-item" download><i class="ti ti-file-download"></i>Check list para survey de velero</a>
+      </div>
+    </div>
+    <div class="lang-picker" id="langPicker">
+      <button class="nav-lang-btn">
+        <img loading="eager" src="https://flagcdn.com/20x15/cl.png" width="20" height="15" alt="CL" style="border-radius:2px;display:block;">
+        <span>ES</span>
+      </button>
+      <div class="lang-drop" id="langDrop">
+        <div class="lang-opt" id="ldEN"><img loading="eager" src="https://flagcdn.com/16x12/us.png" width="16" height="12" alt="US">English</div>
+        <div class="lang-opt lang-cur" id="ldES"><img loading="eager" src="https://flagcdn.com/16x12/cl.png" width="16" height="12" alt="CL">Español</div>
+      </div>
+    </div>
+  </div>
+  <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Inicio</a> &nbsp;/&nbsp; <a href="guias.html">Publicaciones</a> &nbsp;/&nbsp; Electrónica Náutica</div>
+  <div class="page-tag">Electrónica · Instrumentos · Principiantes</div>
+  <h1 class="page-title">Electrónica Náutica Básica para Principiantes</h1>
+  <p class="page-sub">Qué instalar primero, qué puede esperar y cuánto cuesta realmente equipar un velero de crucero.</p>
+  <div class="article-meta">Por <span>Capitán Rodrigo Troncoso</span> &nbsp;·&nbsp; <span>Julio 2026</span> &nbsp;·&nbsp; <span>14 min de lectura</span></div>
+</div>
+
+<article class="article-body">
+
+  <p>La electrónica náutica puede ser un pozo sin fondo de dinero si no tienes claro qué realmente necesitas y en qué orden. He visto veleros con instrumentación de USD 30.000 que navegan menos que barcos con un chartplotter de USD 400 y un VHF portátil. La clave está en entender qué hace cada equipo y cuáles son prioritarios según el tipo de navegación que haces.</p>
+
+  <p>Esta guía está pensada para quienes están comprando su primer velero o equipando una embarcación que viene con electrónica básica o anticuada. Te explico cada equipo en términos prácticos, no técnicos, y te doy una hoja de ruta de instalación por niveles.</p>
+
+  <div class="info-box">
+    <p><strong>Antes de comprar equipos nuevos</strong>, revisa siempre si el barco que estás comprando ya tiene instalados algunos de ellos. Cambiar o actualizar equipos existentes suele ser más económico que instalar desde cero — y a veces el chartplotter antiguo funciona perfectamente bien para empezar.</p>
+  </div>
+
+  <h2>Nivel 1 — Imprescindible (no zarpes sin esto)</h2>
+
+  <div class="tier tier-1">
+    <div class="device-grid">
+      <div class="device-card d-primary">
+        <div class="d-icon"><i class="ti ti-radio"></i></div>
+        <div class="d-name">Radio VHF fija con DSC</div>
+        <div class="d-price">USD 120 – 350 · Marcas: Garmin, Icom, Standard Horizon</div>
+        <div class="d-desc">El equipo más importante del barco para comunicaciones y socorro. El canal 16 es la frecuencia internacional de socorro y de llamada. El DSC (Digital Selective Calling) permite enviar una llamada de socorro automática con tu posición GPS con sólo apretar un botón. El MMSI debe estar registrado en Directemar. VHF fija siempre más un portátil de respaldo.</div>
+      </div>
+      <div class="device-card d-primary">
+        <div class="d-icon"><i class="ti ti-circle-dot"></i></div>
+        <div class="d-name">EPIRB 406 MHz</div>
+        <div class="d-price">USD 350 – 800 · ACR, Ocean Signal, McMurdo</div>
+        <div class="d-desc">Para navegación offshore (más de 12 mn de costa) es obligatorio y la herramienta más importante si el barco se hunde. Clase 1 (float-free): flota y se activa sola si el barco se hunde. Clase 2: activación manual, más económica pero menos segura. Para oceánica, siempre clase 1. Registrarla en Cospas-Sarsat es gratis y obligatorio.</div>
+      </div>
+      <div class="device-card">
+        <div class="d-icon"><i class="ti ti-map"></i></div>
+        <div class="d-name">Chartplotter / Cartas electrónicas</div>
+        <div class="d-price">Tablet + app: USD 50–150 · Unidad fija: USD 350–1.500</div>
+        <div class="d-desc">Puedes empezar con una tablet marinizada con Navionics o iNavX y cartas de Chile. Es una buena forma de aprender sin la inversión de una unidad fija. La unidad fija integrada en el panel de cartas es el sistema definitivo — se integra con depth sounder, AIS y piloto automático vía red NMEA 2000.</div>
+      </div>
+      <div class="device-card">
+        <div class="d-icon"><i class="ti ti-wave-saw-tool"></i></div>
+        <div class="d-name">Depth sounder / Profundímetro</div>
+        <div class="d-price">USD 100 – 400 · Garmin, Lowrance, B&amp;G</div>
+        <div class="d-desc">Muestra la profundidad bajo la quilla en tiempo real. Imprescindible para fondear de noche, entrar a bahías desconocidas o navegar en zonas con bajos no cartografiados (frecuente en Chile). Generalmente integrado con el chartplotter en sistemas modernos. El transductor se instala en el casco — planificar bien la ubicación.</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Nivel 2 — Alta prioridad (instalar lo antes posible)</h2>
+
+  <div class="tier tier-2">
+    <div class="device-grid">
+      <div class="device-card">
+        <div class="d-icon"><i class="ti ti-broadcast"></i></div>
+        <div class="d-name">Receptor AIS</div>
+        <div class="d-price">USD 150 – 400 · Vesper, Standard Horizon, Garmin</div>
+        <div class="d-desc">Recibe las señales de posición de todos los barcos con AIS en tu zona y las muestra en el chartplotter. Esencial para navegar en zonas con tráfico comercial (Estrecho de Magallanes, Valparaíso, San Antonio). El transpondedor AIS clase B (envía y recibe) cuesta más pero te hace visible a otros — prioritario si navegas offshore.</div>
+      </div>
+      <div class="device-card">
+        <div class="d-icon"><i class="ti ti-wind"></i></div>
+        <div class="d-name">Instrumentos de viento</div>
+        <div class="d-price">USD 300 – 800 · B&amp;G, Garmin, Raymarine</div>
+        <div class="d-desc">Anemómetro (velocidad del viento) y veleta (dirección del viento), instalados en el tope del palo. Te dan viento verdadero y aparente en tiempo real. Fundamental para optimizar la vela y anticipar cambios en zonas variables como los canales australes. Muchos barcos usados los tienen pero con sensores defectuosos — revisar en el survey.</div>
+      </div>
+      <div class="device-card">
+        <div class="d-icon"><i class="ti ti-steering-wheel"></i></div>
+        <div class="d-name">Piloto automático</div>
+        <div class="d-price">USD 600 – 3.000 · Raymarine, B&amp;G, Garmin</div>
+        <div class="d-desc">El piloto automático es el tripulante más incansable del barco. En travesías largas, pasar horas en el timón es innecesario y agotador. El precio depende del tipo: de cockpit (empuja el timón directamente, USD 600–1.200, para barcos pequeños) o hidráulico/lineal (actúa sobre el sistema de timón, USD 1.500–3.000, para barcos más grandes y offshore). Prioridad alta si navegas más de 4 horas seguidas.</div>
+      </div>
+      <div class="device-card">
+        <div class="d-icon"><i class="ti ti-speedboat"></i></div>
+        <div class="d-name">Corredera / Velocímetro</div>
+        <div class="d-price">USD 100 – 300 · Generalmente integrado con depth</div>
+        <div class="d-desc">Mide la velocidad a través del agua (SOG y STW). Útil para calcular tiempos de llegada, consumo y corrientes (diferencia entre velocidad sobre el fondo GPS y velocidad por el agua). En muchos barcos viene integrado con el mismo transductor del profundímetro — un solo agujero en el casco para dos sensores.</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Nivel 3 — Confort y navegación avanzada</h2>
+
+  <div class="tier tier-3">
+    <div class="device-grid">
+      <div class="device-card">
+        <div class="d-icon"><i class="ti ti-radar"></i></div>
+        <div class="d-name">Radar</div>
+        <div class="d-price">USD 600 – 2.500 · Garmin, Furuno, Raymarine</div>
+        <div class="d-desc">Para navegar de noche con lluvia o niebla, el radar es irreemplazable — el AIS no detecta objetos sin transpondedor (rocas, islas, pequeñas embarcaciones). Los radares de domo abierto son más potentes; los de domo cerrado más compactos. El radar de 4 kW de domo abierto es el estándar para crucero offshore. En los canales australes, el radar es casi imprescindible para navegar en condiciones de visibilidad reducida.</div>
+      </div>
+      <div class="device-card">
+        <div class="d-icon"><i class="ti ti-satellite"></i></div>
+        <div class="d-name">Comunicación satélite (Iridium / Starlink)</div>
+        <div class="d-price">Iridium GO: USD 500–900 + USD 30–90/mes · Starlink Maritime: USD 2.500 equipo + plan</div>
+        <div class="d-desc">Para zonas sin cobertura celular (que en Chile offshore y canales es prácticamente todo), la comunicación satelital es tu única opción. Iridium GO permite mensajes de texto, pronósticos GRIB y llamadas de voz de baja calidad. Starlink Maritime ofrece internet real — un cambio de paradigma para la navegación de crucero — pero a mayor costo.</div>
+      </div>
+      <div class="device-card">
+        <div class="d-icon"><i class="ti ti-device-watch"></i></div>
+        <div class="d-name">PLB (Personal Locator Beacon)</div>
+        <div class="d-price">USD 200 – 400 · ACR, Ocean Signal</div>
+        <div class="d-desc">Baliza personal de localización — como un EPIRB pero para personas. Si caes al agua y el barco sigue navegando (o si eres el único que queda consciente), el PLB transmite tu posición a los satélites SAR. Muy recomendado para cada tripulante en navegación offshore. Se lleva en el chaleco o en el arnés.</div>
+      </div>
+      <div class="device-card">
+        <div class="d-icon"><i class="ti ti-align-box-center-middle"></i></div>
+        <div class="d-name">Sistema de gestión de energía</div>
+        <div class="d-price">USD 300 – 1.500 · Victron, Mastervolt</div>
+        <div class="d-desc">Monitores de batería, cargadores de corriente alterna y controladores de paneles solares/alternador. No es electrónica de navegación en sentido estricto, pero es la base sobre la que todo lo demás funciona. Un banco de baterías mal gestionado apaga la electrónica en el peor momento. Priorizar conocer el estado real de las baterías del barco que estás comprando.</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Presupuesto por etapa</h2>
+
+  <table class="budget-table">
+    <thead>
+      <tr><th>Etapa</th><th>Equipos incluidos</th><th>Inversión estimada (USD)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Nivel 1 mínimo legal</td><td>VHF + EPIRB + tablet con cartas</td><td>$700 – $1.300</td></tr>
+      <tr><td>Nivel 1 completo</td><td>+ chartplotter fijo + depth sounder</td><td>$1.500 – $3.000</td></tr>
+      <tr><td>Nivel 2 seguridad</td><td>+ AIS transpondedor + instrumentos viento</td><td>$3.000 – $5.000</td></tr>
+      <tr><td>Nivel 2 confort offshore</td><td>+ piloto automático</td><td>$4.500 – $8.000</td></tr>
+      <tr><td>Nivel 3 crucero completo</td><td>+ radar + comunicación satélite + PLB</td><td>$8.000 – $18.000</td></tr>
+    </tbody>
+  </table>
+
+  <div class="info-box">
+    <p><strong>Importante: la instalación también cuesta.</strong> Los precios anteriores son de equipos. La instalación por un electricista náutico competente puede agregar 30–50% sobre el costo del equipo, especialmente en sistemas que requieren pasar cables por el mástil (instrumentos de viento, luces de tope) o integrar redes NMEA 2000.</p>
+    <p>Si compras un barco usado bien equipado, es posible que parte de este listado ya esté instalado — aunque convendrá verificar que los equipos funcionen correctamente y que los registros (MMSI, EPIRB) estén actualizados con tus datos.</p>
+  </div>
+
+  <h2>Marcas y dónde comprar en Chile</h2>
+
+  <ul class="req-list">
+    <li><strong>Garmin:</strong> la marca más distribuida en Chile. Tiene representantes en Santiago y Valparaíso. Chartplotters, VHF, AIS, piloto automático, radar — ecosistema integrado y soporte local disponible.</li>
+    <li><strong>B&amp;G:</strong> especializada en veleros de regata y crucero. Instrumentos de viento y piloto automático muy valorados. Distribución más limitada en Chile, pero se puede importar sin aranceles adicionales.</li>
+    <li><strong>Raymarine:</strong> buena integración con el ecosistema de cartas y cámara térmica. Soporte técnico presente en Chile a través de distribuidores en Valparaíso y Puerto Montt.</li>
+    <li><strong>Icom / Standard Horizon:</strong> los VHF más usados en embarcaciones chilenas. Distribución amplia, repuestos y servicio técnico disponible.</li>
+    <li><strong>ACR / Ocean Signal:</strong> los EPIRB y PLB más fiables del mercado. Se importan directamente — no hay distribuidores locales de marca, pero se consiguen en tiendas náuticas y online.</li>
+  </ul>
+
+  <div class="cta-inline">
+    <h3>¿Necesitas ayuda para planificar tu electrónica?</h3>
+    <p>Puedo ayudarte a definir qué equipos instalar primero, evaluar la electrónica de un barco que estás comprando, o resolver dudas sobre integración de sistemas.</p>
+    <a href="asesoria-electronica.html" class="btn-gold">Asesoría de Electrónica →</a>
+  </div>
+
+</article>
+
+<div style="max-width:760px;margin:0 auto;padding:0 2rem 1.5rem;">
+  <div style="height:1px;background:rgba(196,162,100,0.08);margin-bottom:2rem;"></div>
+  <div style="font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#c4a264;margin-bottom:1.25rem;">Guías relacionadas</div>
+</div>
+<div class="related-guides">
+  <a href="guia-equipamiento-seguridad-chile.html" class="guide-card">
+    <div class="guide-tag">Seguridad · Directemar</div>
+    <div class="guide-title">Equipamiento de Seguridad Obligatorio en Chile</div>
+  </a>
+  <a href="guia-epirb-que-es.html" class="guide-card">
+    <div class="guide-tag">Seguridad</div>
+    <div class="guide-title">¿Qué es un EPIRB y Por Qué Todo Velero Debería Tener Uno?</div>
+  </a>
+  <a href="asesoria-electronica.html" class="guide-card">
+    <div class="guide-tag">Servicio</div>
+    <div class="guide-title">Asesoría de Ayudas Electrónicas</div>
+  </a>
+  <a href="guia-como-comprar-velero-chile.html" class="guide-card">
+    <div class="guide-tag">Compra · Chile</div>
+    <div class="guide-title">Cómo Comprar un Velero en Chile: Guía para el Comprador</div>
+  </a>
+</div>
+
+<footer>
+  <p>&copy; 2025–2026 Hijo del Mar · Capitán Rodrigo Troncoso · <a href="politica-cookies.html">Política de cookies</a></p>
+</footer>
+
+<script src="cookies.js"></script>
+<script>
+(function(){
+  var burger=document.getElementById('navBurger');
+  var links=document.querySelector('nav .nav-links');
+  if(!burger||!links) return;
+  burger.addEventListener('click',function(){burger.classList.toggle('open');links.classList.toggle('open');});
+  var dd=links.querySelector('.nav-dropdown');
+  var ddt=dd&&dd.querySelector('.nav-dropdown-toggle');
+  if(ddt){ddt.addEventListener('click',function(e){if(window.innerWidth<=768){e.preventDefault();dd.classList.toggle('mob-open');}});}
+  document.addEventListener('click',function(e){if(!e.target.closest('nav')){burger.classList.remove('open');links.classList.remove('open');dd&&dd.classList.remove('mob-open');}});
+})();
+</script>
+<script>
+(function(){
+  var picker=document.getElementById('langPicker');
+  var drop=document.getElementById('langDrop');
+  var t;
+  function show(){clearTimeout(t);drop.classList.add('open');}
+  function hide(){t=setTimeout(function(){drop.classList.remove('open');},160);}
+  if(picker){picker.addEventListener('mouseenter',show);picker.addEventListener('mouseleave',hide);}
+  if(drop){drop.addEventListener('mouseenter',show);drop.addEventListener('mouseleave',hide);}
+  var elEN=document.getElementById('ldEN');
+  if(elEN){elEN.addEventListener('click',function(){localStorage.setItem('langOverride','en');location.href='en/guia-marine-electronics-beginners.html';});}
+})();
+</script>
+
+<a class="wa-fab" href="https://wa.me/56923956367?text=Hola%20Capitán,%20vi%20tu%20página%20y%20tengo%20una%20consulta." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+</body>
+</html>
