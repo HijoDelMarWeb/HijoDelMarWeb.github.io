@@ -1,5 +1,8 @@
 /* lang-detect.js — Hijo del Mar · Auto-redirect by browser language */
 (function () {
+  /* Don't redirect bots/crawlers — let them index the original page */
+  if (/bot|crawler|spider|crawling|googlebot|bingbot|yandexbot|baiduspider|slurp|duckduckbot|facebookexternalhit|semrushbot|ahrefsbot/i.test(navigator.userAgent)) return;
+
   /* Mapping ES page → EN page (relative to site root, no leading slash) */
   var ES_TO_EN = {
     '': 'en/',
@@ -39,7 +42,7 @@
   var EN_TO_ES = {};
   for (var k in ES_TO_EN) EN_TO_ES[ES_TO_EN[k]] = k;
 
-  /* If user manually picked a language, respect it — never auto-redirect */
+  /* If user manually picked a language (or was already auto-redirected), respect it */
   try {
     if (localStorage.getItem('langOverride')) return;
   } catch (e) { return; }
@@ -58,12 +61,14 @@
     /* User prefers English but is on an ES page → redirect to EN */
     var dest = ES_TO_EN[path];
     if (dest !== undefined) {
+      try { localStorage.setItem('langOverride', 'en'); } catch (e) {}
       location.replace('/' + dest);
     }
   } else if (!wantsEN && isEN) {
     /* User prefers Spanish but is on an EN page → redirect to ES */
     var dest = EN_TO_ES[path];
     if (dest !== undefined) {
+      try { localStorage.setItem('langOverride', 'es'); } catch (e) {}
       location.replace('/' + dest);
     }
   }
