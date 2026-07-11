@@ -74,3 +74,67 @@
     }
   }
 })();
+
+/* ─── GA4 click event tracking — Hijo del Mar ─────────────────────────────
+   Fires custom events for the 4 key interactions:
+   · whatsapp_click   – any wa.me link
+   · email_click      – any mailto: link
+   · file_download    – PDF / download links  (GA4 recommended event)
+   · tarjeta_click    – links to /tarjeta or /card (digital business card)
+   ───────────────────────────────────────────────────────────────────────── */
+(function () {
+  function onReady(fn) {
+    if (document.readyState !== 'loading') fn();
+    else document.addEventListener('DOMContentLoaded', fn);
+  }
+
+  onReady(function () {
+    document.addEventListener('click', function (e) {
+      var el = e.target.closest ? e.target.closest('a') : null;
+      if (!el || !el.href) return;
+      if (typeof window.gtag !== 'function') return;
+
+      var href = el.href;
+      var pageUrl = location.href;
+      var btnText = (el.textContent || '').trim().slice(0, 60) || el.getAttribute('aria-label') || '';
+
+      /* 1. WhatsApp */
+      if (href.indexOf('wa.me') !== -1) {
+        gtag('event', 'whatsapp_click', {
+          button_text: btnText,
+          page_location: pageUrl
+        });
+        return;
+      }
+
+      /* 2. Email */
+      if (href.indexOf('mailto:') === 0) {
+        gtag('event', 'email_click', {
+          email_address: href.replace('mailto:', '').split('?')[0],
+          page_location: pageUrl
+        });
+        return;
+      }
+
+      /* 3. PDF / file download */
+      if (href.indexOf('.pdf') !== -1 || el.hasAttribute('download')) {
+        var fileName = decodeURIComponent(href.split('/').pop().split('?')[0]);
+        gtag('event', 'file_download', {
+          file_name: fileName,
+          file_extension: 'pdf',
+          link_text: btnText,
+          page_location: pageUrl
+        });
+        return;
+      }
+
+      /* 4. Tarjeta digital */
+      if (href.indexOf('/tarjeta') !== -1 || href.indexOf('/card') !== -1) {
+        gtag('event', 'tarjeta_click', {
+          link_text: btnText,
+          page_location: pageUrl
+        });
+      }
+    });
+  });
+})();
