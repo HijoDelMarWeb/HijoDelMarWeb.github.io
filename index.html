@@ -44,10 +44,16 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ProfessionalService",
+      "@type": ["LocalBusiness", "ProfessionalService"],
       "@id": "https://www.hijodelmar.cl/#negocio",
       "name": "Hijo del Mar",
       "url": "https://www.hijodelmar.cl",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.hijodelmar.cl/logo_hijodelmar.png"
+      },
+      "image": "https://www.hijodelmar.cl/logo_hijodelmar.png",
+      "email": "contacto@hijodelmar.cl",
       "description": "Asesorías náuticas en Chile con 30 años de experiencia real. Planificación de rutas, seguridad, compra de embarcaciones y survey náutico.",
       "telephone": "+56923956367",
       "areaServed": {
