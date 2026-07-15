@@ -36,7 +36,13 @@
     'guia-equipamiento-seguridad-chile.html': 'en/guia-safety-equipment-chile.html',
     'guia-electronica-nautica-principiantes.html': 'en/guia-marine-electronics-beginners.html',
     'guia-inscripcion-directemar-chile.html': 'en/guia-directemar-registration-chile.html',
-    'tarjeta.html': 'en/card.html'
+    'tarjeta.html': 'en/card.html',
+    'guia-vhf-marino.html': 'en/guia-vhf-marine-radio.html',
+    'guia-ais-sistema-identificacion.html': 'en/guia-ais-automatic-identification.html',
+    'guia-plb-baliza-personal.html': 'en/guia-plb-personal-locator-beacon.html',
+    'guia-hombre-al-agua.html': 'en/guia-man-overboard.html',
+    'guia-zarpe-chile.html': 'en/guia-zarpe-sailing-chile.html',
+    'guia-meteorologia-navegantes.html': 'en/guia-weather-sailing-chile.html'
   };
 
   /* Build reverse map EN → ES */

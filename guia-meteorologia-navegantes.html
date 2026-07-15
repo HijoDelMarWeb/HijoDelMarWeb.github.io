@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meteorología Náutica: Cómo Interpretar el Pronóstico para Navegar · Hijo del Mar</title>
+<meta name="description" content="Fuentes de información meteorológica para navegar en Chile, cómo interpretar el pronóstico de viento, cuándo no zarpar y los fenómenos locales que los modelos no capturan. Guía del Capitán Rodrigo.">
+<meta name="keywords" content="meteorología náutica Chile, pronóstico meteorológico navegación, SHOA meteorología, Windy navegación, viento nudos navegación, cuándo no zarpar, puelche viento, meteorología Patagonia">
+<meta name="author" content="Rodrigo Troncoso Peirano">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.hijodelmar.cl/guia-meteorologia-navegantes.html">
+<link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-meteorologia-navegantes.html">
+<link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-weather-sailing-chile.html">
+<link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-meteorologia-navegantes.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.hijodelmar.cl/guia-meteorologia-navegantes.html">
+<meta property="og:title" content="Meteorología para Navegantes: Lo que los Modelos No Te Dicen">
+<meta property="og:description" content="Fuentes de información meteorológica para navegar en Chile, cómo interpretar el pronóstico de viento, cuándo no zarpar y los fenómenos locales que los modelos no capturan. Guía del Capitán Rodrigo.">
+<meta property="og:image" content="https://www.hijodelmar.cl/logo_hijodelmar.png">
+<meta property="og:site_name" content="Hijo del Mar">
+<meta property="og:locale" content="es_CL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Meteorología para Navegantes: Lo que los Modelos No Te Dicen">
+<meta name="twitter:description" content="Fuentes de información meteorológica para navegar en Chile, cómo interpretar el pronóstico de viento, cuándo no zarpar y los fenómenos locales que los modelos no capturan. Guía del Capitán Rodrigo.">
+<meta name="twitter:image" content="https://www.hijodelmar.cl/logo_hijodelmar.png">
+<link rel="icon" type="image/svg+xml" href="/isotipo.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/favicon_192.png">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  var _hdmC = localStorage.getItem('hdm_cookie_consent');
+  gtag('consent', 'default', {'analytics_storage': _hdmC === 'granted' ? 'granted' : 'denied'});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KRJ42YBH5N"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-KRJ42YBH5N');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/tabler-icons.min.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Nunito Sans', sans-serif; background: #08131f; color: #ddd5c0; overflow-x: hidden; }
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 2rem 3rem 2.4rem; position: sticky; top: 0; background: rgba(8,19,31,0.95); backdrop-filter: blur(8px); z-index: 100; }
+  nav::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 14px; background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='14'><path d='M0 14 Q10 10 20 14 Q30 10 40 14 Q50 10 60 14 Q70 10 80 14 Q90 10 100 14 Q110 10 120 14' fill='none' stroke='%23c4a264' stroke-width='1' opacity='0.35'/><path d='M0 14 Q20 7 40 14 Q60 7 80 14 Q100 7 120 14' fill='none' stroke='%23c4a264' stroke-width='1.3' opacity='0.42'/><path d='M0 14 Q30 1 60 14 Q90 1 120 14' fill='none' stroke='%23c4a264' stroke-width='1.7' opacity='0.48'/></svg>"); background-repeat: repeat-x; background-size: 120px 14px; pointer-events: none; }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 24px; color: #c4a264; letter-spacing: 1px; text-decoration: none; }
+  .nav-links { display: flex; align-items: center; gap: 2rem; }
+  .nav-link { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #8090a8; text-decoration: none; transition: color 0.2s; }
+  .nav-link:hover, .nav-link.active { color: #c4a264; }
+  .nav-dropdown { position: relative; display: inline-flex; align-items: center; }
+  .nav-dropdown-toggle { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #8090a8; background: none; border: none; cursor: pointer; padding: 0; transition: color 0.2s; font-family: inherit; }
+  .nav-dropdown-toggle:hover { color: #c4a264; }
+  .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 6px); left: 50%; transform: translateX(-50%); background: rgba(8,19,31,0.95); backdrop-filter: blur(14px); border: 1px solid rgba(196,162,100,0.25); border-radius: 6px; min-width: 280px; z-index: 200; overflow: hidden; box-shadow: 0 24px 48px rgba(0,0,0,0.5); }
+  .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+  .nav-dropdown-header { padding: 12px 20px 8px; font-size: 9px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(196,162,100,0.5); border-bottom: 1px solid rgba(196,162,100,0.1); }
+  .nav-dropdown-item { display: flex; align-items: center; gap: 12px; padding: 14px 20px; font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #6080a0; text-decoration: none; transition: background 0.15s, color 0.15s; border-bottom: 1px solid rgba(196,162,100,0.06); }
+  .nav-dropdown-item:last-child { border-bottom: none; }
+  .nav-dropdown-item i { font-size: 18px; color: rgba(196,162,100,0.4); transition: color 0.15s; flex-shrink: 0; }
+  .nav-dropdown-item:hover { background: rgba(196,162,100,0.07); color: #c4a264; }
+  .nav-dropdown-item:hover i { color: #c4a264; }
+  .page-hero { padding: 4rem 2rem 3rem; text-align: center; background: #08131f; border-bottom: 1px solid rgba(196,162,100,0.08); }
+  .breadcrumb { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #7890a8; margin-bottom: 1.5rem; }
+  .breadcrumb a { color: #5a7090; text-decoration: none; }
+  .breadcrumb a:hover { color: #c4a264; }
+  .page-tag { font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: #c4a264; margin-bottom: 1rem; }
+  .page-title { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; color: #f0e8d5; line-height: 1.1; margin-bottom: 1rem; max-width: 760px; margin-left: auto; margin-right: auto; }
+  .page-sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; color: #b0a080; max-width: 560px; margin: 0 auto 1.5rem; line-height: 1.6; }
+  .article-meta { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #7890a8; }
+  .article-body { max-width: 720px; margin: 0 auto; padding: 3rem 2rem; }
+  .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 600; color: #f0e8d5; margin: 3rem 0 1rem; line-height: 1.2; }
+  .article-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: #d4c8a8; margin: 2rem 0 0.75rem; }
+  .article-body p { font-size: 16px; color: #8090a8; line-height: 1.9; margin-bottom: 1.4rem; }
+  .article-body strong { color: #c4a264; font-weight: 600; }
+  .article-body ul, .article-body ol { margin: 0 0 1.4rem 1.5rem; }
+  .article-body li { font-size: 15px; color: #8090a8; line-height: 1.8; margin-bottom: 0.4rem; }
+  .article-body li strong { color: #c4a264; }
+  .pull-quote { border-left: 3px solid rgba(196,162,100,0.5); padding: 1rem 1.5rem; margin: 2rem 0; background: rgba(196,162,100,0.04); border-radius: 0 4px 4px 0; }
+  .pull-quote p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: #c4a264; line-height: 1.6; margin: 0; }
+  .info-box { background: #0c1e32; border: 1px solid rgba(196,162,100,0.15); border-radius: 4px; padding: 1.5rem; margin: 2rem 0; }
+  .info-box p { color: #7890a8; font-size: 15px; margin: 0 0 0.5rem; line-height: 1.7; }
+  .info-box p:last-child { margin: 0; }
+  .info-box strong { color: #c4a264; }
+  .info-box ul { list-style: none; padding: 0; margin: 0.5rem 0 0; }
+  .info-box li { font-size: 14px; color: #5a7090; padding: 5px 0 5px 20px; position: relative; border-bottom: 1px solid rgba(196,162,100,0.05); line-height: 1.5; }
+  .info-box li:last-child { border-bottom: none; }
+  .info-box li::before { content: '—'; position: absolute; left: 0; color: rgba(196,162,100,0.4); }
+  .warning-box { background: rgba(180,80,60,0.08); border: 1px solid rgba(180,80,60,0.2); border-radius: 4px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+  .warning-box p { font-size: 14px; color: #8070a0; line-height: 1.6; margin: 0; }
+  .warning-box strong { color: #c06050; }
+  .checklist { list-style: none; padding: 0; margin: 0 0 1.4rem 0; }
+  .checklist li { font-size: 15px; color: #8090a8; padding: 6px 0 6px 24px; position: relative; border-bottom: 1px solid rgba(196,162,100,0.05); line-height: 1.6; }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li::before { content: '—'; position: absolute; left: 0; color: rgba(196,162,100,0.4); }
+  .cta-box { background: #0b1a2c; border: 1px solid rgba(196,162,100,0.2); border-radius: 4px; padding: 3rem 2rem; text-align: center; margin: 3rem 0; }
+  .cta-box h2 { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 600; color: #f0e8d5; margin-bottom: 0.5rem; }
+  .cta-box p { font-size: 14px; color: #5a7090; margin: 0.5rem auto 1.5rem; max-width: 440px; }
+  .btn-gold { background: #c4a264; color: #08131f; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 13px 30px; border: none; border-radius: 2px; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.1s; }
+  .btn-gold:hover { background: #d8b878; transform: translateY(-1px); }
+  .cta-inline { background: #0b1a2c; border: 1px solid rgba(196,162,100,0.15); border-radius: 4px; padding: 2rem; margin: 3rem 0; }
+  .cta-inline h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; color: #f0e8d5; margin-bottom: 0.5rem; }
+  .cta-inline p { font-size: 14px; color: #5a7090; margin-bottom: 1rem; }
+  .author-box { display: flex; align-items: center; gap: 1.5rem; background: #0b1a2c; border: 1px solid rgba(196,162,100,0.12); border-radius: 4px; padding: 1.5rem; margin: 2rem 0; }
+  .author-img { width: 64px; height: 64px; border-radius: 50%; flex-shrink: 0; }
+  .author-name { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: #f0e8d5; margin-bottom: 4px; }
+  .author-bio { font-size: 13px; color: #5a7090; line-height: 1.5; }
+  footer { text-align: center; padding: 1.5rem; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #2a3a50; background: #08131f; }
+  footer a { color: #7890a8; text-decoration: underline; }
+  .nav-lang-btn { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #9ab8d0; cursor: pointer; background: linear-gradient(180deg, rgba(255,255,255,0.07) 0%, rgba(0,0,0,0.14) 100%); border: 1px solid rgba(196,162,100,0.2); padding: 6px 11px; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08); font-family: inherit; display: flex; align-items: center; gap: 5px; transition: color 0.15s, border-color 0.15s; }
+  .nav-lang-btn:hover { color: #c4a264; border-color: rgba(196,162,100,0.45); }
+  .lang-picker { position: relative; display: inline-flex; }
+  .lang-drop { position: absolute; top: calc(100% + 5px); left: 50%; transform: translateX(-50%); background: #0b1e35; border: 1px solid rgba(196,162,100,0.3); border-radius: 6px; padding: 5px; display: flex; flex-direction: column; gap: 3px; opacity: 0; pointer-events: none; transition: opacity 0.15s; z-index: 300; min-width: 120px; }
+  .lang-drop.open { opacity: 1; pointer-events: auto; }
+  .lang-opt { display: flex; align-items: center; gap: 8px; padding: 7px 12px; border-radius: 4px; cursor: pointer; color: #6a80a0; font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; transition: background 0.15s, color 0.15s; }
+  .lang-opt:hover { background: rgba(196,162,100,0.1); color: #c4a264; }
+  .lang-opt.lang-cur { color: #c4a264; }
+  .nav-boat { position: absolute; bottom: 10px; pointer-events: none; transition: left 0.16s cubic-bezier(0.25,0.46,0.45,0.94); opacity: 0; z-index: 101; transform: translateX(-50%); }
+  .nav-boat.visible { opacity: 1; }
+  .nav-burger { display: none; background: none; border: 1px solid rgba(196,162,100,0.3); border-radius: 4px; padding: 8px 10px; cursor: pointer; flex-direction: column; gap: 5px; flex-shrink: 0; }
+  .nav-burger span { display: block; width: 22px; height: 2px; background: #c4a264; border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+  .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-burger.open span:nth-child(2) { opacity: 0; }
+  .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  @media (max-width: 768px) {
+    .nav-burger { display: flex; }
+    nav { padding: 1rem 1.5rem 1.4rem; }
+    nav .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(8,19,31,0.98); backdrop-filter: blur(14px); padding: 1rem 1.5rem 1.5rem; border-bottom: 1px solid rgba(196,162,100,0.15); gap: 0.4rem; z-index: 99; }
+    nav .nav-links.open { display: flex; }
+    .page-title { font-size: 32px; }
+    .author-box { flex-direction: column; text-align: center; }
+  }
+  .wa-fab { position: fixed; bottom: 1.5rem; right: 1.5rem; width: 52px; height: 52px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(37,211,102,0.35); z-index: 300; transition: transform 0.2s; }
+  .wa-fab:hover { transform: scale(1.08); }
+  .wa-fab svg { width: 26px; height: 26px; fill: #fff; }
+  .nav-downloads .nav-dropdown-toggle { color: #c4a264; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Meteorología para Navegantes: Cómo Leer el Tiempo Antes de Zarpar",
+  "description": "Fuentes de información meteorológica para navegar en Chile, cómo interpretar el pronóstico de viento, cuándo no zarpar y los fenómenos locales que los modelos no capturan. Guía del Capitán Rodrigo.",
+  "url": "https://www.hijodelmar.cl/guia-meteorologia-navegantes.html",
+  "datePublished": "2026-07-15",
+  "dateModified": "2026-07-15",
+  "inLanguage": "es-CL",
+  "image": "https://www.hijodelmar.cl/logo_hijodelmar.png",
+  "author": {"@type": "Person", "name": "Rodrigo Troncoso Peirano", "url": "https://www.hijodelmar.cl/sobre-mi.html"},
+  "publisher": {"@type": "Organization", "name": "Hijo del Mar", "url": "https://www.hijodelmar.cl/", "logo": {"@type": "ImageObject", "url": "https://www.hijodelmar.cl/logo_hijodelmar.png"}}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuáles son las mejores fuentes de meteorología náutica en Chile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las fuentes principales son: SHOA (shoa.cl) — la fuente oficial de la Armada de Chile con pronósticos, boletines y avisos de marejadas; la Armada emite partes meteorológicos por VHF canal 16 y otros canales según la zona; Windy (windy.com) — excelente para visualizar viento y oleaje con varios modelos (ECMWF, GFS, ICON); PredictWind — especialmente útil para planificación de travesías largas. Para los canales australes, el SHOA es la referencia obligatoria."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿En qué unidades se mide el viento para navegar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El viento en meteorología náutica se mide en nudos (kt o kn), no en kilómetros por hora. La escala Beaufort es la referencia práctica: B3 (7-10 nudos) es brisa suave, B4 (11-16 nudos) es brisa moderada, B5 (17-21 nudos) es brisa fresca y es el límite recomendado para la mayoría de los navegantes recreativos en embarcaciones pequeñas. B6 (22-27 nudos) exige experiencia y embarcación preparada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es el viento Puelche?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El Puelche es un viento katabático que desciende desde la Cordillera de los Andes hacia el Pacífico, principalmente entre Valdivia y Chiloé. Es seco, cálido, súbito y puede alcanzar 50-80 nudos en ráfagas sin que los modelos numéricos lo predigan con precisión. No aparece en Windy ni en el GFS con la intensidad real. Es uno de los fenómenos más peligrosos para la navegación en esa zona y solo se anticipa conociendo la región."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué indica la presión barométrica para un navegante?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La presión barométrica mide el peso de la atmósfera y anticipa el tiempo. Valores sobre 1020 hPa indican alta presión y tiempo estable. Valores bajo 1000 hPa y especialmente bajo 990 hPa indican depresión y mal tiempo potencial. Lo que más importa es el cambio: una caída de más de 3 hPa por hora indica deterioro rápido y es señal de no zarpar o buscar abrigo urgente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo no debe zarpase por condiciones meteorológicas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No debes zarpar cuando el pronóstico indica vientos superiores a lo que tu embarcación y tripulación pueden manejar (generalmente B5-B6 para navegantes recreativos), cuando hay aviso de marejadas en tu zona, cuando el barómetro está cayendo más de 3 hPa por hora, cuando el pronóstico es contradictorio entre modelos, o cuando tienes dudas sobre la fiabilidad de la información. En caso de duda, no zarpes. El mar siempre estará ahí mañana."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.hijodelmar.cl/"},
+    {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://www.hijodelmar.cl/guias.html"},
+    {"@type": "ListItem", "position": 3, "name": "Meteorología para Navegantes"}
+  ]
+}
+</script>
+<script src="/lang-detect.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2472289282343962" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo" style="display:flex;align-items:center;gap:10px;"><svg width="30" height="26" viewBox="0 0 120 100" aria-hidden="true"><path d="M6,78 C16,66 26,66 34,73 C40,78 46,77 50,70 L64,16 Q66,12 67,18 L72,72 C78,79 88,78 98,68 L98,76 C88,86 76,87 68,79 L64,40 L56,74 C50,84 38,86 30,79 C22,72 14,74 6,84 Z" fill="#c4a264"/></svg>Hijo <span id="navBoatHome">del</span> Mar</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Inicio</a>
+    <a href="sobre-mi.html" class="nav-link">Sobre mí</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-toggle">Asesorías</button>
+      <div class="nav-dropdown-menu">
+        <div class="nav-dropdown-header">Asesorías náuticas</div>
+        <a href="asesoria-navegacion.html" class="nav-dropdown-item"><i class="ti ti-route"></i>Planificación de Navegación</a>
+        <a href="asesoria-seguridad.html" class="nav-dropdown-item"><i class="ti ti-shield-check"></i>Equipos de Seguridad</a>
+        <a href="asesoria-electronica.html" class="nav-dropdown-item"><i class="ti ti-device-tablet"></i>Ayudas Electrónicas</a>
+        <a href="asesoria-supervivencia.html" class="nav-dropdown-item"><i class="ti ti-lifebuoy"></i>Supervivencia en el Mar</a>
+        <a href="asesoria-compra-embarcacion.html" class="nav-dropdown-item"><i class="ti ti-anchor"></i>Ayuda en Selección de Barcos</a>
+        <a href="survey-embarcacion.html" class="nav-dropdown-item"><i class="ti ti-clipboard-check"></i>Survey de Embarcación</a>
+      </div>
+    </div>
+    <a href="guias.html" class="nav-link active">Publicaciones</a>
+    <a href="contacto.html" class="nav-link">Contacto</a>
+    <div class="lang-picker" id="langPicker">
+      <button class="nav-lang-btn" id="langBtn">🇨🇱 ES ▾</button>
+      <div class="lang-drop" id="langDrop">
+        <div class="lang-opt lang-cur">🇨🇱 Español</div>
+        <div class="lang-opt" id="ldEN">🇬🇧 English</div>
+      </div>
+    </div>
+  </div>
+  <button class="nav-burger" id="navBurger" aria-label="Menú"><span></span><span></span><span></span></button>
+  <svg id="navBoat" class="nav-boat" width="30" height="26" viewBox="0 0 120 100"><path d="M6,78 C16,66 26,66 34,73 C40,78 46,77 50,70 L64,16 Q66,12 67,18 L72,72 C78,79 88,78 98,68 L98,76 C88,86 76,87 68,79 L64,40 L56,74 C50,84 38,86 30,79 C22,72 14,74 6,84 Z" fill="rgba(196,162,100,0.45)"/></svg>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Inicio</a> · <a href="guias.html">Guías</a> · Meteorología para Navegantes</div>
+  <div class="page-tag">Planificación de Navegación</div>
+  <h1 class="page-title">Meteorología para Navegantes: Cómo Leer el Tiempo Antes de Zarpar</h1>
+  <p class="page-sub">Un mal pronóstico mal interpretado es tan peligroso como ningún pronóstico. Saber leer el tiempo es una habilidad que se aprende antes de zarpar, no en el agua.</p>
+  <div class="article-meta">Por Capitán Rodrigo Troncoso · Julio 2026 · 9 min</div>
+</div>
+
+<main>
+<article class="article-body">
+
+  <p>He visto muchos accidentes marítimos que empezaron con la frase "según Windy no había problema". Windy es una herramienta excelente — la uso yo mismo — pero ningún modelo numérico reemplaza el conocimiento del terreno, la experiencia acumulada y la capacidad de leer señales que los modelos no capturan. La meteorología náutica es una habilidad, no solo el acto de consultar una pantalla.</p>
+
+  <h2>Por qué la meteorología náutica es diferente</h2>
+
+  <p>El pronóstico del tiempo para navegantes tiene requerimientos distintos al pronóstico general. Para una salida de senderismo, importa si llueve. Para una navegación, importan la velocidad del viento en nudos, la dirección, el intervalo entre rachas, el estado del mar (altura y período de la ola), la visibilidad y los cambios en las próximas 12-24 horas. Un pronóstico que en tierra parece "algo de viento" puede significar condiciones difíciles en el agua.</p>
+
+  <p>Además, la geografía de Chile crea microclimas y fenómenos locales que los modelos numéricos globales no capturan con precisión. Un barco en el Canal de Chacao, en un fiordo de la Patagonia o en la bahía de Quintero está en un microambiente completamente distinto al del pronóstico regional.</p>
+
+  <h2>Fuentes de información meteorológica en Chile</h2>
+
+  <h3>SHOA — la referencia oficial</h3>
+  <p>El <strong>Servicio Hidrográfico y Oceanográfico de la Armada de Chile</strong> (shoa.cl) publica pronósticos marítimos, boletines de marejadas, avisos de temporal y datos de corrientes y mareas. Para la zona austral y los canales, es la fuente más confiable porque se basa en modelos ajustados para la geografía chilena y en observaciones de las estaciones de la Armada. La Armada también emite partes meteorológicos por VHF según horario — consulta en tu Capitanía de Puerto cuál es el canal y horario para tu zona.</p>
+
+  <h3>Windy</h3>
+  <p>Windy (windy.com) es la herramienta de visualización más útil para navegantes recreativos. Permite ver el campo de vientos, oleaje y presión con varios modelos (ECMWF, GFS, ICON) y comparar pronósticos. Es especialmente bueno para zonas costeras con suficiente densidad de observaciones. Su limitación principal es que los modelos de baja resolución no capturan efectos locales como el Puelche, los williwaws de los canales o las aceleración del viento en pasos angostos.</p>
+
+  <h3>PredictWind</h3>
+  <p>PredictWind ofrece modelos de mayor resolución y pronósticos de ruta para navegación offshore. Es la herramienta de referencia para planificación de travesías largas, con funciones de optimización de ruta según viento previsto. Tiene coste de suscripción pero vale la pena para quienes navegan fuera de bahía con regularidad.</p>
+
+  <h2>Cómo leer el pronóstico de viento</h2>
+
+  <p>El viento se mide en nudos (kt) y se describe por velocidad media y ráfagas. La <strong>escala Beaufort</strong> es la referencia práctica para navegantes:</p>
+
+  <div class="info-box">
+    <ul>
+      <li><strong>B1-B2 (1-6 kt):</strong> Calma a brisa suave. Condiciones ideales para principiantes</li>
+      <li><strong>B3 (7-10 kt):</strong> Brisa suave. Buen viento de vela, condiciones cómodas</li>
+      <li><strong>B4 (11-16 kt):</strong> Brisa moderada. Condiciones activas, embarcación bien equilibrada navega con placer</li>
+      <li><strong>B5 (17-21 kt):</strong> Brisa fresca. Límite para muchos navegantes recreativos. Olas de 1-2 m. La embarcación exige atención</li>
+      <li><strong>B6 (22-27 kt):</strong> Brisa fuerte. Solo con experiencia y embarcación preparada</li>
+      <li><strong>B7+ (28+ kt):</strong> Viento fuerte a tormenta. No zarpas; si estás en el agua, buscas abrigo</li>
+    </ul>
+  </div>
+
+  <h2>Fenómenos locales que los modelos no capturan</h2>
+
+  <h3>El Puelche</h3>
+  <p>Es un viento katabático que desciende desde la Cordillera de los Andes hacia el Pacífico, principalmente entre Valdivia y Chiloé. Se produce cuando hay una masa de aire cálido y seco que cruza la cordillera y desciende acelerándose por el efecto Foehn. Puede llegar de manera súbita con vientos de 50-80 nudos en ráfagas. Los modelos globales no lo predicen bien porque opera a escala subregional. Los navegantes locales lo conocen por señales visuales: cielo límpido al oriente, descenso de humedad, nubes en forma de arco sobre la cordillera.</p>
+
+  <h3>Williwaws en los canales australes</h3>
+  <p>Los <strong>williwaws</strong> (vientos catabáticos) son ráfagas de viento descendentes desde las montañas que pueden superar los 60 nudos en segundos, sin previo aviso y desde cualquier dirección. No aparecen en ningún modelo de pronóstico porque son eventos muy locales. En la Patagonia son parte del ambiente normal de navegación. La única defensa es el anclaje correcto (dos anclas, línea a tierra) y el conocimiento de cuáles ancorajes son más protegidos de cuáles sectores.</p>
+
+  <div class="warning-box">
+    <p><strong>Cuándo no zarpar:</strong> No zarpes cuando el barómetro cae más de 3 hPa por hora, cuando hay aviso de marejadas en tu zona, cuando el pronóstico es contradictorio entre modelos, cuando las condiciones superan lo que tu embarcación y tripulación manejan cómodamente, o cuando tienes dudas. El mar siempre estará ahí mañana.</p>
+  </div>
+
+  <h2>La presión barométrica como herramienta</h2>
+
+  <p>El barómetro es el instrumento más valioso a bordo después del GPS. La regla práctica: presión estable sobre 1015 hPa indica condiciones favorables. Presión por debajo de 1000 hPa indica depresión. Pero lo que más importa es el <strong>cambio</strong>: una caída de más de 3 hPa en una hora indica deterioro rápido. Si estás navegando y el barómetro cae eso en una hora, busca abrigo antes de que empeoren las condiciones.</p>
+
+  <div class="cta-inline">
+    <h3>¿Planificando una travesía importante?</h3>
+    <p>Puedo hacer contigo un análisis meteorológico de tu ruta y fechas previstas, y orientarte sobre las condiciones esperadas para tu zona de navegación.</p>
+    <a href="https://wa.me/56923956367?text=Hola,%20leí%20tu%20guía%20sobre%20meteorología%20y%20quiero%20planificar%20una%20travesía." class="btn-gold">Consultar por WhatsApp →</a>
+  </div>
+
+  <div class="author-box">
+    <picture><source srcset="/logo_hijodelmar.webp" type="image/webp"><img src="/logo_hijodelmar.png" alt="Capitán Rodrigo Troncoso" class="author-img" width="64" height="64"></picture>
+    <div>
+      <div class="author-name">Rodrigo Troncoso Peirano</div>
+      <div class="author-bio">Capitán de Marina Mercante con 30 años de experiencia en pesca industrial, offshore y los fiordos de la Patagonia chilena.</div>
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <h2>¿Listo para planificar tu próxima travesía?</h2>
+    <p>Análisis de ruta, ventanas meteorológicas, equipamiento y todo lo que necesitas para zarpar con confianza.</p>
+    <a href="asesoria-navegacion.html" class="btn-gold">Ver asesoría de navegación →</a>
+  </div>
+
+</article>
+</main>
+
+<footer>
+  &copy; 2025–2026 Hijo del Mar · Capitán Rodrigo Troncoso · <a href="index.html">Inicio</a> · <a href="politica-cookies.html">Política de cookies</a>
+</footer>
+
+<script>
+(function(){
+  var boat=document.getElementById('navBoat');var nav=document.querySelector('nav');
+  if(boat&&nav){function cx(el){var nr=nav.getBoundingClientRect();var er=el.getBoundingClientRect();return er.left-nr.left+er.width/2;}function goHome(){var logo=document.querySelector('.nav-logo');if(logo){boat.style.left=cx(logo)+'px';}}requestAnimationFrame(function(){goHome();boat.classList.add('visible');});nav.querySelectorAll('.nav-link,.nav-dropdown-toggle').forEach(function(el){el.addEventListener('mouseenter',function(){boat.style.left=cx(el)+'px';});});nav.addEventListener('mouseleave',goHome);window.addEventListener('resize',goHome);}
+})();
+</script>
+<script>
+(function(){var picker=document.getElementById('langPicker');var drop=document.getElementById('langDrop');var t;function show(){clearTimeout(t);drop.classList.add('open');}function hide(){t=setTimeout(function(){drop.classList.remove('open');},160);}if(picker){picker.addEventListener('mouseenter',show);picker.addEventListener('mouseleave',hide);}if(drop){drop.addEventListener('mouseenter',show);drop.addEventListener('mouseleave',hide);}var ldEN=document.getElementById('ldEN');if(ldEN)ldEN.onclick=function(){localStorage.setItem('langOverride','en');location.href='/en/guia-weather-sailing-chile.html';};})();
+</script>
+<script>
+(function(){var burger=document.getElementById('navBurger');var links=document.querySelector('nav .nav-links');if(!burger||!links)return;burger.addEventListener('click',function(e){e.stopPropagation();burger.classList.toggle('open');links.classList.toggle('open');});document.addEventListener('click',function(){burger.classList.remove('open');links.classList.remove('open');});})();
+</script>
+<script src="/cookies.js"></script>
+<a class="wa-fab" href="https://wa.me/56923956367?text=Hola%20Capitán,%20vi%20tu%20página%20y%20tengo%20una%20consulta." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="#fff"/></svg>
+</a>
+</body>
+</html>

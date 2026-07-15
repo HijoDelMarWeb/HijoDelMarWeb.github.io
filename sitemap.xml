@@ -431,4 +431,112 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/guia-vhf-marino.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-vhf-marino.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-vhf-marine-radio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-vhf-marino.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/en/guia-vhf-marine-radio.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-vhf-marino.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-vhf-marine-radio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-vhf-marino.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/guia-ais-sistema-identificacion.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-ais-sistema-identificacion.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-ais-automatic-identification.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-ais-sistema-identificacion.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/en/guia-ais-automatic-identification.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-ais-sistema-identificacion.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-ais-automatic-identification.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-ais-sistema-identificacion.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/guia-plb-baliza-personal.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-plb-baliza-personal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-plb-personal-locator-beacon.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-plb-baliza-personal.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/en/guia-plb-personal-locator-beacon.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-plb-baliza-personal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-plb-personal-locator-beacon.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-plb-baliza-personal.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/guia-hombre-al-agua.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-hombre-al-agua.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-man-overboard.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-hombre-al-agua.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/en/guia-man-overboard.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-hombre-al-agua.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-man-overboard.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-hombre-al-agua.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/guia-zarpe-chile.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-zarpe-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-zarpe-sailing-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-zarpe-chile.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/en/guia-zarpe-sailing-chile.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-zarpe-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-zarpe-sailing-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-zarpe-chile.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/guia-meteorologia-navegantes.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-meteorologia-navegantes.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-weather-sailing-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-meteorologia-navegantes.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/en/guia-weather-sailing-chile.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-meteorologia-navegantes.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-weather-sailing-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-meteorologia-navegantes.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
