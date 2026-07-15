@@ -419,5 +419,16 @@
   });
 })();
 </script>
+<script>
+(function(){
+  var form=document.getElementById('contactForm');
+  if(!form) return;
+  form.addEventListener('submit',function(){
+    if(typeof window.gtag==='function'){
+      gtag('event','generate_lead',{method:'contact_form'});
+    }
+  });
+})();
+</script>
 </body>
 </html>

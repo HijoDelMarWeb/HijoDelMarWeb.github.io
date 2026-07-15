@@ -76,8 +76,9 @@
 })();
 
 /* ─── GA4 click event tracking — Hijo del Mar ─────────────────────────────
-   Fires custom events for the 4 key interactions:
-   · whatsapp_click   – any wa.me link
+   Fires events for key interactions:
+   · generate_lead    – GA4 key event: WA click or contact form submit
+   · whatsapp_click   – custom detail event for WA clicks
    · email_click      – any mailto: link
    · file_download    – PDF / download links  (GA4 recommended event)
    · tarjeta_click    – links to /tarjeta or /card (digital business card)
@@ -100,6 +101,10 @@
 
       /* 1. WhatsApp */
       if (href.indexOf('wa.me') !== -1) {
+        gtag('event', 'generate_lead', {
+          method: 'whatsapp',
+          page_location: pageUrl
+        });
         gtag('event', 'whatsapp_click', {
           button_text: btnText,
           page_location: pageUrl
