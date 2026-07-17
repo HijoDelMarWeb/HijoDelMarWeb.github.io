@@ -205,20 +205,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.hijodelmar.cl/politica-cookies.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/politica-cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/cookie-policy.html"/>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://www.hijodelmar.cl/en/cookie-policy.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/cookie-policy.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/politica-cookies.html"/>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
     <loc>https://www.hijodelmar.cl/survey-embarcacion.html</loc>
     <lastmod>2026-06-29</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/survey-embarcacion.html"/>
