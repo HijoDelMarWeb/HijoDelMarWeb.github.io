@@ -525,4 +525,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/guia-como-empezar-navegar-velero-chile.html</loc>
+    <lastmod>2026-09-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-como-empezar-navegar-velero-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-how-to-start-sailing-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-como-empezar-navegar-velero-chile.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/en/guia-how-to-start-sailing-chile.html</loc>
+    <lastmod>2026-09-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-como-empezar-navegar-velero-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-how-to-start-sailing-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-como-empezar-navegar-velero-chile.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/guia-carta-nautica-shoa-chile.html</loc>
+    <lastmod>2026-09-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-carta-nautica-shoa-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-nautical-charts-shoa-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-carta-nautica-shoa-chile.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/en/guia-nautical-charts-shoa-chile.html</loc>
+    <lastmod>2026-09-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-carta-nautica-shoa-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-nautical-charts-shoa-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-carta-nautica-shoa-chile.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
