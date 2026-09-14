@@ -103,6 +103,13 @@
   .cta-inline { background: #0b1a2c; border: 1px solid rgba(196,162,100,0.15); border-radius: 4px; padding: 2rem; margin: 3rem 0; }
   .cta-inline h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; color: #f0e8d5; margin-bottom: 0.5rem; }
   .cta-inline p { font-size: 14px; color: #5a7090; margin-bottom: 1rem; }
+  .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 1.5rem 0; }
+  .related-card { background: #0c1e32; border: 1px solid rgba(196,162,100,0.1); border-radius: 4px; padding: 1rem 1.25rem; text-decoration: none; transition: border-color 0.2s; display: block; }
+  .related-card:hover { border-color: rgba(196,162,100,0.4); }
+  .related-icon { font-size: 20px; color: #c4a264; margin-bottom: 6px; display: block; }
+  .related-title { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 600; color: #f0e8d5; }
+  .related-desc { font-size: 11px; color: #7890a8; margin-top: 3px; }
+
   .author-box { display: flex; align-items: center; gap: 1.5rem; background: #0b1a2c; border: 1px solid rgba(196,162,100,0.12); border-radius: 4px; padding: 1.5rem; margin: 2rem 0; }
   .author-img { width: 64px; height: 64px; border-radius: 50%; flex-shrink: 0; }
   .author-name { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: #f0e8d5; margin-bottom: 4px; }
@@ -339,6 +346,35 @@
     <h2>¿Quieres navegar con más seguridad?</h2>
     <p>Revisamos juntos tu equipamiento de emergencia y los procedimientos de tu tripulación. Una hora puede marcar la diferencia.</p>
     <a href="asesoria-supervivencia.html" class="btn-gold">Ver asesoría de supervivencia →</a>
+  </div>
+
+  <h2>Artículos relacionados</h2>
+  <div class="related-grid">
+    <a href="guia-epirb-que-es.html" class="related-card">
+      <span class="related-icon"><i class="ti ti-radio"></i></span>
+      <div class="related-title">¿Qué es un EPIRB?</div>
+      <div class="related-desc">La baliza que alerta a los centros de rescate vía satélite</div>
+    </a>
+    <a href="guia-sart-respondedor-radar.html" class="related-card">
+      <span class="related-icon"><i class="ti ti-radar-2"></i></span>
+      <div class="related-title">SART Respondedor de Radar</div>
+      <div class="related-desc">Cómo funciona y cuándo activarlo</div>
+    </a>
+    <a href="guia-ais-sistema-identificacion.html" class="related-card">
+      <span class="related-icon"><i class="ti ti-broadcast"></i></span>
+      <div class="related-title">AIS Marino</div>
+      <div class="related-desc">Qué es, cómo funciona y por qué lo necesitas</div>
+    </a>
+    <a href="guia-plb-baliza-personal.html" class="related-card">
+      <span class="related-icon"><i class="ti ti-device-watch"></i></span>
+      <div class="related-title">PLB Baliza Personal</div>
+      <div class="related-desc">Guía completa para navegantes</div>
+    </a>
+    <a href="guia-vhf-marino.html" class="related-card">
+      <span class="related-icon"><i class="ti ti-antenna"></i></span>
+      <div class="related-title">VHF Marino</div>
+      <div class="related-desc">Canales, procedimientos y llamadas de emergencia</div>
+    </a>
   </div>
 
 </article>
