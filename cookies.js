@@ -11,6 +11,17 @@
     }
   }
 
+  /* ── WhatsApp click tracking (todas las páginas) ────────────
+     Se cuenta como generate_lead (mismo evento clave que el
+     formulario de contacto), con method:'whatsapp' para diferenciar. */
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest ? e.target.closest('a[href*="wa.me"]') : null;
+    if (!link) return;
+    if (typeof gtag === 'function') {
+      gtag('event', 'generate_lead', { method: 'whatsapp' });
+    }
+  }, true);
+
   if (stored === 'granted') { applyConsent('granted'); return; }
   if (stored === 'denied') { return; }
 
