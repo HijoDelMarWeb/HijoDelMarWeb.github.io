@@ -1,0 +1,35 @@
+# Hijo del Mar
+
+> Asesoría náutica independiente en Chile, a cargo del Capitán Rodrigo Troncoso Peirano (Marino Mercante, 30 años de experiencia en pesca industrial, offshore y los canales del sur de Chile). Atención online y presencial; sitio bilingüe español/inglés. Las guías de trámites se basan en fuentes oficiales (Directemar, ChileAtiende, Reglamento General de Deportes Náuticos).
+
+## Servicios
+- [Planificación de navegación](https://www.hijodelmar.cl/asesoria-navegacion.html)
+- [Equipos de seguridad](https://www.hijodelmar.cl/asesoria-seguridad.html)
+- [Electrónica náutica](https://www.hijodelmar.cl/asesoria-electronica.html)
+- [Supervivencia en el mar](https://www.hijodelmar.cl/asesoria-supervivencia.html)
+- [Ayuda en selección de embarcaciones](https://www.hijodelmar.cl/asesoria-compra-embarcacion.html)
+- [Survey de embarcación](https://www.hijodelmar.cl/survey-embarcacion.html)
+- [Precios](https://www.hijodelmar.cl/precios.html)
+
+## Guías principales
+- [Licencia náutica en Chile](https://www.hijodelmar.cl/guia-licencia-nautica-chile.html)
+- [Inscripción de embarcación en Directemar](https://www.hijodelmar.cl/guia-inscripcion-directemar-chile.html)
+- [Zarpe en Chile](https://www.hijodelmar.cl/guia-zarpe-chile.html)
+- [Seguro de embarcación](https://www.hijodelmar.cl/guia-seguro-embarcacion-chile.html)
+- [Survey náutico](https://www.hijodelmar.cl/guia-survey-nautico.html)
+- [EPIRB: qué es y cómo funciona](https://www.hijodelmar.cl/guia-epirb-que-es.html)
+- [AIS marino](https://www.hijodelmar.cl/guia-ais-sistema-identificacion.html)
+- [Cómo planificar una travesía en velero](https://www.hijodelmar.cl/guia-como-planificar-travesia-velero.html)
+- [Navegar en la Patagonia chilena](https://www.hijodelmar.cl/guia-navegar-patagonia-chile.html)
+- [Todas las guías](https://www.hijodelmar.cl/guias.html)
+
+## Sobre el autor y contacto
+- [Sobre mí](https://www.hijodelmar.cl/sobre-mi.html)
+- [Contacto](https://www.hijodelmar.cl/contacto.html)
+
+## English
+- [Home](https://www.hijodelmar.cl/en/)
+- [Guides](https://www.hijodelmar.cl/en/guias.html)
+- [Boating license in Chile](https://www.hijodelmar.cl/en/guia-nautical-license-chile.html)
+- [Boat registration with Directemar](https://www.hijodelmar.cl/en/guia-directemar-registration-chile.html)
+- [Zarpe in Chile](https://www.hijodelmar.cl/en/guia-zarpe-sailing-chile.html)
