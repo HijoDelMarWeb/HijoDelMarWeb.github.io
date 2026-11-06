@@ -580,6 +580,42 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.hijodelmar.cl/guia-radio-maritima-mundo.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-radio-maritima-mundo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-marine-radio-worldwide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-radio-maritima-mundo.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/en/guia-marine-radio-worldwide.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-radio-maritima-mundo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-marine-radio-worldwide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-radio-maritima-mundo.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/guia-radio-requisitos-chile.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-radio-requisitos-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-marine-radio-requirements-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-radio-requisitos-chile.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/en/guia-marine-radio-requirements-chile.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-radio-requisitos-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-marine-radio-requirements-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-radio-requisitos-chile.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.hijodelmar.cl/resenas.html</loc>
     <lastmod>2026-11-06</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/resenas.html"/>

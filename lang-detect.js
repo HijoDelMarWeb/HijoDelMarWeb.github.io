@@ -44,6 +44,8 @@
     'guia-zarpe-chile.html': 'en/guia-zarpe-sailing-chile.html',
     'guia-meteorologia-navegantes.html': 'en/guia-weather-sailing-chile.html',
     'guia-marinas-chile.html': 'en/guia-marinas-chile.html',
+    'guia-radio-maritima-mundo.html': 'en/guia-marine-radio-worldwide.html',
+    'guia-radio-requisitos-chile.html': 'en/guia-marine-radio-requirements-chile.html',
     'resenas.html': 'en/reviews.html'
   };
 

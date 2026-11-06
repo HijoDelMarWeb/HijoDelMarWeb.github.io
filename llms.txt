@@ -22,6 +22,8 @@
 - [Cómo planificar una travesía en velero](https://www.hijodelmar.cl/guia-como-planificar-travesia-velero.html)
 - [Navegar en la Patagonia chilena](https://www.hijodelmar.cl/guia-navegar-patagonia-chile.html)
 - [Marinas de Chile](https://www.hijodelmar.cl/guia-marinas-chile.html)
+- [Radio marítima en el mundo](https://www.hijodelmar.cl/guia-radio-maritima-mundo.html)
+- [Requisitos radioeléctricos en Chile](https://www.hijodelmar.cl/guia-radio-requisitos-chile.html)
 - [Todas las guías](https://www.hijodelmar.cl/guias.html)
 
 ## Sobre el autor y contacto
@@ -35,3 +37,5 @@
 - [Boat registration with Directemar](https://www.hijodelmar.cl/en/guia-directemar-registration-chile.html)
 - [Zarpe in Chile](https://www.hijodelmar.cl/en/guia-zarpe-sailing-chile.html)
 - [Marinas of Chile](https://www.hijodelmar.cl/en/guia-marinas-chile.html)
+- [Marine radio worldwide](https://www.hijodelmar.cl/en/guia-marine-radio-worldwide.html)
+- [Radio requirements in Chile](https://www.hijodelmar.cl/en/guia-marine-radio-requirements-chile.html)
