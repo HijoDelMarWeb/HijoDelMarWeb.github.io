@@ -182,6 +182,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* Downloads dropdown */
   .nav-downloads .nav-dropdown-toggle { color: #856527; }
   .nav-downloads .nav-dropdown-toggle:hover { color: #a8824a; }
+  /* nav-compact */
+  @media (min-width: 769px) and (max-width: 1600px) {
+    nav { padding-left: 1.25rem; padding-right: 1.25rem; }
+    nav .nav-links { gap: 0.15rem; flex-wrap: wrap; justify-content: flex-end; row-gap: 0.2rem; }
+    nav .nav-link, nav .nav-dropdown-toggle { font-size: 11px; letter-spacing: 0.8px; padding: 6px 8px; }
+  }
 </style>
 
 <script type="application/ld+json">
@@ -283,6 +289,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <a href="guias.html" class="nav-link">Guides</a>
+    <a href="guia-marinas-chile.html" class="nav-link">Marinas of Chile</a>
+    <a href="reviews.html" class="nav-link">Leave a Review</a>
     <a href="contact.html" class="nav-link">Contact</a>
         <div class="nav-dropdown nav-downloads">
       <button class="nav-dropdown-toggle nav-downloads-btn" >&#8595; Free Downloads</button>

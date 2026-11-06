@@ -21,6 +21,7 @@
 - [AIS marino](https://www.hijodelmar.cl/guia-ais-sistema-identificacion.html)
 - [Cómo planificar una travesía en velero](https://www.hijodelmar.cl/guia-como-planificar-travesia-velero.html)
 - [Navegar en la Patagonia chilena](https://www.hijodelmar.cl/guia-navegar-patagonia-chile.html)
+- [Marinas de Chile](https://www.hijodelmar.cl/guia-marinas-chile.html)
 - [Todas las guías](https://www.hijodelmar.cl/guias.html)
 
 ## Sobre el autor y contacto
@@ -33,3 +34,4 @@
 - [Boating license in Chile](https://www.hijodelmar.cl/en/guia-nautical-license-chile.html)
 - [Boat registration with Directemar](https://www.hijodelmar.cl/en/guia-directemar-registration-chile.html)
 - [Zarpe in Chile](https://www.hijodelmar.cl/en/guia-zarpe-sailing-chile.html)
+- [Marinas of Chile](https://www.hijodelmar.cl/en/guia-marinas-chile.html)

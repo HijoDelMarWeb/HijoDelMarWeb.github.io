@@ -42,7 +42,9 @@
     'guia-plb-baliza-personal.html': 'en/guia-plb-personal-locator-beacon.html',
     'guia-hombre-al-agua.html': 'en/guia-man-overboard.html',
     'guia-zarpe-chile.html': 'en/guia-zarpe-sailing-chile.html',
-    'guia-meteorologia-navegantes.html': 'en/guia-weather-sailing-chile.html'
+    'guia-meteorologia-navegantes.html': 'en/guia-weather-sailing-chile.html',
+    'guia-marinas-chile.html': 'en/guia-marinas-chile.html',
+    'resenas.html': 'en/reviews.html'
   };
 
   /* Build reverse map EN → ES */

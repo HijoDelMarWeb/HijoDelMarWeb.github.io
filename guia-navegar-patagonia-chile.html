@@ -153,6 +153,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .anchorage-block { flex-direction: column; gap: 0.5rem; }
     .related-guides { grid-template-columns: 1fr; }
   }
+  /* nav-compact */
+  @media (min-width: 769px) and (max-width: 1600px) {
+    nav { padding-left: 1.25rem; padding-right: 1.25rem; }
+    nav .nav-links { gap: 0.15rem; flex-wrap: wrap; justify-content: flex-end; row-gap: 0.2rem; }
+    nav .nav-link, nav .nav-dropdown-toggle { font-size: 11px; letter-spacing: 0.8px; padding: 6px 8px; }
+  }
 </style>
 
 <script type="application/ld+json">
@@ -253,6 +259,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <a href="guias.html" class="nav-link active">Publicaciones</a>
+    <a href="guia-marinas-chile.html" class="nav-link">Marinas de Chile</a>
+    <a href="resenas.html" class="nav-link">Deja tu reseña</a>
     <a href="contacto.html" class="nav-link">Contacto</a>
     <div class="nav-dropdown nav-downloads">
       <button class="nav-dropdown-toggle nav-downloads-btn">&#8595; Descargas Gratis</button>

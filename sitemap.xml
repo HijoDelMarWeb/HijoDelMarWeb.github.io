@@ -561,4 +561,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/guia-marinas-chile.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-marinas-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-marinas-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-marinas-chile.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/en/guia-marinas-chile.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/guia-marinas-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/guia-marinas-chile.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/guia-marinas-chile.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/resenas.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/resenas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/reviews.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/resenas.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.hijodelmar.cl/en/reviews.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.hijodelmar.cl/resenas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hijodelmar.cl/en/reviews.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hijodelmar.cl/resenas.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
