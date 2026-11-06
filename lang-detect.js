@@ -46,6 +46,8 @@
     'guia-marinas-chile.html': 'en/guia-marinas-chile.html',
     'guia-radio-maritima-mundo.html': 'en/guia-marine-radio-worldwide.html',
     'guia-radio-requisitos-chile.html': 'en/guia-marine-radio-requirements-chile.html',
+    'guia-carta-nautica-shoa-chile.html': 'en/guia-nautical-charts-shoa-chile.html',
+    'guia-como-empezar-navegar-velero-chile.html': 'en/guia-how-to-start-sailing-chile.html',
     'resenas.html': 'en/reviews.html'
   };
 
